@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .container {
+                width: 500px;
+                margin: 150px auto;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .container img {
+                width: 100%;
+                height: auto;
+                transition: all 0.5s;
+            }
+
+            .container:hover img {
+                transform: scale(1.1);
+            }
+
+            .container .content {
+                background-color: rgba(0, 0, 0, 0.7);
+                position: absolute;
+                top: -100%;
+                left: 0;
+                text-align: justify;
+                color: white;
+            }
+
+            .content h3 {
+                color: white;
+            }
+
+            .container:hover .content {
+                top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img src="../../../public/images/img/cusco.png" alt="" />
+            <div class="content">
+                <h3>Sinergia</h3>
+            </div>
+        </div>
+    </body>
+</html>

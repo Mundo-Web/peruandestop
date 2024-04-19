@@ -1019,26 +1019,21 @@
             <div class="grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto gap-10 md:gap-4 2xl:gap-16">
                 <!-- 1 -->
                 <div data-aos="fade-up" data-aos-offset="150">
-                    <div class="img-container">
-                        <div class="">
-                            <div class="">
-                                <img src="./images/img/cusco.png" alt="cusco"
-                                    class="w-full rounded-2xl duration-300 ease-in-out hover:brightness-75" />
+                    <div class="image__effect-hover  rounded-[20px]">
+                        <img src="./images/img/cusco.png" alt="cusco" class="w-full shadow-lg" />
+                        <div class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
                             </div>
-                        </div>
-                        <!-- ------ -->
-                        <div class="newsletter flex justify-around text-center">
-                            <p class="text-white font-acehSemibold text-text28 md:text-text32">
-                                98 <span class="block font-acehMedium text-text16 md:text-text20">Actividades</span>
-                            </p>
-                            <p class="text-white font-acehSemibold text-text28 md:text-text32">
-                                23,534
-                                <span class="block font-acehMedium text-text16 md:text-text20">Tickets vendidos</span>
-                            </p>
-                            <p class="text-white font-acehSemibold text-text28 md:text-text32">
-                                9,0/10
-                                <span class="block font-acehMedium text-text16 md:text-text20">Valoraciones</span>
-                            </p>
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">23,534</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Tickets vendidos</span>
+                            </div>
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">9,0/10</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Valoraciones</span>
+                            </div>
                         </div>
                     </div>
 
@@ -1072,24 +1067,22 @@
                 </div>
                 <!-- 2 -->
                 <div data-aos="fade-up" data-aos-offset="150">
-                    <div class="img-container">
-                        <div class="">
-                            <img src="./images/img/lisboa.png" alt="lisboa"
-                                class="w-full rounded-2xl duration-75 ease-in-out hover:brightness-75" />
-                        </div>
+                    <div class="image__effect-hover rounded-[20px]">
+                        <img src="./images/img/lisboa.png" alt="cusco" class="w-full shadow-lg" />
                         <!-- ------ -->
-                        <div class="newsletter flex justify-around text-center">
-                            <p class="text-white font-acehSemibold text-text28 md:text-text32">
-                                98 <span class="block font-acehMedium text-text16 md:text-text20">Actividades</span>
-                            </p>
-                            <p class="text-white font-acehSemibold text-text28 md:text-text32">
-                                23,534
-                                <span class="block font-acehMedium text-text16 md:text-text20">Tickets vendidos</span>
-                            </p>
-                            <p class="text-white font-acehSemibold text-text28 md:text-text32">
-                                9,0/10
-                                <span class="block font-acehMedium text-text16 md:text-text20">Valoraciones</span>
-                            </p>
+                        <div class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
+                            </div>
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">23,534</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Tickets vendidos</span>
+                            </div>
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">9,0/10</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Valoraciones</span>
+                            </div>
                         </div>
                     </div>
 
@@ -1121,24 +1114,22 @@
                 </div>
                 <!-- 3 -->
                 <div data-aos="fade-up" data-aos-offset="150">
-                    <div class="img-container">
-                        <div class="">
-                            <img src="./images/img/dubai.png" alt="dubai"
-                                class="w-full rounded-2xl duration-75 ease-in-out hover:brightness-75" />
-                        </div>
-                        <!-- ------ -->
-                        <div class="newsletter flex justify-around text-center">
-                            <p class="text-white font-acehSemibold text-text28 md:text-text32">
-                                98 <span class="block font-acehMedium text-text16 md:text-text20">Actividades</span>
-                            </p>
-                            <p class="text-white font-acehSemibold text-text28 md:text-text32">
-                                23,534
-                                <span class="block font-acehMedium text-text16 md:text-text20">Tickets vendidos</span>
-                            </p>
-                            <p class="text-white font-acehSemibold text-text28 md:text-text32">
-                                9,0/10
-                                <span class="block font-acehMedium text-text16 md:text-text20">Valoraciones</span>
-                            </p>
+                    <div class="image__effect-hover rounded-[20px]">
+                        
+                        <img src="./images/img/dubai.png" alt="cusco" class="w-full shadow-lg" />
+                        <div class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
+                            </div>
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">23,534</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Tickets vendidos</span>
+                            </div>
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">9,0/10</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Valoraciones</span>
+                            </div>
                         </div>
                     </div>
 
@@ -1170,24 +1161,21 @@
                 </div>
                 <!-- 4 -->
                 <div data-aos="fade-up" data-aos-offset="150">
-                    <div class="img-container">
-                        <div class="">
-                            <img src="./images/img/paris.png" alt="paris"
-                                class="w-full rounded-2xl duration-75 ease-in-out hover:brightness-75" />
-                        </div>
-                        <!-- ------ -->
-                        <div class="newsletter flex justify-around text-center">
-                            <p class="text-white font-acehSemibold text-text28 md:text-text32">
-                                98 <span class="block font-acehMedium text-text16 md:text-text20">Actividades</span>
-                            </p>
-                            <p class="text-white font-acehSemibold text-text28 md:text-text32">
-                                23,534
-                                <span class="block font-acehMedium text-text16 md:text-text20">Tickets vendidos</span>
-                            </p>
-                            <p class="text-white font-acehSemibold text-text28 md:text-text32">
-                                9,0/10
-                                <span class="block font-acehMedium text-text16 md:text-text20">Valoraciones</span>
-                            </p>
+                    <div class="image__effect-hover rounded-[20px]">
+                        <img src="./images/img/paris.png" alt="cusco" class="w-full shadow-lg" />
+                        <div class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
+                            </div>
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">23,534</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Tickets vendidos</span>
+                            </div>
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">9,0/10</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Valoraciones</span>
+                            </div>
                         </div>
                     </div>
 
@@ -1219,24 +1207,21 @@
                 </div>
                 <!-- 5 -->
                 <div data-aos="fade-up" data-aos-offset="150">
-                    <div class="img-container">
-                        <div class="">
-                            <img src="./images/img/El_cairo.png" alt="el_cairo"
-                                class="w-full rounded-2xl duration-75 ease-in-out hover:brightness-75" />
-                        </div>
-                        <!-- ------ -->
-                        <div class="newsletter flex justify-around text-center">
-                            <p class="text-white font-acehSemibold text-text28 md:text-text32">
-                                98 <span class="block font-acehMedium text-text16 md:text-text20">Actividades</span>
-                            </p>
-                            <p class="text-white font-acehSemibold text-text28 md:text-text32">
-                                23,534
-                                <span class="block font-acehMedium text-text16 md:text-text20">Tickets vendidos</span>
-                            </p>
-                            <p class="text-white font-acehSemibold text-text28 md:text-text32">
-                                9,0/10
-                                <span class="block font-acehMedium text-text16 md:text-text20">Valoraciones</span>
-                            </p>
+                    <div class="image__effect-hover rounded-[20px]">
+                        <img src="./images/img/El_cairo.png" alt="cusco" class="w-full shadow-lg" />
+                        <div class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
+                            </div>
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">23,534</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Tickets vendidos</span>
+                            </div>
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">9,0/10</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Valoraciones</span>
+                            </div>
                         </div>
                     </div>
 
@@ -1268,27 +1253,21 @@
                 </div>
                 <!-- 6 -->
                 <div data-aos="fade-up" data-aos-offset="150">
-                    <div class="img-container">
-                        <div class="">
-                            <div class="relative">
-                                <img src="./images/img/venecia.png" alt="venecia"
-                                    class="w-full rounded-2xl duration-75 ease-in-out hover:brightness-75" />
+                    <div class="image__effect-hover rounded-[20px]">
+                        <img src="./images/img/venecia.png" alt="cusco" class="w-full shadow-lg" />
+                        <div class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
                             </div>
-                        </div>
-
-                        <!-- ------ -->
-                        <div class="newsletter flex justify-around text-center ">
-                            <p class="text-white font-acehSemibold text-text28 md:text-text32">
-                                98 <span class="block font-acehMedium text-text16 md:text-text20">Actividades</span>
-                            </p>
-                            <p class="text-white font-acehSemibold text-text28 md:text-text32">
-                                23,534
-                                <span class="block font-acehMedium text-text16 md:text-text20">Tickets vendidos</span>
-                            </p>
-                            <p class="text-white font-acehSemibold text-text28 md:text-text32">
-                                9,0/10
-                                <span class="block font-acehMedium text-text16 md:text-text20">Valoraciones</span>
-                            </p>
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">23,534</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Tickets vendidos</span>
+                            </div>
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">9,0/10</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Valoraciones</span>
+                            </div>
                         </div>
                     </div>
 

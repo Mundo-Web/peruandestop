@@ -125,10 +125,28 @@ export default {
                 "close-menu": "url(../images/prueba/icon-close.svg)",
                 "open-menu": "url(../images/prueba/icon-hamburger.svg)",
                 header_fondo: "url(../../public/images/img/header_fondo.png)",
+                header_fondo_1:
+                    "url(../../public/images/img/header_fondo_1.png)",
+                header_fondo_2:
+                    "url(../../public/images/img/header_fondo_2.png)",
+                header_fondo_3:
+                    "url(../../public/images/img/header_fondo_3.png)",
+                header_fondo_4:
+                    "url(../../public/images/img/header_fondo_4.png)",
+                header_fondo_5:
+                    "url(../../public/images/img/header_fondo_5.png)",
+                header_fondo_6:
+                    "url(../../public/images/img/header_fondo_6.png)",
+                header_fondo_7:
+                    "url(../../public/images/img/header_fondo_7.png)",
+                header_fondo_8:
+                    "url(../../public/images/img/header_fondo_8.png)",
                 destino__mobile_fondo:
                     "url(../../public/images/img/cusco_mobile.png)",
                 destino__desktop_fondo:
                     "url(../../public/images/img/background_cusco.png)",
+                ayuda: "url(../../public/images/img/ayuda.png)",
+                ayuda__mobile: "url(../../public/images/img/ayuda_mobile.png)",
             },
 
             screens: {

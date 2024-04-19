@@ -102,7 +102,7 @@
     </div>
 
 
-    <div class="py-5 bg-gray-500 bg-opacity-35 text-white bg__destino-header">
+    <div class="py-5 bg-gray-500 bg-opacity-50 text-white bg__destino-header">{{-- <div class="py-5 bg-gray-500 bg-opacity-35 text-white bg__destino-header"> --}}
         <div class="flex justify-between items-center w-11/12 mx-auto" >
             <div>
                 <a href="index.html">

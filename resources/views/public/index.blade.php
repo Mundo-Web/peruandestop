@@ -30,7 +30,302 @@
 @section('content')
 
     <main class="pb-24">
-        <section class="bg-header_fondo bg-cover bg-center bg-no-repeat sm:w-full h-full py-44">
+        <section>
+            <div class="swiper slider__headers">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="bg-header_fondo bg-cover bg-center bg-no-repeat sm:w-full h-full">
+                            <div class="text-white flex flex-col items-center pt-80 md:pt-60 pb-72 w-full md:w-6/12  mx-auto"
+                                data-aos="fade-up" data-aos-offset="150">
+                                <div class="text-center">
+                                    <p class="font-acehMedium text-text14 md:text-text20">
+                                        Suspendisse nec interdum orci, a agestas diam.
+                                    </p>
+                                    <h1 class="text-text48 font-acehSemibold md:text-text92 leading-none">
+                                        Viajar, Explorar el mundo
+                                    </h1>
+                                </div>
+                                <div class="pt-10 md:pt-20 w-full">
+                                    <form action="#" class="w-11/12 lg:w-8/12 mx-auto ">
+                                        <div
+                                            class="flex flex-col gap-5 2md:flex-row items-center justify-center 2md:bg-white py-2 md:px-2 rounded-full ">
+                                            <input type="text"
+                                                class="py-4 2md:py-2 rounded-full focus:outline-none w-full text-gray-700 text-center border-none text-text16 md:text-text20"
+                                                placeholder="¿Cuál será tu próximo destino?" />
+
+                                            <button type="submit"
+                                                class="px-10 py-3 rounded-full bg-colorBackgroundHeader flex justify-center items-center gap-2 hover:bg-colorBackgroundMainTop duration-500">
+                                                <span class="font-acehSemibold text-text20 ">Buscar</span><img
+                                                    src="./images/svg/icono_buscar.svg" alt="" />
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="bg-header_fondo_1 bg-cover bg-center bg-no-repeat sm:w-full h-full">
+                            <div class="text-white flex flex-col items-center pt-80 md:pt-60 pb-72 w-full md:w-6/12  mx-auto"
+                                data-aos="fade-up" data-aos-offset="150">
+                                <div class="text-center">
+                                    <p class="font-acehMedium text-text14 md:text-text20">
+                                        Suspendisse nec interdum orci, a agestas diam.
+                                    </p>
+                                    <h1 class="text-text48 font-acehSemibold md:text-text92 leading-none">
+                                        Viajar, Explorar el mundo
+                                    </h1>
+                                </div>
+                                <div class="pt-10 md:pt-20 w-full">
+                                    <form action="#" class="w-11/12 lg:w-8/12 mx-auto ">
+                                        <div
+                                            class="flex flex-col gap-5 2md:flex-row items-center justify-center 2md:bg-white py-2 md:px-2 rounded-full ">
+                                            <input type="text"
+                                                class="py-4 2md:py-2 rounded-full focus:outline-none w-full text-gray-700 text-center border-none text-text16 md:text-text20"
+                                                placeholder="¿Cuál será tu próximo destino?" />
+
+                                            <button type="submit"
+                                                class="px-10 py-3 rounded-full bg-colorBackgroundHeader flex justify-center items-center gap-2 hover:bg-colorBackgroundMainTop duration-500">
+                                                <span class="font-acehSemibold text-text20 ">Buscar</span><img
+                                                    src="./images/svg/icono_buscar.svg" alt="" />
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="bg-header_fondo_2 bg-cover bg-center bg-no-repeat sm:w-full h-full">
+                            <div class="text-white flex flex-col items-center pt-80 md:pt-60 pb-72 w-full md:w-6/12  mx-auto"
+                                data-aos="fade-up" data-aos-offset="150">
+                                <div class="text-center">
+                                    <p class="font-acehMedium text-text14 md:text-text20">
+                                        Suspendisse nec interdum orci, a agestas diam.
+                                    </p>
+                                    <h1 class="text-text48 font-acehSemibold md:text-text92 leading-none">
+                                        Viajar, Explorar el mundo
+                                    </h1>
+                                </div>
+                                <div class="pt-10 md:pt-20 w-full">
+                                    <form action="#" class="w-11/12 lg:w-8/12 mx-auto ">
+                                        <div
+                                            class="flex flex-col gap-5 2md:flex-row items-center justify-center 2md:bg-white py-2 md:px-2 rounded-full ">
+                                            <input type="text"
+                                                class="py-4 2md:py-2 rounded-full focus:outline-none w-full text-gray-700 text-center border-none text-text16 md:text-text20"
+                                                placeholder="¿Cuál será tu próximo destino?" />
+
+                                            <button type="submit"
+                                                class="px-10 py-3 rounded-full bg-colorBackgroundHeader flex justify-center items-center gap-2 hover:bg-colorBackgroundMainTop duration-500">
+                                                <span class="font-acehSemibold text-text20 ">Buscar</span><img
+                                                    src="./images/svg/icono_buscar.svg" alt="" />
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="bg-header_fondo_3 bg-cover bg-center bg-no-repeat sm:w-full h-full">
+                            <div class="text-white flex flex-col items-center pt-80 md:pt-60 pb-72 w-full md:w-6/12  mx-auto"
+                                data-aos="fade-up" data-aos-offset="150">
+                                <div class="text-center">
+                                    <p class="font-acehMedium text-text14 md:text-text20">
+                                        Suspendisse nec interdum orci, a agestas diam.
+                                    </p>
+                                    <h1 class="text-text48 font-acehSemibold md:text-text92 leading-none">
+                                        Viajar, Explorar el mundo
+                                    </h1>
+                                </div>
+                                <div class="pt-10 md:pt-20 w-full">
+                                    <form action="#" class="w-11/12 lg:w-8/12 mx-auto ">
+                                        <div
+                                            class="flex flex-col gap-5 2md:flex-row items-center justify-center 2md:bg-white py-2 md:px-2 rounded-full ">
+                                            <input type="text"
+                                                class="py-4 2md:py-2 rounded-full focus:outline-none w-full text-gray-700 text-center border-none text-text16 md:text-text20"
+                                                placeholder="¿Cuál será tu próximo destino?" />
+
+                                            <button type="submit"
+                                                class="px-10 py-3 rounded-full bg-colorBackgroundHeader flex justify-center items-center gap-2 hover:bg-colorBackgroundMainTop duration-500">
+                                                <span class="font-acehSemibold text-text20 ">Buscar</span><img
+                                                    src="./images/svg/icono_buscar.svg" alt="" />
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="bg-header_fondo_4 bg-cover bg-center bg-no-repeat sm:w-full h-full">
+                            <div class="text-white flex flex-col items-center pt-80 md:pt-60 pb-72 w-full md:w-6/12  mx-auto"
+                                data-aos="fade-up" data-aos-offset="150">
+                                <div class="text-center">
+                                    <p class="font-acehMedium text-text14 md:text-text20">
+                                        Suspendisse nec interdum orci, a agestas diam.
+                                    </p>
+                                    <h1 class="text-text48 font-acehSemibold md:text-text92 leading-none">
+                                        Viajar, Explorar el mundo
+                                    </h1>
+                                </div>
+                                <div class="pt-10 md:pt-20 w-full">
+                                    <form action="#" class="w-11/12 lg:w-8/12 mx-auto ">
+                                        <div
+                                            class="flex flex-col gap-5 2md:flex-row items-center justify-center 2md:bg-white py-2 md:px-2 rounded-full ">
+                                            <input type="text"
+                                                class="py-4 2md:py-2 rounded-full focus:outline-none w-full text-gray-700 text-center border-none text-text16 md:text-text20"
+                                                placeholder="¿Cuál será tu próximo destino?" />
+
+                                            <button type="submit"
+                                                class="px-10 py-3 rounded-full bg-colorBackgroundHeader flex justify-center items-center gap-2 hover:bg-colorBackgroundMainTop duration-500">
+                                                <span class="font-acehSemibold text-text20 ">Buscar</span><img
+                                                    src="./images/svg/icono_buscar.svg" alt="" />
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="bg-header_fondo_5 bg-cover bg-center bg-no-repeat sm:w-full h-full">
+                            <div class="text-white flex flex-col items-center pt-80 md:pt-60 pb-72 w-full md:w-6/12  mx-auto"
+                                data-aos="fade-up" data-aos-offset="150">
+                                <div class="text-center">
+                                    <p class="font-acehMedium text-text14 md:text-text20">
+                                        Suspendisse nec interdum orci, a agestas diam.
+                                    </p>
+                                    <h1 class="text-text48 font-acehSemibold md:text-text92 leading-none">
+                                        Viajar, Explorar el mundo
+                                    </h1>
+                                </div>
+                                <div class="pt-10 md:pt-20 w-full">
+                                    <form action="#" class="w-11/12 lg:w-8/12 mx-auto ">
+                                        <div
+                                            class="flex flex-col gap-5 2md:flex-row items-center justify-center 2md:bg-white py-2 md:px-2 rounded-full ">
+                                            <input type="text"
+                                                class="py-4 2md:py-2 rounded-full focus:outline-none w-full text-gray-700 text-center border-none text-text16 md:text-text20"
+                                                placeholder="¿Cuál será tu próximo destino?" />
+
+                                            <button type="submit"
+                                                class="px-10 py-3 rounded-full bg-colorBackgroundHeader flex justify-center items-center gap-2 hover:bg-colorBackgroundMainTop duration-500">
+                                                <span class="font-acehSemibold text-text20 ">Buscar</span><img
+                                                    src="./images/svg/icono_buscar.svg" alt="" />
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="bg-header_fondo_6 bg-cover bg-center bg-no-repeat sm:w-full h-full">
+                            <div class="text-white flex flex-col items-center pt-80 md:pt-60 pb-72 w-full md:w-6/12  mx-auto"
+                                data-aos="fade-up" data-aos-offset="150">
+                                <div class="text-center">
+                                    <p class="font-acehMedium text-text14 md:text-text20">
+                                        Suspendisse nec interdum orci, a agestas diam.
+                                    </p>
+                                    <h1 class="text-text48 font-acehSemibold md:text-text92 leading-none">
+                                        Viajar, Explorar el mundo
+                                    </h1>
+                                </div>
+                                <div class="pt-10 md:pt-20 w-full">
+                                    <form action="#" class="w-11/12 lg:w-8/12 mx-auto ">
+                                        <div
+                                            class="flex flex-col gap-5 2md:flex-row items-center justify-center 2md:bg-white py-2 md:px-2 rounded-full ">
+                                            <input type="text"
+                                                class="py-4 2md:py-2 rounded-full focus:outline-none w-full text-gray-700 text-center border-none text-text16 md:text-text20"
+                                                placeholder="¿Cuál será tu próximo destino?" />
+
+                                            <button type="submit"
+                                                class="px-10 py-3 rounded-full bg-colorBackgroundHeader flex justify-center items-center gap-2 hover:bg-colorBackgroundMainTop duration-500">
+                                                <span class="font-acehSemibold text-text20 ">Buscar</span><img
+                                                    src="./images/svg/icono_buscar.svg" alt="" />
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="bg-header_fondo_7 bg-cover bg-center bg-no-repeat sm:w-full h-full">
+                            <div class="text-white flex flex-col items-center pt-80 md:pt-60 pb-72 w-full md:w-6/12  mx-auto"
+                                data-aos="fade-up" data-aos-offset="150">
+                                <div class="text-center">
+                                    <p class="font-acehMedium text-text14 md:text-text20">
+                                        Suspendisse nec interdum orci, a agestas diam.
+                                    </p>
+                                    <h1 class="text-text48 font-acehSemibold md:text-text92 leading-none">
+                                        Viajar, Explorar el mundo
+                                    </h1>
+                                </div>
+                                <div class="pt-10 md:pt-20 w-full">
+                                    <form action="#" class="w-11/12 lg:w-8/12 mx-auto ">
+                                        <div
+                                            class="flex flex-col gap-5 2md:flex-row items-center justify-center 2md:bg-white py-2 md:px-2 rounded-full ">
+                                            <input type="text"
+                                                class="py-4 2md:py-2 rounded-full focus:outline-none w-full text-gray-700 text-center border-none text-text16 md:text-text20"
+                                                placeholder="¿Cuál será tu próximo destino?" />
+
+                                            <button type="submit"
+                                                class="px-10 py-3 rounded-full bg-colorBackgroundHeader flex justify-center items-center gap-2 hover:bg-colorBackgroundMainTop duration-500">
+                                                <span class="font-acehSemibold text-text20 ">Buscar</span><img
+                                                    src="./images/svg/icono_buscar.svg" alt="" />
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="bg-header_fondo_8 bg-cover bg-center bg-no-repeat sm:w-full h-full">
+                            <div class="text-white flex flex-col items-center pt-80 md:pt-60 pb-72 w-full md:w-6/12  mx-auto"
+                                data-aos="fade-up" data-aos-offset="150">
+                                <div class="text-center">
+                                    <p class="font-acehMedium text-text14 md:text-text20">
+                                        Suspendisse nec interdum orci, a agestas diam.
+                                    </p>
+                                    <h1 class="text-text48 font-acehSemibold md:text-text92 leading-none">
+                                        Viajar, Explorar el mundo
+                                    </h1>
+                                </div>
+                                <div class="pt-10 md:pt-20 w-full">
+                                    <form action="#" class="w-11/12 lg:w-8/12 mx-auto ">
+                                        <div
+                                            class="flex flex-col gap-5 2md:flex-row items-center justify-center 2md:bg-white py-2 md:px-2 rounded-full ">
+                                            <input type="text"
+                                                class="py-4 2md:py-2 rounded-full focus:outline-none w-full text-gray-700 text-center border-none text-text16 md:text-text20"
+                                                placeholder="¿Cuál será tu próximo destino?" />
+
+                                            <button type="submit"
+                                                class="px-10 py-3 rounded-full bg-colorBackgroundHeader flex justify-center items-center gap-2 hover:bg-colorBackgroundMainTop duration-500">
+                                                <span class="font-acehSemibold text-text20 ">Buscar</span><img
+                                                    src="./images/svg/icono_buscar.svg" alt="" />
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        {{-- <section class="bg-header_fondo bg-cover bg-center bg-no-repeat sm:w-full h-full py-44">
             <div class="text-white flex flex-col items-center pt-16 md:pt-44 w-full md:w-6/12  mx-auto" data-aos="fade-up"
                 data-aos-offset="150">
                 <div class="text-center">
@@ -58,7 +353,7 @@
                     </form>
                 </div>
             </div>
-        </section>
+        </section> --}}
 
         <section class="bg-colorBackgroundMainTop">
             <div class=" w-11/12 md:w-full mx-auto">
@@ -73,17 +368,19 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-white group-hover:text-colorTextMainTop font-acehSemibold text-text32 md:text-text36">
+                            <h3
+                                class="text-white group-hover:text-colorTextMainTop font-acehSemibold text-text32 md:text-text36">
                                 Integer quis turpis
                             </h3>
-                            <p class="text-white group-hover:text-colorTextMainTop font-acehMedium text-text18 md:text-text22">
+                            <p
+                                class="text-white group-hover:text-colorTextMainTop font-acehMedium text-text18 md:text-text22">
                                 Nam venenatis elementum lorem, in sodales massa dictum at. Phasellus sed libero.
                             </p>
                         </div>
                     </div>
 
                     <div class="group  hover:bg-white  md:duration-500 flex flex-col justify-center py-10 md:p-20 gap-5">
-                        <div >
+                        <div>
                             <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -94,17 +391,20 @@
 
                         </div>
                         <div>
-                            <h3 class="text-white group-hover:text-colorTextMainTop font-acehSemibold text-text32 md:text-text36">
+                            <h3
+                                class="text-white group-hover:text-colorTextMainTop font-acehSemibold text-text32 md:text-text36">
                                 Integer quis turpis
                             </h3>
-                            <p class="text-white group-hover:text-colorTextMainTop font-acehMedium text-text18 md:text-text22">
-                                Nam venenatis elementum lorem, in sodales massa dictum at. Phasellus sed libero faucibus, pharetra dolor.
+                            <p
+                                class="text-white group-hover:text-colorTextMainTop font-acehMedium text-text18 md:text-text22">
+                                Nam venenatis elementum lorem, in sodales massa dictum at. Phasellus sed libero faucibus,
+                                pharetra dolor.
                             </p>
                         </div>
                     </div>
 
                     <div class="group  hover:bg-white  md:duration-500 flex flex-col justify-center py-10 md:p-20 gap-5 ">
-                        <div >
+                        <div>
                             <svg width="48" height="40" viewBox="0 0 48 40" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -113,10 +413,12 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="text-white group-hover:text-colorTextMainTop font-acehSemibold text-text32 md:text-text36">
+                            <h3
+                                class="text-white group-hover:text-colorTextMainTop font-acehSemibold text-text32 md:text-text36">
                                 Integer quis turpisds
                             </h3>
-                            <p class="text-white group-hover:text-colorTextMainTop font-acehMedium text-text18 md:text-text22">
+                            <p
+                                class="text-white group-hover:text-colorTextMainTop font-acehMedium text-text18 md:text-text22">
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                 Perferendi.
                             </p>
@@ -134,26 +436,21 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-11/12 mx-auto gap-10 md:gap-4 2xl:gap-16">
                 <!-- 1 -->
                 <div data-aos="fade-up" data-aos-offset="150">
-                    <div class="img-container bg-red-500 rounded-[20px]">
-                        <div class="relative">
-                            <img src="./images/img/cusco.png" alt="cusco" class="w-full shadow-lg" />
-                            <div
-                                class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 bg-black bg-opacity-50 hover:opacity-100 rounded-[20px] md:rounded-[32px]">
+                    <div class="image__effect-hover rounded-[20px]">
+                        <img src="./images/img/cusco.png" alt="cusco" class="w-full shadow-lg" />
+                        <div class="image__effect-content flex justify-around text-center gap-5">
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
                             </div>
-                        </div>
-                        <!-- ------ -->
-                        <div class="newsletter flex justify-around text-center">
-                            <p class="text-white font-acehSemibold text-text28 md:text-text32">
-                                98 <span class="block font-acehMedium text-text12 md:text-text16">Actividades</span>
-                            </p>
-                            <p class="text-white font-acehSemibold text-text28 md:text-text32">
-                                23,534
-                                <span class="block font-acehMedium text-text12 md:text-text16">Tickets vendidos</span>
-                            </p>
-                            <p class="text-white font-acehSemibold text-text28 md:text-text32">
-                                9,0/10
-                                <span class="block font-acehMedium text-text12 md:text-text16">Valoraciones</span>
-                            </p>
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">23,534</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Tickets vendidos</span>
+                            </div>
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">9,0/10</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Valoraciones</span>
+                            </div>
                         </div>
                     </div>
 
@@ -162,7 +459,8 @@
                     <div class="pb-5">
                         <h3 class="font-acehSemibold text-text48 md:text-text52 pt-5 pb-2">Cusco</h3>
                         <p class="font-acehMedium text-text18 md:text-text22 py-3  ">
-                            Nam venenatis elementum lorem, in sodales massa dictum at. Phasellus sed libero faucibus, pharetra dolor.
+                            Nam venenatis elementum lorem, in sodales massa dictum at. Phasellus sed libero faucibus,
+                            pharetra dolor.
                         </p>
                         <div class="flex gap-2 py-2">
                             <img src="./images/svg/start.svg" alt="estrella" />
@@ -185,26 +483,21 @@
                 </div>
                 <!-- 2 -->
                 <div data-aos="fade-up" data-aos-offset="150">
-                    <div class="img-container">
-                        <div class="relative">
-                            <img src="./images/img/lisboa.png" alt="lisboa" class="w-full rounded-2xl" />
-                            <div
-                                class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 bg-black bg-opacity-50 hover:opacity-100 rounded-[20px] md:rounded-[32px]">
+                    <div class="image__effect-hover rounded-[20px]">
+                        <img src="./images/img/lisboa.png" alt="cusco" class="w-full shadow-lg" />
+                        <div class="image__effect-content flex justify-around text-center gap-5">
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
                             </div>
-                        </div>
-                        <!-- ------ -->
-                        <div class="newsletter flex justify-around text-center">
-                            <p class="text-white font-acehSemibold text-text28 md:text-text32">
-                                98 <span class="block font-acehMedium text-text12 md:text-text16">Actividades</span>
-                            </p>
-                            <p class="text-white font-acehSemibold text-text28 md:text-text32">
-                                23,534
-                                <span class="block font-acehMedium text-text12 md:text-text16">Tickets vendidos</span>
-                            </p>
-                            <p class="text-white font-acehSemibold text-text28 md:text-text32">
-                                9,0/10
-                                <span class="block font-acehMedium text-text12 md:text-text16">Valoraciones</span>
-                            </p>
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">23,534</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Tickets vendidos</span>
+                            </div>
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">9,0/10</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Valoraciones</span>
+                            </div>
                         </div>
                     </div>
 
@@ -212,9 +505,9 @@
 
                     <div class="pb-5">
                         <h3 class="font-acehSemibold text-text48 md:text-text52 pt-5 pb-2">Lisboa</h3>
-                        <p class="font-acehMedium text-text18 md:text-text22 py-3">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Doloribus iste soluta dolore corrupti eos rerum ipsamss.
+                        <p class="font-acehMedium text-text18 md:text-text22 py-3  ">
+                            Nam venenatis elementum lorem, in sodales massa dictum at. Phasellus sed libero faucibus,
+                            pharetra dolor.
                         </p>
                         <div class="flex gap-2 py-2">
                             <img src="./images/svg/start.svg" alt="estrella" />
@@ -223,8 +516,9 @@
                             <img src="./images/svg/start_sin_color.svg" alt="estrella" />
                             <img src="./images/svg/start_sin_color.svg" alt="estrella" />
                         </div>
+
                         <div class="flex justify-between items-center">
-                            <p class="font-acehSemibold text-text28">
+                            <p class="font-acehSemibold text-text28 md:text-text32">
                                 2,343
                                 <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
                             </p>
@@ -236,26 +530,21 @@
                 </div>
                 <!-- 3 -->
                 <div data-aos="fade-up" data-aos-offset="150">
-                    <div class="img-container">
-                        <div class="relative">
-                            <img src="./images/img/dubai.png" alt="dubai" class="w-full rounded-2xl" />
-                            <div
-                                class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 bg-black bg-opacity-50 hover:opacity-100 rounded-[20px] md:rounded-[32px]">
+                    <div class="image__effect-hover rounded-[20px]">
+                        <img src="./images/img/dubai.png" alt="cusco" class="w-full shadow-lg" />
+                        <div class="image__effect-content flex justify-around text-center gap-5">
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
                             </div>
-                        </div>
-                        <!-- ------ -->
-                        <div class="newsletter flex justify-around text-center">
-                            <p class="text-white font-acehSemibold text-text28">
-                                98 <span class="block font-acehMedium text-text12 md:text-text16">Actividades</span>
-                            </p>
-                            <p class="text-white font-acehSemibold text-text28">
-                                23,534
-                                <span class="block font-acehMedium text-text12 md:text-text16">Tickets vendidos</span>
-                            </p>
-                            <p class="text-white font-acehSemibold text-text28">
-                                9,0/10
-                                <span class="block font-acehMedium text-text12 md:text-text16">Valoraciones</span>
-                            </p>
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">23,534</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Tickets vendidos</span>
+                            </div>
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">9,0/10</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Valoraciones</span>
+                            </div>
                         </div>
                     </div>
 
@@ -263,9 +552,9 @@
 
                     <div class="pb-5">
                         <h3 class="font-acehSemibold text-text48 md:text-text52 pt-5 pb-2">Dubai</h3>
-                        <p class="font-acehMedium text-text18 md:text-text22 py-3">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Doloribus iste soluta dolore corrupti eos rerum ipsam.
+                        <p class="font-acehMedium text-text18 md:text-text22 py-3  ">
+                            Nam venenatis elementum lorem, in sodales massa dictum at. Phasellus sed libero faucibus,
+                            pharetra dolor.
                         </p>
                         <div class="flex gap-2 py-2">
                             <img src="./images/svg/start.svg" alt="estrella" />
@@ -274,8 +563,9 @@
                             <img src="./images/svg/start_sin_color.svg" alt="estrella" />
                             <img src="./images/svg/start_sin_color.svg" alt="estrella" />
                         </div>
+
                         <div class="flex justify-between items-center">
-                            <p class="font-acehSemibold text-text28">
+                            <p class="font-acehSemibold text-text28 md:text-text32">
                                 2,343
                                 <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
                             </p>
@@ -287,26 +577,21 @@
                 </div>
                 <!-- 4 -->
                 <div data-aos="fade-up" data-aos-offset="150">
-                    <div class="img-container">
-                        <div class="relative">
-                            <img src="./images/img/paris.png" alt="paris" class="w-full rounded-2xl" />
-                            <div
-                                class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 bg-black bg-opacity-50 hover:opacity-100 rounded-[20px] md:rounded-[32px]">
+                    <div class="image__effect-hover rounded-[20px]">
+                        <img src="./images/img/paris.png" alt="cusco" class="w-full shadow-lg" />
+                        <div class="image__effect-content flex justify-around text-center gap-5">
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
                             </div>
-                        </div>
-                        <!-- ------ -->
-                        <div class="newsletter flex justify-around text-center">
-                            <p class="text-white font-acehSemibold text-text28">
-                                98 <span class="block font-acehMedium text-text12 md:text-text16">Actividades</span>
-                            </p>
-                            <p class="text-white font-acehSemibold text-text28">
-                                23,534
-                                <span class="block font-acehMedium text-text12 md:text-text16">Tickets vendidos</span>
-                            </p>
-                            <p class="text-white font-acehSemibold text-text28">
-                                9,0/10
-                                <span class="block font-acehMedium text-text12 md:text-text16">Valoraciones</span>
-                            </p>
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">23,534</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Tickets vendidos</span>
+                            </div>
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">9,0/10</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Valoraciones</span>
+                            </div>
                         </div>
                     </div>
 
@@ -314,9 +599,9 @@
 
                     <div class="pb-5">
                         <h3 class="font-acehSemibold text-text48 md:text-text52 pt-5 pb-2">París</h3>
-                        <p class="font-acehMedium text-text18 md:text-text22 py-3">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Doloribus iste soluta dolore corrupti eos rerum ipsam.
+                        <p class="font-acehMedium text-text18 md:text-text22 py-3  ">
+                            Nam venenatis elementum lorem, in sodales massa dictum at. Phasellus sed libero faucibus,
+                            pharetra dolor.
                         </p>
                         <div class="flex gap-2 py-2">
                             <img src="./images/svg/start.svg" alt="estrella" />
@@ -325,8 +610,9 @@
                             <img src="./images/svg/start_sin_color.svg" alt="estrella" />
                             <img src="./images/svg/start_sin_color.svg" alt="estrella" />
                         </div>
+
                         <div class="flex justify-between items-center">
-                            <p class="font-acehSemibold text-text28">
+                            <p class="font-acehSemibold text-text28 md:text-text32">
                                 2,343
                                 <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
                             </p>
@@ -338,36 +624,31 @@
                 </div>
                 <!-- 5 -->
                 <div data-aos="fade-up" data-aos-offset="150">
-                    <div class="img-container">
-                        <div class="relative">
-                            <img src="./images/img/El_cairo.png" alt="el_cairo" class="w-full rounded-2xl" />
-                            <div
-                                class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 bg-black bg-opacity-50 hover:opacity-100 rounded-[20px] md:rounded-[32px]">
+                    <div class="image__effect-hover rounded-[20px]">
+                        <img src="./images/img/El_cairo.png" alt="cusco" class="w-full shadow-lg" />   
+                        <div class="image__effect-content flex justify-around text-center gap-5">
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
                             </div>
-                        </div>
-                        <!-- ------ -->
-                        <div class="newsletter flex justify-around text-center">
-                            <p class="text-white font-acehSemibold text-text28">
-                                98 <span class="block font-acehMedium text-text12 md:text-text16">Actividades</span>
-                            </p>
-                            <p class="text-white font-acehSemibold text-text28">
-                                23,534
-                                <span class="block font-acehMedium text-text12 md:text-text16">Tickets vendidos</span>
-                            </p>
-                            <p class="text-white font-acehSemibold text-text28">
-                                9,0/10
-                                <span class="block font-acehMedium text-text12 md:text-text16">Valoraciones</span>
-                            </p>
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">23,534</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Tickets vendidos</span>
+                            </div>
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">9,0/10</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Valoraciones</span>
+                            </div>
                         </div>
                     </div>
 
                     <!-- -- -->
 
                     <div class="pb-5">
-                        <h3 class="font-acehSemibold text-text48 md:text-text52 pt-5 pb-2">El Cairo</h3>
-                        <p class="font-acehMedium text-text18 md:text-text22 py-3">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Doloribus iste soluta dolore corrupti eos rerum ipsam.
+                        <h3 class="font-acehSemibold text-text48 md:text-text52 pt-5 pb-2">Egipto</h3>
+                        <p class="font-acehMedium text-text18 md:text-text22 py-3  ">
+                            Nam venenatis elementum lorem, in sodales massa dictum at. Phasellus sed libero faucibus,
+                            pharetra dolor.
                         </p>
                         <div class="flex gap-2 py-2">
                             <img src="./images/svg/start.svg" alt="estrella" />
@@ -376,8 +657,9 @@
                             <img src="./images/svg/start_sin_color.svg" alt="estrella" />
                             <img src="./images/svg/start_sin_color.svg" alt="estrella" />
                         </div>
+
                         <div class="flex justify-between items-center">
-                            <p class="font-acehSemibold text-text28">
+                            <p class="font-acehSemibold text-text28 md:text-text32">
                                 2,343
                                 <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
                             </p>
@@ -389,26 +671,21 @@
                 </div>
                 <!-- 6 -->
                 <div data-aos="fade-up" data-aos-offset="150">
-                    <div class="img-container">
-                        <div class="relative">
-                            <img src="./images/img/venecia.png" alt="venecia" class="w-full rounded-2xl" />
-                            <div
-                                class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 bg-black bg-opacity-50 hover:opacity-100 rounded-[20px] md:rounded-[32px]">
+                    <div class="image__effect-hover rounded-[20px]">
+                        <img src="./images/img/Venecia.png" alt="cusco" class="w-full shadow-lg" />
+                        <div class="image__effect-content flex justify-around text-center gap-5">
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
                             </div>
-                        </div>
-                        <!-- ------ -->
-                        <div class="newsletter flex justify-around text-center">
-                            <p class="text-white font-acehSemibold text-text28">
-                                98 <span class="block font-acehMedium text-text12 md:text-text16">Actividades</span>
-                            </p>
-                            <p class="text-white font-acehSemibold text-text28">
-                                23,534
-                                <span class="block font-acehMedium text-text12 md:text-text16">Tickets vendidos</span>
-                            </p>
-                            <p class="text-white font-acehSemibold text-text28">
-                                9,0/10
-                                <span class="block font-acehMedium text-text12 md:text-text16">Valoraciones</span>
-                            </p>
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">23,534</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Tickets vendidos</span>
+                            </div>
+                            <div class="text-white text-center">
+                                <span class="block font-acehSemibold text-text28 xl:text-text34">9,0/10</span>
+                                <span class="block font-acehMedium text-text12 xl:text-text18">Valoraciones</span>
+                            </div>
                         </div>
                     </div>
 
@@ -416,9 +693,9 @@
 
                     <div class="pb-5">
                         <h3 class="font-acehSemibold text-text48 md:text-text52 pt-5 pb-2">Venecia</h3>
-                        <p class="font-acehMedium text-text18 md:text-text22 py-3">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Doloribus iste soluta dolore corrupti eos rerum ipsam.
+                        <p class="font-acehMedium text-text18 md:text-text22 py-3  ">
+                            Nam venenatis elementum lorem, in sodales massa dictum at. Phasellus sed libero faucibus,
+                            pharetra dolor.
                         </p>
                         <div class="flex gap-2 py-2">
                             <img src="./images/svg/start.svg" alt="estrella" />
@@ -427,8 +704,9 @@
                             <img src="./images/svg/start_sin_color.svg" alt="estrella" />
                             <img src="./images/svg/start_sin_color.svg" alt="estrella" />
                         </div>
+
                         <div class="flex justify-between items-center">
-                            <p class="font-acehSemibold text-text28">
+                            <p class="font-acehSemibold text-text28 md:text-text32">
                                 2,343
                                 <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
                             </p>
@@ -456,7 +734,8 @@
         </section>
 
         <section data-aos="fade-up" data-aos-offset="150">
-            <h2 class="font-acehSemibold text-text40 md:text-text64 w-11/12 mx-auto my-5 leading-none md:leading-tight text-[#0F1B2C]">
+            <h2
+                class="font-acehSemibold text-text40 md:text-text64 w-11/12 mx-auto my-5 leading-none md:leading-tight text-[#0F1B2C]">
                 Actividades destacadas
             </h2>
             <div
@@ -762,7 +1041,22 @@
 
 
 @section('scripts_improtados')
-    <script></script>
+    <script>
+        var swiper = new Swiper(".slider__headers", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            grabCursor: true,
+            centeredSlides: false,
+            initialSlide: 0,
+            allowTouchMove: false,
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true
+            },
+        });
+    </script>
 @stop
 
 @stop

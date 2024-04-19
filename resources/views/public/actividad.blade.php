@@ -621,7 +621,7 @@
 
                 <div class="flex flex-col md:flex-row md:justify-between md:items-center text-[#0F1B2C]">
                     <div class="flex gap-10 py-10 justify-between">
-                        <div class="">
+                        <div>
                             <a
                                 class="mostrar-filtros font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-2 md:py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 flex gap-2 items-center">
                                 Filtros
@@ -1073,7 +1073,7 @@
             </div>
 
             <div class="w-11/12 mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-20 md:gap-10 text-[#0F1B2C]">
+                <div class="grid grid-cols-1 2lg:grid-cols-2 mt-10 gap-20 md:gap-10 text-[#0F1B2C]">
                     <div class="" data-aos="fade-up" data-aos-offset="150">
                         <div class="overflow-hidden rounded-2xl">
                             <div class="img-container">
