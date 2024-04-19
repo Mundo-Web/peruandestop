@@ -35,7 +35,7 @@
     <main class="pb-24">
         <section
             class="bg-destino__mobile_fondo md:bg-destino__desktop_fondo bg-cover bg-center bg-no-repeat sm:w-full h-full">
-            <div class="text-white w-11/12 mx-auto pt-96" data-aos="fade-up">
+            <div class="text-white w-11/12 mx-auto pt-96" data-aos="fade-up" data-aos-offset="150">
                 <div class="flex flex-col justify-end md:grid grid-cols-1 pb-12 md:py-10 md:gap-24">
                     <div class="flex flex-col items-start my-12">
                         <a href="#"
@@ -66,7 +66,7 @@
             </div>
         </section>
         <section>
-            <div class="gap-10 w-11/12 mx-auto">
+            <div class="gap-10 w-11/12 mx-auto" data-aos="fade-up" data-aos-offset="150">
                 <div class="flex flex-row justify-between items-center my-10 gap-5">
                     <h2
                         class="font-acehSemibold text-text32 md:text-text64 leading-none md:leading-tight text-center md:text-left">
@@ -468,7 +468,7 @@
                     </div>
                 </div> --}}
                 <!-- CARRUSEL PARRA MOBILE -->
-                <div class="w-11/12 mx-auto">
+                <div class="w-11/12 mx-auto" data-aos="fade-up" data-aos-offset="150">
                     <div class="swiper productos-explorar-destino my-5">
                         <div class="swiper-wrapper text-[#0F1B2C]">
                             <div class="swiper-slide rounded-2xl">
@@ -1299,7 +1299,7 @@
                 </div>
             </div>
 
-            <div class="flex justify-center mt-10">
+            <div class="flex justify-center mt-10" data-aos="fade-up" data-aos-offset="150">
                 <a href="destino.html"
                     class="font-acehSemibold text-text18 md:text-text22 rounded-full border-colorBorder border-2 py-3 px-5 group md:duration-500 text-[#0F1B2C] hover:bg-colorBackgroundHeader hover:text-white">Ver
                     más Destinos

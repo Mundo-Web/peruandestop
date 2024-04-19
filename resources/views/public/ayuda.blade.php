@@ -258,8 +258,8 @@
             </div>
         </section>
 
-        <section data-aos="fade-up" data-aos-offset="150">
-            <div class="bg-[#F5FAFF] w-11/12 mx-auto text-center py-24 my-32">
+        <section class="bg-[#F5FAFF] w-11/12 mx-auto">
+            <div class="text-center py-24 my-32" data-aos="fade-up" data-aos-offset="150">
                 <div class="flex justify-center items-center">
                     <img src="./images/img/Avatar group.png" alt="" />
                 </div>

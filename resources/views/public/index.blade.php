@@ -475,7 +475,7 @@
                                 2,343
                                 <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
                             </p>
-                            <a href="detalle_actividad.html"
+                            <a href="{{route('detalleActividad')}}"
                                 class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">Ver
                                 destino</a>
                         </div>
@@ -522,7 +522,7 @@
                                 2,343
                                 <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
                             </p>
-                            <a href="detalle_actividad.html"
+                            <a href="{{route('detalleActividad')}}"
                                 class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">Ver
                                 destino</a>
                         </div>
@@ -569,7 +569,7 @@
                                 2,343
                                 <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
                             </p>
-                            <a href="detalle_actividad.html"
+                            <a href="{{route('detalleActividad')}}"
                                 class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">Ver
                                 destino</a>
                         </div>
@@ -616,7 +616,7 @@
                                 2,343
                                 <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
                             </p>
-                            <a href="detalle_actividad.html"
+                            <a href="{{route('detalleActividad')}}"
                                 class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">Ver
                                 destino</a>
                         </div>
@@ -663,7 +663,7 @@
                                 2,343
                                 <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
                             </p>
-                            <a href="detalle_actividad.html"
+                            <a href="{{route('detalleActividad')}}"
                                 class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">Ver
                                 destino</a>
                         </div>
@@ -710,7 +710,7 @@
                                 2,343
                                 <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
                             </p>
-                            <a href="detalle_actividad.html"
+                            <a href="{{route('detalleActividad')}}"
                                 class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">Ver
                                 destino</a>
                         </div>
@@ -833,7 +833,7 @@
                                 120 US$
                                 <span class="block font-acehMedium text-text16 md:text-text20">Por persona</span>
                             </p>
-                            <a href="actividad.html"
+                            <a href="{{route('actividad')}}"
                                 class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">Ver
                                 Actividad</a>
                         </div>
@@ -885,7 +885,7 @@
                                 90 US$
                                 <span class="block font-acehMedium text-text16 md:text-text20">Por persona</span>
                             </p>
-                            <a href="actividad.html"
+                            <a href="{{route('actividad')}}"
                                 class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">Ver
                                 Actividad</a>
                         </div>
@@ -951,7 +951,7 @@
                                 Doloribus iste soluta dolore corrupti eos rerum ipsam.
                             </p>
                         </div>
-                        <a href="actividad.html"
+                        <a href="{{route('actividad')}}"
                             class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader py-3 px-5 rounded-full hover:bg-colorBackgroundMainTop md:duration-500 inline-block text-center w-full md:inline md:w-auto">
                             Ver Actividad
                         </a>
@@ -976,7 +976,7 @@
                                 Doloribus iste soluta dolore corrupti eos rerum ipsam.
                             </p>
                         </div>
-                        <a href="actividad.html"
+                        <a href="{{route('actividad')}}"
                             class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader py-3 px-5 rounded-full hover:bg-colorBackgroundMainTop md:duration-500 inline-block text-center w-full md:inline md:w-auto">
                             Ver Actividad
                         </a>
@@ -1002,7 +1002,7 @@
                                 Doloribus iste soluta dolore corrupti eos rerum ipsam.
                             </p>
                         </div>
-                        <a href="actividad.html"
+                        <a href="{{route('actividad')}}"
                             class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader py-3 px-5 rounded-full hover:bg-colorBackgroundMainTop md:duration-500 inline-block text-center w-full md:inline md:w-auto">
                             Ver Actividad
                         </a>
@@ -1028,7 +1028,7 @@
                                 Doloribus iste soluta dolore corrupti eos rerum ipsam.
                             </p>
                         </div>
-                        <a href="actividad.html"
+                        <a href="{{route('actividad')}}"
                             class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader py-3 px-5 rounded-full hover:bg-colorBackgroundMainTop md:duration-500 inline-block text-center w-full md:inline md:w-auto ">
                             Ver Actividad
                         </a>

@@ -70,7 +70,7 @@
             </div>
         </section>
 
-        <section class="w-11/12 mx-auto">
+        <section class="w-11/12 mx-auto" data-aos="fade-up" data-aos-offset="150">
             <h2 class="font-acehSemibold text-text30 md:text-text36 text-[#0F1B2C] my-12 leading-none md:leading-tight">
                 Publicaciones Recientes
             </h2>
@@ -533,7 +533,7 @@
                 </div>
             </div>
 
-            <div>
+            <div data-aos="fade-up" data-aos-offset="150">
                 <div class="flex justify-between pt-24" aria-label="Pagination">
                     <a class="text-[#3F76BB] flex gap-2 items-center" href="/page/1">
                         <img src="./images/svg/previo.svg" alt="previo" />

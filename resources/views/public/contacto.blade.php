@@ -34,7 +34,7 @@
 @section('content')
     <main>
         <section class="w-11/12 mx-auto gap-5 grid grid-cols-1 grid-rows-1 lg:grid-cols-2 lg:grid-rows-2 lg:gap-10 pt-60">
-            <div class="flex flex-col gap-5 col-span-1 row-span-1">
+            <div class="flex flex-col gap-5 col-span-1 row-span-1" data-aos="fade-up" data-aos-offset="150">
                 <h1 class="font-acehSemibold text-text40 md:text-text44 text-[#141841] leading-none md:leading-tight">
                     A nuestro amable equipo le encantaría saber de usted
                 </h1>
@@ -74,7 +74,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-col gap-10 col-span-1 lg:row-span-2">
+            <div class="flex flex-col gap-10 col-span-1 lg:row-span-2" data-aos="fade-up" data-aos-offset="150">
                 <div class="flex flex-col gap-2">
                     <p class="font-acehSemibold text-text36 md:text-text40 text-[#3F76BB]">
                         Ponerse en contacto
@@ -170,7 +170,7 @@
                 </div>
             </div>
 
-            <div class="col-span-1 row-span-1 lg:-mt-[50px] xl:-mt-[80px] 2xl:-mt-[100px] 3xl:-mt-[200px]">
+            <div class="col-span-1 row-span-1 lg:-mt-[50px] xl:-mt-[80px] 2xl:-mt-[100px] 3xl:-mt-[200px]" data-aos="fade-up" data-aos-offset="150">
                 <img src="./images/img/contacto_image.png" alt="imagen contacto" class="w-full h-full"/>
             </div>
         </section>

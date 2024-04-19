@@ -256,13 +256,13 @@ button {
     position: absolute;
     top: 70px; /* 70px */
     right: 70px;
-    width: 235px;
+    width: 250px;
 }
 
 .navigation {
     position: fixed;
-    left: -100%;
-    width: 350px;
+    left: -100%; /* right: -100% */
+    width: 360px;
     height: 100%;
     background-color: #3f76bb;
     transition: 0.5s;
@@ -277,7 +277,7 @@ button {
     text-align: left;
     text-transform: initial;
     list-style-type: none;
-    font-size: 16px;
+    /* font-size: 16px; */
     padding: 10px 15px;
     /* border-bottom: 1pt solid #252525; */
 }
@@ -320,7 +320,7 @@ button {
 }
 
 .navigation.active {
-    left: 0;
+    left: 0; /* right: 0 */
 }
 
 .hamburger.open #bar1 {
@@ -499,7 +499,7 @@ button {
     src: url("../fonts/mont-heavydemo-webfont.woff") format("woff");
 }
 
-/* ------- prueba para hover --- */
+/* ------- efecto hover en las imagenes --- */
 
 .image__effect-hover {
     overflow: hidden;
