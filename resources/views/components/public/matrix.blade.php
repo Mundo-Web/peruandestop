@@ -16,10 +16,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Index</title>
 </head>
-<body>
+<body class="scroll__hidden_explorar">
     @include('components.public.header')
     
-    <div class="main bg-slate-100 p-6">
+    <div>
         {{-- Aqui va el contenido de cada pagina --}}
         @yield('content')
 

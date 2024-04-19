@@ -1,20 +1,500 @@
-
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
 
 /* Additional styles */
-@import 'additional-styles/utility-patterns.css';
-@import 'additional-styles/flatpickr.css';
+@import "additional-styles/utility-patterns.css";
+@import "additional-styles/flatpickr.css";
 
-@import 'tailwindcss/utilities';
+@import "tailwindcss/utilities";
 
-
-@layer components{
-
-    #tabladatos_wrapper .dt-length select{
+@layer components {
+    #tabladatos_wrapper .dt-length select {
         @apply px-5;
     }
-
-     
 }
 
+/* ------- */
+
+.img-container {
+    overflow: hidden;
+}
+
+.newsletter {
+    position: relative;
+    top: 150px;
+    width: 100%;
+    height: 0;
+    -webkit-transition: top 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: top 0.5s;
+}
+
+.img-container:hover .newsletter {
+    top: -80px;
+}
+
+.cities {
+    transition: transform 0.9s ease;
+}
+/* .cities:hover {
+    transform: scale(1.1);
+  } */
+
+.modal-mostrar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s 0.9s;
+    --transform: translateY(-100vh);
+    --transition: transform 0.8s;
+}
+
+.modal--show {
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity 0.6s;
+    --transform: translateY(0);
+    --transition: transform 0.8s 0.8s;
+}
+
+.modal__mostrar-info {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: #fff;
+
+    padding: 20px;
+    place-items: center;
+    grid-auto-columns: 100%;
+    transform: var(--transform);
+    transition: var(--transition);
+
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.modal__close-mostrar {
+    display: inline-block;
+}
+/* ---- */
+.modal-destinos {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s 0.9s;
+    --transform: translateY(-100vh);
+    --transition: transform 0.8s;
+    padding-top: 5rem; /* Moverlo verticalmente */
+}
+
+.modal__mostrar-destino {
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+
+    margin: auto;
+    width: 90%;
+    max-width: 800px; /* Ancho del modas */
+    max-height: auto; /* altura del moda */
+    background-color: #fff;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    place-items: center;
+    grid-auto-columns: 100%;
+    transform: var(--transform);
+    transition: var(--transition);
+}
+
+.modal__mostrar-destino h2 {
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.modal--show--destinos {
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity 0.6s;
+    --transform: translateY(0);
+    --transition: transform 0.8s 0.8s;
+}
+
+.actividades_scroll::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f1f1f1;
+}
+
+.actividades_scroll::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    border-radius: 2rem;
+}
+
+/* ---- */
+
+.modal-filtros {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s 0.9s;
+    --transform: translateY(-100vh);
+    --transition: transform 0.8s;
+}
+
+.modal--show--filtros {
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity 0.6s;
+    --transform: translateY(0);
+    --transition: transform 0.8s 0.8s;
+}
+
+.modal__mostrar-filtros {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: #fff;
+
+    padding: 20px;
+    place-items: center;
+    grid-auto-columns: 100%;
+    transform: var(--transform);
+    transition: var(--transition);
+
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.filtros_scroll::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f1f1f1;
+}
+
+.filtros_scroll::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    border-radius: 2rem;
+}
+
+.image,
+.image-mobile {
+    position: relative;
+}
+
+.contain,
+.contain-mobile {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.contain:hover,
+.contain-mobile:hover {
+    opacity: 1;
+}
+
+.contain > * {
+    transform: translateY(25px);
+    transition: transform 0.6s;
+}
+
+.contain:hover > * {
+    transform: translateY(0px);
+}
+
+/* -------------------------- */
+/* Para ocultarlos se debe hacer display:none */
+.dropdown-moneda:hover .dropdown-menu-moneda {
+    display: block;
+}
+
+.dropdown-idioma:hover .dropdown-menu-idioma {
+    display: block;
+}
+
+.dropdown-perfil:hover .dropdown-menu-perfil {
+    display: block;
+}
+
+.dropdown-telefono:hover .dropdown-menu-telefono {
+    display: block;
+}
+/* -------- menu ---- */
+
+a,
+button {
+    cursor: pointer;
+}
+
+.menu-list {
+    position: absolute;
+    top: 70px; /* 70px */
+    right: 70px;
+    width: 235px;
+}
+
+.navigation {
+    position: fixed;
+    left: -100%;
+    width: 350px;
+    height: 100%;
+    background-color: #3f76bb;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.navigation ul li {
+    color: #fff;
+    text-align: left;
+    text-transform: initial;
+    list-style-type: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    /* border-bottom: 1pt solid #252525; */
+}
+
+.bar {
+    position: fixed;
+}
+
+.hamburger {
+    margin-right: 30%;
+    display: block;
+    /* top: 5%;
+        left: 95%; */
+    width: 30px;
+    height: 15px;
+    transform: translateY(-50%);
+    border: 0;
+    background: 0 0;
+}
+
+#position {
+    margin-top: 10%;
+    margin-left: 85%;
+}
+
+.bar {
+    top: 3px;
+    background: white;
+    width: 100%;
+    height: 4px;
+    transition: all 0.3s ease-in;
+}
+
+#bar2 {
+    top: 11px;
+}
+
+#bar3 {
+    top: 19px;
+}
+
+.navigation.active {
+    left: 0;
+}
+
+.hamburger.open #bar1 {
+    background-color: #fff;
+    transform: rotate(45deg) translate(6px, 5px);
+}
+
+.hamburger.open #bar2 {
+    background-color: transparent;
+}
+
+.hamburger.open #bar3 {
+    background-color: #fff;
+    transform: rotate(-45deg) translate(6px, -5px);
+}
+
+/* --- */
+/* ---------------------------------------------- modal mostrar mas ------------------------------------------------------------------------- */
+
+/* clase del modal oculto */
+.modal-destino {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s 0.9s;
+    --transform: translateY(-100vh);
+    --transition: transform 0.8s;
+    -webkit-transition: opacity 0.6s 0.9s;
+    -moz-transition: opacity 0.6s 0.9s;
+    -ms-transition: opacity 0.6s 0.9s;
+    -o-transition: opacity 0.6s 0.9s;
+}
+
+/* S le agregar cuando se da click en abri en modal */
+.modal--show {
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity 0.6s;
+    --transform: translateY(0);
+    --transition: transform 0.8s 0.8s;
+}
+
+/* Tamaño del elemento que esta dentr del modal */
+.modal__mostrar-destino {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: #fff;
+
+    padding: 20px;
+    place-items: center;
+    grid-auto-columns: 100%;
+    transform: var(--transform);
+    transition: var(--transition);
+
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+/* Cierra el modal */
+/* .modal__close {
+    display: inline-block;
+  } */
+/* -------------------------- modal filtros ---------------------- */
+
+/* clase del modal oculto */
+.modal-filtro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s 0.9s;
+    --transform: translateY(-100vh);
+    --transition: transform 0.8s;
+    -webkit-transition: opacity 0.6s 0.9s;
+    -moz-transition: opacity 0.6s 0.9s;
+    -ms-transition: opacity 0.6s 0.9s;
+    -o-transition: opacity 0.6s 0.9s;
+}
+
+/* S le agregar cuando se da click en abri en modal */
+.modal--show-filtros {
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity 0.6s;
+    --transform: translateY(0);
+    --transition: transform 0.8s 0.8s;
+}
+
+/* Tamaño del elemento que esta dentr del modal */
+.modal__mostrar-filtro {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: #fff;
+
+    padding: 20px;
+    place-items: center;
+    grid-auto-columns: 100%;
+    transform: var(--transform);
+    transition: var(--transition);
+
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+/* Cierra el modal */
+/* .close-filtro {
+    display: inline-block;
+  } */
+
+/* --- tipografias ---- */
+
+@font-face {
+    font-family: "acehblack";
+    src: url("../fonts/acehsoft-black-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "acehbold";
+    src: url("../fonts/acehsoft-bold-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "acehExtraLight";
+    src: url("../fonts/acehsoft-extralight-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "acehLight";
+    src: url("../fonts/acehsoft-light-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "acehMedium";
+    src: url("../fonts/acehsoft-medium-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "acehRegular";
+    src: url("../fonts/acehsoft-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "acehSemibold";
+    src: url("../fonts/acehsoft-semibold-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "acehThin";
+    src: url("../fonts/acehsoft-thin-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "extraLightDemo";
+    src: url("../fonts/mont-extralightdemo-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "extraHeavyDemo";
+    src: url("../fonts/mont-heavydemo-webfont.woff") format("woff");
+}

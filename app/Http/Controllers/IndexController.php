@@ -20,6 +20,48 @@ class IndexController extends Controller
         return view('public.index');
     }
 
+    public function destino()
+    {
+        //
+        return view('public.destino');
+    }
+
+    public function actividad()
+    {
+        //
+        return view('public.actividad');
+    }
+
+    public function detalleActividad()
+    {
+        //
+        return view('public.detalleActividad');
+    }
+
+    public function blog()
+    {
+        //
+        return view('public.blog');
+    }
+
+    public function post()
+    {
+        //
+        return view('public.post');
+    }
+
+    public function contacto()
+    {
+        //
+        return view('public.contacto');
+    }
+
+    public function ayuda()
+    {
+        //
+        return view('public.ayuda');
+    }
+
     /**
      * Show the form for creating a new resource.
      */
