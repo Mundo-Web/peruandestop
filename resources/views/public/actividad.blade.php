@@ -70,7 +70,7 @@
             <div class="gap-10 w-11/12 mx-auto">
                 <div class="flex flex-row justify-between items-center my-10 gap-5">
                     <h2
-                        class="font-acehSemibold text-text32 md:text-text64 leading-none md:leading-tight text-center md:text-left text-[#141841]">
+                        class="font-acehSemibold text-text32 md:text-text64 leading-none md:leading-tight text-left text-[#141841]">
                         Explorar Actividades
                     </h2>
 
@@ -351,7 +351,7 @@
                     </section>
 
                     <a href="#"
-                        class="flex  items-center gap-2 mostrar-mas font-acehSemibold text-text18 lg:text-text22 rounded-md lg:rounded-full border-colorBorder border-2 py-4 lg:py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group lg:duration-500 flex-initial  w-auto ">{{-- mostrar-modal --}}
+                        class="flex  items-center gap-2 mostrar-mas font-acehSemibold text-text18 lg:text-text22 rounded-md lg:rounded-3xl border-colorBorder border-2 py-4 lg:py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group lg:duration-500 flex-initial  w-auto">{{-- mostrar-modal --}}
                         <!-- -----hidden md:block -->
                         <span class="hidden md:inline"> Mostrar mas</span>
 
@@ -442,7 +442,7 @@
                     </div>
                 </div> --}}
                 <!-- CARRUSEL PARRA MOBILE -->
-                <div class="w-11/12 mx-auto">
+                <div class="w-11/12 mx-auto" data-aos="fade-up" data-aos-offset="150">
                     <div class="swiper productos-explorar-actividades my-5">
                         <div class="swiper-wrapper text-[#0F1B2C]">
                             <div class="swiper-slide rounded-2xl">
@@ -615,7 +615,7 @@
         <section>
             <div class="w-11/12 mx-auto">
                 <h2
-                    class="font-acehSemibold text-[40px] md:text-[64px] leading-none md:leading-tight text-center md:text-left text-[#141841]">
+                    class="font-acehSemibold text-[40px] md:text-[64px] leading-none md:leading-tight text-left text-[#141841]">
                     Todas las Actividades
                 </h2>
 

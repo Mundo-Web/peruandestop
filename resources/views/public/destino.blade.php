@@ -66,10 +66,10 @@
             </div>
         </section>
         <section>
-            <div class="gap-10 w-11/12 mx-auto" data-aos="fade-up" data-aos-offset="150">
+            <div class="gap-10 w-11/12 mx-auto">
                 <div class="flex flex-row justify-between items-center my-10 gap-5">
                     <h2
-                        class="font-acehSemibold text-text32 md:text-text64 leading-none md:leading-tight text-center md:text-left">
+                        class="font-acehSemibold text-text32 md:text-text64 leading-none md:leading-tight text-left text-[#141841]">
                         Explorar Destinos
                     </h2>
 
@@ -385,8 +385,8 @@
                     </section>
 
                     <a href="#"
-                        class="flex  items-center gap-2 font-acehSemibold text-text18 lg:text-text22 rounded-md lg:rounded-full border-colorBorder border-2 py-4 lg:py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group lg:duration-500 flex-initial  w-auto mostrar-modal ">
-                        <span class="hidden lg:inline"> Mostrar mas</span>
+                        class="flex  items-center gap-2 font-acehSemibold text-text18 lg:text-text22 rounded-md lg:rounded-3xl border-colorBorder border-2 py-4 lg:py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group lg:duration-500 flex-initial  w-auto mostrar-modal ">
+                        <span class="hidden lg:inline">Mostrar mass</span>
 
                         <svg width="18" height="13" viewBox="0 0 18 13" fill="none"
                             xmlns="http://www.w3.org/2000/svg" class="inline-block">
@@ -642,7 +642,7 @@
         <section>
             <div class="w-11/12 mx-auto">
                 <h2
-                    class="font-acehSemibold text-[40px] md:text-[64px] leading-none md:leading-tight text-center md:text-left">
+                    class="font-acehSemibold text-[40px] md:text-[64px] leading-none md:leading-tight text-left text-[#141841]">
                     Todos los Destinos
                 </h2>
 
