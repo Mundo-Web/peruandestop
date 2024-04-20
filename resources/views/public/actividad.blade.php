@@ -27,6 +27,11 @@
         .bg__destino-header {
             background-color: #0F1B2C;
         }
+
+        .bg__dropdown-ordenar {
+            background-color: #3F76BB;
+            color: white;
+        }
     </style>
 @stop
 
@@ -68,7 +73,7 @@
 
         <section>
             <div class="gap-10 w-11/12 mx-auto">
-                <div class="flex flex-row justify-between items-center my-10 gap-5">
+                <div class="flex flex-row justify-between items-center my-16 gap-5">
                     <h2
                         class="font-acehSemibold text-text32 md:text-text64 leading-none md:leading-tight text-left text-[#141841]">
                         Explorar Actividades
@@ -78,8 +83,8 @@
                     <!--text-[26px] md:text-[32px]  -->
                     <section class="modal-mostrar z-[100]">
                         <div class="modal__mostrar-info">
-                            <div class="overflow-y-scroll h-[500px] md:h-[700px] actividades_scroll pr-4">
-                                <div class="flex justify-between items-center w-full">
+                            <div>
+                                <div class="flex justify-between items-center w-full my-5">
                                     <h2 class="font-acehSemibold  text-[36px] md:text-[48px] leading-none">
                                         Explorar Actividades
                                     </h2>
@@ -87,265 +92,270 @@
                                         <img src="./images/svg/close.svg" alt="close" />
                                     </a>
                                 </div>
+                                <div class="overflow-y-scroll h-[400px] md:h-[700px] actividades_scroll pr-4 ">
+                                    <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 pb-5">
+                                        <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
+                                            Categorías
+                                        </h3>
+                                        <div class="flex flex-col gap-5">
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_1.png" alt="monumentos historicos" />
+                                                </div>
 
-                                <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5">
-                                    <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
-                                        Categorías
-                                    </h3>
-                                    <div class="flex flex-col gap-5">
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_1.png" alt="monumentos historicos" />
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Visita
+                                                    a monumentos históricos</a>
+                                            </div>
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_2.png" alt="tour gastronomico" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Tour
+                                                    gastronómico</a>
+                                            </div>
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_3.png" alt="recorrido en bicicleta" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Recorrido
+                                                    en bicicleta</a>
+                                            </div>
+
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_4.png" alt="excursion" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Excursión
+                                                    en senderismo</a>
+                                            </div>
+
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_5.png" alt="tour de vinos" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Tour
+                                                    de vinos</a>
+                                            </div>
+
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_6.png" alt="paseo en barco" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Paseo
+                                                    en barco</a>
                                             </div>
 
                                             <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Visita
-                                                a monumentos históricos</a>
+                                                class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
+                                                Mostrar Más Categorías
+                                            </a>
                                         </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_2.png" alt="tour gastronomico" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Tour
-                                                gastronómico</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_3.png" alt="recorrido en bicicleta" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Recorrido
-                                                en bicicleta</a>
-                                        </div>
+                                    </div>
 
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_4.png" alt="excursion" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Excursión
-                                                en senderismo</a>
-                                        </div>
+                                    <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5">
+                                        <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
+                                            Intereses del viaje
+                                        </h3>
+                                        <div class="flex flex-col gap-5">
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_1.png" alt="monumentos historicos" />
+                                                </div>
 
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_5.png" alt="tour de vinos" />
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Excursión
+                                                    en senderismo</a>
                                             </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Tour
-                                                de vinos</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_6.png" alt="paseo en barco" />
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_2.png" alt="tour gastronomico" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Visita
+                                                    a monumentos históricos</a>
                                             </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Paseo
-                                                en barco</a>
-                                        </div>
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_3.png" alt="recorrido en bicicleta" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Paseo
+                                                    en barco</a>
+                                            </div>
 
-                                        <a href="#"
-                                            class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
-                                            Mostrar Más Categorías
-                                        </a>
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_4.png" alt="excursion" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Tour
+                                                    gastronómico</a>
+                                            </div>
+
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_5.png" alt="tour de vinos" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Tour
+                                                    de vinos</a>
+                                            </div>
+
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_6.png" alt="paseo en barco" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Recorrido
+                                                    en bicicleta</a>
+                                            </div>
+
+                                            <a href="#"
+                                                class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
+                                                Mostrar Más Intereses
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5">
+                                        <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
+                                            Atracciones para explorar
+                                        </h3>
+                                        <div class="flex flex-col gap-5">
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_1.png" alt="monumentos historicos" />
+                                                </div>
+
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Excursión
+                                                    en senderismo</a>
+                                            </div>
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_2.png" alt="tour gastronomico" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Visita
+                                                    a monumentos históricos</a>
+                                            </div>
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_3.png"
+                                                        alt="recorrido en bicicleta" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Paseo
+                                                    en barco</a>
+                                            </div>
+
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_4.png" alt="excursion" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Tour
+                                                    gastronómico</a>
+                                            </div>
+
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_5.png" alt="tour de vinos" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Tour
+                                                    de vinos</a>
+                                            </div>
+
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_6.png" alt="paseo en barco" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Recorrido
+                                                    en bicicleta</a>
+                                            </div>
+
+                                            <a href="#"
+                                                class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px] pt-2">
+                                                Mostrar Más Atracciones
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-full text-[#0F1B2C]  py-5">
+                                        <h3
+                                            class="font-acehSemibold text-text26 md:text-text32 my-5 leading-none md:leading-tight">
+                                            Actividades para todo tipo de viajero
+                                        </h3>
+                                        <div class="flex flex-col gap-5">
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_1.png" alt="monumentos historicos" />
+                                                </div>
+
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Visita
+                                                    a castillos</a>
+                                            </div>
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_2.png" alt="tour gastronomico" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Visita
+                                                    a monumentos históricos</a>
+                                            </div>
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_3.png"
+                                                        alt="recorrido en bicicleta" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Hitos
+                                                    y monumentos</a>
+                                            </div>
+
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_4.png" alt="excursion" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Aventura</a>
+                                            </div>
+
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_5.png" alt="tour de vinos" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Cocina</a>
+                                            </div>
+
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_6.png" alt="paseo en barco" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Recorrido
+                                                    en bicicleta</a>
+                                            </div>
+
+                                            <a href="#"
+                                                class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
+                                                Mostrar Más Actividades
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5">
-                                    <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
-                                        Intereses del viaje
-                                    </h3>
-                                    <div class="flex flex-col gap-5">
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_1.png" alt="monumentos historicos" />
-                                            </div>
 
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Excursión
-                                                en senderismo</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_2.png" alt="tour gastronomico" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Visita
-                                                a monumentos históricos</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_3.png" alt="recorrido en bicicleta" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Paseo
-                                                en barco</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_4.png" alt="excursion" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Tour
-                                                gastronómico</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_5.png" alt="tour de vinos" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Tour
-                                                de vinos</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_6.png" alt="paseo en barco" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Recorrido
-                                                en bicicleta</a>
-                                        </div>
-
-                                        <a href="#"
-                                            class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
-                                            Mostrar Más Intereses
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5">
-                                    <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
-                                        Atracciones para explorar
-                                    </h3>
-                                    <div class="flex flex-col gap-5">
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_1.png" alt="monumentos historicos" />
-                                            </div>
-
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Excursión
-                                                en senderismo</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_2.png" alt="tour gastronomico" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Visita
-                                                a monumentos históricos</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_3.png" alt="recorrido en bicicleta" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Paseo
-                                                en barco</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_4.png" alt="excursion" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Tour
-                                                gastronómico</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_5.png" alt="tour de vinos" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Tour
-                                                de vinos</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_6.png" alt="paseo en barco" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Recorrido
-                                                en bicicleta</a>
-                                        </div>
-
-                                        <a href="#"
-                                            class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
-                                            Mostrar Más Atracciones
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="w-full text-[#0F1B2C]  py-5">
-                                    <h3
-                                        class="font-acehSemibold text-text26 md:text-text32 my-5 leading-none md:leading-tight">
-                                        Actividades para todo tipo de viajero
-                                    </h3>
-                                    <div class="flex flex-col gap-5">
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_1.png" alt="monumentos historicos" />
-                                            </div>
-
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Visita
-                                                a castillos</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_2.png" alt="tour gastronomico" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Visita
-                                                a monumentos históricos</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_3.png" alt="recorrido en bicicleta" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Hitos
-                                                y monumentos</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_4.png" alt="excursion" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Aventura</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_5.png" alt="tour de vinos" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Cocina</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_6.png" alt="paseo en barco" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Recorrido
-                                                en bicicleta</a>
-                                        </div>
-
-                                        <a href="#"
-                                            class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
-                                            Mostrar Más Actividades
-                                        </a>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </section>
@@ -442,8 +452,8 @@
                     </div>
                 </div> --}}
                 <!-- CARRUSEL PARRA MOBILE -->
-                <div class="w-11/12 mx-auto" data-aos="fade-up" data-aos-offset="150">
-                    <div class="swiper productos-explorar-actividades my-5">
+                <div data-aos="fade-up" data-aos-offset="150">
+                    <div class="swiper productos-explorar-actividades">
                         <div class="swiper-wrapper text-[#0F1B2C]">
                             <div class="swiper-slide rounded-2xl">
                                 <div class="rounded-2xl">
@@ -613,7 +623,7 @@
 
 
         <section>
-            <div class="w-11/12 mx-auto">
+            <div class="w-11/12 mx-auto mt-16">
                 <h2
                     class="font-acehSemibold text-[40px] md:text-[64px] leading-none md:leading-tight text-left text-[#141841]">
                     Todas las Actividades
@@ -636,8 +646,8 @@
                             <!-- ----filtros modales -->
                             <section class="modal-filtros z-[100]">
                                 <div class="modal__mostrar-filtros">
-                                    <div class="overflow-y-scroll h-[500px] md:h-[700px] filtros_scroll pr-4">
-                                        <div class="flex justify-between items-center w-full">
+                                    <div>
+                                        <div class="flex justify-between items-center w-full my-5">
                                             <h2 class="font-acehSemibold text-text36 md:text-text48 leading-none px-2">
                                                 Filtros
                                             </h2>
@@ -645,408 +655,435 @@
                                                 <img src="./images/svg/close.svg" alt="close" />
                                             </a>
                                         </div>
-                                        <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5 px-2">
-                                            <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
-                                                Tiempo
-                                            </h3>
-                                            <div class="flex flex-col gap-5">
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div>
-                                                        <input type="checkbox" id="tiempo_temprano"
-                                                            class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
-                                                    </div>
 
-                                                    <label for="tiempo_temprano"
-                                                        class="font-acehMedium text-text18 md:text-text22">
-                                                        Por la mañana, de 8 a. m a 12p.m
-                                                    </label>
-                                                </div>
-                                                <div class="flex items-center justify-start gap-5">
+                                        <div class="overflow-y-scroll h-[400px] md:h-[700px] filtros_scroll pr-4">
+                                            <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 pb-5 px-2">
+                                                <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
+                                                    Tiempo
+                                                </h3>
+                                                <div class="flex flex-col gap-5">
                                                     <div class="flex items-center justify-start gap-5">
                                                         <div>
-                                                            <input type="checkbox" id="tiempo_tarde"
+                                                            <input type="checkbox" id="tiempo_temprano"
                                                                 class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
                                                         </div>
 
-                                                        <label for="tiempo_tarde"
+                                                        <label for="tiempo_temprano"
                                                             class="font-acehMedium text-text18 md:text-text22">
-                                                            Por la tarde, de 12 a 17 horas
+                                                            Por la mañana, de 8 a. m a 12p.m
                                                         </label>
                                                     </div>
-                                                </div>
-                                                <div class="flex items-center justify-start gap-5">
                                                     <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="tiempo_noche"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
-                                                        </div>
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="tiempo_tarde"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
+                                                            </div>
 
-                                                        <label for="tiempo_noche"
-                                                            class="font-acehMedium text-text18 md:text-text22">
-                                                            Por la noche, de 17:00 a. m a 12:00 horas
-                                                        </label>
+                                                            <label for="tiempo_tarde"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Por la tarde, de 12 a 17 horas
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="tiempo_noche"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
+                                                            </div>
+
+                                                            <label for="tiempo_noche"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Por la noche, de 17:00 a. m a 12:00 horas
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5 px-2">
-                                            <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
-                                                Destinos
-                                            </h3>
-                                            <div class="flex flex-col gap-5">
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div>
-                                                        <input type="checkbox" id="cusco_destino"
-                                                            class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
-                                                    </div>
-
-                                                    <label for="cusco_destino"
-                                                        class="font-acehMedium text-text18 md:text-text22">
-                                                        Cusco
-                                                    </label>
-                                                </div>
-                                                <div class="flex items-center justify-start gap-5">
+                                            <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5 px-2">
+                                                <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
+                                                    Destinos
+                                                </h3>
+                                                <div class="flex flex-col gap-5">
                                                     <div class="flex items-center justify-start gap-5">
                                                         <div>
-                                                            <input type="checkbox" id="nueva_york"
+                                                            <input type="checkbox" id="cusco_destino"
                                                                 class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
                                                         </div>
 
-                                                        <label for="nueva_york"
+                                                        <label for="cusco_destino"
                                                             class="font-acehMedium text-text18 md:text-text22">
-                                                            Nueva York
+                                                            Cusco
                                                         </label>
                                                     </div>
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="nueva_york"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
+                                                            </div>
+
+                                                            <label for="nueva_york"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Nueva York
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="paris"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
+                                                            </div>
+
+                                                            <label for="paris"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                París
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="londres"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
+                                                            </div>
+
+                                                            <label for="londres"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Londres
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="florencia"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
+                                                            </div>
+
+                                                            <label for="florencia"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Florencia
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <a href="#"
+                                                        class="text-colorLetter font-acehbold text-text120 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
+                                                        Mostrar Más Destinos
+                                                    </a>
                                                 </div>
-                                                <div class="flex items-center justify-start gap-5">
+                                            </div>
+
+                                            <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5 px-2">
+                                                <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
+                                                    Interés
+                                                </h3>
+                                                <div class="flex flex-col gap-5">
                                                     <div class="flex items-center justify-start gap-5">
                                                         <div>
-                                                            <input type="checkbox" id="paris"
+                                                            <input type="checkbox" id="todas_actividades"
                                                                 class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
                                                         </div>
 
-                                                        <label for="paris"
+                                                        <label for="todas_actividades"
                                                             class="font-acehMedium text-text18 md:text-text22">
-                                                            París
+                                                            Todas las actividades
                                                         </label>
                                                     </div>
-                                                </div>
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="tour_gastronomico"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
+                                                            </div>
 
-                                                <div class="flex items-center justify-start gap-5">
+                                                            <label for="tour_gastronomico"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Tour Gastronómico
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="monumentos_historicos"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
+                                                            </div>
+
+                                                            <label for="monumentos_historicos"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Visita a monumentos históricos
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="recorrido_bicicleta"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
+                                                            </div>
+
+                                                            <label for="recorrido_bicicleta"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Recorrido en bicicleta
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="excursion_senderismo"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
+                                                            </div>
+
+                                                            <label for="excursion_senderismo"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                excursion de senderismo
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="tour_vinos"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
+                                                            </div>
+
+                                                            <label for="tour_vinos"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Tour de Vinos
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="paseo_barcos"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
+                                                            </div>
+
+                                                            <label for="paseo_barcos"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Paseo en barco
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="galerias_arte"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
+                                                            </div>
+
+                                                            <label for="galerias_arte"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Visita a museos y galerías de artes
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="aventura"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
+                                                            </div>
+
+                                                            <label for="aventura"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Aventura
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <a href="#"
+                                                        class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
+                                                        Mostrar Más Intereses
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5 px-2">
+                                                <h3 class="font-acehSemibold text-text26 md:text-text32 mt-5 mb-3">
+                                                    Precio
+                                                </h3>
+                                                <p class="font-acehMedium text-text20 md:text-text24 mb-3">
+                                                    El precio medio de la actividad es s/144.00
+                                                </p>
+
+                                                <div class="flex flex-col gap-5">
+                                                    <div class="flex flex-col gap-5 md:flex-row ">
+                                                        <div class="flex flex-col w-full">
+                                                            <label class="font-acehMedium text-text16 md:text-text20">Mín.
+                                                                precio</label>
+                                                            <input type="number"
+                                                                class="appearance-none border rounded-3xl py-2 px-3 text-gray-700 leading-tight focus:border-colorBorder focus:shadow-outline border-colorBorder text-text16 md:text-text20" />
+                                                        </div>
+                                                        <div class="flex flex-col w-full">
+                                                            <label class="font-acehMedium text-text16 md:text-text20">Max.
+                                                                precio</label>
+                                                            <input type="number"
+                                                                class="appearance-none border rounded-3xl py-2 px-3 text-gray-700 leading-tight focus:border-colorBorder focus:shadow-outline border-colorBorder text-text16 md:text-text20" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex gap-5 items-center">
+
+                                                        <p
+                                                            class="text-[#0F1B2C] font-acehbold text-text18 md:text-text22 w-full">
+                                                            Tipo de moneda
+                                                        </p>
+
+                                                        {{-- revisar --}}
+                                                        <select name="" id=""
+                                                            class="font-acehbold text-[#3F76BB] border-none text-text18 md:text-text22 w-full">
+                                                            <option value="1" class="font-acehRegular">Soles Peruanos
+                                                            </option>
+                                                            <option value="2" class="font-acehRegular">Dolares
+                                                                americanos</option>
+                                                            <option value="3" class="font-acehRegular">Libra
+                                                                esterlina</option>
+
+                                                        </select>
+
+
+                                                        {{--  <p
+                                                            class="text-[#0F1B2C] font-acehbold text-text18 md:text-text22 min-w-[90px]">
+                                                            Tipo de moneda
+                                                        </p>
+
+                                                        <div class="dropdown-moneda inline-block relative">
+                                                            <button
+                                                                class="font-acehbold py-2  rounded inline-flex items-center">
+                                                                <span
+                                                                    class="mr-0 md:mr-12 text-[#3F76BB] text-text18 md:text-text22">
+                                                                    Soles peruanos
+                                                                </span>
+                                                                <svg width="20" height="20" viewBox="0 0 10 6"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M9.20711 0.792893C8.81658 0.402369 8.18342 0.402369 7.79289 0.792893L5 3.58579L2.20711 0.792893C1.81658 0.402369 1.18342 0.402369 0.792894 0.792893C0.402369 1.18342 0.402369 1.81658 0.792894 2.20711L4.29289 5.70711C4.68342 6.09763 5.31658 6.09763 5.70711 5.70711L9.20711 2.20711C9.59763 1.81658 9.59763 1.18342 9.20711 0.792893Z"
+                                                                        fill="#3F76BB" />
+                                                                </svg>
+                                                            </button>
+                                                            <ul
+                                                                class="dropdown-menu-moneda absolute text-[#141718] text-text16 md:text-text20 w-full hidden z-20 bg-white rounded-md">
+                                                                <li class="">
+                                                                    <a
+                                                                        class="rounded-md hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap">Dolares
+                                                                        Americanos</a>
+                                                                </li>
+                                                                <li class="">
+                                                                    <a
+                                                                        class="rounded-md hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap">Portugués</a>
+                                                                </li>
+                                                                <li class="">
+                                                                    <a
+                                                                        class="rounded-md hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap">Frances</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div> --}}
+
+                                                        <!-- ----- -->
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5 px-2">
+                                                <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
+                                                    Duración
+                                                </h3>
+                                                <div class="flex flex-col gap-5">
                                                     <div class="flex items-center justify-start gap-5">
                                                         <div>
-                                                            <input type="checkbox" id="londres"
+                                                            <input type="checkbox" id="tiempo_03"
                                                                 class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
                                                         </div>
 
-                                                        <label for="londres"
+                                                        <label for="tiempo_03"
                                                             class="font-acehMedium text-text18 md:text-text22">
-                                                            Londres
+                                                            0 - 3 horas
                                                         </label>
                                                     </div>
-                                                </div>
-
-                                                <div class="flex items-center justify-start gap-5">
                                                     <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="florencia"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
-                                                        </div>
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="tiempo_35"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
+                                                            </div>
 
-                                                        <label for="florencia"
-                                                            class="font-acehMedium text-text18 md:text-text22">
-                                                            Florencia
-                                                        </label>
+                                                            <label for="tiempo_35"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                3 - 5
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="tiempo_57"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
+                                                            </div>
+
+                                                            <label for="tiempo_57"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                5 - 7
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="full_day"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
+                                                            </div>
+
+                                                            <label for="full_day"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Full day (7 +horas)
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="multiday"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
+                                                            </div>
+
+                                                            <label for="multiday"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Multi-day
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                 </div>
-
+                                            </div>
+                                            <div class="flex justify-between items-center pt-5">
                                                 <a href="#"
-                                                    class="text-colorLetter font-acehbold text-text120 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
-                                                    Mostrar Más Destinos
+                                                    class="text-colorLetter font-acehbold text-text16 md:text-text22 hover:text-blue-900 md:duration-500 min-w-[90px] my-5 inline-block text-center md:text-left">
+                                                    Limpiar Todo
                                                 </a>
+
+                                                <a href="detalle_actividad.html"
+                                                    class="font-acehMedium text-text16 md:text-text22 rounded-3xl bg-colorBackgroundHeader py-3 px-5 md:px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500">Ver
+                                                    Actividad</a>
                                             </div>
+
                                         </div>
 
-                                        <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5 px-2">
-                                            <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
-                                                Interés
-                                            </h3>
-                                            <div class="flex flex-col gap-5">
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div>
-                                                        <input type="checkbox" id="todas_actividades"
-                                                            class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
-                                                    </div>
 
-                                                    <label for="todas_actividades"
-                                                        class="font-acehMedium text-text18 md:text-text22">
-                                                        Todas las actividades
-                                                    </label>
-                                                </div>
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="tour_gastronomico"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
-                                                        </div>
 
-                                                        <label for="tour_gastronomico"
-                                                            class="font-acehMedium text-text18 md:text-text22">
-                                                            Tour Gastronómico
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="monumentos_historicos"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
-                                                        </div>
-
-                                                        <label for="monumentos_historicos"
-                                                            class="font-acehMedium text-text18 md:text-text22">
-                                                            Visita a monumentos históricos
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="recorrido_bicicleta"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
-                                                        </div>
-
-                                                        <label for="recorrido_bicicleta"
-                                                            class="font-acehMedium text-text18 md:text-text22">
-                                                            Recorrido en bicicleta
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="excursion_senderismo"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
-                                                        </div>
-
-                                                        <label for="excursion_senderismo"
-                                                            class="font-acehMedium text-text18 md:text-text22">
-                                                            excursion de senderismo
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="tour_vinos"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
-                                                        </div>
-
-                                                        <label for="tour_vinos"
-                                                            class="font-acehMedium text-text18 md:text-text22">
-                                                            Tour de Vinos
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="paseo_barcos"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
-                                                        </div>
-
-                                                        <label for="paseo_barcos"
-                                                            class="font-acehMedium text-text18 md:text-text22">
-                                                            Paseo en barco
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="galerias_arte"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
-                                                        </div>
-
-                                                        <label for="galerias_arte"
-                                                            class="font-acehMedium text-text18 md:text-text22">
-                                                            Visita a museos y galerías de artes
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="aventura"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
-                                                        </div>
-
-                                                        <label for="aventura"
-                                                            class="font-acehMedium text-text18 md:text-text22">
-                                                            Aventura
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                                <a href="#"
-                                                    class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
-                                                    Mostrar Más Intereses
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5 px-2">
-                                            <h3 class="font-acehSemibold text-text26 md:text-text32 mt-5 mb-3">
-                                                Precio
-                                            </h3>
-                                            <p class="font-acehMedium text-text20 md:text-text24 mb-3">
-                                                El precio medio de la actividad es s/144.00
-                                            </p>
-
-                                            <div class="flex flex-col gap-5">
-                                                <div class="flex flex-col gap-5 md:flex-row ">
-                                                    <div class="flex flex-col w-full">
-                                                        <label class="font-acehMedium text-text16 md:text-text20">Mín.
-                                                            precio</label>
-                                                        <input type="number"
-                                                            class="appearance-none border rounded-3xl py-2 px-3 text-gray-700 leading-tight focus:border-colorBorder focus:shadow-outline border-colorBorder text-text16 md:text-text20" />
-                                                    </div>
-                                                    <div class="flex flex-col w-full">
-                                                        <label class="font-acehMedium text-text16 md:text-text20">Max.
-                                                            precio</label>
-                                                        <input type="number"
-                                                            class="appearance-none border rounded-3xl py-2 px-3 text-gray-700 leading-tight focus:border-colorBorder focus:shadow-outline border-colorBorder text-text16 md:text-text20" />
-                                                    </div>
-                                                </div>
-
-                                                <div class="flex gap-5 items-center">
-                                                    <p
-                                                        class="text-[#0F1B2C] font-acehbold text-text18 md:text-text22 min-w-[90px]">
-                                                        Tipo de moneda
-                                                    </p>
-
-                                                    <div class="dropdown-moneda inline-block relative">
-                                                        <button
-                                                            class="font-acehbold py-2 px-6 rounded inline-flex items-center">
-                                                            <span
-                                                                class="mr-0 md:mr-12 text-[#3F76BB] text-text18 md:text-text22">Soles
-                                                                peruanos</span>
-                                                            <svg width="10" height="6" viewBox="0 0 10 6"
-                                                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                    d="M9.20711 0.792893C8.81658 0.402369 8.18342 0.402369 7.79289 0.792893L5 3.58579L2.20711 0.792893C1.81658 0.402369 1.18342 0.402369 0.792894 0.792893C0.402369 1.18342 0.402369 1.81658 0.792894 2.20711L4.29289 5.70711C4.68342 6.09763 5.31658 6.09763 5.70711 5.70711L9.20711 2.20711C9.59763 1.81658 9.59763 1.18342 9.20711 0.792893Z"
-                                                                    fill="#3F76BB" />
-                                                            </svg>
-                                                        </button>
-                                                        <ul
-                                                            class="dropdown-menu-moneda absolute text-[#141718] text-text16 md:text-text20 w-full hidden z-20 bg-white rounded-md">
-                                                            <li class="">
-                                                                <a
-                                                                    class="rounded-md hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap">Dolares
-                                                                    Americanos</a>
-                                                            </li>
-                                                            <li class="">
-                                                                <a
-                                                                    class="rounded-md hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap">Portugués</a>
-                                                            </li>
-                                                            <li class="">
-                                                                <a
-                                                                    class="rounded-md hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap">Frances</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-
-                                                    <!-- ----- -->
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5 px-2">
-                                            <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
-                                                Duración
-                                            </h3>
-                                            <div class="flex flex-col gap-5">
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div>
-                                                        <input type="checkbox" id="tiempo_03"
-                                                            class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
-                                                    </div>
-
-                                                    <label for="tiempo_03"
-                                                        class="font-acehMedium text-text18 md:text-text22">
-                                                        0 - 3 horas
-                                                    </label>
-                                                </div>
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="tiempo_35"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
-                                                        </div>
-
-                                                        <label for="tiempo_35"
-                                                            class="font-acehMedium text-text18 md:text-text22">
-                                                            3 - 5
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="tiempo_57"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
-                                                        </div>
-
-                                                        <label for="tiempo_57"
-                                                            class="font-acehMedium text-text18 md:text-text22">
-                                                            5 - 7
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="full_day"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
-                                                        </div>
-
-                                                        <label for="full_day"
-                                                            class="font-acehMedium text-text18 md:text-text22">
-                                                            Full day (7 +horas)
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="multiday"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
-                                                        </div>
-
-                                                        <label for="multiday"
-                                                            class="font-acehMedium text-text18 md:text-text22">
-                                                            Multi-day
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex justify-between items-center">
-                                            <a href="#"
-                                                class="text-colorLetter font-acehbold text-text16 md:text-text22 hover:text-blue-900 md:duration-500 min-w-[90px] my-5 inline-block text-center md:text-left">
-                                                Limpiar Todo
-                                            </a>
-
-                                            <a href="detalle_actividad.html"
-                                                class="font-acehMedium text-text16 md:text-text22 rounded-full bg-colorBackgroundHeader py-3 px-5 md:px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500">Ver
-                                                Actividad</a>
-                                        </div>
                                     </div>
                                 </div>
                             </section>
@@ -1055,8 +1092,8 @@
 
                         <div class="flex items-center">
                             <a href="#"
-                                class="font-acehSemibold text-[18px] rounded-[20px] border-colorBorder border-2 py-2 md:py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 flex gap-2 items-center ">
-                                <span> Ordenar</span>
+                                class="open-ordenar font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-2 md:py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 flex gap-2 items-center">
+                                <span>Ordenar</span>
                                 <svg width="30" height="30" viewBox="0 0 25 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" class="inline-block">
                                     <path d="M7.01172 10L12.0125 14.58L17.0117 10" stroke="#0F1B2C" stroke-width="2"
@@ -1064,6 +1101,31 @@
                                         class="group-hover:stroke-white md:duration-500" />
                                 </svg>
                             </a>
+
+
+                            <div class="modal-ordenar z-[100]">
+                                <div class="modal__mostrar-ordenar">
+                                    <div class="flex flex-col gap-5 p-5">
+                                        <div class="flex justify-between items-center w-full">
+                                            <h2 class="font-acehSemibold text-[36px] md:text-[48px] leading-none">
+                                                Ordenar
+                                            </h2>
+                                            <a href="#" class="modal__close-ordenar">
+                                                <img src="./images/svg/close.svg" alt="close" />
+                                            </a>
+                                        </div>
+                                        <div
+                                            class="flex flex-col text-[#0F1B2C] font-acehRegular text-text18 md:text-text22">
+                                            <a href="#" class="p-4 rounded-2xl ordenar-destinos">A - Z</a>
+                                            <a href="#" class="p-4 rounded-2xl ordenar-destinos">Z - A</a>
+                                            <a href="#" class="p-4 rounded-2xl ordenar-destinos">De menor a
+                                                mayor</a>
+                                            <a href="#" class="p-4 rounded-2xl ordenar-destinos">De mayor a
+                                                menor</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <p class="font-acehSemibold text-text18 md:text-text22">
@@ -1414,101 +1476,131 @@
 
 @section('scripts_improtados')
     <script>
-        const openModal = document.querySelector(".mostrar-mas");
-        const modal = document.querySelector(".modal-mostrar");
-        const closeModal = document.querySelector(".modal__close-mostrar");
-        const body = document.querySelector(".scroll__hidden_explorar");
+        document.addEventListener("DOMContentLoaded", () => {
+            const openModal = document.querySelector(".mostrar-mas");
+            const modal = document.querySelector(".modal-mostrar");
+            const closeModal = document.querySelector(".modal__close-mostrar");
+            const body = document.querySelector(".scroll__hidden_explorar");
+            /* -------------------------------------- */
+            const openModalFiltros = document.querySelector(".mostrar-filtros"); //1
+            const modalFiltros = document.querySelector(".modal-filtros"); //2
+            const closeModalFiltro = document.querySelector(".modal__close-filtro");
 
-        /* const openModalDestino = document.querySelector(".mostrar-destino"); //modal__mostrar-destino
-        const modalDestinos = document.querySelector(".modal-destinos"); //modal-destinos
-         */
-        const openModalFiltros = document.querySelector(".mostrar-filtros"); //1
-        const modalFiltros = document.querySelector(".modal-filtros"); //2
-        const closeModalFiltro = document.querySelector(".modal__close-filtro");
+            /* ----------------------------- */
+            // Captura el click de abrir
+            const openOrdenar = document.querySelector(".open-ordenar");
+            // Captura al modal que se quiere mostrar
+            const modalOrdenar = document.querySelector(".modal-ordenar");
+            //Captura el evento de cierre
+            const closeModalOrdenar = document.querySelector(".modal__close-ordenar");
+            // Captura el body para bloqueo
 
-        openModal.addEventListener("click", (e) => {
-            e.preventDefault();
+            const ordenarDropdown = document.querySelectorAll('.ordenar-destinos');
 
-            modal.classList.add("modal--show");
-            body.classList.add("overflow-hidden");
-            modal.style.display = "flex";
-        });
+            ordenarDropdown.forEach(ordenar => {
+                ordenar.addEventListener("click", (e) => {
+                    if (!e.target.classList.contains('bg__dropdown-ordenar')) {
+                        e.target.classList.add("bg__dropdown-ordenar");
+                        ordenarDropdown.forEach(item => {
+                            if (e.target !== item) {
+                                item.classList.remove('bg__dropdown-ordenar')
+                            }
+                        })
+                    }
+                })
+            });
 
-        openModalFiltros.addEventListener("click", (e) => {
-            e.preventDefault();
+            openModal.addEventListener("click", (e) => {
+                e.preventDefault();
 
-            modalFiltros.classList.add("modal--show--filtros");
-            body.classList.add("overflow-hidden");
-            modalFiltros.style.display = "flex";
-        });
+                modal.classList.add("modal--show");
+                body.classList.add("overflow-hidden");
+                modal.style.display = "flex";
+            });
 
-        /* openModalDestino.addEventListener("click", (e) => {
-          e.preventDefault();
+            openModalFiltros.addEventListener("click", (e) => {
+                e.preventDefault();
 
-          modalDestinos.classList.add("modal--show--destinos");
-          body.classList.add("overflow-hidden");
-          modalDestinos.style.display = "flex";
-        }); */
-
-        closeModal.addEventListener("click", (e) => {
-            e.preventDefault();
-            modal.classList.remove("modal--show");
-            body.classList.remove("overflow-hidden");
-        });
-
-        closeModalFiltro.addEventListener("click", (e) => {
-            modalFiltros.classList.remove("modal--show--filtros");
-            body.classList.remove("overflow-hidden");
-        });
-
-        // Función para cerrar el modal
-        function closeModa(event) {
-            if (event.target === modal) {
+                modalFiltros.classList.add("modal--show--filtros");
+                body.classList.add("overflow-hidden");
+                modalFiltros.style.display = "flex";
+            });
+            /* --------------------------------------- */
+            closeModal.addEventListener("click", (e) => {
+                e.preventDefault();
                 modal.classList.remove("modal--show");
                 body.classList.remove("overflow-hidden");
-            }
-            /* if (event.target === modalDestinos) {
-              modalDestinos.classList.remove("modal--show--destinos");
-              body.classList.remove("overflow-hidden");
-            } */
-            if (event.target === modalFiltros) {
-                console.log("cerra");
+            });
+
+            closeModalFiltro.addEventListener("click", (e) => {
                 modalFiltros.classList.remove("modal--show--filtros");
                 body.classList.remove("overflow-hidden");
+            });
+
+            /* --------------------------- */
+            openOrdenar.addEventListener("click", (e) => {
+                e.preventDefault();
+                modalOrdenar.classList.add("modal--show");
+                body.classList.add("overflow-hidden");
+                modalOrdenar.style.display = "flex";
+            });
+
+            closeModalOrdenar.addEventListener("click", (e) => {
+                e.preventDefault();
+                modalOrdenar.classList.remove("modal--show");
+                body.classList.remove("overflow-hidden");
+            });
+
+            // Función para cerrar el modal
+            function closeModa(event) {
+                if (event.target === modal) {
+                    modal.classList.remove("modal--show");
+                    body.classList.remove("overflow-hidden");
+                }
+                if (event.target === modalFiltros) {
+                    console.log("cerra");
+                    modalFiltros.classList.remove("modal--show--filtros");
+                    body.classList.remove("overflow-hidden");
+                }
+
+                if (event.target === modalOrdenar) {
+                    modalOrdenar.classList.remove("modal--show");
+                    body.classList.remove("overflow-hidden");
+                }
             }
-        }
 
-        window.addEventListener("click", closeModa);
+            window.addEventListener("click", closeModa);
 
-        /* -------------------------------------------- */
+            /* -------------------------------------------- */
 
-        var swiper = new Swiper(".productos-explorar-actividades", {
-            slidesPerView: 6,
-            spaceBetween: 40,
-            loop: true,
-            grabCursor: true,
-            centeredSlides: false,
-            initialSlide: 0,
-            allowTouchMove: false,
-            autoplay: {
-                delay: 1500,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true
-            },
-            breakpoints: {
-                0: {
-                    slidesPerView: 2,
-                    centeredSlides: true,
+            var swiper = new Swiper(".productos-explorar-actividades", {
+                slidesPerView: 6,
+                spaceBetween: 40,
+                loop: true,
+                grabCursor: true,
+                centeredSlides: false,
+                initialSlide: 0,
+                allowTouchMove: false,
+                autoplay: {
+                    delay: 1500,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true
                 },
-                768: {
-                    slidesPerView: 4,
-                    centeredSlides: true,
+                breakpoints: {
+                    0: {
+                        slidesPerView: 2,
+                        centeredSlides: true,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        centeredSlides: true,
+                    },
+                    1280: {
+                        slidesPerView: 6,
+                    },
                 },
-                1280: {
-                    slidesPerView: 6,
-                },
-            },
-        });
+            });
+        })
     </script>
 @stop
 

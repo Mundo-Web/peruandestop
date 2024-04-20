@@ -35,9 +35,9 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="bg-header_fondo bg-cover bg-center bg-no-repeat sm:w-full h-full">
-                            <div class="text-white flex flex-col items-center pt-80 md:pt-60 pb-72 w-full md:w-6/12  mx-auto"
+                            <div class="text-white flex flex-col items-center pt-80 md:pt-80 pb-60 w-full sm:w-6/12   mx-auto"
                                 data-aos="fade-up" data-aos-offset="150">
-                                <div class="text-center">
+                                <div class="text-center w-11/12 mx-auto">
                                     <p class="font-acehMedium text-text14 md:text-text20">
                                         Suspendisse nec interdum orci, a agestas diam.
                                     </p>
@@ -67,9 +67,9 @@
 
                     <div class="swiper-slide">
                         <div class="bg-header_fondo_1 bg-cover bg-center bg-no-repeat sm:w-full h-full">
-                            <div class="text-white flex flex-col items-center pt-80 md:pt-60 pb-72 w-full md:w-6/12  mx-auto"
+                            <div class="text-white flex flex-col items-center pt-80 md:pt-80 pb-60 w-full sm:w-6/12   mx-auto"
                                 data-aos="fade-up" data-aos-offset="150">
-                                <div class="text-center">
+                                <div class="text-center w-11/12 mx-auto">
                                     <p class="font-acehMedium text-text14 md:text-text20">
                                         Suspendisse nec interdum orci, a agestas diam.
                                     </p>
@@ -99,9 +99,9 @@
 
                     <div class="swiper-slide">
                         <div class="bg-header_fondo_2 bg-cover bg-center bg-no-repeat sm:w-full h-full">
-                            <div class="text-white flex flex-col items-center pt-80 md:pt-60 pb-72 w-full md:w-6/12  mx-auto"
+                            <div class="text-white flex flex-col items-center pt-80 md:pt-80 pb-60 w-full sm:w-6/12   mx-auto"
                                 data-aos="fade-up" data-aos-offset="150">
-                                <div class="text-center">
+                                <div class="text-center w-11/12 mx-auto">
                                     <p class="font-acehMedium text-text14 md:text-text20">
                                         Suspendisse nec interdum orci, a agestas diam.
                                     </p>
@@ -131,9 +131,9 @@
 
                     <div class="swiper-slide">
                         <div class="bg-header_fondo_3 bg-cover bg-center bg-no-repeat sm:w-full h-full">
-                            <div class="text-white flex flex-col items-center pt-80 md:pt-60 pb-72 w-full md:w-6/12  mx-auto"
+                            <div class="text-white flex flex-col items-center pt-80 md:pt-80 pb-60 w-full sm:w-6/12   mx-auto"
                                 data-aos="fade-up" data-aos-offset="150">
-                                <div class="text-center">
+                                <div class="text-center w-11/12 mx-auto">
                                     <p class="font-acehMedium text-text14 md:text-text20">
                                         Suspendisse nec interdum orci, a agestas diam.
                                     </p>
@@ -163,9 +163,9 @@
 
                     <div class="swiper-slide">
                         <div class="bg-header_fondo_4 bg-cover bg-center bg-no-repeat sm:w-full h-full">
-                            <div class="text-white flex flex-col items-center pt-80 md:pt-60 pb-72 w-full md:w-6/12  mx-auto"
+                            <div class="text-white flex flex-col items-center pt-80 md:pt-80 pb-60 w-full sm:w-6/12   mx-auto"
                                 data-aos="fade-up" data-aos-offset="150">
-                                <div class="text-center">
+                                <div class="text-center w-11/12 mx-auto">
                                     <p class="font-acehMedium text-text14 md:text-text20">
                                         Suspendisse nec interdum orci, a agestas diam.
                                     </p>
@@ -195,9 +195,9 @@
 
                     <div class="swiper-slide">
                         <div class="bg-header_fondo_5 bg-cover bg-center bg-no-repeat sm:w-full h-full">
-                            <div class="text-white flex flex-col items-center pt-80 md:pt-60 pb-72 w-full md:w-6/12  mx-auto"
+                            <div class="text-white flex flex-col items-center pt-80 md:pt-80 pb-60 w-full sm:w-6/12   mx-auto"
                                 data-aos="fade-up" data-aos-offset="150">
-                                <div class="text-center">
+                                <div class="text-center w-11/12 mx-auto">
                                     <p class="font-acehMedium text-text14 md:text-text20">
                                         Suspendisse nec interdum orci, a agestas diam.
                                     </p>
@@ -227,9 +227,9 @@
 
                     <div class="swiper-slide">
                         <div class="bg-header_fondo_6 bg-cover bg-center bg-no-repeat sm:w-full h-full">
-                            <div class="text-white flex flex-col items-center pt-80 md:pt-60 pb-72 w-full md:w-6/12  mx-auto"
+                            <div class="text-white flex flex-col items-center pt-80 md:pt-80 pb-60 w-full sm:w-6/12   mx-auto"
                                 data-aos="fade-up" data-aos-offset="150">
-                                <div class="text-center">
+                                <div class="text-center w-11/12 mx-auto">
                                     <p class="font-acehMedium text-text14 md:text-text20">
                                         Suspendisse nec interdum orci, a agestas diam.
                                     </p>
@@ -259,9 +259,9 @@
 
                     <div class="swiper-slide">
                         <div class="bg-header_fondo_7 bg-cover bg-center bg-no-repeat sm:w-full h-full">
-                            <div class="text-white flex flex-col items-center pt-80 md:pt-60 pb-72 w-full md:w-6/12  mx-auto"
+                            <div class="text-white flex flex-col items-center pt-80 md:pt-80 pb-60 w-full sm:w-6/12   mx-auto"
                                 data-aos="fade-up" data-aos-offset="150">
-                                <div class="text-center">
+                                <div class="text-center w-11/12 mx-auto">
                                     <p class="font-acehMedium text-text14 md:text-text20">
                                         Suspendisse nec interdum orci, a agestas diam.
                                     </p>
@@ -291,9 +291,9 @@
 
                     <div class="swiper-slide">
                         <div class="bg-header_fondo_8 bg-cover bg-center bg-no-repeat sm:w-full h-full">
-                            <div class="text-white flex flex-col items-center pt-80 md:pt-60 pb-72 w-full md:w-6/12  mx-auto"
+                            <div class="text-white flex flex-col items-center pt-80 md:pt-80 pb-60 w-full sm:w-6/12   mx-auto"
                                 data-aos="fade-up" data-aos-offset="150">
-                                <div class="text-center">
+                                <div class="text-center w-11/12 mx-auto">
                                     <p class="font-acehMedium text-text14 md:text-text20">
                                         Suspendisse nec interdum orci, a agestas diam.
                                     </p>
@@ -320,6 +320,7 @@
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </section>

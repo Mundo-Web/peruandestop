@@ -27,6 +27,11 @@
         .bg__destino-header {
             background-color: #0F1B2C;
         }
+
+        .bg__dropdown-ordenar {
+            background-color: #3F76BB;
+            color: white;
+        }
     </style>
 @stop
 
@@ -67,7 +72,7 @@
         </section>
         <section>
             <div class="gap-10 w-11/12 mx-auto">
-                <div class="flex flex-row justify-between items-center my-10 gap-5">
+                <div class="flex flex-row justify-between items-center my-16 gap-5">
                     <h2
                         class="font-acehSemibold text-text32 md:text-text64 leading-none md:leading-tight text-left text-[#141841]">
                         Explorar Destinos
@@ -76,8 +81,8 @@
                     <!-- --------- modal -->
                     <section class="modal-destino z-[100]">
                         <div class="modal__mostrar-destino">
-                            <div class="overflow-y-scroll h-[500px] md:h-[700px] actividades_scroll pr-4">
-                                <div class="flex justify-between items-center w-full">
+                            <div>
+                                <div class="flex justify-between items-center w-full my-5">
                                     <h2 class="font-acehSemibold text-text36 md:text-text48 leading-none">
                                         Explorar Destinos
                                     </h2>
@@ -86,309 +91,317 @@
                                     </a>
                                 </div>
 
-                                <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5">
-                                    <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
-                                        Playas
-                                    </h3>
-                                    <div class="flex flex-col gap-5">
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_1.png" alt="playa tropical" />
+                                <div class="overflow-y-scroll h-[400px] md:h-[700px] actividades_scroll pr-4">
+                                    <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5">
+                                        <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
+                                            Playas
+                                        </h3>
+                                        <div class="flex flex-col gap-5">
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_1.png" alt="playa tropical" />
+                                                </div>
+
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Playa
+                                                    tropical</a>
+                                            </div>
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_2.png" alt="playa de surf" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Playa
+                                                    de surf</a>
+                                            </div>
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_3.png" alt="isla paradisiaca" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Isla
+                                                    paradisiaca</a>
+                                            </div>
+
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_4.png" alt="destino buceo" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Destino
+                                                    de buceo</a>
                                             </div>
 
                                             <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Playa
-                                                tropical</a>
+                                                class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
+                                                Mostrar Más Playas
+                                            </a>
                                         </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_2.png" alt="playa de surf" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Playa
-                                                de surf</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_3.png" alt="isla paradisiaca" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Isla
-                                                paradisiaca</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_4.png" alt="destino buceo" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Destino
-                                                de buceo</a>
-                                        </div>
-
-                                        <a href="#"
-                                            class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
-                                            Mostrar Más Playas
-                                        </a>
                                     </div>
+
+                                    <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5">
+                                        <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
+                                            Ciudad
+                                        </h3>
+                                        <div class="flex flex-col gap-5">
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_1.png" alt="Metrópolis urbana" />
+                                                </div>
+
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Metrópolis
+                                                    urbana</a>
+                                            </div>
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_2.png" alt="Ciudad histórica" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Ciudad
+                                                    histórica</a>
+                                            </div>
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_3.png" alt="Destino cultural" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Destino
+                                                    cultural</a>
+                                            </div>
+
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_4.png" alt="ciudad de negocios" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Ciudad
+                                                    de negocios</a>
+                                            </div>
+
+                                            <a href="#"
+                                                class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
+                                                Mostrar Más Ciudades
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5">
+                                        <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
+                                            Montaña
+                                        </h3>
+                                        <div class="flex flex-col gap-5">
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_1.png" alt="estacion esqui" />
+                                                </div>
+
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Estacion
+                                                    de esqui</a>
+                                            </div>
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_2.png" alt="pueblo de montaña" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Pueblo
+                                                    de montaña</a>
+                                            </div>
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_3.png" alt="ruta de tracking" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Ruta
+                                                    de tracking</a>
+                                            </div>
+
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_4.png" alt="paisaje alpino" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Paisaje
+                                                    alpino</a>
+                                            </div>
+
+                                            <a href="#"
+                                                class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
+                                                Mostrar Más Montañas
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5">
+                                        <h3
+                                            class="font-acehSemibold text-text26 md:text-text32 my-5 leading-none md:leading-tight">
+                                            Histórico
+                                        </h3>
+                                        <div class="flex flex-col gap-5">
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_1.png" alt="sitio arqueologico" />
+                                                </div>
+
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Sitio
+                                                    arqueológico</a>
+                                            </div>
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_2.png" alt="ciudad medieval" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Ciudad
+                                                    medieval</a>
+                                            </div>
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_3.png" alt="ruta de la historia" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Ruta
+                                                    de la historia</a>
+                                            </div>
+
+                                            <a href="#"
+                                                class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
+                                                Mostrar Más Históricos
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5">
+                                        <h3
+                                            class="font-acehSemibold text-text26 md:text-text32 my-5 leading-none md:leading-tight">
+                                            Aventura
+                                        </h3>
+                                        <div class="flex flex-col gap-5">
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_1.png" alt="parque de aventuras" />
+                                                </div>
+
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Parque
+                                                    de aventuras</a>
+                                            </div>
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_2.png" alt="destino de safari" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Destino
+                                                    de safari</a>
+                                            </div>
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_3.png"
+                                                        alt="expedicion en la selva" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Expedición
+                                                    en la selva</a>
+                                            </div>
+
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_3.png"
+                                                        alt="tour de aventura en la naturaeza" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Tour
+                                                    de aventura en la naturaleza</a>
+                                            </div>
+
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_3.png" alt="deporte extremo" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Deporte
+                                                    extremo</a>
+                                            </div>
+
+                                            <a href="#"
+                                                class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
+                                                Mostrar Más Aventuras
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-full text-[#0F1B2C]  py-5">
+                                        <h3
+                                            class="font-acehSemibold text-text26 md:text-text32 my-5 leading-none md:leading-tight">
+                                            Ecoturismo
+                                        </h3>
+                                        <div class="flex flex-col gap-5">
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_1.png" alt="reserva natural" />
+                                                </div>
+
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Reserva
+                                                    natural</a>
+                                            </div>
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_2.png"
+                                                        alt="Santuario vida silvestre" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Santuario
+                                                    vida silvestre</a>
+                                            </div>
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_3.png"
+                                                        alt="centro de conservacion" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Centro
+                                                    de conservación</a>
+                                            </div>
+
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_3.png" alt="turismo sostenible" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Turismo
+                                                    sostenible</a>
+                                            </div>
+
+                                            <div class="flex items-center justify-start gap-5">
+                                                <div>
+                                                    <img src="./images/img/categoria_3.png" alt="viajes de aves" />
+                                                </div>
+                                                <a href="#"
+                                                    class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Viaje
+                                                    de observación de aves</a>
+                                            </div>
+
+                                            <a href="#"
+                                                class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px] pt-2">
+                                                Mostrar Más Ecoturismo
+                                            </a>
+                                        </div>
+                                    </div>
+
                                 </div>
 
-                                <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5">
-                                    <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
-                                        Ciudad
-                                    </h3>
-                                    <div class="flex flex-col gap-5">
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_1.png" alt="Metrópolis urbana" />
-                                            </div>
 
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Metrópolis
-                                                urbana</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_2.png" alt="Ciudad histórica" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Ciudad
-                                                histórica</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_3.png" alt="Destino cultural" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Destino
-                                                cultural</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_4.png" alt="ciudad de negocios" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Ciudad
-                                                de negocios</a>
-                                        </div>
-
-                                        <a href="#"
-                                            class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
-                                            Mostrar Más Ciudades
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5">
-                                    <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
-                                        Montaña
-                                    </h3>
-                                    <div class="flex flex-col gap-5">
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_1.png" alt="estacion esqui" />
-                                            </div>
-
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Estacion
-                                                de esqui</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_2.png" alt="pueblo de montaña" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Pueblo
-                                                de montaña</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_3.png" alt="ruta de tracking" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Ruta
-                                                de tracking</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_4.png" alt="paisaje alpino" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Paisaje
-                                                alpino</a>
-                                        </div>
-
-                                        <a href="#"
-                                            class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
-                                            Mostrar Más Montañas
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5">
-                                    <h3
-                                        class="font-acehSemibold text-text26 md:text-text32 my-5 leading-none md:leading-tight">
-                                        Histórico
-                                    </h3>
-                                    <div class="flex flex-col gap-5">
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_1.png" alt="sitio arqueologico" />
-                                            </div>
-
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Sitio
-                                                arqueológico</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_2.png" alt="ciudad medieval" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Ciudad
-                                                medieval</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_3.png" alt="ruta de la historia" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Ruta
-                                                de la historia</a>
-                                        </div>
-
-                                        <a href="#"
-                                            class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
-                                            Mostrar Más Históricos
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5">
-                                    <h3
-                                        class="font-acehSemibold text-text26 md:text-text32 my-5 leading-none md:leading-tight">
-                                        Aventura
-                                    </h3>
-                                    <div class="flex flex-col gap-5">
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_1.png" alt="parque de aventuras" />
-                                            </div>
-
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Parque
-                                                de aventuras</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_2.png" alt="destino de safari" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Destino
-                                                de safari</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_3.png" alt="expedicion en la selva" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Expedición
-                                                en la selva</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_3.png"
-                                                    alt="tour de aventura en la naturaeza" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Tour
-                                                de aventura en la naturaleza</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_3.png" alt="deporte extremo" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Deporte
-                                                extremo</a>
-                                        </div>
-
-                                        <a href="#"
-                                            class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
-                                            Mostrar Más Aventuras
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="w-full text-[#0F1B2C]  py-5">
-                                    <h3
-                                        class="font-acehSemibold text-text26 md:text-text32 my-5 leading-none md:leading-tight">
-                                        Ecoturismo
-                                    </h3>
-                                    <div class="flex flex-col gap-5">
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_1.png" alt="reserva natural" />
-                                            </div>
-
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Reserva
-                                                natural</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_2.png" alt="Santuario vida silvestre" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Santuario
-                                                vida silvestre</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_3.png" alt="centro de conservacion" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Centro
-                                                de conservación</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_3.png" alt="turismo sostenible" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Turismo
-                                                sostenible</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_3.png" alt="viajes de aves" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Viaje
-                                                de observación de aves</a>
-                                        </div>
-
-                                        <a href="#"
-                                            class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
-                                            Mostrar Más Ecoturismo
-                                        </a>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </section>
 
                     <a href="#"
-                        class="flex  items-center gap-2 font-acehSemibold text-text18 lg:text-text22 rounded-md lg:rounded-3xl border-colorBorder border-2 py-4 lg:py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group lg:duration-500 flex-initial  w-auto mostrar-modal ">
-                        <span class="hidden lg:inline">Mostrar mass</span>
+                        class="flex  items-center gap-2 font-acehSemibold text-text18 lg:text-text22 rounded-xl lg:rounded-3xl border-colorBorder border-2 py-4 lg:py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group lg:duration-500 flex-initial  w-auto mostrar-modal ">
+                        <span class="hidden lg:inline">Mostrar más</span>
 
-                        <svg width="18" height="13" viewBox="0 0 18 13" fill="none"
+                        <svg width="20" height="20" viewBox="0 0 18 13" fill="none"
                             xmlns="http://www.w3.org/2000/svg" class="inline-block">
                             <path d="M3.46154 6.5H14.5385M1 1.5H17M7.15385 11.5H10.8462" stroke="#0F1B2C" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round"
@@ -468,8 +481,9 @@
                     </div>
                 </div> --}}
                 <!-- CARRUSEL PARRA MOBILE -->
-                <div class="w-11/12 mx-auto" data-aos="fade-up" data-aos-offset="150">
-                    <div class="swiper productos-explorar-destino my-5">
+    
+                <div data-aos="fade-up" data-aos-offset="150">
+                    <div class="swiper productos-explorar-destino">
                         <div class="swiper-wrapper text-[#0F1B2C]">
                             <div class="swiper-slide rounded-2xl">
                                 <div class="rounded-2xl">
@@ -640,7 +654,7 @@
         </section>
 
         <section>
-            <div class="w-11/12 mx-auto">
+            <div class="w-11/12 mx-auto mt-16">
                 <h2
                     class="font-acehSemibold text-[40px] md:text-[64px] leading-none md:leading-tight text-left text-[#141841]">
                     Todos los Destinos
@@ -650,10 +664,10 @@
                     <div class="flex gap-10 py-10 justify-between">
                         <div class="flex items-center">
                             <a
-                                class="open-filtro font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-2 md:py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 flex gap-2 items-center ">
+                                class="open-filtro font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-2 md:py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 flex gap-2 items-center">
                                 <span>Filtros </span>
 
-                                <svg width="20" height="20" viewBox="0 0 18 13" fill="none"
+                                <svg width="25" height="25" viewBox="0 0 18 13" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" class="inline-block">
                                     <path d="M3.46154 6.5H14.5385M1 1.5H17M7.15385 11.5H10.8462" stroke="#0F1B2C"
                                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -663,8 +677,8 @@
                             <!-- ----filtros modales -->
                             <section class="modal-filtro z-[100]">
                                 <div class="modal__mostrar-filtro">
-                                    <div class="overflow-y-scroll h-[500px] md:h-[700px] filtros_scroll pr-4">
-                                        <div class="flex justify-between items-center w-full">
+                                    <div>
+                                        <div class="flex justify-between items-center w-full my-5">
                                             <h2 class="font-acehSemibold text-text36 md:text-text48 leading-none px-2">
                                                 Filtros
                                             </h2>
@@ -672,324 +686,401 @@
                                                 <img src="./images/svg/close.svg" alt="close" />
                                             </a>
                                         </div>
-                                        <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5 px-2">
-                                            <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
-                                                País
-                                            </h3>
-                                            <div class="flex flex-col gap-5">
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div>
-                                                        <input type="checkbox" id="peru"
-                                                            class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
-                                                    </div>
 
-                                                    <label for="peru" class="font-acehMedium text-text18 md:text-text22">
-                                                        Perú
-                                                    </label>
-                                                </div>
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div>
-                                                        <input type="checkbox" id="usa"
-                                                            class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
-                                                    </div>
-
-                                                    <label for="usa" class="font-acehMedium text-text18 md:text-text22">
-                                                        USA
-                                                    </label>
-                                                </div>
-                                                <div class="flex items-center justify-start gap-5">
+                                        <div class="overflow-y-scroll h-[400px] md:h-[700px] filtros_scroll pr-4">
+                                            <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 pb-5">
+                                                <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
+                                                    País
+                                                </h3>
+                                                <div class="flex flex-col gap-5">
                                                     <div class="flex items-center justify-start gap-5">
                                                         <div>
-                                                            <input type="checkbox" id="francia"
+                                                            <input type="checkbox" id="peru"
                                                                 class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                         </div>
 
-                                                        <label for="francia" class="font-acehMedium text-text18 md:text-text22">
-                                                            Francia
+                                                        <label for="peru"
+                                                            class="font-acehMedium text-text18 md:text-text22">
+                                                            Perú
                                                         </label>
                                                     </div>
-                                                </div>
-
-                                                <div class="flex items-center justify-start gap-5">
                                                     <div class="flex items-center justify-start gap-5">
                                                         <div>
-                                                            <input type="checkbox" id="Reino Unido"
+                                                            <input type="checkbox" id="usa"
                                                                 class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                         </div>
 
-                                                        <label for="Reino Unido" class="font-acehMedium text-text18 md:text-text22">
-                                                            Reino Unido
+                                                        <label for="usa"
+                                                            class="font-acehMedium text-text18 md:text-text22">
+                                                            USA
                                                         </label>
                                                     </div>
-                                                </div>
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="francia"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
+                                                            </div>
 
-                                                <div class="flex items-center justify-start gap-5">
+                                                            <label for="francia"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Francia
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="Reino Unido"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
+                                                            </div>
+
+                                                            <label for="Reino Unido"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Reino Unido
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="italia"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
+                                                            </div>
+
+                                                            <label for="italia"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Italia
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <a href="#"
+                                                        class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
+                                                        Mostrar Más Países
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5 px-2">
+                                                <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
+                                                    Ciudad
+                                                </h3>
+                                                <div class="flex flex-col gap-5">
                                                     <div class="flex items-center justify-start gap-5">
                                                         <div>
-                                                            <input type="checkbox" id="italia"
+                                                            <input type="checkbox" id="cusco"
                                                                 class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                         </div>
 
-                                                        <label for="italia" class="font-acehMedium text-text18 md:text-text22">
-                                                            Italia
+                                                        <label for="cusco"
+                                                            class="font-acehMedium text-text18 md:text-text22">
+                                                            Cusco
                                                         </label>
                                                     </div>
-                                                </div>
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="lima"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
+                                                            </div>
 
+                                                            <label for="lima"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Lima
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="arequipa"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
+                                                            </div>
+
+                                                            <label for="arequipa"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Arequipa
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="iquitos"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
+                                                            </div>
+
+                                                            <label for="iquitos"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Iquitos
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="florencia"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
+                                                            </div>
+
+                                                            <label for="florencia"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Florencia
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <a href="#"
+                                                        class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
+                                                        Mostrar Más Ciudades
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5 px-2">
+                                                <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
+                                                    Clima
+                                                </h3>
+                                                <div class="flex flex-col gap-5">
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div>
+                                                            <input type="checkbox" id="frio"
+                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
+                                                        </div>
+
+                                                        <label for="frio"
+                                                            class="font-acehMedium text-text18 md:text-text22">
+                                                            Frío
+                                                        </label>
+                                                    </div>
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="templado"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
+                                                            </div>
+
+                                                            <label for="templado"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Templado
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="calido"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
+                                                            </div>
+
+                                                            <label for="calido"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Cálido
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5 px-2">
+                                                <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
+                                                    Actividades
+                                                </h3>
+                                                <div class="flex flex-col gap-5">
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div>
+                                                            <input type="checkbox" id="todas_actividades"
+                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
+                                                        </div>
+
+                                                        <label for="todas_actividades"
+                                                            class="font-acehMedium text-text18 md:text-text22">
+                                                            Todas las actividades
+                                                        </label>
+                                                    </div>
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="tracking"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
+                                                            </div>
+
+                                                            <label for="tracking"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Tracking
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="buceo"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
+                                                            </div>
+
+                                                            <label for="buceo"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Buceo
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="gastronomia"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
+                                                            </div>
+
+                                                            <label for="gastronomia"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Gastronomía
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="compras"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
+                                                            </div>
+
+                                                            <label for="compras"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Compras
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="visitas_culturales"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
+                                                            </div>
+
+                                                            <label for="visitas_culturales"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Visitas culturales
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="deportes_acuaticos"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
+                                                            </div>
+
+                                                            <label for="deportes_acuaticos"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Deportes acuáticos
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="vida_nocturna"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
+                                                            </div>
+
+                                                            <label for="vida_nocturna"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Vida nocturna
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="aventura"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
+                                                            </div>
+
+                                                            <label for="aventura"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Aventura
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <a href="#"
+                                                        class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
+                                                        Mostrar Más Actividades
+                                                    </a>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5 px-2">
+                                                <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
+                                                    Duración
+                                                </h3>
+                                                <div class="flex flex-col gap-5">
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div>
+                                                            <input type="checkbox" id="finDeSemana"
+                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
+                                                        </div>
+
+                                                        <label for="finDeSemana"
+                                                            class="font-acehMedium text-text18 md:text-text22">
+                                                            Fin de semana
+                                                        </label>
+                                                    </div>
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="unaSemana"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
+                                                            </div>
+
+                                                            <label for="unaSemana"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Una semanas
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-center justify-start gap-5">
+                                                        <div class="flex items-center justify-start gap-5">
+                                                            <div>
+                                                                <input type="checkbox" id="dosAmasSemanas"
+                                                                    class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
+                                                            </div>
+
+                                                            <label for="dosAmasSemanas"
+                                                                class="font-acehMedium text-text18 md:text-text22">
+                                                                Dos semanas o más
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <a href="#"
+                                                        class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
+                                                        Mostrar Más Actividades
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex justify-between items-center pt-5">
                                                 <a href="#"
-                                                    class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
-                                                    Mostrar Más Países
+                                                    class="text-colorLetter font-acehbold text-text16 md:text-text22 hover:text-blue-900 md:duration-500 min-w-[90px] my-5 inline-block text-center md:text-left">
+                                                    Limpiar Todo
                                                 </a>
+
+                                                <a href="detalle_actividad.html"
+                                                    class="font-acehMedium text-text16 md:text-text22 rounded-3xl bg-colorBackgroundHeader py-3 px-5 md:px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500">
+                                                    Mostrar Resultados</a>
                                             </div>
-                                        </div>
-                                        <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5 px-2">
-                                            <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
-                                                Ciudad
-                                            </h3>
-                                            <div class="flex flex-col gap-5">
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div>
-                                                        <input type="checkbox" id="cusco"
-                                                            class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
-                                                    </div>
-
-                                                    <label for="cusco" class="font-acehMedium text-text18 md:text-text22">
-                                                        Cusco
-                                                    </label>
-                                                </div>
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="lima"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
-                                                        </div>
-
-                                                        <label for="lima" class="font-acehMedium text-text18 md:text-text22">
-                                                            Lima
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="arequipa"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
-                                                        </div>
-
-                                                        <label for="arequipa" class="font-acehMedium text-text18 md:text-text22">
-                                                            Arequipa
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="iquitos"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
-                                                        </div>
-
-                                                        <label for="iquitos" class="font-acehMedium text-text18 md:text-text22">
-                                                            Iquitos
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="florencia"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
-                                                        </div>
-
-                                                        <label for="florencia" class="font-acehMedium text-text18 md:text-text22">
-                                                            Florencia
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                                <a href="#"
-                                                    class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
-                                                    Mostrar Más Ciudades
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                        <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5 px-2">
-                                            <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
-                                                Clima
-                                            </h3>
-                                            <div class="flex flex-col gap-5">
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div>
-                                                        <input type="checkbox" id="frio"
-                                                            class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
-                                                    </div>
-
-                                                    <label for="frio" class="font-acehMedium text-text18 md:text-text22">
-                                                        Frío
-                                                    </label>
-                                                </div>
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="templado"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
-                                                        </div>
-
-                                                        <label for="templado" class="font-acehMedium text-text18 md:text-text22">
-                                                            Templado
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="calido"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
-                                                        </div>
-
-                                                        <label for="calido" class="font-acehMedium text-text18 md:text-text22">
-                                                            Cálido
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5 px-2">
-                                            <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
-                                                Actividades
-                                            </h3>
-                                            <div class="flex flex-col gap-5">
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div>
-                                                        <input type="checkbox" id="todas_actividades"
-                                                            class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
-                                                    </div>
-
-                                                    <label for="todas_actividades" class="font-acehMedium text-text18 md:text-text22">
-                                                        Todas las actividades
-                                                    </label>
-                                                </div>
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="tracking"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
-                                                        </div>
-
-                                                        <label for="tracking" class="font-acehMedium text-text18 md:text-text22">
-                                                            Tracking
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="buceo"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
-                                                        </div>
-
-                                                        <label for="buceo" class="font-acehMedium text-text18 md:text-text22">
-                                                            Buceo
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="gastronomia"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
-                                                        </div>
-
-                                                        <label for="gastronomia" class="font-acehMedium text-text18 md:text-text22">
-                                                            Gastronomía
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="compras"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
-                                                        </div>
-
-                                                        <label for="compras" class="font-acehMedium text-text18 md:text-text22">
-                                                            Compras
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="visitas_culturales"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
-                                                        </div>
-
-                                                        <label for="visitas_culturales" class="font-acehMedium text-text18 md:text-text22">
-                                                            Visitas culturales
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="deportes_acuaticos"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
-                                                        </div>
-
-                                                        <label for="deportes_acuaticos" class="font-acehMedium text-text18 md:text-text22">
-                                                            Deportes acuáticos
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="vida_nocturna"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
-                                                        </div>
-
-                                                        <label for="vida_nocturna" class="font-acehMedium text-text18 md:text-text22">
-                                                            Vida nocturna
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                                <div class="flex items-center justify-start gap-5">
-                                                    <div class="flex items-center justify-start gap-5">
-                                                        <div>
-                                                            <input type="checkbox" id="aventura"
-                                                                class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
-                                                        </div>
-
-                                                        <label for="aventura" class="font-acehMedium text-text18 md:text-text22">
-                                                            Aventura
-                                                        </label>
-                                                    </div>
-                                                </div>
-
-                                                <a href="#"
-                                                    class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
-                                                    Mostrar Más Actividades
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="flex justify-between items-center">
-                                            <a href="#"
-                                                class="text-colorLetter font-acehbold text-text16 md:text-text22 hover:text-blue-900 md:duration-500 min-w-[90px] my-5 inline-block text-center md:text-left">
-                                                Limpiar Todo
-                                            </a>
-
-                                            <a href="detalle_actividad.html"
-                                                class="font-acehMedium text-text16 md:text-text22 rounded-full bg-colorBackgroundHeader py-3 px-5 md:px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500">Mostrar
-                                                Resultados</a>
                                         </div>
                                     </div>
                                 </div>
@@ -999,8 +1090,8 @@
 
                         <div class="flex items-center">
                             <a href="#"
-                                class="font-acehSemibold text-[18px] rounded-[20px] border-colorBorder border-2 py-2 md:py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 flex gap-2 items-center ">
-                                <span> Ordenar</span>
+                                class="open-ordenar font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-2 md:py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 flex gap-2 items-center">
+                                <span>Ordenar</span>
                                 <svg width="30" height="30" viewBox="0 0 25 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" class="inline-block">
                                     <path d="M7.01172 10L12.0125 14.58L17.0117 10" stroke="#0F1B2C" stroke-width="2"
@@ -1008,6 +1099,30 @@
                                         class="group-hover:stroke-white md:duration-500" />
                                 </svg>
                             </a>
+
+                            <div class="modal-ordenar z-[100]">
+                                <div class="modal__mostrar-ordenar">
+                                    <div class="flex flex-col gap-5 p-5">
+                                        <div class="flex justify-between items-center w-full">
+                                            <h2 class="font-acehSemibold text-[36px] md:text-[48px] leading-none">
+                                                Ordenar
+                                            </h2>
+                                            <a href="#" class="modal__close-ordenar">
+                                                <img src="./images/svg/close.svg" alt="close" />
+                                            </a>
+                                        </div>
+                                        <div
+                                            class="flex flex-col text-[#0F1B2C] font-acehRegular text-text18 md:text-text22">
+                                            <a href="#" class="p-4 rounded-2xl ordenar-destinos">A - Z</a>
+                                            <a href="#" class="p-4 rounded-2xl ordenar-destinos">Z - A</a>
+                                            <a href="#" class="p-4 rounded-2xl ordenar-destinos">De menor a
+                                                mayor</a>
+                                            <a href="#" class="p-4 rounded-2xl ordenar-destinos">De mayor a
+                                                menor</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <p class="font-acehSemibold text-text18 md:text-text22 hidden md:block text-[#0F1B2C]">
@@ -1016,12 +1131,13 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto gap-10 md:gap-4 2xl:gap-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto gap-10 md:gap-4 2xl:gap-16 mt-10">
                 <!-- 1 -->
                 <div data-aos="fade-up" data-aos-offset="150">
                     <div class="image__effect-hover  rounded-[20px]">
                         <img src="./images/img/cusco.png" alt="cusco" class="w-full shadow-lg" />
-                        <div class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
+                        <div
+                            class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
                             <div class="text-white text-center">
                                 <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
                                 <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
@@ -1070,7 +1186,8 @@
                     <div class="image__effect-hover rounded-[20px]">
                         <img src="./images/img/lisboa.png" alt="cusco" class="w-full shadow-lg" />
                         <!-- ------ -->
-                        <div class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
+                        <div
+                            class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
                             <div class="text-white text-center">
                                 <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
                                 <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
@@ -1115,9 +1232,10 @@
                 <!-- 3 -->
                 <div data-aos="fade-up" data-aos-offset="150">
                     <div class="image__effect-hover rounded-[20px]">
-                        
+
                         <img src="./images/img/dubai.png" alt="cusco" class="w-full shadow-lg" />
-                        <div class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
+                        <div
+                            class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
                             <div class="text-white text-center">
                                 <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
                                 <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
@@ -1163,7 +1281,8 @@
                 <div data-aos="fade-up" data-aos-offset="150">
                     <div class="image__effect-hover rounded-[20px]">
                         <img src="./images/img/paris.png" alt="cusco" class="w-full shadow-lg" />
-                        <div class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
+                        <div
+                            class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
                             <div class="text-white text-center">
                                 <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
                                 <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
@@ -1209,7 +1328,8 @@
                 <div data-aos="fade-up" data-aos-offset="150">
                     <div class="image__effect-hover rounded-[20px]">
                         <img src="./images/img/El_cairo.png" alt="cusco" class="w-full shadow-lg" />
-                        <div class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
+                        <div
+                            class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
                             <div class="text-white text-center">
                                 <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
                                 <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
@@ -1255,7 +1375,8 @@
                 <div data-aos="fade-up" data-aos-offset="150">
                     <div class="image__effect-hover rounded-[20px]">
                         <img src="./images/img/venecia.png" alt="cusco" class="w-full shadow-lg" />
-                        <div class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
+                        <div
+                            class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
                             <div class="text-white text-center">
                                 <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
                                 <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
@@ -1315,13 +1436,6 @@
         </section>
     </main>
 
-
-
-
-
-
-
-
 @section('scripts_improtados')
     <script>
         document.addEventListener("DOMContentLoaded", () => { // Captura el click de abrir
@@ -1341,18 +1455,46 @@
 
             /* -------------------------------------------- */
 
-            var swiper = new Swiper(".productos-explorar-destino", {
+
+            // Captura el click de abrir
+            const openOrdenar = document.querySelector(".open-ordenar");
+            // Captura al modal que se quiere mostrar
+            const modalOrdenar = document.querySelector(".modal-ordenar");
+            //Captura el evento de cierre
+            const closeModalOrdenar = document.querySelector(".modal__close-ordenar");
+            // Captura el body para bloqueo
+
+            /* ------------------- */
+
+            const ordenarDropdown = document.querySelectorAll('.ordenar-destinos');
+
+            ordenarDropdown.forEach(ordenar => {
+                ordenar.addEventListener("click", (e) => {
+                    if (!e.target.classList.contains('bg__dropdown-ordenar')) {
+                        e.target.classList.add("bg__dropdown-ordenar");
+                        ordenarDropdown.forEach(item => {
+                            if (e.target !== item) {
+                                item.classList.remove('bg__dropdown-ordenar')
+                            }
+                        })
+                    }
+                })
+            });
+
+            /* ----------- */
+
+            const swiper = new Swiper(".productos-explorar-destino", {
                 slidesPerView: 6,
                 spaceBetween: 40,
                 loop: true,
-                grabCursor: true,
+                grabCursor: false,
                 centeredSlides: false,
                 initialSlide: 0,
                 allowTouchMove: false,
                 autoplay: {
                     delay: 1500,
                     disableOnInteraction: false,
-                    pauseOnMouseEnter:true
+                    pauseOnMouseEnter: true
                 },
                 breakpoints: {
                     0: {
@@ -1365,7 +1507,7 @@
                     },
                     1280: {
                         slidesPerView: 6,
-                    },                 
+                    },
                 },
             });
 
@@ -1397,6 +1539,20 @@
                 body.classList.remove("overflow-hidden");
             });
 
+            /* --------------------------- */
+            openOrdenar.addEventListener("click", (e) => {
+                e.preventDefault();
+                modalOrdenar.classList.add("modal--show");
+                body.classList.add("overflow-hidden");
+                modalOrdenar.style.display = "flex";
+            });
+
+            closeModalOrdenar.addEventListener("click", (e) => {
+                e.preventDefault();
+                modalOrdenar.classList.remove("modal--show");
+                body.classList.remove("overflow-hidden");
+            });
+
             // Función para cerrar el modal
             function resetEffects(event) {
                 if (event.target === modal) {
@@ -1405,6 +1561,11 @@
                 }
                 if (event.target === modalFiltro) {
                     modalFiltro.classList.remove("modal--show-filtros");
+                    body.classList.remove("overflow-hidden");
+                }
+
+                if (event.target === modalOrdenar) {
+                    modalOrdenar.classList.remove("modal--show");
                     body.classList.remove("overflow-hidden");
                 }
             }
