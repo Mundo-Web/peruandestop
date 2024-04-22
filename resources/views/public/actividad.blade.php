@@ -936,7 +936,7 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="flex gap-5 items-center">
+                                                    <div class="flex flex-col md:flex-row gap-5 items-center">
 
                                                         <p
                                                             class="text-[#0F1B2C] font-acehbold text-text18 md:text-text22 w-full">
@@ -945,7 +945,7 @@
 
                                                         {{-- revisar --}}
                                                         <select name="" id=""
-                                                            class="font-acehbold text-[#3F76BB] border-none text-text18 md:text-text22 w-full">
+                                                            class="font-acehbold text-[#3F76BB] border-none text-text18 md:text-text22 w-full px-2">
                                                             <option value="1" class="font-acehRegular">Soles Peruanos
                                                             </option>
                                                             <option value="2" class="font-acehRegular">Dolares
