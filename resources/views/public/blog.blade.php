@@ -92,7 +92,7 @@
                                 recusandae ad quibusdams.
                             </p>
                             <div class="mt-2">
-                                <a href="post.html"
+                                <a href="{{route('post')}}"
                                     class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop duration-500 inline-block w-auto">
                                     Ver Actividad
                                 </a>
@@ -116,7 +116,7 @@
                                     lorem dapibus...
                                 </p>
                                 <div class="mt-2">
-                                    <a href="post.html"
+                                    <a href="{{route('post')}}"
                                         class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop duration-500 inline-block w-auto">
                                         Ver Actividad
                                     </a>
@@ -142,7 +142,7 @@
                                     lorem dapibus...
                                 </p>
                                 <div class="mt-2">
-                                    <a href="post.html"
+                                    <a href="{{route('post')}}"
                                         class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop duration-500 inline-block w-auto">
                                         Ver Actividad
                                     </a>
@@ -176,7 +176,7 @@
                                     lorem dapibus...
                                 </p>
                                 <div class="flex">
-                                    <a href="post.html"
+                                    <a href="{{route('post')}}"
                                         class="font-acehRegular text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 text-center ">Ver
                                         Actividad</a>
                                 </div>
@@ -200,7 +200,7 @@
                                     lorem dapibus...
                                 </p>
                                 <div class="flex">
-                                    <a href="post.html"
+                                    <a href="{{route('post')}}"
                                         class="font-acehRegular text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 text-center ">Ver
                                         Actividad</a>
                                 </div>
@@ -223,7 +223,7 @@
                                     lorem dapibus...
                                 </p>
                                 <div class="flex">
-                                    <a href="post.html"
+                                    <a href="{{route('post')}}"
                                         class="font-acehRegular text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 text-center ">Ver
                                         Actividad</a>
                                 </div>
@@ -246,7 +246,7 @@
                                     lorem dapibus...
                                 </p>
                                 <div class="flex">
-                                    <a href="post.html"
+                                    <a href="{{route('post')}}"
                                         class="font-acehRegular text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 text-center ">Ver
                                         Actividad</a>
                                 </div>
@@ -269,7 +269,7 @@
                                     lorem dapibus...
                                 </p>
                                 <div class="flex">
-                                    <a href="post.html"
+                                    <a href="{{route('post')}}"
                                         class="font-acehRegular text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 text-center ">Ver
                                         Actividad</a>
                                 </div>
@@ -292,7 +292,7 @@
                                     lorem dapibus...
                                 </p>
                                 <div class="flex">
-                                    <a href="post.html"
+                                    <a href="{{route('post')}}"
                                         class="font-acehRegular text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 text-center ">Ver
                                         Actividad</a>
                                 </div>
@@ -316,7 +316,7 @@
                                     lorem dapibus...
                                 </p>
                                 <div class="flex">
-                                    <a href="post.html"
+                                    <a href="{{route('post')}}"
                                         class="font-acehRegular text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 text-center ">Ver
                                         Actividad</a>
                                 </div>
@@ -339,7 +339,7 @@
                                     lorem dapibus...
                                 </p>
                                 <div class="flex">
-                                    <a href="post.html"
+                                    <a href="{{route('post')}}"
                                         class="font-acehRegular text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 text-center ">Ver
                                         Actividad</a>
                                 </div>
@@ -376,7 +376,7 @@
                             </p>
                         </div>
                         <div>
-                            <a href="post.html"
+                            <a href="{{route('post')}}"
                                 class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop duration-500 inline-block w-auto">
                                 Ver Actividad
                             </a>
@@ -405,7 +405,7 @@
                             </p>
                         </div>
                         <div>
-                            <a href="post.html"
+                            <a href="{{route('post')}}"
                                 class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop duration-500 inline-block w-auto">
                                 Ver Actividad
                             </a>
@@ -435,7 +435,7 @@
                             </p>
                         </div>
                         <div>
-                            <a href="post.html"
+                            <a href="{{route('post')}}"
                                 class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop duration-500 inline-block w-auto">
                                 Ver Actividad
                             </a>
@@ -464,7 +464,7 @@
                             </p>
                         </div>
                         <div>
-                            <a href="post.html"
+                            <a href="{{route('post')}}"
                                 class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop duration-500 inline-block w-auto">
                                 Ver Actividad
                             </a>
@@ -493,7 +493,7 @@
                             </p>
                         </div>
                         <div>
-                            <a href="post.html"
+                            <a href="{{route('post')}}"
                                 class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop duration-500 inline-block w-auto">
                                 Ver Actividad
                             </a>
@@ -522,7 +522,7 @@
                             </p>
                         </div>
                         <div>
-                            <a href="post.html"
+                            <a href="{{route('post')}}"
                                 class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop duration-500 inline-block w-auto">
                                 Ver Actividad
                             </a>

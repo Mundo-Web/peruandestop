@@ -728,7 +728,7 @@
         </section>
 
         <section class="py-12 w-11/12 mx-auto flex" data-aos="fade-up" data-aos-offset="150">
-            <a href="destino.html"
+            <a href="{{route('destino')}}"
                 class="font-acehSemibold text-text18 md:text-text22 rounded-full border-colorBorder border-2 py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 inline-block w-full md:w-auto text-center">
                 Ver más Destinos
                 <svg width="20" height="17" viewBox="0 0 20 17" fill="none"
@@ -902,7 +902,7 @@
             </div>
 
             <div class="w-11/12 mx-auto pb-20">
-                <a href="actividad.html"
+                <a href="{{route('actividad')}}"
                     class="font-acehSemibold text-text18 md:text-text22 rounded-full border-colorBorder border-2 py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 inline-block w-full md:w-auto text-center">
                     Ver más Actividades
                     <svg width="20" height="17" viewBox="0 0 20 17" fill="none"

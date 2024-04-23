@@ -1075,9 +1075,9 @@
                                                     Limpiar Todo
                                                 </a>
 
-                                                <a href="detalle_actividad.html"
-                                                    class="font-acehMedium text-text16 md:text-text22 rounded-3xl bg-colorBackgroundHeader py-3 px-5 md:px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500">Ver
-                                                    Actividad</a>
+                                                <a href="{{route('detalleActividad')}}"
+                                                    class="font-acehMedium text-text16 md:text-text22 rounded-3xl bg-colorBackgroundHeader py-3 px-5 md:px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500">
+                                                    Ver Actividad</a>
                                             </div>
 
                                         </div>
@@ -1184,7 +1184,7 @@
                                     120 US$
                                     <span class="block font-acehMedium text-text16 md:text-text20">Por persona</span>
                                 </p>
-                                <a href="actividad.html"
+                                <a href="{{route('detalleActividad')}}"
                                     class="font-acehSemibold text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">Ver
                                     Actividad</a>
                             </div>
@@ -1236,7 +1236,7 @@
                                     120 US$
                                     <span class="block font-acehMedium text-text16 md:text-text20">Por persona</span>
                                 </p>
-                                <a href="actividad.html"
+                                <a href="{{route('detalleActividad')}}"
                                     class="font-acehSemibold text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">Ver
                                     Actividad</a>
                             </div>
@@ -1288,7 +1288,7 @@
                                     120 US$
                                     <span class="block font-acehMedium text-text16 md:text-text20">Por persona</span>
                                 </p>
-                                <a href="actividad.html"
+                                <a href="{{route('detalleActividad')}}"
                                     class="font-acehSemibold text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">Ver
                                     Actividad</a>
                             </div>
@@ -1340,7 +1340,7 @@
                                     120 US$
                                     <span class="block font-acehMedium text-text16 md:text-text20">Por persona</span>
                                 </p>
-                                <a href="actividad.html"
+                                <a href="{{route('detalleActividad')}}"
                                     class="font-acehSemibold text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">Ver
                                     Actividad</a>
                             </div>
@@ -1393,7 +1393,7 @@
                                     120 US$
                                     <span class="block font-acehMedium text-text16 md:text-text20">Por persona</span>
                                 </p>
-                                <a href="actividad.html"
+                                <a href="{{route('detalleActividad')}}"
                                     class="font-acehSemibold text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">Ver
                                     Actividad</a>
                             </div>
@@ -1445,7 +1445,7 @@
                                     120 US$
                                     <span class="block font-acehMedium text-text16 md:text-text20">Por persona</span>
                                 </p>
-                                <a href="actividad.html"
+                                <a href="{{route('detalleActividad')}}"
                                     class="font-acehSemibold text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">Ver
                                     Actividad</a>
                             </div>
@@ -1454,7 +1454,7 @@
                 </div>
 
                 <div class="flex justify-center mt-10">
-                    <a href="destino.html"
+                    <a href="{{route('destino')}}"
                         class="font-acehSemibold text-text18 md:text-text22 rounded-full border-colorBorder border-2 py-3 px-5 group md:duration-500 text-[#0F1B2C] hover:bg-colorBackgroundHeader hover:text-white">Ver
                         más Destinos
                         <svg width="20" height="17" viewBox="0 0 20 17" fill="none"

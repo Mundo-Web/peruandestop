@@ -105,7 +105,7 @@
     <div class="py-5 bg-black bg-opacity-20 text-white bg__destino-header">{{-- <div class="py-5 bg-gray-500 bg-opacity-35 text-white bg__destino-header"> --}}
         <div class="flex justify-between items-center w-11/12 mx-auto" >
             <div>
-                <a href="index.html">
+                <a href="{{route('index')}}">
                     <img src="./images/img/logo.png" alt="logo peruandestop travel more" class="" />
                 </a>
             </div>
