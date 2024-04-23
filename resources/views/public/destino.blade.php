@@ -1174,7 +1174,7 @@
                                 2,343
                                 <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
                             </p>
-                            <a href="detalle_actividad.html"
+                            <a href="{{route('detalleActividad')}}"
                                 class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">
                                 Ver destino
                             </a>
@@ -1222,7 +1222,7 @@
                             <p class="font-acehSemibold text-text28 md:text-text32 text-[#0F1B2C]">
                                 2,343 <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
                             </p>
-                            <a href="detalle_actividad.html"
+                            <a href="{{route('detalleActividad')}}"
                                 class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">
                                 Ver destino
                             </a>
@@ -1270,7 +1270,7 @@
                             <p class="font-acehSemibold text-text28 md:text-text32 text-[#0F1B2C]">
                                 2,343 <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
                             </p>
-                            <a href="detalle_actividad.html"
+                            <a href="{{route('detalleActividad')}}"
                                 class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">
                                 Ver destino
                             </a>
@@ -1317,7 +1317,7 @@
                             <p class="font-acehSemibold text-text28 md:text-text32 text-[#0F1B2C]">
                                 2,343 <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
                             </p>
-                            <a href="detalle_actividad.html"
+                            <a href="{{route('detalleActividad')}}"
                                 class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">
                                 Ver destino
                             </a>
@@ -1364,7 +1364,7 @@
                             <p class="font-acehSemibold text-text28 md:text-text32 text-[#0F1B2C]">
                                 2,343 <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
                             </p>
-                            <a href="detalle_actividad.html"
+                            <a href="{{route('detalleActividad')}}"
                                 class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">
                                 Ver destino
                             </a>
@@ -1411,7 +1411,7 @@
                             <p class="font-acehSemibold text-text28 md:text-text32">
                                 2,343 <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
                             </p>
-                            <a href="detalle_actividad.html"
+                            <a href="{{route('detalleActividad')}}"
                                 class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">
                                 Ver destino
                             </a>
@@ -1421,7 +1421,7 @@
             </div>
 
             <div class="flex justify-center mt-10" data-aos="fade-up" data-aos-offset="150">
-                <a href="destino.html"
+                <a href="{{route('destino')}}"
                     class="font-acehSemibold text-text18 md:text-text22 rounded-full border-colorBorder border-2 py-3 px-5 group md:duration-500 text-[#0F1B2C] hover:bg-colorBackgroundHeader hover:text-white">Ver
                     más Destinos
                     <svg width="20" height="17" viewBox="0 0 20 17" fill="none"
