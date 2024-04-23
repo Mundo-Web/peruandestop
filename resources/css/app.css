@@ -450,7 +450,7 @@ button {
 
 /* --- tipografias ---- */
 
-@font-face {
+/* @font-face {
     font-family: "acehblack";
     src: url("../fonts/acehsoft-black-webfont.woff") format("woff");
 }
@@ -480,10 +480,10 @@ button {
     src: url("../fonts/acehsoft-regular-webfont.woff") format("woff");
 }
 
-/* @font-face {
+ @font-face {
     font-family: "acehSemibold";
     src: url("../fonts/acehsoft-semibold-webfont.woff") format("woff");
-} */
+} 
 
 @font-face {
     font-family: "acehThin";
@@ -499,7 +499,7 @@ button {
     font-family: "extraHeavyDemo";
     src: url("../fonts/mont-heavydemo-webfont.woff") format("woff");
 }
-
+ */
 /* ------- efecto hover en las imagenes --- */
 
 .image__effect-hover {

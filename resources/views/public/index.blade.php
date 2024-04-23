@@ -26,10 +26,10 @@
             /* o tu color deseado */
         }
 
-        @font-face {
+        /* @font-face {
         font-family: "acehSemibold";
         src: url({{asset('fonts/acehsoft-bold-webfont.woff')}}) format("woff");
-} 
+        }  */
     </style>
 @stop
 
