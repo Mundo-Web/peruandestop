@@ -23,6 +23,7 @@
             border-color: initial;
             /* o tu color deseado */
         }
+        
     </style>
 @stop
 
@@ -673,7 +674,7 @@
                 <!-- 6 -->
                 <div data-aos="fade-up" data-aos-offset="150">
                     <div class="image__effect-hover rounded-[20px]">
-                        <img src="./images/img/Venecia.png" alt="cusco" class="w-full shadow-lg" />
+                        <img src="./images/img/venecia.png" alt="cusco" class="w-full shadow-lg" />
                         <div class="image__effect-content flex justify-around text-center gap-5">
                             <div class="text-white text-center">
                                 <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>

@@ -623,7 +623,7 @@
                                 2,343
                                 <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
                             </p>
-                            <a href="detalle_actividad.html"
+                            <a href="{{route('detalleActividad')}}"
                                 class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader  py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500">Ver
                                 Destino</a>
                         </div>
@@ -673,7 +673,7 @@
                             <p class="font-acehSemibold text-text28 md:text-text32">
                                 2,343 <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
                             </p>
-                            <a href="detalle_actividad.html"
+                            <a href="{{route('detalleActividad')}}"
                                 class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader  py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500">Ver
                                 Destino</a>
                         </div>
@@ -723,7 +723,7 @@
                             <p class="font-acehSemibold text-text28 md:text-text32">
                                 2,343 <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
                             </p>
-                            <a href="detalle_actividad.html"
+                            <a href="{{route('detalleActividad')}}"
                                 class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500">Ver
                                 Destino</a>
                         </div>

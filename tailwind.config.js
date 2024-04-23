@@ -121,10 +121,11 @@ export default {
                 selectCheck: "#173525",
                 colorBorder: "#3F76BB",
             },
+            /* public\build\assets\header_fondo-iNcmhpe6.png */
             backgroundImage: {
                 "close-menu": "url(../images/prueba/icon-close.svg)",
                 "open-menu": "url(../images/prueba/icon-hamburger.svg)",
-                header_fondo: "url(../../public/images/img/header_fondo.png)",
+                header_fondo: "url(/public/images/img/header_fondo.png)",
                 header_fondo_1:
                     "url(../../public/images/img/header_fondo_1.png)",
                 header_fondo_2:
