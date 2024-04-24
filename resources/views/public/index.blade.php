@@ -30,6 +30,44 @@
         font-family: "acehSemibold";
         src: url({{asset('fonts/acehsoft-bold-webfont.woff')}}) format("woff");
         }  */
+
+        .bg_header_fondo{
+            background-image: url({{asset('images/img/header_fondo.png')}});
+        }
+
+        .bg_header_fondo_1{
+            background-image: url({{asset('images/img/header_fondo_1.png')}});
+        }
+
+        .bg_header_fondo_2{
+            background-image: url({{asset('images/img/header_fondo_2.png')}});
+        }
+
+        .bg_header_fondo_3{
+            background-image: url({{asset('images/img/header_fondo_3.png')}});
+        }  
+        
+        .bg_header_fondo_4{
+            background-image: url({{asset('images/img/header_fondo_4.png')}});
+        }
+
+        .bg_header_fondo_5{
+            background-image: url({{asset('images/img/header_fondo_5.png')}});
+        }
+
+
+        .bg_header_fondo_6{
+            background-image: url({{asset('images/img/header_fondo_6.png')}});
+        }
+
+
+        .bg_header_fondo_7{
+            background-image: url({{asset('images/img/header_fondo_7.png')}});
+        }
+
+        .bg_header_fondo_8{
+            background-image: url({{asset('images/img/header_fondo_8.png')}});
+        }
     </style>
 @stop
 
@@ -41,7 +79,7 @@
             <div class="swiper slider__headers">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="bg-header_fondo bg-cover bg-center bg-no-repeat sm:w-full h-full">
+                        <div class="bg_header_fondo bg-cover bg-center bg-no-repeat sm:w-full h-full">
                             <div class="text-white flex flex-col items-center pt-80 md:pt-80 pb-60 w-full sm:w-6/12   mx-auto"
                                 data-aos="fade-up" data-aos-offset="150">
                                 <div class="text-center w-11/12 mx-auto">
@@ -73,7 +111,7 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <div class="bg-header_fondo_1 bg-cover bg-center bg-no-repeat sm:w-full h-full">
+                        <div class="bg_header_fondo_1 bg-cover bg-center bg-no-repeat sm:w-full h-full">
                             <div class="text-white flex flex-col items-center pt-80 md:pt-80 pb-60 w-full sm:w-6/12   mx-auto"
                                 data-aos="fade-up" data-aos-offset="150">
                                 <div class="text-center w-11/12 mx-auto">
@@ -105,7 +143,7 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <div class="bg-header_fondo_2 bg-cover bg-center bg-no-repeat sm:w-full h-full">
+                        <div class="bg_header_fondo_2 bg-cover bg-center bg-no-repeat sm:w-full h-full">
                             <div class="text-white flex flex-col items-center pt-80 md:pt-80 pb-60 w-full sm:w-6/12   mx-auto"
                                 data-aos="fade-up" data-aos-offset="150">
                                 <div class="text-center w-11/12 mx-auto">
@@ -137,7 +175,7 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <div class="bg-header_fondo_3 bg-cover bg-center bg-no-repeat sm:w-full h-full">
+                        <div class="bg_header_fondo_3 bg-cover bg-center bg-no-repeat sm:w-full h-full">
                             <div class="text-white flex flex-col items-center pt-80 md:pt-80 pb-60 w-full sm:w-6/12   mx-auto"
                                 data-aos="fade-up" data-aos-offset="150">
                                 <div class="text-center w-11/12 mx-auto">
@@ -169,7 +207,7 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <div class="bg-header_fondo_4 bg-cover bg-center bg-no-repeat sm:w-full h-full">
+                        <div class="bg_header_fondo_4 bg-cover bg-center bg-no-repeat sm:w-full h-full">
                             <div class="text-white flex flex-col items-center pt-80 md:pt-80 pb-60 w-full sm:w-6/12   mx-auto"
                                 data-aos="fade-up" data-aos-offset="150">
                                 <div class="text-center w-11/12 mx-auto">
@@ -201,7 +239,7 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <div class="bg-header_fondo_5 bg-cover bg-center bg-no-repeat sm:w-full h-full">
+                        <div class="bg_header_fondo_5 bg-cover bg-center bg-no-repeat sm:w-full h-full">
                             <div class="text-white flex flex-col items-center pt-80 md:pt-80 pb-60 w-full sm:w-6/12   mx-auto"
                                 data-aos="fade-up" data-aos-offset="150">
                                 <div class="text-center w-11/12 mx-auto">
@@ -233,7 +271,7 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <div class="bg-header_fondo_6 bg-cover bg-center bg-no-repeat sm:w-full h-full">
+                        <div class="bg_header_fondo_6 bg-cover bg-center bg-no-repeat sm:w-full h-full">
                             <div class="text-white flex flex-col items-center pt-80 md:pt-80 pb-60 w-full sm:w-6/12   mx-auto"
                                 data-aos="fade-up" data-aos-offset="150">
                                 <div class="text-center w-11/12 mx-auto">
@@ -265,7 +303,7 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <div class="bg-header_fondo_7 bg-cover bg-center bg-no-repeat sm:w-full h-full">
+                        <div class="bg_header_fondo_7 bg-cover bg-center bg-no-repeat sm:w-full h-full">
                             <div class="text-white flex flex-col items-center pt-80 md:pt-80 pb-60 w-full sm:w-6/12   mx-auto"
                                 data-aos="fade-up" data-aos-offset="150">
                                 <div class="text-center w-11/12 mx-auto">
@@ -297,7 +335,7 @@
                     </div>
 
                     <div class="swiper-slide">
-                        <div class="bg-header_fondo_8 bg-cover bg-center bg-no-repeat sm:w-full h-full">
+                        <div class="bg_header_fondo_8 bg-cover bg-center bg-no-repeat sm:w-full h-full">
                             <div class="text-white flex flex-col items-center pt-80 md:pt-80 pb-60 w-full sm:w-6/12   mx-auto"
                                 data-aos="fade-up" data-aos-offset="150">
                                 <div class="text-center w-11/12 mx-auto">

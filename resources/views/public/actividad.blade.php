@@ -32,6 +32,17 @@
             background-color: #3F76BB;
             color: white;
         }
+
+        .bg__actividad-portada {
+            background-image: url({{asset('images/img/cusco_mobile.png')}});
+        }
+
+        @media (min-width: 768px)   {
+
+            .bg__actividad-portada{
+                background-image: url({{asset('images/img/background_cusco.png')}});
+            }    
+        }
     </style>
 @stop
 
@@ -39,7 +50,7 @@
 
     <main class="pb-24">
         <section
-            class="bg-destino__mobile_fondo md:bg-destino__desktop_fondo bg-cover bg-center bg-no-repeat sm:w-full h-full">
+            class="bg__actividad-portada bg-cover bg-center bg-no-repeat sm:w-full h-full">
             <div class="text-white w-11/12 mx-auto pt-96" data-aos="fade-up">
                 <div class="flex flex-col justify-end md:grid grid-cols-1 pb-12 md:py-10 md:gap-24">
                     <div class="flex flex-col items-start my-12">
@@ -633,7 +644,7 @@
                     <div class="flex gap-10 py-10 justify-between">
                         <div>
                             <a
-                                class="mostrar-filtros font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-2 md:py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 flex gap-2 items-center">
+                                class="cursor-pointer mostrar-filtros font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-2 md:py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 flex gap-2 items-center">
                                 Filtros
                                 <svg width="20" height="20" viewBox="0 0 18 13" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" class="inline-block">

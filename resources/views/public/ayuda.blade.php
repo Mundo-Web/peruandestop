@@ -27,15 +27,24 @@
         .bg__destino-header {
             background-color: #0F1B2C;
         }
+
+        .bg__ayuda{
+            background-image: url({{asset('images/img/ayuda_mobile.png')}});
+        }
+
+        @media (min-width: 768px){
+            .bg__ayuda{
+                background-image: url({{asset('images/img/ayuda.png')}});
+            }
+        }
     </style>
 @stop
 
 
 @section('content')
-
     <main>
         <section>
-            <div class="bg-ayuda__mobile md:bg-ayuda bg-cover bg-center bg-no-repeat sm:w-full h-full pt-60 pb-24 md:pb-0">
+            <div class="bg__ayuda bg-cover bg-center bg-no-repeat sm:w-full h-full pt-60 pb-24 md:pb-0">
                 <div class="w-full md:w-6/12 mx-auto flex flex-col justify-center items-center md:pt-36 md:pb-60  text-center gap-5"
                     data-aos="fade-up" data-aos-offset="150">
                     <p class="font-acehMedium text-text28 md:text-text44 text-[#3F76BB]">FAQs</p>

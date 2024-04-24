@@ -32,6 +32,17 @@
             background-color: #3F76BB;
             color: white;
         }
+
+        .bg__destino-portada{
+            background-image: url({{asset('images/img/cusco_mobile.png')}});
+        }
+
+        @media (min-width: 768px)   {
+
+            .bg__destino-portada{
+                background-image: url({{asset('images/img/background_cusco.png')}});
+            }    
+        }
     </style>
 @stop
 
@@ -39,7 +50,7 @@
 @section('content')
     <main class="pb-24">
         <section
-            class="bg-destino__mobile_fondo md:bg-destino__desktop_fondo bg-cover bg-center bg-no-repeat sm:w-full h-full">
+            class="bg__destino-portada bg-cover bg-center bg-no-repeat sm:w-full h-full">
             <div class="text-white w-11/12 mx-auto pt-96" data-aos="fade-up" data-aos-offset="150">
                 <div class="flex flex-col justify-end md:grid grid-cols-1 pb-12 md:py-10 md:gap-24">
                     <div class="flex flex-col items-start my-12">
@@ -664,7 +675,7 @@
                     <div class="flex gap-10 py-10 justify-between">
                         <div class="flex items-center">
                             <a
-                                class="open-filtro font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-2 md:py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 flex gap-2 items-center">
+                                class="cursor-pointer open-filtro font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-2 md:py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 flex gap-2 items-center">
                                 <span>Filtros </span>
 
                                 <svg width="25" height="25" viewBox="0 0 18 13" fill="none"
@@ -1134,10 +1145,11 @@
             <div class="grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto gap-10 md:gap-4 2xl:gap-16 mt-10">
                 <!-- 1 -->
                 <div data-aos="fade-up" data-aos-offset="150">
-                    <div class="image__effect-hover  rounded-[20px]">
-                        <img src="./images/img/cusco.png" alt="cusco" class="w-full shadow-lg" />
+                    <div class="image__effect-hover rounded-[20px]">
+                        <img src="./images/img/cusco.png" alt="cusco" class="w-full shadow-lg block 2md:hidden" />
+                        <img src="./images/img/cusco_1.png" alt="cusco" class="w-full shadow-lg hidden 2md:block" />
                         <div
-                            class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
+                            class="image__effect-content flex justify-center sm:justify-start text-center gap-9 md:gap-12 lg:gap-16 p-5">
                             <div class="text-white text-center">
                                 <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
                                 <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
@@ -1184,10 +1196,11 @@
                 <!-- 2 -->
                 <div data-aos="fade-up" data-aos-offset="150">
                     <div class="image__effect-hover rounded-[20px]">
-                        <img src="./images/img/lisboa.png" alt="cusco" class="w-full shadow-lg" />
+                        <img src="./images/img/lisboa.png" alt="cusco" class="w-full shadow-lg block 2md:hidden" />
+                        <img src="./images/img/lisboa_1.png" alt="cusco" class="w-full shadow-lg hidden 2md:block" />
                         <!-- ------ -->
                         <div
-                            class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
+                            class="image__effect-content flex justify-center sm:justify-start text-center gap-9 md:gap-12 lg:gap-16 p-5">
                             <div class="text-white text-center">
                                 <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
                                 <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
@@ -1232,10 +1245,10 @@
                 <!-- 3 -->
                 <div data-aos="fade-up" data-aos-offset="150">
                     <div class="image__effect-hover rounded-[20px]">
-
-                        <img src="./images/img/dubai.png" alt="cusco" class="w-full shadow-lg" />
+                        <img src="./images/img/dubai.png" alt="cusco" class="w-full shadow-lg block md:hidden" />
+                        <img src="./images/img/dubai_1.png" alt="cusco" class="w-full shadow-lg hidden md:block" />
                         <div
-                            class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
+                            class="image__effect-content flex justify-center sm:justify-start text-center gap-9 md:gap-12 lg:gap-16 p-5">
                             <div class="text-white text-center">
                                 <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
                                 <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
@@ -1280,9 +1293,10 @@
                 <!-- 4 -->
                 <div data-aos="fade-up" data-aos-offset="150">
                     <div class="image__effect-hover rounded-[20px]">
-                        <img src="./images/img/paris.png" alt="cusco" class="w-full shadow-lg" />
+                        <img src="./images/img/paris.png" alt="cusco" class="w-full shadow-lg block md:hidden" />
+                        <img src="./images/img/paris_1.png" alt="cusco" class="w-full shadow-lg hidden md:block" />
                         <div
-                            class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
+                            class="image__effect-content flex justify-center sm:justify-start text-center gap-9 md:gap-12 lg:gap-16 p-5">
                             <div class="text-white text-center">
                                 <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
                                 <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
@@ -1327,9 +1341,10 @@
                 <!-- 5 -->
                 <div data-aos="fade-up" data-aos-offset="150">
                     <div class="image__effect-hover rounded-[20px]">
-                        <img src="./images/img/El_cairo.png" alt="cusco" class="w-full shadow-lg" />
+                        <img src="./images/img/El_cairo.png" alt="cusco" class="w-full shadow-lg block 2md:hidden" />
+                        <img src="./images/img/el_cairo_1.png" alt="cusco" class="w-full shadow-lg hidden 2md:block" />
                         <div
-                            class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
+                            class="image__effect-content flex justify-center sm:justify-start text-center gap-9 md:gap-12 lg:gap-16 p-5">
                             <div class="text-white text-center">
                                 <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
                                 <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
@@ -1374,9 +1389,10 @@
                 <!-- 6 -->
                 <div data-aos="fade-up" data-aos-offset="150">
                     <div class="image__effect-hover rounded-[20px]">
-                        <img src="./images/img/venecia.png" alt="cusco" class="w-full shadow-lg" />
+                        <img src="./images/img/venecia.png" alt="cusco" class="w-full shadow-lg block 2md:hidden" />
+                        <img src="./images/img/venecia_1.png" alt="cusco" class="w-full shadow-lg hidden 2md:block" />
                         <div
-                            class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
+                            class="image__effect-content flex justify-center sm:justify-start text-center gap-9 md:gap-12 lg:gap-16 p-5">
                             <div class="text-white text-center">
                                 <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
                                 <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
