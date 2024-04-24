@@ -2,7 +2,7 @@
     <div class="py-10 " >
         <div class="flex flex-col gap-10 md:grid grid-cols-5 md:gap-5 lg:gap-16 text-white w-11/12 mx-auto">
             <!-- --corregir-- el responsive -->
-            <div class="flex flex-col justify-start gap-3 items-start z-[50]" data-aos="fade-up" data-aos-offset="150">
+            <div class="flex flex-col justify-start gap-3 items-start z-[10]" data-aos="fade-up" data-aos-offset="150">
                 <p class="font-acehbold text-text22 pb-2">Lenguaje</p>
                 <div class="dropdown-idioma inline-block relative font-acehbold">
                     <button class="font-semibold py-2 px-6 rounded inline-flex items-center">
