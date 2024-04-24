@@ -52,49 +52,9 @@
     "src": "public/images/img/header_fondo_8.png"
   },
   "resources/css/app.css": {
-    "file": "assets/app-ki859ce7.css",
+    "file": "assets/app-1SVAlckt.css",
     "isEntry": true,
     "src": "resources/css/app.css"
-  },
-  "resources/fonts/acehsoft-black-webfont.woff": {
-    "file": "assets/acehsoft-black-webfont-A69_VVw_.woff",
-    "src": "resources/fonts/acehsoft-black-webfont.woff"
-  },
-  "resources/fonts/acehsoft-bold-webfont.woff": {
-    "file": "assets/acehsoft-bold-webfont-XK75yNqm.woff",
-    "src": "resources/fonts/acehsoft-bold-webfont.woff"
-  },
-  "resources/fonts/acehsoft-extralight-webfont.woff": {
-    "file": "assets/acehsoft-extralight-webfont-Vt2KX94m.woff",
-    "src": "resources/fonts/acehsoft-extralight-webfont.woff"
-  },
-  "resources/fonts/acehsoft-light-webfont.woff": {
-    "file": "assets/acehsoft-light-webfont-CeQtK63v.woff",
-    "src": "resources/fonts/acehsoft-light-webfont.woff"
-  },
-  "resources/fonts/acehsoft-medium-webfont.woff": {
-    "file": "assets/acehsoft-medium-webfont-EGKnsOyg.woff",
-    "src": "resources/fonts/acehsoft-medium-webfont.woff"
-  },
-  "resources/fonts/acehsoft-regular-webfont.woff": {
-    "file": "assets/acehsoft-regular-webfont-zWNK3X0s.woff",
-    "src": "resources/fonts/acehsoft-regular-webfont.woff"
-  },
-  "resources/fonts/acehsoft-semibold-webfont.woff": {
-    "file": "assets/acehsoft-semibold-webfont-NzeQG55G.woff",
-    "src": "resources/fonts/acehsoft-semibold-webfont.woff"
-  },
-  "resources/fonts/acehsoft-thin-webfont.woff": {
-    "file": "assets/acehsoft-thin-webfont-nKZc1-fN.woff",
-    "src": "resources/fonts/acehsoft-thin-webfont.woff"
-  },
-  "resources/fonts/mont-extralightdemo-webfont.woff": {
-    "file": "assets/mont-extralightdemo-webfont-WZrvoKFY.woff",
-    "src": "resources/fonts/mont-extralightdemo-webfont.woff"
-  },
-  "resources/fonts/mont-heavydemo-webfont.woff": {
-    "file": "assets/mont-heavydemo-webfont-BMM_0K7K.woff",
-    "src": "resources/fonts/mont-heavydemo-webfont.woff"
   },
   "resources/js/app.js": {
     "css": [
