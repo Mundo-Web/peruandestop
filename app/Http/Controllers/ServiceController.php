@@ -35,6 +35,7 @@ class ServiceController extends Controller
 
     public function mostrarFront()
     {
+        
         $servicios = Service::where("status", "=", true)->get();
         $logos = ClientLogos::where("status", "=", true)->get();
         $generales = General::where('id', '=', 1 )->get();

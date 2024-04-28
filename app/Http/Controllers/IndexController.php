@@ -6,6 +6,7 @@ use App\Http\Requests\StoreIndexRequest;
 use App\Http\Requests\UpdateIndexRequest;
 use App\Models\Attributes;
 use App\Models\AttributesValues;
+use App\Models\Blog;
 use App\Models\Faqs;
 use App\Models\General;
 use App\Models\Index;
@@ -16,6 +17,7 @@ use App\Models\Strength;
 use App\Models\Testimony;
 use App\Models\Category;
 use App\Models\Specifications;
+use App\Models\Tag;
 use App\Models\User;
 use App\Models\UserDetails;
 use Illuminate\Http\Request;
@@ -39,6 +41,8 @@ class IndexController extends Controller
     $categorias = Category::where("visible", "=", true)->get();
     $destacados = Products::where('destacar', '=', 1)->where('status', '=', 1)->where('visible', '=', 1)->get();
     $descuentos = Products::where('descuento', '>', 0)->where('status', '=', 1)->where('visible', '=', 1)->get();
+    $tags = Tag::where('status', '=', 1)->where('visible', '=', 1)->get();
+    $blogs = Blog::where('status', '=', 1)->where('visible', '=', 1)->get();
 
     $general = General::all();
     $benefit = Strength::where('status', '=', 1)->get();
@@ -49,7 +53,7 @@ class IndexController extends Controller
 
     dump($categorias->count());
 
-    return view('public.index', compact('productos', 'destacados', 'descuentos', 'general', 'benefit', 'faqs', 'testimonie', 'slider', 'categorias', 'category'));
+    return view('public.index', compact('productos', 'destacados', 'descuentos', 'general', 'benefit', 'faqs', 'testimonie', 'slider', 'categorias', 'category','tags', 'blogs'));
   }
 
   public function catalogo($filtro, Request $request)
@@ -278,7 +282,8 @@ class IndexController extends Controller
   public function blog()
   {
       //
-      return view('public.blog');
+      $blogs = Blog::where('status', '=', 1)->where('visible', '=', 1)->orderByDesc('created_at')->limit(3)->get();
+      return view('public.blog',compact('blogs'));
   }
 
   public function post()
