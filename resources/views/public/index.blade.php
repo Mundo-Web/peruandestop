@@ -25,9 +25,9 @@
     }
 
     /* @font-face {
-                                font-family: "acehSemibold";
-                                src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
-                                }  */
+                                                  font-family: "acehSemibold";
+                                                  src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
+                                                  }  */
 
     .bg_header_fondo {
       background-image: url({{ asset('images/img/header_fondo.png') }});
@@ -556,49 +556,15 @@
       </h2>
       <div class="flex-wrap w-11/12 mx-auto hidden 2md:flex md:flex-col gap-8 justify-center items-center text-center">
         <div class="flex gap-10">
-          <a href="#VerDestino"
-            class="font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-3 px-5 hover:text-white hover:bg-[#3F76BB] md:duration-500 leading-none text-center h-full">Tour
-            gastronómicos
-          </a>
 
-          <a href="#VerDestino"
-            class="font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-3 px-5 hover:text-white hover:bg-[#3F76BB] md:duration-500 leading-none text-center h-full">Visita
-            a monumentos históricos
-          </a>
-
-          <a href="#VerDestino"
-            class="font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-3 px-5 hover:text-white hover:bg-[#3F76BB] md:duration-500 leading-none text-center h-full">Recorrido
-            en bicicleta
-          </a>
-
-          <a href="#VerDestino"
-            class="font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-3 px-5 hover:text-white hover:bg-[#3F76BB] md:duration-500 leading-none text-center h-full">Excursión
-            en senderismo
-          </a>
+          @foreach ($tags as $item)
+            <a href="#VerDestino"
+              class="font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-3 px-5 hover:text-white hover:bg-[#3F76BB] md:duration-500 leading-none text-center h-full">{{ $item->name }}
+            </a>
+          @endforeach
         </div>
         <div class="flex gap-5">
-          <a href="#VerDestino"
-            class="font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-3 px-5 hover:text-white hover:bg-[#3F76BB] md:duration-500 leading-none text-center h-full">Tour
-            de vinos
-          </a>
 
-          <a href="#VerDestino"
-            class="font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-3 px-5 hover:text-white hover:bg-[#3F76BB] md:duration-500 leading-none text-center h-full">Paseo
-            en barco
-          </a>
-
-          <a href="#VerDestino"
-            class="font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-3 px-5 hover:text-white hover:bg-[#3F76BB] md:duration-500 leading-none text-center h-full">Visita
-            a museos y galerías de arte
-          </a>
-
-          <a href="#VerDestino"
-            class="font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-3 px-5 hover:text-white hover:bg-[#3F76BB] md:duration-500 leading-none text-center h-full">Aventura
-          </a>
-
-          <a href="#VerDestino"
-            class="font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-3 px-5 hover:text-white hover:bg-[#3F76BB] md:duration-500 leading-none text-center h-full">Reservas
-          </a>
         </div>
       </div>
 
@@ -671,127 +637,64 @@
     </section>
 
     <section id="blog">
-      <div class="flex flex-col lg:flex-row justify-between items-center w-11/12 mx-auto pb-16" data-aos="fade-up"
-        data-aos-offset="150">
-        <div class="basis-3/4">
-          <h2 class="font-acehSemibold text-text40 md:text-text64 leading-none">
-            Nuestro blog y artículos
-          </h2>
-          <p class="font-acehMedium text-text18 md:text-text22 py-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-            laudantium autem dolor, harum a excepturi placeat commodi sapiente
-            labore quia repellat velit
-          </p>
-        </div>
-        <div class="basis-1/4 flex justify-start lg:justify-end w-full">
-          <!-- Agregamos justify-end aquí -->
-          <a href="#"
-            class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader py-3 px-5 rounded-full hover:bg-colorBackgroundMainTop md:duration-500 text-center ">
-            Ver más publicaciones
-          </a>
-        </div>
-      </div>
-
-      <div>
-        <div class="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-11/12 mx-auto">
-          <div data-aos="fade-up" data-aos-offset="150" class="pb-5">
-            <div class="overflow-hidden rounded-3xl">
-              <div class="transform transition-transform scale-100 hover:scale-110 duration-500">
-                <img src="./images/img/Indonecia.png" alt="indonesia" class="w-full shadow-lg object-cover" />
-              </div>
-            </div>
-
-            <!-- -- -->
-
-            <div class="pb-5">
-              <h3 class="font-acehSemibold text-text24 md:text-text28 pt-5">
-                Explorando el patrimonio de indonesia
-              </h3>
-              <p class="font-acehMedium text-text16 md:text-text20 py-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloribus iste soluta dolore corrupti eos rerum ipsam.
-              </p>
-            </div>
-            <a href="{{ route('actividad') }}"
-              class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader py-3 px-5 rounded-full hover:bg-colorBackgroundMainTop md:duration-500 inline-block text-center w-full md:inline md:w-auto">
-              Ver Actividad
-            </a>
+      @if (count($blogs) > 0)
+        <div class="flex flex-col lg:flex-row justify-between items-center w-11/12 mx-auto pb-16" data-aos="fade-up"
+          data-aos-offset="150">
+          <div class="basis-3/4">
+            <h2 class="font-acehSemibold text-text40 md:text-text64 leading-none">
+              Nuestro blog y artículos
+            </h2>
+            <p class="font-acehMedium text-text18 md:text-text22 py-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+              laudantium autem dolor, harum a excepturi placeat commodi sapiente
+              labore quia repellat velit
+            </p>
           </div>
-
-          <div data-aos="fade-up" data-aos-offset="150" class="pb-5">
-            <div class="overflow-hidden rounded-3xl">
-              <div class="transform transition-transform scale-100 hover:scale-110 duration-500">
-                <img src="./images/img/Sudamerica.png" alt="cusco" class="w-full shadow-lg object-cover" />
-              </div>
-            </div>
-
-            <!-- -- -->
-
-            <div class="pb-5">
-              <h3 class="font-acehSemibold text-text24 md:text-text28 pt-5">
-                Explorando las gemas ocultas de Sudamérica
-              </h3>
-              <p class="font-acehMedium text-text16 md:text-text20 py-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloribus iste soluta dolore corrupti eos rerum ipsam.
-              </p>
-            </div>
-            <a href="{{ route('actividad') }}"
-              class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader py-3 px-5 rounded-full hover:bg-colorBackgroundMainTop md:duration-500 inline-block text-center w-full md:inline md:w-auto">
-              Ver Actividad
-            </a>
-          </div>
-
-          <div data-aos="fade-up" data-aos-offset="150" class="pb-5">
-            <div class="overflow-hidden rounded-[20px]">
-              <div class="img-container transform transition-transform scale-100 hover:scale-110 duration-500">
-                <img src="./images/img/una_aventura_vez.png" alt="cusco"
-                  class="w-full rounded-2xl shadow-lg object-cover" />
-              </div>
-            </div>
-
-            <!-- -- -->
-
-            <div class="pb-5">
-              <h3 class="font-acehSemibold text-text24 md:text-text28 pt-5">
-                Explorando el mundo, una aventura a la vez
-              </h3>
-              <p class="font-acehMedium text-text16 md:text-text20 py-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloribus iste soluta dolore corrupti eos rerum ipsam.
-              </p>
-            </div>
-            <a href="{{ route('actividad') }}"
-              class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader py-3 px-5 rounded-full hover:bg-colorBackgroundMainTop md:duration-500 inline-block text-center w-full md:inline md:w-auto">
-              Ver Actividad
-            </a>
-          </div>
-
-          <div data-aos="fade-up" data-aos-offset="150" class="pb-5">
-            <div class="overflow-hidden rounded-2xl">
-              <div class="img-container transform transition-transform scale-100 hover:scale-110 duration-500">
-                <img src="./images/img/egipto.png" alt="cusco" class="w-full  rounded-2xl shadow-lg object-cover" />
-              </div>
-            </div>
-
-            <!-- -- -->
-
-            <div class="pb-5">
-              <h3 class="font-acehSemibold text-text24 md:text-text28 pt-5">
-                Revelando las antiguas maravillas de Egipto
-              </h3>
-              <p class="font-acehMedium text-text16 md:text-text20 py-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloribus iste soluta dolore corrupti eos rerum ipsam.
-              </p>
-            </div>
-            <a href="{{ route('actividad') }}"
-              class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader py-3 px-5 rounded-full hover:bg-colorBackgroundMainTop md:duration-500 inline-block text-center w-full md:inline md:w-auto ">
-              Ver Actividad
+          <div class="basis-1/4 flex justify-start lg:justify-end w-full">
+            <!-- Agregamos justify-end aquí -->
+            <a href="#"
+              class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader py-3 px-5 rounded-full hover:bg-colorBackgroundMainTop md:duration-500 text-center ">
+              Ver más publicaciones
             </a>
           </div>
         </div>
-      </div>
+
+        <div>
+
+          <div class="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-11/12 mx-auto">
+
+            @foreach ($blogs as $blog)
+              <div data-aos="fade-up" data-aos-offset="150" class="pb-5">
+                <div class="overflow-hidden rounded-3xl">
+                  <div class="transform transition-transform scale-100 hover:scale-110 duration-500">
+                    <img src="{{ asset($blog->url_image . '/' . $blog->name_image) }}" alt="indonesia"
+                      class="w-full shadow-lg object-cover" />
+                  </div>
+                </div>
+
+                <!-- -- -->
+
+                <div class="pb-5">
+                  <h3 class="font-acehSemibold text-text24 md:text-text28 pt-5">
+                    {{ $blog->title }}
+                  </h3>
+                  <p class="font-acehMedium text-text16 md:text-text20 py-3">
+                    {!! $blog->description !!}
+                  </p>
+                </div>
+                <a href="{{ route('actividad') }}"
+                  class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader py-3 px-5 rounded-full hover:bg-colorBackgroundMainTop md:duration-500 inline-block text-center w-full md:inline md:w-auto">
+                  Ver detalles
+                </a>
+              </div>
+            @endforeach
+
+          </div>
+
+
+
+        </div>
+      @endif
     </section>
   </main>
 
