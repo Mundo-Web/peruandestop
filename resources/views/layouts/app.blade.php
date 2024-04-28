@@ -15,7 +15,6 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- funciones -->
 
   {{-- colorpicker  --}}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css" />
@@ -28,7 +27,7 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.tailwindcss.css">
   <script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
   <script src="https://cdn.datatables.net/2.0.3/js/dataTables.tailwindcss.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
 
   <!-- Sweetalert -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -37,6 +36,11 @@
   <!-- TinyMCE -->
   <script src="https://cdn.tiny.cloud/1/kj7rz3ruf2k1dwv5rrw0v3iekjqj1h0xy6wn1ago86ohjn3l/tinymce/7/tinymce.min.js"
     referrerpolicy="origin"></script>
+
+  <!-- Select2 -->
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
 
   <!-- Scripts -->
   @vite(['resources/css/app.css', 'resources/js/app.js'])

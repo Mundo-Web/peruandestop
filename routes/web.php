@@ -23,6 +23,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\LogosClientController;
 
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\StrengthController;
 use App\Http\Controllers\ValoresAtributosController;
@@ -51,6 +52,9 @@ Route::get('/post', [IndexController::class, 'post'] )->name('post');
 Route::get('/contacto', [IndexController::class, 'contacto'] )->name('contacto');
 Route::get('/ayuda', [IndexController::class, 'ayuda'] )->name('ayuda');
 
+Route::get('/catalogo/{id}', [IndexController::class, 'destino'] )->name('catalogo');
+Route::get('/contacto', [IndexController::class, 'destino'] )->name('contacto');
+Route::get('/comentario', [IndexController::class, 'destino'] )->name('comentario');
 
 
 Route::get('/nosotros', [IndexController::class, 'index'] )->name('nosotros');
@@ -79,9 +83,14 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         Route::post('/testimonios/updateVisible', [TestimonyController::class, 'updateVisible'] )->name('testimonios.updateVisible');
 
         //Categorías
-        Route::resource('/categorias', CategoryController::class);
-        Route::post('/categorias/deleteCategory', [CategoryController::class, 'deleteCategory'] )->name('categorias.deleteCategory');
-        Route::post('/categorias/updateVisible', [CategoryController::class, 'updateVisible'] )->name('categorias.updateVisible');
+        Route::resource('/destino', CategoryController::class);
+        Route::post('/destino/deleteCategory', [CategoryController::class, 'deleteCategory'] )->name('destino.deleteCategory');
+        Route::post('/destino/updateVisible', [CategoryController::class, 'updateVisible'] )->name('destino.updateVisible');
+
+        //Actividades
+        Route::resource('/actividad', ProductsController::class);
+        Route::post('/actividad/updateVisible', [ProductsController::class, 'updateVisible'])->name('actividad.updateVisible');
+        Route::post('/actividad/borrar', [ProductsController::class, 'borrar'])->name('actividad.borrar');
 
 
         //Servicios
