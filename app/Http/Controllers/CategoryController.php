@@ -21,7 +21,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $category = Category::where("status", "=", true)->get();
+        $category = Category::where("status", "=", true)->orderByDesc('created_at')->get();
        
         return view('pages.categories.index', compact('category'));
 
@@ -51,23 +51,8 @@ class CategoryController extends Controller
 
             $img =  $manager->read($request->file('imagen'));
 
-        
-            // Obtener las dimensiones de la imagen que se esta subiendo
-            $width = $img->width();
-            $height = $img->height();
-
-            // $img->crop(1216, 392);
-
-            // if ($width > $height) {
-            //     //dd('Horizontal');
-            //     //si es horizontal igualamos el alto de la imagen a alto que queremos
-            //     $img->resize(height: 808)->crop(1440, 808);
-            // } else {
-            //     //dd('Vertical');
-            //     //En caso sea vertical la imagen
-            //     //igualamos el ancho y cropeamos
-            //     $img->resize(width: 1440)->crop(1440, 808);
-            // }
+            //adaptamos el tamaño de la imagen
+            $img->coverDown(669, 446);
 
             $ruta = 'storage/images/categories/';
 
