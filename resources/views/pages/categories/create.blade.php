@@ -56,7 +56,7 @@
               </div>
 
               <div class="md:col-span-5">
-                <label for="address">Subir una Foto</label>
+                <label for="address">Subir una Foto  <span class="text-slate-400"> (669 píxeles de ancho x 446 píxeles de alto) </span></label>
                 <div class="relative mb-2  mt-2">
                   <input name="imagen"
                     class="p-2.5 block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"

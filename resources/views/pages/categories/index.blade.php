@@ -2,7 +2,7 @@
     <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
         
         <section class="py-4 border-b border-slate-100 dark:border-slate-700">
-            <a href="{{ route('destino.create') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded text-sm" >Crear categoría</a>
+            <a href="{{ route('destino.create') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded text-sm" >Crear Nuevo Destino</a>
         </section>
 
 
@@ -10,7 +10,7 @@
             
             
             <header class="px-5 py-4 border-b border-slate-100 dark:border-slate-700">
-                <h2 class="font-semibold text-slate-800 dark:text-slate-100 text-2xl tracking-tight">Categorías</h2>
+                <h2 class="font-semibold text-slate-800 dark:text-slate-100 text-2xl tracking-tight">Destinos</h2>
             </header>
             <div class="p-3">
         
@@ -20,7 +20,7 @@
                     <table id="tabladatos" class="display text-lg" style="width:100%" >
                         <thead>
                             <tr>
-                                <th>Nombre</th>
+                                <th>Destino</th>
                                 <th>Descripción</th>
                                 <th>Destacar</th>
                                 <th>Visible</th>
@@ -83,7 +83,7 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>Nombre</th>
+                                <th>Destino</th>
                                 <th>Descripción</th>
                                 <th>Destacar</th>
                                 <th>Visible</th>
@@ -114,7 +114,7 @@
 
                 Swal.fire({
                     title: "Seguro que deseas eliminar?",
-                    text: "Vas a eliminar una categoría",
+                    text: "Vas a eliminar este Destino",
                     icon: "warning",
                     showCancelButton: true,
                     confirmButtonColor: "#3085d6",
@@ -153,7 +153,8 @@
 
             // $('.check_d:not(:checked)').prop('disabled', true);
 
-            $( ".btn_swithc" ).on( "change", function() {
+            
+            $("#tabladatos").on("change", ".btn_swithc", function(){
                 
                 var status = 0;
                 var id = $(this).attr('data-idService');

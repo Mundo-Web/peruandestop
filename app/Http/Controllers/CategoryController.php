@@ -24,7 +24,6 @@ class CategoryController extends Controller
         $category = Category::where("status", "=", true)->orderByDesc('created_at')->get();
        
         return view('pages.categories.index', compact('category'));
-
         
     }
 
@@ -82,7 +81,7 @@ class CategoryController extends Controller
 
         $category->save();
        
-        return redirect()->route('destino.index')->with('success', 'Categoria creada');
+        return redirect()->route('destino.index')->with('success', 'Destino creado');
     }
 
     /**
@@ -169,7 +168,7 @@ class CategoryController extends Controller
         
         $category->save();
 
-        return redirect()->route('destino.index')->with('success', 'Categoria modificada');
+        return redirect()->route('destino.index')->with('success', 'Destino Actualizado');
     }
 
     /**
@@ -191,7 +190,7 @@ class CategoryController extends Controller
        
         $category->save();
 
-        return response()->json(['message' => 'Categoría eliminada']);
+        return response()->json(['message' => 'Destino eliminado']);
     }
 
 
@@ -203,7 +202,7 @@ class CategoryController extends Controller
 
 
         if($cantidad >= 4 && $request->status == 1){
-            return response()->json(['message' => 'Solo puedes destacar 4 categorias'], 409 );
+            return response()->json(['message' => 'Solo puedes destacar 4 Destinos'], 409 );
         }
 
 
@@ -223,7 +222,7 @@ class CategoryController extends Controller
         $cantidad = $this->contarCategoriasDestacadas();
 
         
-        return response()->json(['message' => 'Categoría modificada',  'cantidad' => $cantidad]);
+        return response()->json(['message' => 'Visibilidad del Destino modificada',  'cantidad' => $cantidad]);
     
     }
 
