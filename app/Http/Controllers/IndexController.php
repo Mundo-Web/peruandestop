@@ -42,7 +42,7 @@ class IndexController extends Controller
     $destacados = Products::where('destacar', '=', 1)->where('status', '=', 1)->where('visible', '=', 1)->get();
     $descuentos = Products::where('descuento', '>', 0)->where('status', '=', 1)->where('visible', '=', 1)->get();
     $tags = Tag::where('status', '=', 1)->where('visible', '=', 1)->get();
-    $blogs = Blog::where('status', '=', 1)->where('visible', '=', 1)->get();
+    $blogs = Blog::where('status', '=', 1)->where('visible', '=', 1)->orderByDesc('created_at')->limit(4)->get();
 
     $general = General::all();
     $benefit = Strength::where('status', '=', 1)->get();
@@ -51,7 +51,7 @@ class IndexController extends Controller
     $slider = Slider::where('status', '=', 1)->where('visible', '=', 1)->get();
     $category = Category::where('status', '=', 1)->where('destacar', '=', 1)->get();
 
-    
+
 
     return view('public.index', compact('productos', 'destacados', 'descuentos', 'general', 'benefit', 'faqs', 'testimonie', 'slider', 'categorias', 'category', 'tags', 'blogs'));
   }
@@ -256,10 +256,55 @@ class IndexController extends Controller
     }
     return $codigoAleatorio;
   }
-  public function destino()
+  public function destino(Request $request)
   {
-    //
-    return view('public.destino');
+    $tagsId = $request->input('tags');
+
+    $destino = Category::where('status', '=', 1)->where('visible', '=', 1)->with('productos')->paginate(6);
+    $tours =  Products::where('status', '=', 1)->where('visible', '=', 1)->get();
+    $tags = Tag::where('status', '=', 1)->where('visible', '=', 1)->get();
+
+    if ($tagsId !== null) {
+      $tagsIdNumeric = intval($tagsId);
+
+
+      // $destino = Tag::where('id',$tagsId)->with('productos')->with('productos.categoria')->get();
+      // $destino= Category::where('status', '=', 1)->where('visible', '=', 1)->with('productos')->with('productos.tags')->where('id',$tagsId)->paginate(6);
+      // $destino = Category::select()
+      // ->join('tags_xproducts', 'tags.id' ,  'tags_xproducts.tag_id' )
+      // ->with(['productos.tags' => function ($query) use ($tagsIdNumeric) {
+      //     $query->where('tag_id', $tagsIdNumeric);
+      //   }])
+
+      //   ->get();
+
+      $destino = Category::select([
+        DB::raw('DISTINCT(categories.id)'),
+        'categories.*', 
+
+        ])
+        ->join('products', 'categories.id', '=', 'products.categoria_id')
+        ->join('tags_xproducts', 'products.id', '=', 'tags_xproducts.producto_id')
+        ->join('tags', 'tags_xproducts.tag_id', '=', 'tags.id')
+        ->where('tags.id', $tagsIdNumeric)
+
+        ->paginate(6);
+
+      
+
+
+      /* $destino = Tag::select('tags.id', 'tags.name', 'categories.description', 'categories.id AS category_id')
+      ->join('tags_xproducts', 'tags.id', '=', 'tags_xproducts.tag_id')
+      ->join('products', 'tags_xproducts.producto_id', '=', 'products.id')
+      ->join('categories', 'products.categoria_id', '=', 'categories.id')
+      ->where('tags.id', $tagsId)
+      ->distinct()
+      ->get(); */
+    }
+
+
+
+    return view('public.destino', compact('destino', 'tours', 'tags'));
   }
 
   public function actividad()
@@ -296,7 +341,7 @@ class IndexController extends Controller
 
     // Encontrar la posición del blog en el conjunto de resultados paginados
     $position = $this->getPosition($blogsPaginated, $id);
-    
+
 
     return view('public.post', compact('blog', 'blogsAll', 'id', 'position'));
   }
@@ -325,8 +370,8 @@ class IndexController extends Controller
 
   public function ayuda()
   {
-    //
-    return view('public.ayuda');
+    $faqs = Faqs::all();
+    return view('public.ayuda', compact('faqs'));
   }
 
   public function agradecimiento()

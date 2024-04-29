@@ -29,7 +29,7 @@ class Products extends Model
 
   public function categoria()
   {
-      return $this->belongsTo(Category::class);
+      return $this->belongsTo(Category::class, 'categoria_id');
   }
 
   public function galeria(){

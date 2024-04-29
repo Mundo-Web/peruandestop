@@ -186,7 +186,7 @@
                   </select>
                 </div>
 
-                <div class="md:col-span-5 mt-2">
+                {{-- <div class="md:col-span-5 mt-2">
                   <div class=" flex items-end justify-between gap-2 ">
                     <label for="especificacion">Especificacion </label>
                     <button type="button" id="AddEspecifiacion"
@@ -236,7 +236,7 @@
 
 
                 </div>
-
+ --}}
 
                 <div class="md:col-span-5">
                   <label for="producto">Atributos</label>

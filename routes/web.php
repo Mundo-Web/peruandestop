@@ -20,6 +20,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\TestimonyController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\FaqsController;
 use App\Http\Controllers\LogosClientController;
 
 use App\Http\Controllers\IndexController;
@@ -136,7 +137,11 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         Route::post('/tags/deleteTags', [TagController::class, 'deleteTags'])->name('tags.deleteTags');
 
         
-        
+        Route::resource('/faqs', FaqsController::class);
+        Route::post('/faqs/updateVisible', [FaqsController::class, 'updateVisible'])->name('faqs.updateVisible');
+        Route::post('/faqs/borrar', [FaqsController::class, 'borrar'])->name('faqs.borrar');
+
+               
         Route::fallback(function() {
             return view('pages/utility/404');
         });

@@ -51,17 +51,9 @@
 
       <div>
         <div class="mb-4 flex justify-between border-t-2 pt-5" aria-label="Pagination">
-          {{ $position }}
 
-          <a class="px-2 py-2 text-[#3F76BB] flex gap-2" href="/page/1">
-            <img src="./images/svg/previo.svg" alt="previo" />
-            <span class="font-acehbold text-text14 md:text-text22 text-[#3F76BB]">Previo</span>
-          </a>
 
-          <a class="px-2 py-2 text-[#3F76BB] flex gap-2" href="/page/1">
-            <span class="font-acehbold text-text14 md:text-text22 text-[#3F76BB]">Next</span>
-            <img src="./images/svg/next.svg" alt="next" />
-          </a>
+
         </div>
       </div>
     </section>

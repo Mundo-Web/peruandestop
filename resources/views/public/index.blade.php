@@ -25,9 +25,9 @@
     }
 
     /* @font-face {
-                                                                        font-family: "acehSemibold";
-                                                                        src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
-                                                                        }  */
+                                                                            font-family: "acehSemibold";
+                                                                            src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
+                                                                            }  */
 
     .bg_header_fondo {
       background-image: url({{ asset('images/img/header_fondo.png') }});
@@ -610,10 +610,10 @@
                     <p class="font-acehMedium text-text16 md:text-text20">{{ $actividad->categoria->name }} -
                       {{ $actividad->categoria->pais }} </p>
                   </div>
-                  <div class="flex gap-2">
+                  {{-- <div class="flex gap-2">
                     <img src="./images/svg/hora.svg" alt="hora" />
                     <p class="font-acehMedium text-text16 md:text-text20">4 horas</p>
-                  </div>
+                  </div> --}}
                 </div>
               </div>
 
@@ -691,7 +691,7 @@
                     {{ $blog->title }}
                   </h3>
                   <p class="font-acehMedium text-text16 md:text-text20 py-3">
-                    {!! $blog->description !!}
+                    {!! Str::limit($blog->description, 180) !!}
                   </p>
                 </div>
                 <a href="{{ url('post/' . $blog->id) }}"

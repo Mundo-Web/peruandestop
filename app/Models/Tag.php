@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Tag extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'description', 'color', 'slug', 'type', 'visible', 'status'];
+    protected $fillable = ['name', 'description', 'color', 'slug', 'type', 'visible', 'status', 'imagen'];
 
     public function articles(): \Illuminate\Database\Eloquent\Relations\MorphToMany
     {
@@ -16,7 +16,7 @@ class Tag extends Model
     }
 
 
-    public function products()
+    public function productos()
     {
         return $this->belongsToMany(Products::class, 'tags_xproducts', 'tag_id', 'producto_id');
     }
