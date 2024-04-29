@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('description')->nullable();
             $table->string('url_image')->nullable();
             $table->string('name_image')->nullable();
+            $table->string('color')->nullable();
             
             $table->boolean('destacar')->default(false);
 

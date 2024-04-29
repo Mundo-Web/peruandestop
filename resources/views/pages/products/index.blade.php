@@ -24,6 +24,7 @@
           <table id="tabladatos" class="display text-lg" style="width:100%">
             <thead>
               <tr>
+                <th>Destino</th>
                 <th>Actividad</th>
                 <th>Precio</th>
                 <th>Descuento</th>
@@ -38,6 +39,8 @@
 
               @foreach ($products as $item)
                 <tr>
+                  <td>{{ $item->categoria->name }}</td>
+                  
                   <td>{{ $item->producto }}</td>
                   
                   <td>{{ $item->precio }}</td>
@@ -122,6 +125,7 @@
             </tbody>
             <tfoot>
               <tr>
+                <th>Destino</th>
                 <th>Actividad</th>
                 <th>Precio</th>
                 <th>Descuento</th>

@@ -75,6 +75,7 @@ class CategoryController extends Controller
         
         $category->name = $request->name;
         $category->description = $request->description;
+        $category->color = $request->color;
         $category->slug = $slug;
         $category->status = 1;
         $category->visible = 1;
@@ -152,6 +153,7 @@ class CategoryController extends Controller
 
             $category->url_image = $rutanueva;
             $category->name_image = $nombreImagen;
+            
         }
 
         $slug = strtolower(str_replace(' ', '-', $request->name));
@@ -164,6 +166,7 @@ class CategoryController extends Controller
 
         $category->name = $request->name;
         $category->description = $request->description;
+        $category->color = $request->color;
         $category->slug = $slug;
         
         $category->save();

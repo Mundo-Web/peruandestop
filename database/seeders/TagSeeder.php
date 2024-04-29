@@ -13,5 +13,14 @@ class TagSeeder extends Seeder
     public function run(): void
     {
         //
+        $tag = ['Tour Gastronómico', 'Aventura', 'Excursión', 'Visita a museos históricos'];
+        for ($i = 0; $i < 4; $i++) {
+            Category::create([
+                'name' => $cat[$i],
+                'description' => 'Aquí va la descripción del destino '.$cat[$i],
+                'status' => 1,
+                'visible' => 1,
+            ]);
+        }
     }
 }

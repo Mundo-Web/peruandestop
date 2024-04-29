@@ -105,7 +105,8 @@
         $('document').ready(function(){
            
             new DataTable('#tabladatos',{
-                responsive: true
+                responsive: true,
+                
             });
 
             $( ".btn_delete" ).on( "click", function(e) {
