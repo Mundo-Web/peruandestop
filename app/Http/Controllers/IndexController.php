@@ -37,7 +37,8 @@ class IndexController extends Controller
   {
     // $productos =  Products::where("destacar", "=", true)->where("status","=",true)->get();
     $productos =  Products::with('tags')->activeDestacado()->get();
-    $categorias = Category::all();
+    //$categorias = Category::all();
+    $categorias = Category::where("visible", "=", true)->get();
     $destacados = Products::where('destacar', '=', 1)->where('status', '=', 1)->where('visible', '=', 1)->get();
     $descuentos = Products::where('descuento', '>', 0)->where('status', '=', 1)->where('visible', '=', 1)->get();
     $tags = Tag::where('status', '=', 1)->where('visible', '=', 1)->get();
@@ -50,7 +51,7 @@ class IndexController extends Controller
     $slider = Slider::where('status', '=', 1)->where('visible', '=', 1)->get();
     $category = Category::where('status', '=', 1)->where('destacar', '=', 1)->get();
 
-
+    dump($categorias->count());
 
     return view('public.index', compact('productos', 'destacados', 'descuentos', 'general', 'benefit', 'faqs', 'testimonie', 'slider', 'categorias', 'category', 'tags', 'blogs'));
   }

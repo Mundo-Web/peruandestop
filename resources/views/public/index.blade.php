@@ -476,8 +476,20 @@
         @foreach ($categorias as $destino)
           <div data-aos="fade-up" data-aos-offset="150">
             <div class="image__effect-hover rounded-[20px]">
-              <img src="{{ asset($destino->url_image . '/' . $destino->name_image) }}" alt="cusco"
-                class="w-full shadow-lg" />
+
+              @if($destino->name_image == null)
+                  <div class="relative mb-2 mt-2">
+                    <img src="{{ asset('images/noimage.png') }}" alt="cusco"
+                      class="w-full shadow-lg" />                    
+                  </div>
+                @else
+                  <div class="relative mb-2 mt-2">
+                    <img src="{{ asset($destino->url_image . '/' . $destino->name_image) }}" alt="cusco"
+                      class="w-full shadow-lg" />
+                  </div>
+                @endif
+
+              
               <div class="image__effect-content flex justify-around text-center gap-5">
                 <div class="text-white text-center">
                   <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>

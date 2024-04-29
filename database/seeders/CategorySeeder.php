@@ -15,11 +15,11 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         //
-        $cat = ['Wall Panel', 'Marmol UV', 'Piso Click SPC', 'Piedra PU'];
+        $cat = ['Cuzco', 'Arequipa', 'Ayacucho', 'Loreto'];
         for ($i = 0; $i < 4; $i++) {
             Category::create([
                 'name' => $cat[$i],
-                'description' => 'Aquí va la descripción de la categoria '.$cat[$i],
+                'description' => 'Aquí va la descripción del destino '.$cat[$i],
                 'status' => 1,
                 'visible' => 1,
             ]);
