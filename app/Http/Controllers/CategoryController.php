@@ -74,6 +74,7 @@ class CategoryController extends Controller
 
         
         $category->name = $request->name;
+        $category->pais = $request->pais;
         $category->description = $request->description;
         $category->color = $request->color;
         $category->slug = $slug;
@@ -165,6 +166,7 @@ class CategoryController extends Controller
 
 
         $category->name = $request->name;
+        $category->pais = $request->pais;
         $category->description = $request->description;
         $category->color = $request->color;
         $category->slug = $slug;

@@ -4,7 +4,7 @@
     <section class="py-4 border-b border-slate-100 dark:border-slate-700">
       <a href="{{ route('actividad.create') }}"
         class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded text-sm">
-        Agregar Actividad
+        Agregar Tour
       </a>
     </section>
 
@@ -14,7 +14,7 @@
 
 
       <header class="px-5 py-4 border-b border-slate-100 dark:border-slate-700">
-        <h2 class="font-semibold text-slate-800 dark:text-slate-100 text-2xl tracking-tight">Actividades </h2>
+        <h2 class="font-semibold text-slate-800 dark:text-slate-100 text-2xl tracking-tight">Tours </h2>
       </header>
       <div class="p-3">
 
@@ -25,7 +25,7 @@
             <thead>
               <tr>
                 <th>Destino</th>
-                <th>Actividad</th>
+                <th>Tour</th>
                 <th>Precio</th>
                 <th>Descuento</th>
                 <th>Imagen</th>
@@ -40,13 +40,13 @@
               @foreach ($products as $item)
                 <tr>
                   <td>{{ $item->categoria->name }}</td>
-                  
+
                   <td>{{ $item->producto }}</td>
-                  
+
                   <td>{{ $item->precio }}</td>
                   <td>{{ $item->descuento }}</td>
-                  
-                  
+
+
                   <td class="px-3 py-2"><img class="w-20" src="{{ asset($item->imagen) }}" alt=""></td>
                   <td>
                     <form method="POST" action="">
@@ -126,7 +126,7 @@
             <tfoot>
               <tr>
                 <th>Destino</th>
-                <th>Actividad</th>
+                <th>Tour</th>
                 <th>Precio</th>
                 <th>Descuento</th>
                 <th>Imagen</th>

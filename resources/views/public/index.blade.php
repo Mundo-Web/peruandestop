@@ -25,9 +25,9 @@
     }
 
     /* @font-face {
-                                                    font-family: "acehSemibold";
-                                                    src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
-                                                    }  */
+                                                                        font-family: "acehSemibold";
+                                                                        src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
+                                                                        }  */
 
     .bg_header_fondo {
       background-image: url({{ asset('images/img/header_fondo.png') }});
@@ -477,19 +477,18 @@
           <div data-aos="fade-up" data-aos-offset="150">
             <div class="image__effect-hover rounded-[20px]">
 
-              @if($destino->name_image == null)
-                  <div class="relative mb-2 mt-2">
-                    <img src="{{ asset('images/noimage.png') }}" alt="cusco"
-                      class="w-full shadow-lg" />                    
-                  </div>
-                @else
-                  <div class="relative mb-2 mt-2">
-                    <img src="{{ asset($destino->url_image . '/' . $destino->name_image) }}" alt="cusco"
-                      class="w-full shadow-lg" />
-                  </div>
-                @endif
+              @if ($destino->name_image == null)
+                <div class="relative mb-2 mt-2">
+                  <img src="{{ asset('images/noimage.png') }}" alt="cusco" class="w-full shadow-lg" />
+                </div>
+              @else
+                <div class="relative mb-2 mt-2">
+                  <img src="{{ asset($destino->url_image . '/' . $destino->name_image) }}" alt="cusco"
+                    class="w-full shadow-lg" />
+                </div>
+              @endif
 
-              
+
               <div class="image__effect-content flex justify-around text-center gap-5">
                 <div class="text-white text-center">
                   <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
@@ -526,7 +525,7 @@
                   2,343
                   <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
                 </p>
-                <a href="{{ route('detalleActividad') }}"
+                <a href="{{ route('actividad') }}"
                   class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">Ver
                   destino</a>
               </div>
@@ -564,7 +563,7 @@
     <section data-aos="fade-up" data-aos-offset="150">
       <h2
         class="font-acehSemibold text-text40 md:text-text64 w-11/12 mx-auto my-5 leading-none md:leading-tight text-[#0F1B2C]">
-        Actividades destacadas
+        Tours destacados
       </h2>
       <div class="flex-wrap w-11/12 mx-auto hidden 2md:flex md:flex-col gap-8 justify-center items-center text-center">
         <div class="flex gap-10">
@@ -608,7 +607,8 @@
                 <div class="flex gap-10">
                   <div class="flex gap-2">
                     <img src="./images/svg/ubicacion.svg" alt="ubigeo" />
-                    <p class="font-acehMedium text-text16 md:text-text20">{{ $actividad->categoria->name }} - Perú</p>
+                    <p class="font-acehMedium text-text16 md:text-text20">{{ $actividad->categoria->name }} -
+                      {{ $actividad->categoria->pais }} </p>
                   </div>
                   <div class="flex gap-2">
                     <img src="./images/svg/hora.svg" alt="hora" />
@@ -622,9 +622,9 @@
                   {{ $actividad->precio }} US$
                   <span class="block font-acehMedium text-text16 md:text-text20">Por persona</span>
                 </p>
-                <a href="{{ route('actividad') }}"
+                <a href="{{ route('detalleActividad') }}"
                   class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">Ver
-                  Actividad</a>
+                  Tour</a>
               </div>
             </div>
           </div>
@@ -636,7 +636,7 @@
       <div class="w-11/12 mx-auto pb-20">
         <a href="{{ route('actividad') }}"
           class="font-acehSemibold text-text18 md:text-text22 rounded-full border-colorBorder border-2 py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 inline-block w-full md:w-auto text-center">
-          Ver más Actividades
+          Ver más Tours
           <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg"
             class="inline-block">
             <path
@@ -694,7 +694,7 @@
                     {!! $blog->description !!}
                   </p>
                 </div>
-                <a href="{{ route('actividad') }}"
+                <a href="{{ url('post/' . $blog->id) }}"
                   class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader py-3 px-5 rounded-full hover:bg-colorBackgroundMainTop md:duration-500 inline-block text-center w-full md:inline md:w-auto">
                   Ver detalles
                 </a>

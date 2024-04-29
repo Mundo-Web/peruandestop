@@ -51,7 +51,7 @@ class IndexController extends Controller
     $slider = Slider::where('status', '=', 1)->where('visible', '=', 1)->get();
     $category = Category::where('status', '=', 1)->where('destacar', '=', 1)->get();
 
-    dump($categorias->count());
+    
 
     return view('public.index', compact('productos', 'destacados', 'descuentos', 'general', 'benefit', 'faqs', 'testimonie', 'slider', 'categorias', 'category', 'tags', 'blogs'));
   }
@@ -296,7 +296,7 @@ class IndexController extends Controller
 
     // Encontrar la posición del blog en el conjunto de resultados paginados
     $position = $this->getPosition($blogsPaginated, $id);
-    dump($position);
+    
 
     return view('public.post', compact('blog', 'blogsAll', 'id', 'position'));
   }

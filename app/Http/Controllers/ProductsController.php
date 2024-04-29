@@ -177,7 +177,7 @@ class ProductsController extends Controller
     $atributos = Attributes::where("status", "=", true)->get();
     $valorAtributo = AttributesValues::where("status", "=", true)->get();
     $allTags = Tag::all();
-    dump($product->toArray());
+   
 
 
     return view('pages.products.edit', compact('product', 'atributos', 'valorAtributo','allTags'));
