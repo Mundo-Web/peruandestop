@@ -53,12 +53,13 @@ class BlogController extends Controller
 
     if ($request->hasFile("imagen")) {
       $file = $request->file('imagen');
-      $routeImg = 'storage/images/imagen/';
+      $routeImg = 'storage/images/posts/';
       $nombreImagen = Str::random(10) . '_' . $file->getClientOriginalName();
 
       $manager = new ImageManager(new Driver());
 
       $img =  $manager->read($request->file('imagen'));
+      
 
       $ruta = 'storage/images/posts/';
 
@@ -106,6 +107,7 @@ class BlogController extends Controller
 		$manager = new ImageManager(new Driver());
 		$img =  $manager->read($file);
 
+    $img->coverDown(270, 245);
 
 		if (!file_exists($route)) {
 			mkdir($route, 0777, true); // Se crea la ruta con permisos de lectura, escritura y ejecución

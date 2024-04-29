@@ -81,20 +81,20 @@
           @foreach ($blogs as $key => $blog)
             @if ($key == 0)
               <div class="flex flex-col gap-4 row-span-2">
-                <div class="h-full">
-                  <img src="./images/img/publicacion_1.png" alt="publicacion" class="w-full h-full" />
+                <div class="h-full w-[600px]">
+                  <img src="{{ asset($blog->url_image . '/' . $blog->name_image) }}" alt="publicacion"
+                    class="w-full  h-80 rounded-3xl" />
                 </div>
 
                 <div class="flex flex-col gap-2">
                   <h2 class="font-acehSemibold text-text24 md:text-text28 text-[#0F1B2C]">
-                    Revelando las anitguas maravillas de Egipto
+                    {{ $blog->title }}
                   </h2>
-                  <p class="font-acehMedium text-text16 md:text-text20 text-[#495560]">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat
-                    recusandae ad quibusdams.
-                  </p>
+
+                  {!! Str::limit($blog->description, 180) !!}
+
                   <div class="mt-2">
-                    <a href="{{ route('post') }}"
+                    <a href="{{ route('post', $blog->id) }}" method="POST"
                       class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop duration-500 inline-block w-auto">
                       Ver Actividad
                     </a>
@@ -106,44 +106,19 @@
               <div class="row-span-1">
                 <div class="flex gap-5 h-full">
                   <div class="w-full">
-                    <img src="./images/img/publicacion_3.png" alt="publicacion" class="w-full h-full" />
+                    <img src="{{ asset($blog->url_image . '/' . $blog->name_image) }}" alt="publicacion"
+                      class=" rounded-3xl" />
                   </div>
 
                   <div class="flex flex-col gap-2  justify-center">
                     <h2 class="font-acehSemibold text-text24 md:text-text28 text-[#0F1B2C] leading-none md:leading-tight">
-                      Explorando las gemas ocultas de Sudamérica
+                      {{ $blog->title }}
                     </h2>
-                    <p class="font-acehMedium text-text16 md:text-text20 text-[#495560]">
-                      Maecenas pharetra aliquet ligula eu porta. Nunc id justo et
-                      lorem dapibus...
-                    </p>
+
+                    {!! Str::limit($blog->description, 180) !!}
+
                     <div class="mt-2">
-                      <a href="{{ route('post') }}"
-                        class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop duration-500 inline-block w-auto">
-                        Ver Actividad
-                      </a>
-                    </div>
-
-                  </div>
-
-                </div>
-              </div>
-              <div class="row-span-1">
-                <div class="flex gap-5 h-full">
-                  <div class="w-full">
-                    <img src="./images/img/publicacion_2.png" alt="publicacion" class="w-full h-full" />
-                  </div>
-
-                  <div class="flex flex-col gap-2 justify-center">
-                    <h2 class="font-acehSemibold text-text24 md:text-text28 text-[#0F1B2C] leading-none md:leading-tight">
-                      Explorando las gemas ocultas de Sudamérica
-                    </h2>
-                    <p class="font-acehMedium text-text16 md:text-text20 text-[#495560]">
-                      Maecenas pharetra aliquet ligula eu porta. Nunc id justo et
-                      lorem dapibus...
-                    </p>
-                    <div class="mt-2">
-                      <a href="{{ route('post') }}"
+                      <a href="{{ route('post', $blog->id) }}" method="POST"
                         class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop duration-500 inline-block w-auto">
                         Ver Actividad
                       </a>
@@ -165,191 +140,29 @@
       <div class="block w-11/12 mx-auto xl:hidden">
         <div class="swiper publicaciones-recientes my-5">
           <div class="swiper-wrapper mb-16">
-            <div class="swiper-slide rounded-2xl">
-              <div class="flex flex-col gap-5">
-                <div class="rounded-2xl">
-                  <div>
-                    <img src="./images/img/publicaciones_recientes_2.png" alt="publicacion"
-                      class="w-full rounded-2xl shadow-lg object-cover" />
+            @foreach ($blogs as $blog)
+              <div class="swiper-slide rounded-2xl">
+                <div class="flex flex-col gap-5">
+                  <div class="rounded-2xl">
+                    <div>
+                      <img src="{{ asset($blog->url_image . '/' . $blog->name_image) }}" alt="publicacion"
+                        class="w-full rounded-2xl shadow-lg object-cover" />
+                    </div>
                   </div>
-                </div>
-                <h2 class="font-acehSemibold text-text24 md:text-text28 text-left leading-none text-[#0F1B2C]">
-                  Revelando las antiguas maravillas de Egipto
-                </h2>
-                <p class="font-acehMedium text-text16 md:text-text20 text-[#495560]">
-                  Maecenas pharetra aliquet ligula eu porta. Nunc id justo et
-                  lorem dapibus...
-                </p>
-                <div class="flex">
-                  <a href="{{ route('post') }}"
-                    class="font-acehRegular text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 text-center ">Ver
-                    Actividad</a>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="swiper-slide rounded-2xl">
-              <div class="flex flex-col gap-5">
-                <div class="rounded-2xl">
-                  <div class="">
-                    <img src="./images/img/publicaciones_recientes_2.png" alt="publicacion"
-                      class="w-full rounded-2xl shadow-lg object-cover" />
+                  <h2 class="font-acehSemibold text-text24 md:text-text28 text-left leading-none text-[#0F1B2C]">
+                    {{ $blog->title }}
+                  </h2>
+                  {!! Str::limit($blog->description, 180) !!}
+                  <div class="flex">
+                    <a href="{{ route('post', $blog->id) }}" method="POST"
+                      class="font-acehRegular text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 text-center ">Ver
+                      Actividad</a>
                   </div>
-                </div>
-                <h2 class="font-acehSemibold text-text24 md:text-text28 text-left leading-none text-[#0F1B2C] ">
-                  Revelando las antiguas maravillas de Egipto
-                </h2>
-                <p class="font-acehMedium text-text16 md:text-text20  text-[#495560]">
-                  Maecenas pharetra aliquet ligula eu porta. Nunc id justo et
-                  lorem dapibus...
-                </p>
-                <div class="flex">
-                  <a href="{{ route('post') }}"
-                    class="font-acehRegular text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 text-center ">Ver
-                    Actividad</a>
+
                 </div>
               </div>
-            </div>
+            @endforeach
 
-            <div class="swiper-slide rounded-2xl">
-              <div class="flex flex-col gap-5">
-                <div class="rounded-2xl">
-                  <div>
-                    <img src="./images/img/publicaciones_recientes_2.png" alt="publicacion"
-                      class="w-full rounded-2xl shadow-lg object-cover" />
-                  </div>
-                </div>
-                <h2 class="font-acehSemibold text-text24 md:text-text28 text-left leading-none text-[#0F1B2C]">
-                  Revelando las antiguas maravillas de Egipto
-                </h2>
-                <p class="font-acehMedium text-text16 md:text-text20  text-[#495560]">
-                  Maecenas pharetra aliquet ligula eu porta. Nunc id justo et
-                  lorem dapibus...
-                </p>
-                <div class="flex">
-                  <a href="{{ route('post') }}"
-                    class="font-acehRegular text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 text-center ">Ver
-                    Actividad</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide rounded-2xl">
-              <div class="flex flex-col gap-5">
-                <div class="rounded-2xl">
-                  <div>
-                    <img src="./images/img/publicaciones_recientes_2.png" alt="publicacion"
-                      class="w-full rounded-2xl shadow-lg object-cover" />
-                  </div>
-                </div>
-                <h2 class="font-acehSemibold text-text24 md:text-text28 text-left leading-none text-[#0F1B2C]">
-                  Revelando las antiguas maravillas de Egipto
-                </h2>
-                <p class="font-acehMedium text-text16 md:text-text20 text-[#495560]">
-                  Maecenas pharetra aliquet ligula eu porta. Nunc id justo et
-                  lorem dapibus...
-                </p>
-                <div class="flex">
-                  <a href="{{ route('post') }}"
-                    class="font-acehRegular text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 text-center ">Ver
-                    Actividad</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide rounded-2xl">
-              <div class="flex flex-col gap-5">
-                <div class="rounded-2xl">
-                  <div>
-                    <img src="./images/img/publicaciones_recientes_2.png" alt="publicacion"
-                      class="w-full rounded-2xl shadow-lg object-cover" />
-                  </div>
-                </div>
-                <h2 class="font-acehSemibold text-text24 md:text-text28 text-left leading-none text-[#0F1B2C]">
-                  Revelando las antiguas maravillas de Egipto
-                </h2>
-                <p class="font-acehMedium text-text16 md:text-text20 text-[#495560]">
-                  Maecenas pharetra aliquet ligula eu porta. Nunc id justo et
-                  lorem dapibus...
-                </p>
-                <div class="flex">
-                  <a href="{{ route('post') }}"
-                    class="font-acehRegular text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 text-center ">Ver
-                    Actividad</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide rounded-2xl">
-              <div class="flex flex-col gap-5">
-                <div class="rounded-2xl">
-                  <div>
-                    <img src="./images/img/publicaciones_recientes_2.png" alt="publicacion"
-                      class="w-full rounded-2xl shadow-lg object-cover" />
-                  </div>
-                </div>
-                <h2 class="font-acehSemibold text-text24 md:text-text28 text-left leading-none text-[#0F1B2C]">
-                  Revelando las antiguas maravillas de Egipto
-                </h2>
-                <p class="font-acehMedium text-text16 md:text-text20 text-[#495560]">
-                  Maecenas pharetra aliquet ligula eu porta. Nunc id justo et
-                  lorem dapibus...
-                </p>
-                <div class="flex">
-                  <a href="{{ route('post') }}"
-                    class="font-acehRegular text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 text-center ">Ver
-                    Actividad</a>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="swiper-slide rounded-2xl">
-              <div class="flex flex-col gap-5">
-                <div class="rounded-2xl">
-                  <div>
-                    <img src="./images/img/publicaciones_recientes_2.png" alt="publicacion"
-                      class="w-full rounded-2xl shadow-lg object-cover" />
-                  </div>
-                </div>
-                <h2 class="font-acehSemibold text-text24 md:text-text28 text-left leading-none text-[#0F1B2C]">
-                  Revelando las antiguas maravillas de Egipto
-                </h2>
-                <p class="font-acehMedium text-text16 md:text-text20 text-[#495560]">
-                  Maecenas pharetra aliquet ligula eu porta. Nunc id justo et
-                  lorem dapibus...
-                </p>
-                <div class="flex">
-                  <a href="{{ route('post') }}"
-                    class="font-acehRegular text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 text-center ">Ver
-                    Actividad</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide rounded-2xl">
-              <div class="flex flex-col gap-5">
-                <div class="rounded-2xl">
-                  <div>
-                    <img src="./images/img/publicaciones_recientes_2.png" alt="publicacion"
-                      class="w-full rounded-2xl shadow-lg object-cover" />
-                  </div>
-                </div>
-                <h2 class="font-acehSemibold text-text24 md:text-text28 text-left leading-none text-[#0F1B2C] ">
-                  Revelando las antiguas maravillas de Egipto
-                </h2>
-                <p class="font-acehMedium text-text16 md:text-text20 text-[#495560]">
-                  Maecenas pharetra aliquet ligula eu porta. Nunc id justo et
-                  lorem dapibus...
-                </p>
-                <div class="flex">
-                  <a href="{{ route('post') }}"
-                    class="font-acehRegular text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 text-center ">Ver
-                    Actividad</a>
-                </div>
-              </div>
-            </div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -362,210 +175,48 @@
       </h2>
 
       <div class="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        <div data-aos="fade-up" data-aos-offset="150" class="flex flex-col gap-5">
-          <div class="overflow-hidden rounded-3xl">
-            <div class="transform transition-transform scale-100 hover:scale-110 duration-1000">
-              <img src="./images/img/Indonecia.png" alt="indonesia" class="w-full  object-cover h-full" />
+
+
+        @foreach ($blogsAll as $blog)
+          <div data-aos="fade-up" data-aos-offset="150" class="flex flex-col gap-5">
+            <div class="overflow-hidden rounded-3xl">
+              <div class="w-[386px] h-[310px] transform transition-transform scale-100 hover:scale-110 duration-1000">
+                <img src="{{ asset($blog->url_image . '/' . $blog->name_image) }}" alt="indonesia"
+                  class="w-full  object-cover h-full" />
+              </div>
             </div>
+
+            <!-- -- -->
+            <div class=" flex flex-col justify-between gap-5">
+              <div class="flex flex-col gap-2">
+                <h3 class="font-acehSemibold text-text26 md:text-text30 leading-none md:leading-tight text-[#0F1B2C]">
+                  {{ $blog->title }}
+                </h3>
+                {!! Str::limit($blog->description, 180) !!}
+              </div>
+              <div>
+                <a href="{{ route('post', $blog->id) }}" method="POST"
+                  class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop duration-500 inline-block w-auto">
+                  Ver Actividad
+                </a>
+              </div>
+            </div>
+
+
           </div>
-
-          <!-- -- -->
-          <div class=" flex flex-col justify-between gap-5">
-            <div class="flex flex-col gap-2">
-              <h3 class="font-acehSemibold text-text26 md:text-text30 leading-none md:leading-tight text-[#0F1B2C]">
-                Explorando el patrimonio de indonesia
-              </h3>
-              <p class="font-acehMedium text-text16 md:text-text20 text-[#495560]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloribus iste soluta dolore corrupti eos rerum ipsam.
-              </p>
-            </div>
-            <div>
-              <a href="{{ route('post') }}"
-                class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop duration-500 inline-block w-auto">
-                Ver Actividad
-              </a>
-            </div>
-          </div>
+        @endforeach
 
 
-        </div>
 
-        <div data-aos="fade-up" data-aos-offset="150" class="flex flex-col gap-5">
-          <div class="overflow-hidden rounded-3xl">
-            <div class="transform transition-transform scale-100 hover:scale-110 duration-1000">
-              <img src="./images/img/Sudamerica.png" alt="indonesia" class="w-full  object-cover h-full" />
-            </div>
-          </div>
-
-          <!-- -- -->
-          <div class=" flex flex-col justify-between gap-5">
-            <div class="flex flex-col gap-2">
-              <h3 class="font-acehSemibold text-text26 md:text-text30 leading-none md:leading-tight text-[#0F1B2C]">
-                Explorando las gemas ocultas de Sudamérica
-              </h3>
-              <p class="font-acehMedium text-text16 md:text-text20 text-[#495560]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloribus iste soluta dolore corrupti eos rerum ipsam.
-              </p>
-            </div>
-            <div>
-              <a href="{{ route('post') }}"
-                class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop duration-500 inline-block w-auto">
-                Ver Actividad
-              </a>
-            </div>
-          </div>
-
-
-        </div>
-
-        <div data-aos="fade-up" data-aos-offset="150" class="flex flex-col gap-5">
-          <div class="overflow-hidden rounded-3xl">
-            <div class="transform transition-transform scale-100 hover:scale-110 duration-1000">
-              <img src="./images/img/una_aventura_vez.png" alt="indonesia" class="w-full  object-cover h-full" />
-            </div>
-          </div>
-
-          <!-- -- -->
-          <div class=" flex flex-col justify-between gap-5">
-            <div class="flex flex-col gap-2">
-              <h3 class="font-acehSemibold text-text26 md:text-text30 leading-none md:leading-tight text-[#0F1B2C]">
-                Explorando el mundo, una aventura a la vez
-              </h3>
-              <p class="font-acehMedium text-text16 md:text-text20 text-[#495560]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloribus iste soluta dolore corrupti eos rerum ipsam.
-              </p>
-            </div>
-            <div>
-              <a href="{{ route('post') }}"
-                class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop duration-500 inline-block w-auto">
-                Ver Actividad
-              </a>
-            </div>
-          </div>
-
-
-        </div>
-
-        <div data-aos="fade-up" data-aos-offset="150" class="flex flex-col gap-5">
-          <div class="overflow-hidden rounded-3xl">
-            <div class="transform transition-transform scale-100 hover:scale-110 duration-1000">
-              <img src="./images/img/egipto.png" alt="indonesia" class="w-full  object-cover h-full" />
-            </div>
-          </div>
-
-          <!-- -- -->
-          <div class=" flex flex-col justify-between gap-5">
-            <div class="flex flex-col gap-2">
-              <h3 class="font-acehSemibold text-text26 md:text-text30 leading-none md:leading-tight text-[#0F1B2C]">
-                Explorando el mundo, una aventura a la vez
-              </h3>
-              <p class="font-acehMedium text-text16 md:text-text20 text-[#495560]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloribus iste soluta dolore corrupti eos rerum ipsam.
-              </p>
-            </div>
-            <div>
-              <a href="{{ route('post') }}"
-                class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop duration-500 inline-block w-auto">
-                Ver Actividad
-              </a>
-            </div>
-          </div>
-
-
-        </div>
-
-        <div data-aos="fade-up" data-aos-offset="150" class="flex flex-col gap-5">
-          <div class="overflow-hidden rounded-3xl">
-            <div class="transform transition-transform scale-100 hover:scale-110 duration-1000">
-              <img src="./images/img/Indonecia.png" alt="indonesia" class="w-full  object-cover h-full" />
-            </div>
-          </div>
-
-          <!-- -- -->
-          <div class=" flex flex-col justify-between gap-5">
-            <div class="flex flex-col gap-2">
-              <h3 class="font-acehSemibold text-text26 md:text-text30 leading-none md:leading-tight text-[#0F1B2C]">
-                Explorando el patrimonio de Indonesia
-              </h3>
-              <p class="font-acehMedium text-text16 md:text-text20 text-[#495560]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloribus iste soluta dolore corrupti eos rerum ipsam.
-              </p>
-            </div>
-            <div>
-              <a href="{{ route('post') }}"
-                class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop duration-500 inline-block w-auto">
-                Ver Actividad
-              </a>
-            </div>
-          </div>
-
-
-        </div>
-
-        <div data-aos="fade-up" data-aos-offset="150" class="flex flex-col gap-5">
-          <div class="overflow-hidden rounded-3xl">
-            <div class="transform transition-transform scale-100 hover:scale-110 duration-1000">
-              <img src="./images/img/Indonecia.png" alt="indonesia" class="w-full  object-cover h-full" />
-            </div>
-          </div>
-
-          <!-- -- -->
-          <div class=" flex flex-col justify-between gap-5">
-            <div class="flex flex-col gap-2">
-              <h3 class="font-acehSemibold text-text26 md:text-text30 leading-none md:leading-tight text-[#0F1B2C]">
-                Explorando el patrimonio de Indonesia
-              </h3>
-              <p class="font-acehMedium text-text16 md:text-text20 text-[#495560]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloribus iste soluta dolore corrupti eos rerum ipsam.
-              </p>
-            </div>
-            <div>
-              <a href="{{ route('post') }}"
-                class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop duration-500 inline-block w-auto">
-                Ver Actividad
-              </a>
-            </div>
-          </div>
-
-
-        </div>
       </div>
 
       <div data-aos="fade-up" data-aos-offset="150">
-        <div class="flex justify-between pt-24" aria-label="Pagination">
-          <a class="text-[#3F76BB] flex gap-2 items-center" href="/page/1">
-            <img src="./images/svg/previo.svg" alt="previo" />
-            <span class="font-acehbold text-text14 md:text-text22 text-[#3F76BB]">Previo</span>
-          </a>
+        <div class="flex  pt-24 justify-center " aria-label="Pagination">
 
-          <div class="flex items-center font-acehMedium text-text14 md:text-text18 text-[#495560]">
-            <a class="rounded-lg px-4 py-2 pagination__blog bg-pagination" href="#">
-              1
-            </a>
 
-            <a class="rounded-lg px-4 py-2  pagination__blog" href="#">
-              2
-            </a>
+          {{ $blogsAll }}
 
-            <a class="rounded-lg px-4 py-2 pagination__blog" href="#">
-              3
-            </a>
 
-            <a class="rounded-lg px-4 py-2  pagination__blog" href="#">
-              4
-            </a>
-          </div>
-
-          <a class=" text-[#3F76BB] flex gap-2 items-center" href="/page/1">
-            <span class="font-acehbold text-text14 md:text-text22 text-[#3F76BB]">Next</span>
-            <img src="./images/svg/next.svg" alt="next" />
-          </a>
         </div>
       </div>
     </section>

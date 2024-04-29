@@ -52,7 +52,7 @@ class IndexController extends Controller
 
 
 
-    return view('public.index', compact('productos', 'destacados', 'descuentos', 'general', 'benefit', 'faqs', 'testimonie', 'slider', 'categorias', 'category','tags', 'blogs'));
+    return view('public.index', compact('productos', 'destacados', 'descuentos', 'general', 'benefit', 'faqs', 'testimonie', 'slider', 'categorias', 'category', 'tags', 'blogs'));
   }
 
   public function catalogo($filtro, Request $request)
@@ -83,7 +83,7 @@ class IndexController extends Controller
         $categoria = Category::findOrFail($filtro);
       }
 
-     
+
 
       if ($rangefrom !== null && $rangeto !== null) {
 
@@ -94,7 +94,7 @@ class IndexController extends Controller
           $productos = Products::where('categoria_id', '=', $filtro)->get();
           $categoria = Category::findOrFail($filtro);
         }
-       
+
         $cleanedData = $productos->filter(function ($value) use ($rangefrom, $rangeto) {
 
           if ($value['descuento'] == 0) {
@@ -102,33 +102,28 @@ class IndexController extends Controller
             if ($value['precio'] <= $rangeto && $value['precio'] >= $rangefrom) {
               return $value;
             }
-
           } else {
 
             if ($value['descuento'] <= $rangeto && $value['descuento'] >= $rangefrom) {
               return $value;
             }
           }
-
-         
         });
 
         $currentPage = LengthAwarePaginator::resolveCurrentPage();
         $productos = new LengthAwarePaginator(
-        $cleanedData->forPage($currentPage, 3), // Obtener los productos por página
-        $cleanedData->count(), // Contar todos los elementos
-        3, // Número de elementos por página
-        $currentPage, // Página actual
-        ['path' => request()->url()] // URL base para la paginación
+          $cleanedData->forPage($currentPage, 3), // Obtener los productos por página
+          $cleanedData->count(), // Contar todos los elementos
+          3, // Número de elementos por página
+          $currentPage, // Página actual
+          ['path' => request()->url()] // URL base para la paginación
         );
-        
       }
 
 
 
       return view('public.catalogo', compact('general', 'faqs', 'categorias', 'testimonie', 'filtro', 'productos', 'categoria', 'rangefrom', 'rangeto'));
     } catch (\Throwable $th) {
-     
     }
   }
 
@@ -202,7 +197,7 @@ class IndexController extends Controller
         $codigoAleatorio = $this->codigoVentaAleatorio();
         $this->guardarOrden();
 
-        return response()->json(['message' => 'Data procesada correctamente','codigoCompra' => $codigoAleatorio],);
+        return response()->json(['message' => 'Data procesada correctamente', 'codigoCompra' => $codigoAleatorio],);
       } else {
         $existeUsuario = User::where('email', $email)->get()->toArray();
         if ($existeUsuario) {
@@ -230,7 +225,7 @@ class IndexController extends Controller
 
             $codigoAleatorio = $this->codigoVentaAleatorio();
             $this->guardarOrden();
-            return response()->json(['message' => 'Todos los datos estan correctos','codigoCompra' => $codigoAleatorio],);
+            return response()->json(['message' => 'Todos los datos estan correctos', 'codigoCompra' => $codigoAleatorio],);
           }
         } else {
           return response()->json(['errors' => 'Por favor registrese e inicie session '], 422);
@@ -262,40 +257,75 @@ class IndexController extends Controller
   }
   public function destino()
   {
-      //
-      return view('public.destino');
+    //
+    return view('public.destino');
   }
 
   public function actividad()
   {
-      //
-      return view('public.actividad');
+    //
+    return view('public.actividad');
   }
 
   public function detalleActividad()
   {
-      //
-      return view('public.detalleActividad');
+    //
+    return view('public.detalleActividad');
   }
 
   public function blog()
   {
-      //
-      $blogs = Blog::where('status', '=', 1)->where('visible', '=', 1)->orderByDesc('created_at')->limit(3)->get();
-      return view('public.blog',compact('blogs'));
+    //
+    $blogs = Blog::where('status', '=', 1)->where('visible', '=', 1)->orderByDesc('created_at')->limit(3)->get();
+    $blogsAll = Blog::where('status', '=', 1)->where('visible', '=', 1)->orderByDesc('created_at')->paginate(6);
+
+
+    return view('public.blog', compact('blogs', 'blogsAll'));
   }
 
-  public function post()
+  public function post(string $id)
   {
-      //
-      return view('public.post');
+    $blog = Blog::find($id);
+    $blogsAll = Blog::all();
+
+
+
+    // Obtener los blogs paginados ordenados por created_at
+    $blogsPaginated = Blog::orderByDesc('created_at')->paginate(1);
+
+    // Encontrar la posición del blog en el conjunto de resultados paginados
+    $position = $this->getPosition($blogsPaginated, $id);
+    dump($position);
+
+    return view('public.post', compact('blog', 'blogsAll', 'id', 'position'));
   }
+
+  function getPosition($paginator, $id)
+  {
+    // Obtener el índice del primer elemento en la página actual
+    $firstItemIndex = $paginator->firstItem() - 1;
+
+    // Buscar la posición del elemento en el conjunto de resultados paginados
+    $items = $paginator->items();
+    $position = array_search($id, array_column($items, 'id'));
+
+    // Si no se encuentra el ID en la matriz, devolver -1
+    if ($position === false) {
+      return -1;
+    }
+
+    // Ajustar la posición para tener en cuenta la paginación
+    $position += $firstItemIndex;
+
+    return $position;
+  }
+
 
 
   public function ayuda()
   {
-      //
-      return view('public.ayuda');
+    //
+    return view('public.ayuda');
   }
 
   public function agradecimiento()

@@ -48,7 +48,7 @@ Route::get('/destino', [IndexController::class, 'destino'] )->name('destino');
 Route::get('/actividad', [IndexController::class, 'actividad'] )->name('actividad');
 Route::get('/detalleActividad', [IndexController::class, 'detalleActividad'] )->name('detalleActividad');
 Route::get('/blog', [IndexController::class, 'blog'] )->name('blog');
-Route::get('/post', [IndexController::class, 'post'] )->name('post');
+Route::get('/post/{id}', [IndexController::class, 'post'] )->name('post');
 Route::get('/contacto', [IndexController::class, 'contacto'] )->name('contacto');
 Route::get('/ayuda', [IndexController::class, 'ayuda'] )->name('ayuda');
 

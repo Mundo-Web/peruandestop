@@ -25,9 +25,9 @@
     }
 
     /* @font-face {
-                                                  font-family: "acehSemibold";
-                                                  src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
-                                                  }  */
+                                                    font-family: "acehSemibold";
+                                                    src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
+                                                    }  */
 
     .bg_header_fondo {
       background-image: url({{ asset('images/img/header_fondo.png') }});
@@ -596,7 +596,7 @@
                 <div class="flex gap-10">
                   <div class="flex gap-2">
                     <img src="./images/svg/ubicacion.svg" alt="ubigeo" />
-                    <p class="font-acehMedium text-text16 md:text-text20">Cusco - Perú</p>
+                    <p class="font-acehMedium text-text16 md:text-text20">{{ $actividad->categoria->name }} - Perú</p>
                   </div>
                   <div class="flex gap-2">
                     <img src="./images/svg/hora.svg" alt="hora" />
