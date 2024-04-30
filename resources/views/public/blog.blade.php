@@ -91,12 +91,12 @@
                     {{ $blog->title }}
                   </h2>
 
-                  {!! Str::limit($blog->description, 180) !!}
+                  {!! Str::limit($blog->description, 150) !!}
 
                   <div class="mt-2">
                     <a href="{{ route('post', $blog->id) }}" method="POST"
                       class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop duration-500 inline-block w-auto">
-                      Ver Actividad
+                      Ver Mas
                     </a>
                   </div>
                 </div>
@@ -110,17 +110,17 @@
                       class=" rounded-3xl" />
                   </div>
 
-                  <div class="flex flex-col gap-2  justify-center">
+                  <div class="flex flex-col gap-2  ">
                     <h2 class="font-acehSemibold text-text24 md:text-text28 text-[#0F1B2C] leading-none md:leading-tight">
                       {{ $blog->title }}
                     </h2>
 
-                    {!! Str::limit($blog->description, 180) !!}
+                    {!! Str::limit($blog->description, 150) !!}
 
                     <div class="mt-2">
                       <a href="{{ route('post', $blog->id) }}" method="POST"
                         class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop duration-500 inline-block w-auto">
-                        Ver Actividad
+                        Ver Mas
                       </a>
                     </div>
 
@@ -152,7 +152,7 @@
                   <h2 class="font-acehSemibold text-text24 md:text-text28 text-left leading-none text-[#0F1B2C]">
                     {{ $blog->title }}
                   </h2>
-                  {!! Str::limit($blog->description, 180) !!}
+                  {!! Str::limit($blog->description, 150) !!}
                   <div class="flex">
                     <a href="{{ route('post', $blog->id) }}" method="POST"
                       class="font-acehRegular text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 text-center ">Ver
@@ -192,12 +192,12 @@
                 <h3 class="font-acehSemibold text-text26 md:text-text30 leading-none md:leading-tight text-[#0F1B2C]">
                   {{ $blog->title }}
                 </h3>
-                {!! Str::limit($blog->description, 180) !!}
+                {!! Str::limit($blog->description, 150) !!}
               </div>
               <div>
                 <a href="{{ route('post', $blog->id) }}" method="POST"
                   class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop duration-500 inline-block w-auto">
-                  Ver Actividad
+                  Ver Mas
                 </a>
               </div>
             </div>

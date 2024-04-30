@@ -961,68 +961,97 @@
 
         @foreach ($destino as $item)
           <div data-aos="fade-up" data-aos-offset="150">
+
             <div class="image__effect-hover rounded-[20px]">
+
+
               <img src="{{ asset($item->url_image . '/' . $item->name_image) }}" alt="cusco"
                 class="w-full shadow-lg block 2md:hidden" />
               <img src="{{ asset($item->url_image . '/' . $item->name_image) }}" alt="cusco"
                 class="w-full shadow-lg hidden 2md:block" />
-              <div
-                class="image__effect-content flex justify-center sm:justify-start text-center gap-9 md:gap-12 lg:gap-16 p-5">
-                <div class="text-white text-center">
-                  <span class="block font-acehSemibold text-text28 xl:text-text34">{{ $item->productos->count() }}
-                  </span>
-                  <span class="block font-acehMedium text-text12 xl:text-text18">Tours</span>
-                </div>
 
+
+              <div
+                class="image__effect-content flex justify-center sm:justify-end text-center gap-9 md:gap-12 lg:gap-16 p-5">
+                <div class=" text-center bg-neutral-800">
+                  HOla
+                </div>
+                <div class="flex items-center justify-">
+
+                  <a "
+                      class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">
+                      Ver Tours
+                    </a>
+
+                  </div>
+
+                  <div class="text-white text-center">
+                    <span class="block font-acehSemibold text-text28 xl:text-text34">{{ $item->productos->count() }}
+                    </span>
+                    <span class="block font-acehMedium text-text12 xl:text-text18">Tours</span>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- -- -->
+
+              <div class="pb-5">
+                <h3 class="font-acehSemibold text-text48 md:text-text52 pt-5 pb-2 text-[#0F1B2C]">{{ $item->name }}</h3>
+                <p class="font-acehMedium text-text18 md:text-text22 py-3 text-[#0F1B2C]">
+                  {{ $item->description }}
+                </p>
+
+                <!-- corregir este div -->
+                <div class="flex justify-between items-center ">
+                  <div>
+                    <div class="flex gap-2 py-2">
+                      <img src="./images/svg/start.svg" alt="estrella">
+                      <img src="./images/svg/start.svg" alt="estrella">
+                      <img src="./images/svg/start.svg" alt="estrella">
+                      <img src="./images/svg/start_sin_color.svg" alt="estrella">
+                      <img src="./images/svg/start_sin_color.svg" alt="estrella">
+                    </div>
+                    <p class="font-acehSemibold text-text28 md:text-text32 text-[#0F1B2C]">
+                      2,343
+                      <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
+                    </p>
+
+                  </div>
+
+                  <a href="{{ url('/actividad/' . $item->id) }}"
+                    class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">
+                    Ver Tours
+                  </a>
+
+                </div>
               </div>
             </div>
+   @endforeach
 
-            <!-- -- -->
+                    <!-- 2 -->
 
-            <div class="pb-5">
-              <h3 class="font-acehSemibold text-text48 md:text-text52 pt-5 pb-2 text-[#0F1B2C]">{{ $item->name }}</h3>
-              <p class="font-acehMedium text-text18 md:text-text22 py-3 text-[#0F1B2C]">
-                {{ $item->description }}
-              </p>
+                    <!-- 3 -->
 
-              <!-- corregir este div -->
-              {{-- <div class="flex justify-between items-center">
-              <p class="font-acehSemibold text-text28 md:text-text32 text-[#0F1B2C]">
-                2,343
-                <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
-              </p>
-              <a href="{{ route('detalleActividad') }}"
-                class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">
-                Ver destino
-              </a>
-            </div> --}}
-            </div>
-          </div>
-        @endforeach
+                    <!-- 4 -->
 
-        <!-- 2 -->
+                    <!-- 5 -->
 
-        <!-- 3 -->
+                    <!-- 6 -->
 
-        <!-- 4 -->
+                </div>
 
-        <!-- 5 -->
-
-        <!-- 6 -->
-
-      </div>
-
-      <div data-aos="fade-up" data-aos-offset="150">
-        <div class="flex  pt-24 justify-center " aria-label="Pagination">
+                <div data-aos="fade-up" data-aos-offset="150">
+                  <div class="flex  pt-24 justify-center " aria-label="Pagination">
 
 
-          {{ $destino }}
+                    {{ $destino }}
 
 
-        </div>
-      </div>
+                  </div>
+                </div>
 
-      {{-- <div class="flex justify-center mt-10" data-aos="fade-up" data-aos-offset="150">
+                {{-- <div class="flex justify-center mt-10" data-aos="fade-up" data-aos-offset="150">
         <a href="{{ route('destino') }}"
           class="font-acehSemibold text-text18 md:text-text22 rounded-full border-colorBorder border-2 py-3 px-5 group md:duration-500 text-[#0F1B2C] hover:bg-colorBackgroundHeader hover:text-white">Ver
           más Destinos

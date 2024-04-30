@@ -21,6 +21,7 @@ use App\Http\Controllers\TestimonyController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\FaqsController;
+use App\Http\Controllers\GalerieController;
 use App\Http\Controllers\LogosClientController;
 
 use App\Http\Controllers\IndexController;
@@ -46,15 +47,18 @@ use App\Models\AboutUs;
 /* Las rutas publicas */
 Route::get('/', [IndexController::class, 'index'] )->name('index');
 Route::get('/destino', [IndexController::class, 'destino'] )->name('destino');
-Route::get('/actividad', [IndexController::class, 'actividad'] )->name('actividad');
-Route::get('/detalleActividad', [IndexController::class, 'detalleActividad'] )->name('detalleActividad');
+Route::get('/actividad/{id}', [IndexController::class, 'actividad'] )->name('actividad');
+Route::get('/detalleActividad/{id}', [IndexController::class, 'detalleActividad'] )->name('detalleActividad');
+
 Route::get('/blog', [IndexController::class, 'blog'] )->name('blog');
 Route::get('/post/{id}', [IndexController::class, 'post'] )->name('post');
+
 Route::get('/contacto', [IndexController::class, 'contacto'] )->name('contacto');
+
 Route::get('/ayuda', [IndexController::class, 'ayuda'] )->name('ayuda');
 
 Route::get('/catalogo/{id}', [IndexController::class, 'destino'] )->name('catalogo');
-Route::get('/contacto', [IndexController::class, 'destino'] )->name('contacto');
+// Route::get('/contacto', [IndexController::class, 'destino'] )->name('contacto');
 Route::get('/comentario', [IndexController::class, 'destino'] )->name('comentario');
 
 
@@ -62,6 +66,8 @@ Route::get('/nosotros', [IndexController::class, 'index'] )->name('nosotros');
 Route::get('/servicios', [IndexController::class, 'index'] )->name('servicios');
 
 Route::post('guardarContactos', [IndexController::class, 'guardarContacto'] )->name('guardarContactos');
+Route::post('guardarUserNewsLetter', [IndexController::class, 'guardarUserNewsLetter'] )->name('guardarUserNewsLetter');
+
 
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
@@ -74,6 +80,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
         //messages
         Route::resource('/mensajes', MessageController::class);
+        Route::post('/mensajes/borrar', [MessageController::class, 'borrar'])->name('mensajes.borrar');
 
         //Datos Generales
         Route::resource('/datosgenerales', GeneralController::class);
@@ -140,6 +147,11 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         Route::resource('/faqs', FaqsController::class);
         Route::post('/faqs/updateVisible', [FaqsController::class, 'updateVisible'])->name('faqs.updateVisible');
         Route::post('/faqs/borrar', [FaqsController::class, 'borrar'])->name('faqs.borrar');
+
+        Route::resource('/galerie', GalerieController::class);
+        Route::post('/galerie/updateVisible', [GalerieController::class, 'updateVisible'])->name('galerie.updateVisible');
+        Route::post('/galerie/borrar', [GalerieController::class, 'borrar'])->name('galerie.borrar');
+
 
                
         Route::fallback(function() {

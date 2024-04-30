@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\EmailConfig;
 use App\Http\Requests\StoreIndexRequest;
 use App\Http\Requests\UpdateIndexRequest;
 use App\Models\Attributes;
@@ -16,6 +17,7 @@ use App\Models\Slider;
 use App\Models\Strength;
 use App\Models\Testimony;
 use App\Models\Category;
+use App\Models\NewsletterSubscriber;
 use App\Models\Specifications;
 use App\Models\Tag;
 use App\Models\User;
@@ -137,7 +139,7 @@ class IndexController extends Controller
   public function contacto()
   {
     $general = General::all();
-    return view('public.contact', compact('general'));
+    return view('public.contacto', compact('general'));
   }
 
   public function carrito()
@@ -280,9 +282,9 @@ class IndexController extends Controller
 
       $destino = Category::select([
         DB::raw('DISTINCT(categories.id)'),
-        'categories.*', 
+        'categories.*',
 
-        ])
+      ])
         ->join('products', 'categories.id', '=', 'products.categoria_id')
         ->join('tags_xproducts', 'products.id', '=', 'tags_xproducts.producto_id')
         ->join('tags', 'tags_xproducts.tag_id', '=', 'tags.id')
@@ -290,7 +292,7 @@ class IndexController extends Controller
 
         ->paginate(6);
 
-      
+
 
 
       /* $destino = Tag::select('tags.id', 'tags.name', 'categories.description', 'categories.id AS category_id')
@@ -307,16 +309,36 @@ class IndexController extends Controller
     return view('public.destino', compact('destino', 'tours', 'tags'));
   }
 
-  public function actividad()
+  public function actividad(string $id)
   {
     //
-    return view('public.actividad');
+    $destino = Category::find($id);
+    return view('public.actividad', compact('destino'));
   }
 
-  public function detalleActividad()
+  public function detalleActividad(string $id)
   {
     //
-    return view('public.detalleActividad');
+    $destinos = Category::all();
+    $tagsProducto = Products::with('tags')->find($id);
+    $tagsIds = $tagsProducto->tags->pluck('id')->toArray();
+    $tagsIdsString = implode(', ', $tagsIds);
+
+    $sql = $sql = "
+          SELECT DISTINCT categories.name, categories.*
+          FROM tags
+          INNER JOIN tags_xproducts ON tags.id = tags_xproducts.tag_id
+          INNER JOIN products ON tags_xproducts.producto_id = products.id
+          INNER JOIN categories ON products.categoria_id = categories.id
+          WHERE tags.id IN ($tagsIdsString)
+      ";
+
+    // Ejecutar la consulta SQL y obtener los resultados
+    $tagsDestinos = DB::select($sql);
+
+    // producto -> categoria -> 
+    $tour = Products::find($id);
+    return view('public.detalleActividad', compact('tour', 'destinos', 'tagsDestinos'));
   }
 
   public function blog()
@@ -488,6 +510,9 @@ class IndexController extends Controller
   {
     //Del modelo
     //'full_name', 'email', 'phone', 'message', 'status', 'is_read'
+    $data = $request->all();
+
+    $data['full_name'] = $request->name . ' ' . $request->apellido;
 
     $reglasValidacion = [
       'name' => 'required|string|max:255',
@@ -503,8 +528,34 @@ class IndexController extends Controller
       'phone.integer' => 'El campo teléfono debe ser un número entero.',
     ];
     $request->validate($reglasValidacion, $mensajes);
-    $formlanding = Message::create($request->all());
+    $formlanding = Message::create($data);
+
+    $this->envioCorreo($formlanding);
     // return redirect()->route('landingaplicativos', $formlanding)->with('mensaje','Mensaje enviado exitoso')->with('name', $request->nombre);
     return response()->json(['message' => 'Mensaje enviado con exito']);
+  }
+
+  private function envioCorreo($data)
+  {
+
+    $name = $data['nombre'];
+    $mail = EmailConfig::config();
+    try {
+      $mail->addAddress($data['email']);
+      $mail->Body = "Buenas tardes $name su solicitud fue procesada.";
+      $mail->isHTML(true);
+      $mail->send();
+    } catch (\Throwable $th) {
+      //throw $th;
+    }
+  }
+
+  public function guardarUserNewsLetter(Request $request){
+
+    NewsletterSubscriber::create($request->all());
+    $data= $request->all(); 
+    $data['nombre'] = '';
+    $this->envioCorreo($data);
+    return response()->json(['message' => 'Newsletter guardado ']);
   }
 }

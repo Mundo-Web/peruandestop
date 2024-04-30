@@ -54,8 +54,8 @@
         <div class="flex flex-col justify-end md:grid grid-cols-1 pb-12 md:py-10 md:gap-24">
           <div class="flex flex-col items-start my-12">
             <a href="#"
-              class="font-acehbold text-text18 md:text-text22 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 leading-none">Perú</a>
-            <h1 class="font-acehbold text-text64 md:text-text68">Cusco</h1>
+              class="font-acehbold text-text18 md:text-text22 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 leading-none">{{ $destino->pais }}</a>
+            <h1 class="font-acehbold text-text64 md:text-text68">{{ $destino->name }}</h1>
           </div>
           <div class="flex items-center flex-row md:justify-end md:gap-10 justify-center gap-5">
             <p class="font-acehSemibold text-text24 md:text-text40 leading-none md:leading-tight">
@@ -84,15 +84,15 @@
     <section>
       <div class="gap-10 w-11/12 mx-auto">
         <div class="flex flex-row justify-between items-center my-16 gap-5">
-          <h2 class="font-acehSemibold text-text32 md:text-text64 leading-none md:leading-tight text-left text-[#141841]">
+          {{-- <h2 class="font-acehSemibold text-text32 md:text-text64 leading-none md:leading-tight text-left text-[#141841]">
             Explorar Actividades
-          </h2>
+          </h2> --}}
 
           <!-- --------- modal -->
           <!--text-[26px] md:text-[32px]  -->
           <section class="modal-mostrar z-[100]">
             <div class="modal__mostrar-info">
-              <div>
+              {{-- <div>
                 <div class="flex justify-between items-center w-full my-5">
                   <h2 class="font-acehSemibold  text-[36px] md:text-[48px] leading-none">
                     Explorar Actividades
@@ -362,12 +362,12 @@
                 </div>
 
 
-              </div>
+              </div> --}}
             </div>
           </section>
 
-          <a href="#"
-            class="flex  items-center gap-2 mostrar-mas font-acehSemibold text-text18 lg:text-text22 rounded-md lg:rounded-3xl border-colorBorder border-2 py-4 lg:py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group lg:duration-500 flex-initial  w-auto">{{-- mostrar-modal --}}
+          {{-- <a href="#"
+            class="flex  items-center gap-2 mostrar-mas font-acehSemibold text-text18 lg:text-text22 rounded-md lg:rounded-3xl border-colorBorder border-2 py-4 lg:py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group lg:duration-500 flex-initial  w-auto">
             <!-- -----hidden md:block -->
             <span class="hidden md:inline"> Mostrar mas</span>
 
@@ -376,7 +376,7 @@
               <path d="M3.46154 6.5H14.5385M1 1.5H17M7.15385 11.5H10.8462" stroke="#0F1B2C" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-white md:duration-500" />
             </svg>
-          </a>
+          </a> --}}
 
           <!-- ------ -->
         </div>
@@ -457,7 +457,7 @@
                     </div>
                 </div> --}}
         <!-- CARRUSEL PARRA MOBILE -->
-        <div data-aos="fade-up" data-aos-offset="150">
+        {{-- <div data-aos="fade-up" data-aos-offset="150">
           <div class="swiper productos-explorar-actividades">
             <div class="swiper-wrapper text-[#0F1B2C]">
               <div class="swiper-slide rounded-2xl">
@@ -620,16 +620,24 @@
             </div>
             <!-- <div class="swiper-pagination-actividades mt-6"></div> -->
           </div>
-        </div>
+        </div> --}}
       </div>
     </section>
 
 
     <section>
-      <div class="w-11/12 mx-auto mt-16">
+      {{--  <div class="w-11/12 mx-auto mt-16">
         <h2 class="font-acehSemibold text-[40px] md:text-[64px] leading-none md:leading-tight text-left text-[#141841]">
-          Todos los tours de : Pais
+          Todos los tours de {{ $destino->name }} : {{ $destino->pais }}
+
         </h2>
+        <div>
+          @foreach ($destino->productos as $item)
+            <p>
+              {{ $item->producto }}
+            </p>
+          @endforeach
+        </div>
 
         <div class="flex flex-col md:flex-row md:justify-between md:items-center text-[#0F1B2C]">
           <div class="flex gap-10 py-10 justify-between">
@@ -637,8 +645,8 @@
               <a
                 class="cursor-pointer mostrar-filtros font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-2 md:py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 flex gap-2 items-center">
                 Filtros
-                <svg width="20" height="20" viewBox="0 0 18 13" fill="none"
-                  xmlns="http://www.w3.org/2000/svg" class="inline-block">
+                <svg width="20" height="20" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="inline-block">
                   <path d="M3.46154 6.5H14.5385M1 1.5H17M7.15385 11.5H10.8462" stroke="#0F1B2C" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-white md:duration-500" />
                 </svg>
@@ -926,7 +934,7 @@
                               Tipo de moneda
                             </p>
 
-                            {{-- revisar --}}
+                            
                             <select name="" id=""
                               class="font-acehbold text-[#3F76BB] border-none text-text18 md:text-text22 w-full px-2">
                               <option value="1" class="font-acehRegular">Soles Peruanos
@@ -939,42 +947,7 @@
                             </select>
 
 
-                            {{--  <p
-                                                            class="text-[#0F1B2C] font-acehbold text-text18 md:text-text22 min-w-[90px]">
-                                                            Tipo de moneda
-                                                        </p>
-
-                                                        <div class="dropdown-moneda inline-block relative">
-                                                            <button
-                                                                class="font-acehbold py-2  rounded inline-flex items-center">
-                                                                <span
-                                                                    class="mr-0 md:mr-12 text-[#3F76BB] text-text18 md:text-text22">
-                                                                    Soles peruanos
-                                                                </span>
-                                                                <svg width="20" height="20" viewBox="0 0 10 6"
-                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                        d="M9.20711 0.792893C8.81658 0.402369 8.18342 0.402369 7.79289 0.792893L5 3.58579L2.20711 0.792893C1.81658 0.402369 1.18342 0.402369 0.792894 0.792893C0.402369 1.18342 0.402369 1.81658 0.792894 2.20711L4.29289 5.70711C4.68342 6.09763 5.31658 6.09763 5.70711 5.70711L9.20711 2.20711C9.59763 1.81658 9.59763 1.18342 9.20711 0.792893Z"
-                                                                        fill="#3F76BB" />
-                                                                </svg>
-                                                            </button>
-                                                            <ul
-                                                                class="dropdown-menu-moneda absolute text-[#141718] text-text16 md:text-text20 w-full hidden z-20 bg-white rounded-md">
-                                                                <li class="">
-                                                                    <a
-                                                                        class="rounded-md hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap">Dolares
-                                                                        Americanos</a>
-                                                                </li>
-                                                                <li class="">
-                                                                    <a
-                                                                        class="rounded-md hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap">Portugués</a>
-                                                                </li>
-                                                                <li class="">
-                                                                    <a
-                                                                        class="rounded-md hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap">Frances</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div> --}}
+                           
 
                             <!-- ----- -->
                           </div>
@@ -1053,7 +1026,7 @@
                           Limpiar Todo
                         </a>
 
-                        <a href="{{ route('detalleActividad') }}"
+                        <a href="{{ url('/detalleActividad') . '/' . $item->id }}"
                           class="font-acehMedium text-text16 md:text-text22 rounded-3xl bg-colorBackgroundHeader py-3 px-5 md:px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500">
                           Ver Actividad</a>
                       </div>
@@ -1108,318 +1081,59 @@
             98 activiades y excursiones en Cusco
           </p>
         </div>
-      </div>
+      </div> --}}
 
       <div class="w-11/12 mx-auto">
         <div class="grid grid-cols-1 2lg:grid-cols-2 mt-10 gap-20 md:gap-10 text-[#0F1B2C]">
-          <div class="" data-aos="fade-up" data-aos-offset="150">
-            <div class="overflow-hidden rounded-2xl">
-              <div class="img-container">
-                <img src="./images/img/recorrido_camino_inca.png" alt=""
-                  class="w-full rounded-2xl shadow-lg object-cover" />
-              </div>
-            </div>
-
-            <div class="w-full mx-auto flex flex-col justify-center gap-5">
-              <div class="flex flex-col-reverse gap-5 md:gap-5 md:flex-row md:justify-start md:items-center mt-5">
-                <span
-                  class="font-acehMedium text-text16 md:text-text20 rounded-full border-colorBorder border-2 py-1 px-5 inline-block max-w-max text-center">
-                  Senderismo
-                </span>
-
-                <div class="flex justify-between items-center gap-5">
-                  <p class="font-acehbold text-text18 md:text-text22">
-                    9,0/10
-                    <span class="font-acehMedium text-text18 md:text-text22">Valoraciones</span>
-                  </p>
-                  <p class="font-acehbold text-text18 md:text-text22">
-                    2,343
-                    <span class="font-acehMedium text-text18 md:text-text22">Opiniones</span>
-                  </p>
-                </div>
-              </div>
-              <div class="flex flex-col gap-5">
-                <h2 class="font-acehSemibold text-text48 md:text-text52 leading-none">
-                  Recorrido Camino al Inca
-                </h2>
-                <div class="flex gap-10">
-                  <div class="flex gap-2 items-center">
-                    <img src="./images/svg/ubicacion.svg" alt="ubigeo" />
-                    <p class="font-acehMedium text-text18 md:text-text22">Cusco - Perú</p>
-                  </div>
-                  <div class="flex gap-2 items-center">
-                    <img src="./images/svg/hora.svg" alt="hora" />
-                    <p class="font-acehMedium text-text16 md:text-text20">4 horas</p>
-                  </div>
+          @foreach ($destino->productos as $item)
+            <div class="" data-aos="fade-up" data-aos-offset="150">
+              <div class="overflow-hidden rounded-2xl">
+                <div class="img-container ">
+                  <img src="{{ asset($item->imagen) }}" alt=""
+                    class=" object-cover w-[600px] h-[300px] rounded-2xl shadow-lg " />
                 </div>
               </div>
 
-              <div class="flex flex-col gap-5 md:flex-row justify-between items-start md:items-center ">
-                <p class="font-acehbold text-text40 md:text-text44">
-                  120 US$
-                  <span class="block font-acehMedium text-text16 md:text-text20">Por persona</span>
-                </p>
-                <a href="{{ route('detalleActividad') }}"
-                  class="font-acehSemibold text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">Ver
-                  Actividad</a>
-              </div>
-            </div>
-          </div>
+              <div class="w-full mx-auto flex flex-col justify-center gap-5">
+                <div class="flex flex-col-row gap-5 md:gap-5 md:flex-row md:justify-start md:items-center mt-5">
+                  @foreach ($item->tags as $tag)
+                    <span
+                      class="font-acehMedium text-text16 md:text-text20 rounded-full border-colorBorder border-2 py-1 px-5 inline-block max-w-max text-center">
 
-          <div data-aos="fade-up" data-aos-offset="150">
-            <div>
-              <img src="./images/img/duis mauris.png" alt="" class="w-full rounded-2xl" />
-            </div>
-
-            <div class="w-full mx-auto flex flex-col justify-center gap-5">
-              <div class="flex flex-col-reverse gap-5 md:gap-5 md:flex-row md:justify-start md:items-center mt-5">
-                <span
-                  class="font-acehMedium text-text16 md:text-text20 rounded-full border-colorBorder border-2 py-1 px-5 inline-block max-w-max text-center">
-                  City tour
-                </span>
-
-                <div class="flex justify-between items-center gap-5">
-                  <p class="font-acehbold text-text18 md:text-text22">
-                    9,0/10
-                    <span class="font-acehMedium text-text18 md:text-text22">Valoraciones</span>
-                  </p>
-                  <p class="font-acehbold text-text18 md:text-text22">
-                    2,343
-                    <span class="font-acehMedium text-text18 md:text-text22">Opiniones</span>
-                  </p>
+                      {{ Str::limit($tag->name, 10) }}
+                    </span>
+                  @endforeach
                 </div>
-              </div>
-              <div class="flex flex-col gap-5">
-                <h2 class="font-acehSemibold text-text48 md:text-text52 leading-none">
-                  Recorrido Camino al Inca
-                </h2>
-                <div class="flex gap-10">
-                  <div class="flex gap-2 items-center">
-                    <img src="./images/svg/ubicacion.svg" alt="ubigeo" />
-                    <p class="font-acehMedium text-text18 md:text-text22">Cusco - Perú</p>
-                  </div>
-                  <div class="flex gap-2 items-center">
-                    <img src="./images/svg/hora.svg" alt="hora" />
-                    <p class="font-acehMedium text-text16 md:text-text20">4 horas</p>
+                <div class="flex flex-col gap-2">
+                  <h2 class="font-acehSemibold text-text48 md:text-text40 leading-none">
+                    {{ $item->producto }}
+                  </h2>
+                  <div class="flex gap-10">
+                    <div class="flex gap-2 items-center">
+                      <img src="{{ asset('images/svg/ubicacion.svg') }}" alt="ubigeo" />
+                      <p class="font-acehMedium text-text18 md:text-text22">{{ $destino->name }} - {{ $destino->pais }}
+                      </p>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                      <img src="{{ asset('images/svg/hora.svg') }}" alt="hora" />
+                      <p class="font-acehMedium text-text16 md:text-text20">4 horas</p>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="flex flex-col gap-5 md:flex-row justify-between items-start md:items-center ">
-                <p class="font-acehbold text-text40 md:text-text44">
-                  120 US$
-                  <span class="block font-acehMedium text-text16 md:text-text20">Por persona</span>
-                </p>
-                <a href="{{ route('detalleActividad') }}"
-                  class="font-acehSemibold text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">Ver
-                  Actividad</a>
-              </div>
-            </div>
-          </div>
-
-          <div data-aos="fade-up" data-aos-offset="150">
-            <div>
-              <img src="./images/img/integer sollicitun.png" alt="" class="w-full rounded-2xl" />
-            </div>
-
-            <div class="w-full mx-auto flex flex-col justify-center gap-5">
-              <div class="flex flex-col-reverse gap-5 md:gap-5 md:flex-row md:justify-start md:items-center mt-5">
-                <span
-                  class="font-acehMedium text-text16 md:text-text20 rounded-full border-colorBorder border-2 py-1 px-5 inline-block max-w-max text-center">
-                  Senderismo
-                </span>
-
-                <div class="flex justify-between items-center gap-5">
-                  <p class="font-acehbold text-text18 md:text-text22">
-                    9,0/10
-                    <span class="font-acehMedium text-text18 md:text-text22">Valoraciones</span>
+                <div class="flex flex-col gap-5 md:flex-row justify-between items-start md:items-center ">
+                  <p class="font-acehbold text-text40 md:text-text44">
+                    {{ $item->precio }} US$
+                    <span class="block font-acehMedium text-text16 md:text-text20">Por persona</span>
                   </p>
-                  <p class="font-acehbold text-text18 md:text-text22">
-                    2,343
-                    <span class="font-acehMedium text-text18 md:text-text22">Opiniones</span>
-                  </p>
+                  <a href="{{ url('/detalleActividad') . '/' . $item->id }}"
+                    class="font-acehSemibold text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">
+                    Ver Tour
+                  </a>
                 </div>
               </div>
-              <div class="flex flex-col gap-5">
-                <h2 class="font-acehSemibold text-text48 md:text-text52 leading-none">
-                  Recorrido Camino al Inca
-                </h2>
-                <div class="flex gap-10">
-                  <div class="flex gap-2 items-center">
-                    <img src="./images/svg/ubicacion.svg" alt="ubigeo" />
-                    <p class="font-acehMedium text-text18 md:text-text22">Cusco - Perú</p>
-                  </div>
-                  <div class="flex gap-2 items-center">
-                    <img src="./images/svg/hora.svg" alt="hora" />
-                    <p class="font-acehMedium text-text16 md:text-text20">4 horas</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex flex-col gap-5 md:flex-row justify-between items-start md:items-center ">
-                <p class="font-acehbold text-text40 md:text-text44">
-                  120 US$
-                  <span class="block font-acehMedium text-text16 md:text-text20">Por persona</span>
-                </p>
-                <a href="{{ route('detalleActividad') }}"
-                  class="font-acehSemibold text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">Ver
-                  Actividad</a>
-              </div>
             </div>
-          </div>
-
-          <div data-aos="fade-up" data-aos-offset="150">
-            <div>
-              <img src="./images/img/duis mauris.png" alt="" class="w-full rounded-2xl" />
-            </div>
-
-            <div class="w-full mx-auto flex flex-col justify-center gap-5">
-              <div class="flex flex-col-reverse gap-5 md:gap-5 md:flex-row md:justify-start md:items-center mt-5">
-                <span
-                  class="font-acehMedium text-text16 md:text-text20 rounded-full border-colorBorder border-2 py-1 px-5 inline-block max-w-max text-center">
-                  City tour
-                </span>
-
-                <div class="flex justify-between items-center gap-5">
-                  <p class="font-acehbold text-text18 md:text-text22">
-                    9,0/10
-                    <span class="font-acehMedium text-text18 md:text-text22">Valoraciones</span>
-                  </p>
-                  <p class="font-acehbold text-text18 md:text-text22">
-                    2,343
-                    <span class="font-acehMedium text-text18 md:text-text22">Opiniones</span>
-                  </p>
-                </div>
-              </div>
-              <div class="flex flex-col gap-5">
-                <h2 class="font-acehSemibold text-text48 md:text-text52 leading-none">
-                  Recorrido Camino al Inca
-                </h2>
-                <div class="flex gap-10">
-                  <div class="flex gap-2 items-center">
-                    <img src="./images/svg/ubicacion.svg" alt="ubigeo" />
-                    <p class="font-acehMedium text-text18 md:text-text22">Cusco - Perú</p>
-                  </div>
-                  <div class="flex gap-2 items-center">
-                    <img src="./images/svg/hora.svg" alt="hora" />
-                    <p class="font-acehMedium text-text16 md:text-text20">4 horas</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex flex-col gap-5 md:flex-row justify-between items-start md:items-center ">
-                <p class="font-acehbold text-text40 md:text-text44">
-                  120 US$
-                  <span class="block font-acehMedium text-text16 md:text-text20">Por persona</span>
-                </p>
-                <a href="{{ route('detalleActividad') }}"
-                  class="font-acehSemibold text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">Ver
-                  Actividad</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="" data-aos="fade-up" data-aos-offset="150">
-            <div class="">
-              <img src="./images/img/ronda_comida_peruana_actividad.png" alt="" class="w-full rounded-2xl" />
-            </div>
-
-            <div class="w-full mx-auto flex flex-col justify-center gap-5">
-              <div class="flex flex-col-reverse gap-5 md:gap-5 md:flex-row md:justify-start md:items-center mt-5">
-                <span
-                  class="font-acehMedium text-text16 md:text-text20 rounded-full border-colorBorder border-2 py-1 px-5 inline-block max-w-max text-center">
-                  Senderismo
-                </span>
-
-                <div class="flex justify-between items-center gap-5">
-                  <p class="font-acehbold text-text18 md:text-text22">
-                    9,0/10
-                    <span class="font-acehMedium text-text18 md:text-text22">Valoraciones</span>
-                  </p>
-                  <p class="font-acehbold text-text18 md:text-text22">
-                    2,343
-                    <span class="font-acehMedium text-text18 md:text-text22">Opiniones</span>
-                  </p>
-                </div>
-              </div>
-              <div class="flex flex-col gap-5">
-                <h2 class="font-acehSemibold text-text48 md:text-text52 leading-none">
-                  Recorrido Camino al Inca
-                </h2>
-                <div class="flex gap-10">
-                  <div class="flex gap-2 items-center">
-                    <img src="./images/svg/ubicacion.svg" alt="ubigeo" />
-                    <p class="font-acehMedium text-text18 md:text-text22">Cusco - Perú</p>
-                  </div>
-                  <div class="flex gap-2 items-center">
-                    <img src="./images/svg/hora.svg" alt="hora" />
-                    <p class="font-acehMedium text-text16 md:text-text20">4 horas</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex flex-col gap-5 md:flex-row justify-between items-start md:items-center ">
-                <p class="font-acehbold text-text40 md:text-text44">
-                  120 US$
-                  <span class="block font-acehMedium text-text16 md:text-text20">Por persona</span>
-                </p>
-                <a href="{{ route('detalleActividad') }}"
-                  class="font-acehSemibold text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">Ver
-                  Actividad</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="" data-aos="fade-up" data-aos-offset="150">
-            <div class="">
-              <img src="./images/img/nan venenatis.png" alt="" class="w-full rounded-2xl" />
-            </div>
-
-            <div class="w-full mx-auto flex flex-col justify-center gap-5">
-              <div class="flex flex-col-reverse gap-5 md:gap-5 md:flex-row md:justify-start md:items-center mt-5">
-                <span
-                  class="font-acehMedium text-text16 md:text-text20 rounded-full border-colorBorder border-2 py-1 px-5 inline-block max-w-max text-center">
-                  City tour
-                </span>
-
-                <div class="flex justify-between items-center gap-5">
-                  <p class="font-acehbold text-text18 md:text-text22">
-                    9,0/10
-                    <span class="font-acehMedium text-text18 md:text-text22">Valoraciones</span>
-                  </p>
-                  <p class="font-acehbold text-text18 md:text-text22">
-                    2,343
-                    <span class="font-acehMedium text-text18 md:text-text22">Opiniones</span>
-                  </p>
-                </div>
-              </div>
-              <div class="flex flex-col gap-5">
-                <h2 class="font-acehSemibold text-text48 md:text-text52 leading-none">
-                  Recorrido Camino al Inca
-                </h2>
-                <div class="flex gap-10">
-                  <div class="flex gap-2 items-center">
-                    <img src="./images/svg/ubicacion.svg" alt="ubigeo" />
-                    <p class="font-acehMedium text-text18 md:text-text22">Cusco - Perú</p>
-                  </div>
-                  <div class="flex gap-2 items-center">
-                    <img src="./images/svg/hora.svg" alt="hora" />
-                    <p class="font-acehMedium text-text16 md:text-text20">4 horas</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex flex-col gap-5 md:flex-row justify-between items-start md:items-center ">
-                <p class="font-acehbold text-text40 md:text-text44">
-                  120 US$
-                  <span class="block font-acehMedium text-text16 md:text-text20">Por persona</span>
-                </p>
-                <a href="{{ route('detalleActividad') }}"
-                  class="font-acehSemibold text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">Ver
-                  Actividad</a>
-              </div>
-            </div>
-          </div>
+          @endforeach
         </div>
 
         <div class="flex justify-center mt-10">

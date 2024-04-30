@@ -49,7 +49,7 @@
 
       <div data-aos="fade-up" data-aos-offset="150">
         <nav class="flex flex-col lg:items-start">
-          <img src="./images/svg/headphone.svg" alt="auriculares" class="w-6 pb-4" />
+          <img src="{{ asset('images/svg/headphone.svg') }}" alt="auriculares" class="w-6 pb-4" />
           <p class="font-acehbold text-text22  lg:text-left">Asistencia para Agencias</p>
           <a href="#numero" class="font-acehLight text-text20 py-1">{{ $datosgenerales[0]->cellphone }}</a>
           <a href="#correo"
@@ -62,18 +62,18 @@
 
         <div class="flex md:justify-center justify-start">
           <div class="flex flex-wrap md:justify-center items-center lg:justify-start gap-2">
-            <img src="./images/svg/mastercad.svg" alt="mastercad" />
-            <img src="./images/svg/bitpay.svg" alt="bitpay" />
-            <img src="./images/svg/visa.svg" alt="visa" />
-            <img src="./images/svg/american.svg" alt="american" />
+            <img src="{{ asset('images/svg/mastercad.svg') }}" alt="mastercad" />
+            <img src="{{ asset('images/svg/bitpay.svg') }}" alt="bitpay" />
+            <img src="{{ asset('images/svg/visa.svg') }}" alt="visa" />
+            <img src="{{ asset('images/svg/american.svg') }}" alt="american" />
 
-            <img src="./images/svg/discover.svg" alt="discover" />
-            <img src="./images/svg/soport.svg" alt="soport" />
-            <img src="./images/svg/gpa.svg" alt="gpa" />
+            <img src="{{ asset('images/svg/discover.svg') }}" alt="discover" />
+            <img src="{{ asset('images/svg/soport.svg') }}" alt="soport" />
+            <img src="{{ asset('images/svg/gpa.svg') }}" alt="gpa" />
 
-            <img src="./images/svg/pay.svg" alt="pay" />
-            <img src="./images/svg/paypal.svg" alt="paypal" />
-            <img src="./images/svg/roja_azul.svg" alt="roja_azul" />
+            <img src="{{ asset('images/svg/pay.svg') }}" alt="pay" />
+            <img src="{{ asset('images/svg/paypal.svg') }}" alt="paypal" />
+            <img src="{{ asset('images/svg/roja_azul.svg') }}" alt="roja_azul" />
           </div>
         </div>
       </div>
@@ -88,9 +88,9 @@
         </p>
       </div>
       <div class="flex justify-start md:justify-end gap-5 w-full">
-        <a href="#"><img src="./images/svg/instagram.svg" alt="instagram" /></a>
-        <a href="#"><img src="./images/svg/facebook.svg" alt="facebook" /></a>
-        <a href=""><img src="./images/svg/youtube.svg" alt="youtube" /></a>
+        <a href="#"><img src="{{ asset('images/svg/instagram.svg') }}" alt="instagram" /></a>
+        <a href="#"><img src="{{ asset('images/svg/facebook.svg') }}" alt="facebook" /></a>
+        <a href=""><img src="{{ asset('images/svg/youtube.svg') }}" alt="youtube" /></a>
       </div>
     </div>
   </div>

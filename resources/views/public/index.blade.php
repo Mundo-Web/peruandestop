@@ -25,9 +25,9 @@
     }
 
     /* @font-face {
-                                                                            font-family: "acehSemibold";
-                                                                            src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
-                                                                            }  */
+                                                                                      font-family: "acehSemibold";
+                                                                                      src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
+                                                                                      }  */
 
     .bg_header_fondo {
       background-image: url({{ asset('images/img/header_fondo.png') }});
@@ -525,7 +525,7 @@
                   2,343
                   <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
                 </p>
-                <a href="{{ route('actividad') }}"
+                <a href="{{ url('/actividad/' . $destino->id) }}"
                   class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">Ver
                   destino</a>
               </div>
@@ -563,13 +563,14 @@
     <section data-aos="fade-up" data-aos-offset="150">
       <h2
         class="font-acehSemibold text-text40 md:text-text64 w-11/12 mx-auto my-5 leading-none md:leading-tight text-[#0F1B2C]">
+
         Tours destacados
       </h2>
       <div class="flex-wrap w-11/12 mx-auto hidden 2md:flex md:flex-col gap-8 justify-center items-center text-center">
         <div class="flex gap-10">
 
           @foreach ($tags as $item)
-            <a href="#VerDestino"
+            <a href="{{ 'destino?tags=' . $item->id }}"
               class="font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-3 px-5 hover:text-white hover:bg-[#3F76BB] md:duration-500 leading-none text-center h-full">{{ $item->name }}
             </a>
           @endforeach
@@ -622,7 +623,7 @@
                   {{ $actividad->precio }} US$
                   <span class="block font-acehMedium text-text16 md:text-text20">Por persona</span>
                 </p>
-                <a href="{{ route('detalleActividad') }}"
+                <a href="{{ url('/detalleActividad') . '/' . $actividad->id }}"
                   class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">Ver
                   Tour</a>
               </div>
@@ -634,7 +635,7 @@
       </div>
 
       <div class="w-11/12 mx-auto pb-20">
-        <a href="{{ route('actividad') }}"
+        <a href="{{ url('/actividad/' . $actividad->id) }}"
           class="font-acehSemibold text-text18 md:text-text22 rounded-full border-colorBorder border-2 py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 inline-block w-full md:w-auto text-center">
           Ver más Tours
           <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg"
