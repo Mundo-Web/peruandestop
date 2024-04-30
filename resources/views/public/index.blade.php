@@ -25,9 +25,9 @@
     }
 
     /* @font-face {
-                                                                                        font-family: "acehSemibold";
-                                                                                        src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
-                                                                                        }  */
+                                                                                          font-family: "acehSemibold";
+                                                                                          src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
+                                                                                          }  */
 
     .bg_header_fondo {
       background-image: url({{ asset('images/img/header_fondo.png') }});
@@ -586,7 +586,7 @@
           <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 pt-10 pb-5 lg:py-10" data-aos="fade-up"
             data-aos-offset="150">
             <div class="">
-              <img src="{{ asset($actividad->imagen) }}" alt="" class="w-full rounded-2xl" />
+              <img src="{{ asset($actividad->imagen) }}" alt="" class="w-full rounded-2xl object-cover" />
             </div>
 
             <div class="w-full mx-auto flex flex-col justify-center">
