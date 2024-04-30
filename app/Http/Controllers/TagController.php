@@ -67,7 +67,7 @@ class TagController extends Controller
       Tag::create($data);
 
 
-      // return redirect()->route('tags.index')->with('success', 'Etiqueta creada');
+      return redirect()->route('tags.index')->with('success', 'Etiqueta creada');
     } catch (\Throwable $th) {
       //throw $th;
       dump($th);
