@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('url_image')->nullable();
             $table->string('name_image')->nullable();
             $table->string('color')->nullable();
+            $table->string('category_type')->nullable();
+
             
             $table->boolean('destacar')->default(false);
 

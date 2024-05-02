@@ -120,7 +120,10 @@ class ProductsController extends Controller
 
       $producto = Products::create($cleanedData);
       $this->GuardarEspecificaciones($producto->id, $especificaciones);
-      $this->TagsXProducts($producto->id, $tagsSeleccionados);
+      if(count($tagsSeleccionados) !== 0 ){
+        $this->TagsXProducts($producto->id, $tagsSeleccionados);
+
+      }
       return redirect()->route('actividad.index')->with('success', 'Publicación creado exitosamente.');
     } catch (\Throwable $th) {
       //throw $th;
