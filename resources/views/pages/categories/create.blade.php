@@ -75,6 +75,20 @@
                 </div>
               </div>
 
+              <div class="md:col-span-5">
+                <div>
+                  <label>
+                    <input type="radio" name="category_type" value="destino">
+                    Destino
+                  </label>
+                  <label>
+                    <input type="radio" name="category_type" value="paquete">
+                    Paquete
+                  </label>
+                </div>
+
+              </div>
+
               <div class="md:col-span-1">
                 <label for="color">Color</label>
                 <input type="text" id="color" name="color" value=""
