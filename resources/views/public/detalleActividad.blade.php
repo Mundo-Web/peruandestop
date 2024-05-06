@@ -73,20 +73,43 @@
           <div class="basis-1/6">
             @if (isset($tour->galeria[0]->imagen))
               <img src="{{ asset($tour->galeria[0]->imagen) }}" alt="disfraces"
-                class="w-full h-full rounded-tl-3xl rounded-bl-3xl" />
+                class="w-full h-full rounded-tl-3xl rounded-bl-3xl object-cover" />
+            @else
+              <img src="{{ asset('images/noimage.png') }}" alt="disfraces"
+                class="w-full h-full rounded-tl-3xl rounded-bl-3xl object-cover" />
             @endif
+
+
+
 
           </div>
           <div class="grow basis-3/6">
+            @if (isset($tour->galeria[1]->imagen))
+              <img src="{{ asset($tour->galeria[1]->imagen) }}" alt="disfraces" class="w-full h-full   object-cover" />
+            @else
+              <img src="{{ asset('images/noimage.png') }}" alt="disfraces" class="w-full h-full   object-cover" />
+            @endif
 
-            <img src="{{ asset($tour->galeria[1]->imagen) }}" alt="animales" class="w-full h-full object-cover" />
+
 
           </div>
           <div class="basis-2/6 flex flex-col gap-2">
-            <img src="{{ asset($tour->galeria[2]->imagen) }}" alt="convento" class="w-full h-full rounded-tr-3xl " />
+            @if (isset($tour->galeria[2]->imagen))
+              <img src="{{ asset($tour->galeria[2]->imagen) }}" alt="disfraces"
+                class="w-full h-full rounded-tr-3xl  object-cover" />
+            @else
+              <img src="{{ asset('images/noimage.png') }}" alt="disfraces"
+                class="w-full h-full rounded-tr-3xl  object-cover" />
+            @endif
 
             <div class="relative z-10">
-              <img src="{{ asset($tour->galeria[3]->imagen) }}" alt="convento" class="w-full h-full rounded-br-3xl" />
+              @if (isset($tour->galeria[3]->imagen))
+                <img src="{{ asset($tour->galeria[3]->imagen) }}" alt="disfraces"
+                  class="w-full h-full rounded-br-3xl  object-cover" />
+              @else
+                <img src="{{ asset('images/noimage.png') }}" alt="disfraces"
+                  class="w-full h-full rounded-br-3xl  object-cover" />
+              @endif
               <a href="#"
                 class="hidden md:absolute bottom-[10px] right-[10px] bg-transparent p-2 text-white md:flex gap-2 items-center rounded-3xl border-2 font-acehSemibold text-text16 md:text-text20">
                 <span>Mostrar todas las fotos</span>
@@ -153,7 +176,8 @@
               class="font-acehbold md:text-[30px] 2md:text-[50px] xl:text-[60px] md:w-8/12 mx-auto text-center leading-none lg:leading-tight">
               Tu viaje comienza aquí
             </h3>
-            <p class="font-acehMedium w-9/12 mx-auto md:text-[14px] 2md:text-[16px] xl:text-[18px] md:w-6/12 text-center">
+            <p
+              class="font-acehMedium w-9/12 mx-auto md:text-[14px] 2md:text-[16px] xl:text-[18px] md:w-6/12 text-center">
               Regístrese ahora para recibir consejos de viaje, itinerarios
               personalizados e inspiración para las vacaciones directamente en
               su bandeja de entrada.
