@@ -123,7 +123,8 @@
                   <div class="flex flex-col justify-center items-center">
                     <p class="font-acehbold text-[#3F76BB] text-text40 md:text-text44">{{ $tour->precio }} $</p>
                   </div>
-                  <a href="https://peruandestop.com/?partner_id=3B3BJLW&partner_ticketing_activity_ids=166190"
+                  <a href="https://strawberryfieldliverpool.com/?partner_id=3B3BJLW&partner_ticketing_activity_ids=166190&partner_ticketing_language=es"
+                    {{-- href="https://peruandestop.com/?partner_id=3B3BJLW&partner_ticketing_activity_ids=166190" --}}
                     class="rounded-3xl bg-colorBackgroundHeader px-4 py-3 w-full text-white hover:bg-colorBackgroundMainTop md:duration-500 font-acehSemibold text-text20 md:text-text24 text-center">Confirmar
                     Reserva</a>
                   <a href="#"
