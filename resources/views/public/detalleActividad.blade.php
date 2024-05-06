@@ -1,6 +1,8 @@
 @extends('components.public.matrix')
 
 @section('css_improtados')
+  <script defer data-gyg-partner-hash="3B3BJLW" data-gyg-currency="USD"
+    src="https://cdn.getyourguide.com/partner-ticketing/latest/ticketing.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
   <style>
@@ -69,10 +71,14 @@
 
         <div class="flex gap-2" data-aos="fade-up" data-aos-offset="150">
           <div class="basis-1/6">
-            <img src="{{ asset($tour->galeria[0]->imagen) }}" alt="disfraces"
-              class="w-full h-full rounded-tl-3xl rounded-bl-3xl" />
+            @if (isset($tour->galeria[0]->imagen))
+              <img src="{{ asset($tour->galeria[0]->imagen) }}" alt="disfraces"
+                class="w-full h-full rounded-tl-3xl rounded-bl-3xl" />
+            @endif
+
           </div>
           <div class="grow basis-3/6">
+
             <img src="{{ asset($tour->galeria[1]->imagen) }}" alt="animales" class="w-full h-full object-cover" />
 
           </div>
@@ -117,7 +123,7 @@
                   <div class="flex flex-col justify-center items-center">
                     <p class="font-acehbold text-[#3F76BB] text-text40 md:text-text44">{{ $tour->precio }} $</p>
                   </div>
-                  <a href="#"
+                  <a href="https://peruandestop.com/?partner_id=3B3BJLW&partner_ticketing_activity_ids=166190"
                     class="rounded-3xl bg-colorBackgroundHeader px-4 py-3 w-full text-white hover:bg-colorBackgroundMainTop md:duration-500 font-acehSemibold text-text20 md:text-text24 text-center">Confirmar
                     Reserva</a>
                   <a href="#"
