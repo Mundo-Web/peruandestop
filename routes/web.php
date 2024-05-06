@@ -55,7 +55,7 @@ Route::get('/post/{id}', [IndexController::class, 'post'] )->name('post');
 
 Route::get('/contacto', [IndexController::class, 'contacto'] )->name('contacto');
 
-Route::get('/ayuda', [IndexController::class, 'ayuda'] )->name('ayuda');
+Route::get('/destino?source=paquete', [IndexController::class, 'destino'] )->name('ayuda');
 
 Route::get('/catalogo/{id}', [IndexController::class, 'destino'] )->name('catalogo');
 // Route::get('/contacto', [IndexController::class, 'destino'] )->name('contacto');

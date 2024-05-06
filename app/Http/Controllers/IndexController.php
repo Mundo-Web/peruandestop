@@ -261,8 +261,18 @@ class IndexController extends Controller
   public function destino(Request $request)
   {
     $tagsId = $request->input('tags');
+    $source = $request->input('source');
+    $tipoCategoria = null ;
+    if($source == 'destino'){
+      // dump('viene de paquetes');
+      $tipoCategoria = "Destino"; 
+    }else{
+      $tipoCategoria = "Paquetes"; 
+    }
 
-    $destino = Category::where('status', '=', 1)->where('visible', '=', 1)->with('productos')->paginate(6);
+    //en categoria tenemos tipocategoria en donde tiene que ser igual al source
+
+    $destino = Category::where('status', '=', 1)->where('visible', '=', 1)->where('category_type', '=',$source)->with('productos')->paginate(6);
     $tours =  Products::where('status', '=', 1)->where('visible', '=', 1)->get();
     $tags = Tag::where('status', '=', 1)->where('visible', '=', 1)->get();
 
@@ -306,7 +316,7 @@ class IndexController extends Controller
 
 
 
-    return view('public.destino', compact('destino', 'tours', 'tags'));
+    return view('public.destino', compact('destino', 'tours', 'tags', 'tipoCategoria'));
   }
 
   public function actividad(string $id)

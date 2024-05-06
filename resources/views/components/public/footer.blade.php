@@ -32,8 +32,8 @@
         <nav class="flex flex-col lg:items-start">
           <p class="font-acehbold text-text22 pb-4">Menú</p>
           <a href="{{ route('index') }}" class="font-acehLight text-text20 py-1">Home</a>
-          <a href="{{ route('destino') }}" class="font-acehLight text-text20 py-1">Destinos</a>
-          <a href="{{ route('ayuda') }}" class="font-acehLight text-text20 py-1">Ayuda</a>
+          <a href="{{ url('destino?source=destino') }}" class="font-acehLight text-text20 py-1">Destinos</a>
+          <a href="{{ route('ayuda') }}" class="font-acehLight text-text20 py-1">Paquetes</a>
           <a href="{{ route('contacto') }}" class="font-acehLight text-text20 py-1">Contacto</a>
         </nav>
       </div>

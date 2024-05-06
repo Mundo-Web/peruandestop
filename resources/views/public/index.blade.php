@@ -25,9 +25,9 @@
     }
 
     /* @font-face {
-                                                                                          font-family: "acehSemibold";
-                                                                                          src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
-                                                                                          }  */
+                                                                                            font-family: "acehSemibold";
+                                                                                            src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
+                                                                                            }  */
 
     .bg_header_fondo {
       background-image: url({{ asset('images/img/header_fondo.png') }});
@@ -547,7 +547,7 @@
     </section>
 
     <section class="py-12 w-11/12 mx-auto flex" data-aos="fade-up" data-aos-offset="150">
-      <a href="{{ route('destino') }}"
+      <a href="{{ url('destino?source=destino') }}"
         class="font-acehSemibold text-text18 md:text-text22 rounded-full border-colorBorder border-2 py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 inline-block w-full md:w-auto text-center">
         Ver más Destinos
         <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg"

@@ -1137,7 +1137,7 @@
         </div>
 
         <div class="flex justify-center mt-10">
-          <a href="{{ route('destino') }}"
+          <a href="{{ url('destino?source=destino') }}"
             class="font-acehSemibold text-text18 md:text-text22 rounded-full border-colorBorder border-2 py-3 px-5 group md:duration-500 text-[#0F1B2C] hover:bg-colorBackgroundHeader hover:text-white">Ver
             más Destinos
             <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg"

@@ -45,7 +45,7 @@
           <a href="{{ route('index') }}">Home</a>
         </li>
         <li>
-          <a href="{{ route('destino') }}">Destinos</a>
+          <a href="{{ url('destino?source=destino') }}">Destinos</a>
         </li>
         <li>
           <a href="{{ route('blog') }}">Blog</a>
@@ -109,7 +109,7 @@
           <nav class="text-white hidden lg:flex gap-5 font-acehSemibold text-text18 md:text-text22">
             <a href="{{ route('index') }}"
               class="rounded-full hover:bg-colorBackgroundHeader md:duration-300 py-2 px-5">Home</a>
-            <a href="{{ route('destino') }}"
+            <a href="{{ url('destino?source=destino') }}"
               class="rounded-full hover:bg-colorBackgroundHeader md:duration-300 py-2 px-5 flex justify-center items-center gap-3">
               <span>Destinos</span>
             </a>
@@ -117,7 +117,7 @@
               class="rounded-full hover:bg-colorBackgroundHeader md:duration-300 py-2 px-5">Blog
             </a>
             <a href="{{ route('ayuda') }}"
-              class="rounded-full hover:bg-colorBackgroundHeader md:duration-300 py-2 px-5">Ayuda
+              class="rounded-full hover:bg-colorBackgroundHeader md:duration-300 py-2 px-5">Paquetes
             </a>
             <a href="{{ route('contacto') }}"
               class="rounded-full hover:bg-colorBackgroundHeader md:duration-300 py-2 px-5">Contacto
