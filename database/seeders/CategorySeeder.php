@@ -20,6 +20,7 @@ class CategorySeeder extends Seeder
             Category::create([
                 'name' => $cat[$i],
                 'description' => 'Aquí va la descripción del destino '.$cat[$i],
+                'category_type' => 'destino',
                 'status' => 1,
                 'visible' => 1,
             ]);

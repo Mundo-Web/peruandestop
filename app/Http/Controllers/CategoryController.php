@@ -72,7 +72,6 @@ class CategoryController extends Controller
             $slug .= '-' . rand(1, 1000); // Puedes ajustar el rango según tu necesidad
         }
 
-        dump($request->all());
         $category->name = $request->name;
         $category->pais = $request->pais;
         $category->description = $request->description;
