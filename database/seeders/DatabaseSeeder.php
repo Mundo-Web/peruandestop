@@ -36,6 +36,7 @@ class DatabaseSeeder extends Seeder
             GeneralSeeder::class,
             CategorySeeder::class,
             TagSeeder::class,
+            LangsTableSeeder::class
             //ServiceSeeder::class,
         ]);
     }
