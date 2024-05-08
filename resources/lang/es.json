@@ -1,0 +1,88 @@
+{
+  "lang": "Español",
+  "nav": {
+    "home": "Inicio",
+    "destino": "Destino",
+    "blog": "Blog",
+    "paquetes": "Paquetes",
+    "contact": "Contacto",
+    "login": "Iniciar sesión",
+    "lang": {
+      "es": "Español",
+      "en": "Inglés",
+      "pt": "Portugués",
+      "it": "Italiano"
+    }
+  },
+  "section1": {
+    "one": {
+      "title": "Integer quis es",
+      "description": "Nam venenatis elementum lorem, in sodales massa dictum at. Phasellus sed libero. es"
+    },
+    "two": {
+      "title": "Integer quis  Tupes es",
+      "description": " Tupes Nam venenatis elementum lorem, in sodales massa dictum at. Phasellus sed libero. es"
+    },
+    "three": {
+      "title": "Integer quis Surpes es",
+      "description": " Surpes Nam venenatis elementum lorem, in sodales massa dictum at. Phasellus sed libero. es"
+    }
+  },
+  "section2": {
+    "header": " Explorar Destinos populares",
+    "btn": "See More",
+    "all": "Ver más Destinos"
+  },
+  "actividad": {
+    "ver": "Ver Tour",
+    "all": "Ver mas Destinos"
+  },
+  "detallesActividad": {
+    "btnGaleria": "Mostrar todas las fotos",
+    "reservar": "Reservar",
+    "confirmar": "Confirmar",
+    "shared": "Comparte la actividad",
+    "journey": "Tu viaje comienza aquí",
+    "register": "Regístrese ahora para recibir consejos de viaje, itinerarios personalizados e inspiración para las vacaciones directamente en su bandeja de entrada.",
+    "inscribirse": "Correo Electronico",
+    "btnRegister": "inscribirse",
+    "explorer": "Explorar Destinos Relacionados",
+    "all": "Ver mas Destinos",
+    "ver": "Ver Destino"
+  },
+  "destino": {
+    "explorar": "Explorar",
+    "all": "Todos los destinos",
+    "linkTours": "Ver Tours"
+  },
+  "blog": {
+    "title": "Nuestro Blog",
+    "title2": "Historias del mundo",
+    "parrafo1": "Es Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenamet, consectetur adipisicing elit.",
+    "btnSusbcribir": "Suscribir",
+    "Pr": "Publicaciones Recientes",
+    "pAll": "Todas las publicaciones"
+  },
+  "contacto": {
+    "title": "A nuestro amable equipo le encantaría saber de usted",
+    "contact": "Ponerse en contacto",
+    "nombre": "Nombre",
+    "apellido": "Apellido",
+    "email": "Correo",
+    "telefono": "Telefono",
+    "text": "Escribir un mensaje",
+    "confirmR": "Confirmar Reserva",
+    "p1": "ES Nam a lorem ut dui ultrices efficitur vitae et metus. Mauris quis vulputate orci, ac hendrerit purus.",
+    "horario": "Horario de oficina en Perú",
+    "horario2": "Lunes - Sábados",
+    "ourDirection": "Nuestra dirección",
+    "getInContact": "Ponerse en contacto",
+    "politica": "Usted acepta nuestra amigable política de privacidad"
+  },
+  "main": {
+    "hash": "#sode-world",
+    "title": "Software Developers World",
+    "summary": "Somos una empresa que desarrolla software para hacerte la vida más fácil. Prueba nuestros servicios y/o productos que son para ti.",
+    "button": "Ver productos"
+  }
+}

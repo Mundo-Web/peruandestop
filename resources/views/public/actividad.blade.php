@@ -1126,9 +1126,9 @@
                     {{ $item->precio }} US$
                     <span class="block font-acehMedium text-text16 md:text-text20">Por persona</span>
                   </p>
-                  <a href="{{ url('/detalleActividad') . '/' . $item->id }}"
+                  <a href="{{ url($langInfo['selected'] . '/detalleActividad') . '/' . $item->id }}"
                     class="font-acehSemibold text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">
-                    Ver Tour
+                    {{ $langInfo['lang']['actividad']['ver'] }}
                   </a>
                 </div>
               </div>
@@ -1137,9 +1137,9 @@
         </div>
 
         <div class="flex justify-center mt-10">
-          <a href="{{ url('destino?source=destino') }}"
-            class="font-acehSemibold text-text18 md:text-text22 rounded-full border-colorBorder border-2 py-3 px-5 group md:duration-500 text-[#0F1B2C] hover:bg-colorBackgroundHeader hover:text-white">Ver
-            más Destinos
+          <a href="{{ url($langInfo['selected'] . '/destino?source=destino') }}"
+            class="font-acehSemibold text-text18 md:text-text22 rounded-full border-colorBorder border-2 py-3 px-5 group md:duration-500 text-[#0F1B2C] hover:bg-colorBackgroundHeader hover:text-white">
+            {{ $langInfo['lang']['actividad']['all'] }}
             <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg"
               class="inline-block">
               <path

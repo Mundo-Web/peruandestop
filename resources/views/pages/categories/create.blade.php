@@ -1,7 +1,7 @@
 <x-app-layout>
 
   <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
-    <form action="{{ route('destino.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('destination.store') }}" method="POST" enctype="multipart/form-data">
       @csrf
       <div
         class="col-span-full xl:col-span-8 bg-white dark:bg-slate-800 shadow-lg rounded-sm border border-slate-200 dark:border-slate-700">
@@ -74,6 +74,18 @@
                     placeholder="Descripción"></textarea>
                 </div>
               </div>
+              <div class="md:col-span-2">
+                <select id="tags_id" name="langs"
+                  class="mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                  <option value="">Seleccionar Idioma </option>
+
+                  <option value="es">Español</option>
+                  <option value="en">Ingles</option>
+
+
+                </select>
+              </div>
+
 
               <div class="md:col-span-5">
                 <div>

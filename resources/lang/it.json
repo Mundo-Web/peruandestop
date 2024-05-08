@@ -1,0 +1,23 @@
+{
+  "lang": "Italiano",
+  "nav": {
+    "home": "Home",
+    "planes": "Piani",
+    "services": "Servizi",
+    "team": "Chi Siamo",
+    "contact": "Contattaci",
+    "login": "Accedi",
+    "lang": {
+      "es": "Spagnolo",
+      "en": "Inglese",
+      "pt": "Portoghese",
+      "it": "Italiano"
+    }
+  },
+  "main": {
+    "hash": "#sode-world",
+    "title": "Software Developers World",
+    "summary": "Siamo un'azienda che sviluppa software per rendere la tua vita più facile. Prova i nostri servizi e/o prodotti che sono per te.",
+    "button": "Visualizza Prodotti"
+  }
+}

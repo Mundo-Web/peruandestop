@@ -80,10 +80,12 @@ class CategoryController extends Controller
         $category->category_type = $request->category_type;
         $category->status = 1;
         $category->visible = 1;
+        $category->langs = $request->langs;
+
 
         $category->save();
        
-        return redirect()->route('destino.index')->with('success', 'Destino creado');
+        return redirect()->route('destination.index')->with('success', 'Destino creado');
     }
 
     /**
@@ -158,7 +160,7 @@ class CategoryController extends Controller
         
         $category->save();
 
-        return redirect()->route('destino.index')->with('success', 'Destino Actualizado');
+        return redirect()->route('destination.index')->with('success', 'Destino Actualizado');
     }
 
     /**

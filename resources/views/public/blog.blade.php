@@ -40,14 +40,15 @@
     <section class="pt-60" data-aos="fade-up" data-aos-offset="150">
       <div class="text-center flex flex-col gap-5 w-11/12 mx-auto">
         <div class="w-full md:w-6/12 mx-auto flex flex-col gap-5">
-          <h2 class="text-[#3F76BB] font-acehMedium text-text28 md:text-text32 leading-none">Nuestro Blog</h2>
+          <h2 class="text-[#3F76BB] font-acehMedium text-text28 md:text-text32 leading-none">
+            {{ $langInfo['lang']['blog']['title'] }}</h2>
           <h1 class="text-[#0F1B2C] font-acehSemibold text-text64 md:text-text68 leading-none">
-            Historias del mundo
+
+            {{ $langInfo['lang']['blog']['title2'] }}
           </h1>
           <p class="text-[#495560] font-acehMedium text-text18 md:text-text22">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Assumenamet, consectetur adipisicing elit. Assu amet, consectetur
-            adipisicing elit. Assu.
+
+            {{ $langInfo['lang']['blog']['parrafo1'] }}
           </p>
         </div>
 
@@ -61,8 +62,9 @@
 
               <button type="submit"
                 class="px-10 py-2 rounded-full bg-colorBackgroundHeader flex justify-center items-center gap-2 hover:bg-colorBackgroundMainTop duration-500">
-                <span class="font-acehSemibold text-text18 md:text-text24 text-white">Suscribir</span><img
-                  src="./images/svg/icono_buscar.svg" alt="" />
+                <span class="font-acehSemibold text-text18 md:text-text24 text-white">
+                  {{ $langInfo['lang']['blog']['btnSusbcribir'] }}</span><img src="./images/svg/icono_buscar.svg"
+                  alt="" />
               </button>
             </div>
           </form>
@@ -72,7 +74,9 @@
 
     <section class="w-11/12 mx-auto" data-aos="fade-up" data-aos-offset="150">
       <h2 class="font-acehSemibold text-text30 md:text-text36 text-[#0F1B2C] my-12 leading-none md:leading-tight">
-        Publicaciones Recientes
+
+        {{ $langInfo['lang']['blog']['Pr'] }}
+
       </h2>
 
       <!-- GRILLA PUBLICACIONES RECIENTES PARA MAYOR A  798px -->
@@ -94,7 +98,7 @@
                   {!! Str::limit($blog->description, 150) !!}
 
                   <div class="mt-2">
-                    <a href="{{ route('post', $blog->id) }}" method="POST"
+                    <a href="{{ route('post', [$lang, $blog->id]) }}" method="POST"
                       class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop duration-500 inline-block w-auto">
                       Ver Mas
                     </a>
@@ -154,7 +158,7 @@
                   </h2>
                   {!! Str::limit($blog->description, 150) !!}
                   <div class="flex">
-                    <a href="{{ route('post', $blog->id) }}" method="POST"
+                    <a href="{{ route('post', [$lang, $blog->id]) }}" method="POST"
                       class="font-acehRegular text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 text-center ">Ver
                       Actividad</a>
                   </div>
@@ -171,7 +175,8 @@
 
     <section class="w-11/12 mx-auto my-12">
       <h2 class="font-acehSemibold text-text30 md:text-text40 text-[#0F1B2C] my-10 leading-none md:leading-tight">
-        Todas las publicaciones
+        {{ $langInfo['lang']['blog']['pAll'] }}
+
       </h2>
 
       <div class="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -195,7 +200,7 @@
                 {!! Str::limit($blog->description, 150) !!}
               </div>
               <div>
-                <a href="{{ route('post', $blog->id) }}" method="POST"
+                <a href="{{ route('post', [$lang, $blog->id]) }}" method="POST"
                   class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop duration-500 inline-block w-auto">
                   Ver Mas
                 </a>

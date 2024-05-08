@@ -1,0 +1,88 @@
+{
+  "lang": "English",
+  "nav": {
+    "home": "Home",
+    "destino": "Destination",
+    "blog": "Blog",
+    "paquetes": "Packages",
+    "contact": "Contact Us",
+    "login": "Login",
+    "lang": {
+      "es": "Spanish",
+      "en": "English",
+      "pt": "Portuguese",
+      "it": "Italian"
+    }
+  },
+  "section1": {
+    "one": {
+      "title": "Integer quis En",
+      "description": "Nam venenatis elementum lorem, in sodales massa dictum at. Phasellus sed libero. EN"
+    },
+    "two": {
+      "title": "Integer quis  Tupes En",
+      "description": " Tupes Nam venenatis elementum lorem, in sodales massa dictum at. Phasellus sed libero. EN"
+    },
+    "three": {
+      "title": "Integer quis Surpes En",
+      "description": " Surpes Nam venenatis elementum lorem, in sodales massa dictum at. Phasellus sed libero. EN"
+    }
+  },
+  "section2": {
+    "header": "Explore Popular Destinations",
+    "btn": "See More",
+    "all": "See more destinations"
+  },
+  "actividad": {
+    "ver": "See Tour",
+    "all": "See more destinations"
+  },
+  "detallesActividad": {
+    "btnGaleria": "See Galerie",
+    "reservar": "Reserve",
+    "confirmar": "Confirm",
+    "shared": "Share the activity",
+    "journey": "Your journey starts here",
+    "register": "Sign up now to receive travel tips, itineraries personalized and holiday inspiration directly to your inbox.",
+    "inscribirse": "Email",
+    "btnRegister": "Register",
+    "explorer": "Explore Related Destinations",
+    "all": "See more destinations",
+    "ver": "See destination"
+  },
+  "destino": {
+    "explorar": "Explore",
+    "all": "See all Destinations",
+    "linkTours": "See Tour"
+  },
+  "blog": {
+    "title": "Our Blog",
+    "title2": "Stories of the world",
+    "parrafo1": "EN Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenamet, consectetur adipisicing elit.",
+    "btnSusbcribir": "Suscribe",
+    "Pr": "Recent Blogs",
+    "pAll": " All Blogs"
+  },
+  "contacto": {
+    "title": "Our friendly team would love to hear from you",
+    "contact": "Get in touch",
+    "nombre": "First Name",
+    "apellido": "Last Name",
+    "email": "E-mail",
+    "telefono": "Phone",
+    "text": "Write a message",
+    "confirmR": "Confirm reservation",
+    "p1": "EN Nam a lorem ut dui ultrices efficitur vitae et metus. Mauris quis vulputate orci, ac hendrerit purus.",
+    "horario": "Office hours in Peru",
+    "horario2": "Monday - Saturday",
+    "ourDirection": "Our address",
+    "getInContact": "Get in touch",
+    "politica": "You accept our friendly privacy policy"
+  },
+  "main": {
+    "hash": "#sode-world",
+    "title": "Software Developers World",
+    "summary": "We are a company that develops software to make your life easier. Try our services and/or products that are for you.",
+    "button": "View Products"
+  }
+}

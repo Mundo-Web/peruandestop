@@ -40,26 +40,26 @@
     <section class="w-11/12 mx-auto gap-5 grid grid-cols-1 grid-rows-1 lg:grid-cols-2 lg:grid-rows-2 lg:gap-10 pt-60">
       <div class="flex flex-col gap-5 col-span-1 row-span-1" data-aos="fade-up" data-aos-offset="150">
         <h1 class="font-acehSemibold text-text40 md:text-text44 text-[#141841] leading-none md:leading-tight">
-          A nuestro amable equipo le encantaría saber de usted
+          {{ $langInfo['lang']['contacto']['title'] }}
         </h1>
         <p class="font-acehRegular text-text18 md:text-text22 text-[#495560]">
-          Nam a lorem ut dui ultrices efficitur vitae et metus. Mauris quis
-          vulputate orci, ac hendrerit purus.
+          {{ $langInfo['lang']['contacto']['p1'] }}
         </p>
 
         <div>
           <p class="font-acehSemibold text-text20 md:text-text24 text-[#3F76BB]">
-            Horario de oficina en Perú
+            {{ $langInfo['lang']['contacto']['horario'] }}
+
           </p>
           <div class="font-acehMedium text-text18 md:text-text22 text-[#495560]">
-            <p>Lunes - Sábados</p>
+            <p> {{ $langInfo['lang']['contacto']['horario2'] }}</p>
             <p>8:00 am a 5.00 pm</p>
           </div>
         </div>
 
         <div>
           <p class="font-acehSemibold text-text20 md:text-text24 text-[#3F76BB]">
-            Nuestra dirección
+            {{ $langInfo['lang']['contacto']['ourDirection'] }}
           </p>
           <div class="font-acehMedium text-text18 md:text-text22 text-[#495560]">
             <p>Samblas tandapata 160</p>
@@ -69,7 +69,8 @@
 
         <div>
           <p class="font-acehSemibold text-text20 md:text-text24 text-[#3F76BB] leading-none md:leading-tight">
-            Ponerse en contacto
+            {{ $langInfo['lang']['contacto']['getInContact'] }}
+
           </p>
           <div class="font-acehMedium text-text18 md:text-text22 text-[#495560]">
             <p>+51 999 000 999</p>
@@ -81,10 +82,10 @@
       <div class="flex flex-col gap-10 col-span-1 lg:row-span-2" data-aos="fade-up" data-aos-offset="150">
         <div class="flex flex-col gap-2">
           <p class="font-acehSemibold text-text36 md:text-text40 text-[#3F76BB]">
-            Ponerse en contacto
+            {{ $langInfo['lang']['contacto']['contact'] }}
           </p>
           <p class="font-acehRegular text-text18 md:text-text22 text-[#495560]">
-            A nuestro amable equipo le encantaría saber de usted.
+            {{ $langInfo['lang']['contacto']['title'] }}
           </p>
         </div>
 
@@ -94,27 +95,30 @@
             <div class="flex flex-col gap-5">
               <div class="flex flex-col md:flex-row gap-5 w-full">
                 <div class="flex flex-col gap-2 flex-auto">
-                  <label for="name" class="font-acehMedium text-text14 md:text-text18 text-[#344054]">Nombre</label>
+                  <label for="name"
+                    class="font-acehMedium text-text14 md:text-text18 text-[#344054]">{{ $langInfo['lang']['contacto']['nombre'] }}</label>
 
                   <input name="name" type="text" placeholder="Ingresa tu nombre"
                     class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
                 </div>
 
                 <div class="flex flex-col gap-2 flex-auto">
-                  <label for="apellido" class="font-acehMedium text-text14 md:text-text18 text-[#344054]">Apellido</label>
+                  <label for="apellido"
+                    class="font-acehMedium text-text14 md:text-text18 text-[#344054]">{{ $langInfo['lang']['contacto']['apellido'] }}</label>
                   <input id="apellido" name="apellido" type="text" placeholder="Ingresa tu apellido"
                     class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
                 </div>
               </div>
               <div class="flex flex-col gap-2">
-                <label for="email" class="font-acehMedium text-text14 md:text-text18 text-[#344054]">E-mail</label>
+                <label for="email"
+                  class="font-acehMedium text-text14 md:text-text18 text-[#344054]">{{ $langInfo['lang']['contacto']['email'] }}</label>
                 <input name="email" type="email" placeholder="Ingresa tu correo electrónico"
                   class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular text-[#344054]" />
               </div>
 
               <div class="flex flex-col gap-2">
                 <label for="phone" class="font-acehMedium text-text14 md:text-text18 text-[#344054]">
-                  Número de teléfono
+                  {{ $langInfo['lang']['contacto']['telefono'] }}
                 </label>
                 <div class="border-gray-200 border-[1.5px] flex rounded-xl">
                   <select name="codigoPais" id="pais"
@@ -155,8 +159,8 @@
               </div>
 
               <div class="flex flex-col gap-2">
-                <label for="message" class="font-acehMedium text-text14 md:text-text18 text-[#344054]">Escribir un
-                  mensaje</label>
+                <label for="message"
+                  class="font-acehMedium text-text14 md:text-text18 text-[#344054]">{{ $langInfo['lang']['contacto']['text'] }}</label>
                 <textarea name="message" id="message" cols="30" rows="5"
                   class="font-acehRegular border-gray-200 border-[1.5px] rounded-xl focus:outline-none text-text16 md:text-text20"></textarea>
               </div>
@@ -165,12 +169,12 @@
                 <input type="checkbox" id="politica"
                   class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader" />
 
-                <label for="politica" class="font-acehRegular text-text16 md:text-text20 text-[#495560]">Usted acepta
-                  nuestra
-                  amigable política de privacidad</label>
+                <label for="politica"
+                  class="font-acehRegular text-text16 md:text-text20 text-[#495560]">{{ $langInfo['lang']['contacto']['politica'] }}
+                </label>
               </div>
               <div class="w-full">
-                <input type="submit" value="Confirmar Reserva"
+                <input type="submit" value="{{ $langInfo['lang']['contacto']['confirmR'] }}"
                   class="text-white bg-[#3F76BB] py-4 rounded-3xl cursor-pointer border-2 font-acehSemibold text-text20 md:text-text24 text-center border-none w-full hover:bg-colorBackgroundMainTop duration-500" />
               </div>
             </div>
@@ -216,7 +220,7 @@
 
       let formDataArray = $(this).serializeArray();
       $.ajax({
-        url: '{{ route('guardarContactos') }}',
+        url: '{{ route('guardarContactos', ['lang' => $lang]) }}',
         method: 'POST',
         data: $(this).serialize(),
         success: function(response) {

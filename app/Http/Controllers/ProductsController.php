@@ -124,7 +124,7 @@ class ProductsController extends Controller
         $this->TagsXProducts($producto->id, $tagsSeleccionados);
 
       }
-      return redirect()->route('actividad.index')->with('success', 'Publicación creado exitosamente.');
+      return redirect()->route('activity.index')->with('success', 'Publicación creado exitosamente.');
     } catch (\Throwable $th) {
       //throw $th;
       dump($th);
@@ -240,7 +240,7 @@ class ProductsController extends Controller
 
     $this->TagsXProducts($id, $tagsSeleccionados);
 
-    return redirect()->route('actividad.index')->with('success', 'Producto editado exitosamente.');
+    return redirect()->route('activity.index')->with('success', 'Producto editado exitosamente.');
   }
 
   /**

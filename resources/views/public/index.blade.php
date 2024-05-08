@@ -25,9 +25,9 @@
     }
 
     /* @font-face {
-                                                                                            font-family: "acehSemibold";
-                                                                                            src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
-                                                                                            }  */
+                                                                                                                        font-family: "acehSemibold";
+                                                                                                                        src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
+                                                                                                                        }  */
 
     .bg_header_fondo {
       background-image: url({{ asset('images/img/header_fondo.png') }});
@@ -413,10 +413,10 @@
             </div>
             <div>
               <h3 class="text-white group-hover:text-colorTextMainTop font-acehSemibold text-text32 md:text-text36">
-                Integer quis turpis
+                {{ $langInfo['lang']['section1']['one']['title'] }}
               </h3>
               <p class="text-white group-hover:text-colorTextMainTop font-acehMedium text-text18 md:text-text22">
-                Nam venenatis elementum lorem, in sodales massa dictum at. Phasellus sed libero.
+                {{ $langInfo['lang']['section1']['one']['description'] }}
               </p>
             </div>
           </div>
@@ -434,11 +434,10 @@
             </div>
             <div>
               <h3 class="text-white group-hover:text-colorTextMainTop font-acehSemibold text-text32 md:text-text36">
-                Integer quis turpis
+                {{ $langInfo['lang']['section1']['two']['title'] }}
               </h3>
               <p class="text-white group-hover:text-colorTextMainTop font-acehMedium text-text18 md:text-text22">
-                Nam venenatis elementum lorem, in sodales massa dictum at. Phasellus sed libero faucibus,
-                pharetra dolor.
+                {{ $langInfo['lang']['section1']['two']['description'] }}
               </p>
             </div>
           </div>
@@ -454,11 +453,10 @@
             </div>
             <div>
               <h3 class="text-white group-hover:text-colorTextMainTop font-acehSemibold text-text32 md:text-text36">
-                Integer quis turpisds
+                {{ $langInfo['lang']['section1']['three']['title'] }}
               </h3>
               <p class="text-white group-hover:text-colorTextMainTop font-acehMedium text-text18 md:text-text22">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Perferendi.
+                {{ $langInfo['lang']['section1']['three']['description'] }}
               </p>
             </div>
           </div>
@@ -466,10 +464,10 @@
       </div>
     </section>
 
-    <section class="z-0" data-aos="fade-up" data-aos-offset="150">
+    <section class="z-0" data-aos="fade-up" data-aos-offset="150"> {{-- section2 --}}
       <h2
         class="font-acehSemibold text-text40 md:text-text64 w-11/12 mx-auto py-8 md:py-5 leading-none md:leading-tight my-10 text-[#141841]">
-        Explorar Destinos populares
+        {{ $langInfo['lang']['section2']['header'] }}
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-11/12 mx-auto gap-10 md:gap-4 2xl:gap-16">
         <!-- 1 -->
@@ -525,9 +523,8 @@
                   2,343
                   <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
                 </p>
-                <a href="{{ url('/actividad/' . $destino->id) }}"
-                  class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">Ver
-                  destino</a>
+                <a href="{{ url($langInfo['selected'] . '/actividad/' . $destino->id) }}"
+                  class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">{{ $langInfo['lang']['section2']['btn'] }}</a>
               </div>
             </div>
           </div>
@@ -547,9 +544,9 @@
     </section>
 
     <section class="py-12 w-11/12 mx-auto flex" data-aos="fade-up" data-aos-offset="150">
-      <a href="{{ url('destino?source=destino') }}"
+      <a href="{{ url($langInfo['selected'] . '/destino?source=destino') }}"
         class="font-acehSemibold text-text18 md:text-text22 rounded-full border-colorBorder border-2 py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 inline-block w-full md:w-auto text-center">
-        Ver más Destinos
+        {{ $langInfo['lang']['section2']['all'] }}
         <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg"
           class="inline-block">
           <path

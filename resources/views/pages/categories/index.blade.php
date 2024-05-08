@@ -2,7 +2,7 @@
   <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
 
     <section class="py-4 border-b border-slate-100 dark:border-slate-700">
-      <a href="{{ route('destino.create') }}"
+      <a href="{{ route('destination.create') }}"
         class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded text-sm">Crear Nuevo Destino</a>
     </section>
 
@@ -75,7 +75,7 @@
                   </td>
                   <td class="flex flex-row justify-end items-center gap-5">
 
-                    <a href="{{ route('destino.edit', $item->id) }}"
+                    <a href="{{ route('destination.edit', $item->id) }}"
                       class="bg-yellow-400 px-3 py-2 rounded text-white  "><i
                         class="fa-regular fa-pen-to-square"></i></a>
                     {{-- {{  route('servicios.destroy', $item->id) }} --}}
@@ -136,7 +136,7 @@
 
             $.ajax({
 
-              url: '{{ route('destino.deleteCategory') }}',
+              url: '{{ route('destination.deleteCategory') }}',
               method: 'POST',
               data: {
                 _token: $('input[name="_token"]').val(),
@@ -182,7 +182,7 @@
 
 
         $.ajax({
-          url: "{{ route('destino.updateVisible') }}",
+          url: "{{ route('destination.updateVisible') }}",
           method: 'POST',
           data: {
             _token: $('input[name="_token"]').val(),

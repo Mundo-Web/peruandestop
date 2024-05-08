@@ -2,7 +2,7 @@
   <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
 
     <section class="py-4 border-b border-slate-100 dark:border-slate-700">
-      <a href="{{ route('actividad.create') }}"
+      <a href="{{ route('activity.create') }}"
         class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded text-sm">
         Agregar Tour
       </a>
@@ -107,7 +107,7 @@
 
                   <td class="flex justify-center items-center gap-5 text-center sm:text-right">
 
-                    <a href="{{ route('actividad.edit', $item->id) }}"
+                    <a href="{{ route('activity.edit', $item->id) }}"
                       class="bg-yellow-400 px-3 py-2 rounded text-white  "><i
                         class="fa-regular fa-pen-to-square"></i></a>
 
@@ -172,7 +172,7 @@
       console.log(titleService)
 
       $.ajax({
-        url: "{{ route('actividad.updateVisible') }}",
+        url: "{{ route('activity.updateVisible') }}",
         method: 'POST',
         data: {
           _token: $('input[name="_token"]').val(),
@@ -214,7 +214,7 @@
 
           $.ajax({
 
-            url: `{{ route('actividad.borrar') }}`,
+            url: `{{ route('activity.borrar') }}`,
             method: 'POST',
             data: {
               _token: $('input[name="_token"]').val(),

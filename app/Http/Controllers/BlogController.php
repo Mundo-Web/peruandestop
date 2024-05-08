@@ -73,6 +73,7 @@ class BlogController extends Controller
     $post->category_id = $request->category_id;
     $post->title = $request->title;
     $post->description = $request->description;
+    $post->langs = $request->langs;
     $post->status = 1;
     $post->visible = 1;
 
@@ -80,7 +81,7 @@ class BlogController extends Controller
 
     $post->save();
 
-    return redirect()->route('blog.index')->with('success', 'Publicación creado exitosamente.');
+    return redirect()->route('blogs.index')->with('success', 'Publicación creado exitosamente.');
   }
 
   /**
@@ -161,7 +162,7 @@ class BlogController extends Controller
 
     $post->update();
 
-    return redirect()->route('blog.index')->with('success', 'Post actualizado');
+    return redirect()->route('blogs.index')->with('success', 'Post actualizado');
   }
 
   /**

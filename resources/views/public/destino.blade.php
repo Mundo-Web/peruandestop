@@ -83,7 +83,7 @@
       <div class="gap-10 w-11/12 mx-auto">
         <div class="flex flex-row justify-between items-center my-16 gap-5">
           <h2 class="font-acehSemibold text-text32 md:text-text64 leading-none md:leading-tight text-left text-[#141841]">
-            Explorar {{ $tipoCategoria }}
+            {{ $langInfo['lang']['destino']['explorar'] }} {{ $tipoCategoria }}
           </h2>
 
           <!-- --------- modal -->
@@ -510,7 +510,7 @@
     <section>
       <div class="w-11/12 mx-auto mt-16">
         <h2 class="font-acehSemibold text-[40px] md:text-[64px] leading-none md:leading-tight text-left text-[#141841]">
-          Todos los Destinos
+          {{ $langInfo['lang']['destino']['all'] }}
         </h2>
 
         <div class="flex flex-col md:flex-row md:justify-between md:items-center">
@@ -979,54 +979,54 @@
                 <div class="flex items-center justify-">
 
                   <a "
-                          class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">
-                          Ver Tours
-                        </a>
+                                      class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">
+                                      
+                                    </a>
 
-                      </div>
+                                  </div>
 
-                      <div class="text-white text-center">
-                        <span class="block font-acehSemibold text-text28 xl:text-text34">{{ $item->productos->count() }}
-                        </span>
-                        <span class="block font-acehMedium text-text12 xl:text-text18">Tours</span>
-                      </div>
+                                  <div class="text-white text-center">
+                                    <span class="block font-acehSemibold text-text28 xl:text-text34">{{ $item->productos->count() }}
+                                    </span>
+                                    <span class="block font-acehMedium text-text12 xl:text-text18">Tours</span>
+                                  </div>
 
-                    </div>
-                  </div>
+                                </div>
+                              </div>
 
-                  <!-- -- -->
+                              <!-- -- -->
 
-                  <div class="pb-5">
-                    <h3 class="font-acehSemibold text-text48 md:text-text52 pt-5 pb-2 text-[#0F1B2C]">{{ $item->name }}</h3>
-                    <p class="font-acehMedium text-text18 md:text-text22 py-3 text-[#0F1B2C]">
-                      {{ $item->description }}
-                    </p>
+                              <div class="pb-5">
+                                <h3 class="font-acehSemibold text-text48 md:text-text52 pt-5 pb-2 text-[#0F1B2C]">{{ $item->name }}</h3>
+                                <p class="font-acehMedium text-text18 md:text-text22 py-3 text-[#0F1B2C]">
+                                  {{ $item->description }}
+                                </p>
 
-                    <!-- corregir este div -->
-                    <div class="flex justify-between items-center ">
-                      <div>
-                        <div class="flex gap-2 py-2">
-                          <img src="./images/svg/start.svg" alt="estrella">
-                          <img src="./images/svg/start.svg" alt="estrella">
-                          <img src="./images/svg/start.svg" alt="estrella">
-                          <img src="./images/svg/start_sin_color.svg" alt="estrella">
-                          <img src="./images/svg/start_sin_color.svg" alt="estrella">
-                        </div>
-                        <p class="font-acehSemibold text-text28 md:text-text32 text-[#0F1B2C]">
-                          2,343
-                          <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
-                        </p>
+                                <!-- corregir este div -->
+                                <div class="flex justify-between items-center ">
+                                  <div>
+                                    <div class="flex gap-2 py-2">
+                                      <img src="./images/svg/start.svg" alt="estrella">
+                                      <img src="./images/svg/start.svg" alt="estrella">
+                                      <img src="./images/svg/start.svg" alt="estrella">
+                                      <img src="./images/svg/start_sin_color.svg" alt="estrella">
+                                      <img src="./images/svg/start_sin_color.svg" alt="estrella">
+                                    </div>
+                                    <p class="font-acehSemibold text-text28 md:text-text32 text-[#0F1B2C]">
+                                      2,343
+                                      <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
+                                    </p>
 
-                      </div>
+                                  </div>
 
-                      <a href="{{ url('/actividad/' . $item->id) }}"
-                        class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">
-                        Ver Tours
-                      </a>
+                                  <a href="{{ url($langInfo['selected'] . '/actividad/' . $item->id) }}"
+                                    class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">
+                                    {{ $langInfo['lang']['destino']['linkTours'] }}
+                                  </a>
 
-                    </div>
-                  </div>
-                </div>
+                                </div>
+                              </div>
+                            </div>
    @endforeach
 
                     <!-- 2 -->

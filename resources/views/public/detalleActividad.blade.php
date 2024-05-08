@@ -112,7 +112,7 @@
               @endif
               <a href="#"
                 class="hidden md:absolute bottom-[10px] right-[10px] bg-transparent p-2 text-white md:flex gap-2 items-center rounded-3xl border-2 font-acehSemibold text-text16 md:text-text20">
-                <span>Mostrar todas las fotos</span>
+                <span>{{ $langInfo['lang']['detallesActividad']['btnGaleria'] }}</span>
 
                 <img src="{{ asset('images/svg/camara.svg') }}" alt="camara" class="w-8" />
               </a>
@@ -137,7 +137,7 @@
             <div class="shadow-lg rounded-xl">
               <div class=" border-b-2 border-[#F1F1F1] w-11/12 2lg:mx-auto">
                 <p class="font-acehSemibold text-text30 md:text-text34 text-[#3F76BB] py-5 text-center 2lg:text-left">
-                  Reservar
+                  {{ $langInfo['lang']['detallesActividad']['reservar'] }}
                 </p>
               </div>
 
@@ -148,12 +148,12 @@
                   </div>
                   <a href="https://strawberryfieldliverpool.com/?partner_id=3B3BJLW&partner_ticketing_activity_ids=166190&partner_ticketing_language=es"
                     {{-- href="https://peruandestop.com/?partner_id=3B3BJLW&partner_ticketing_activity_ids=166190" --}}
-                    class="rounded-3xl bg-colorBackgroundHeader px-4 py-3 w-full text-white hover:bg-colorBackgroundMainTop md:duration-500 font-acehSemibold text-text20 md:text-text24 text-center">Confirmar
-                    Reserva</a>
+                    class="rounded-3xl bg-colorBackgroundHeader px-4 py-3 w-full text-white hover:bg-colorBackgroundMainTop md:duration-500 font-acehSemibold text-text20 md:text-text24 text-center">
+                    {{ $langInfo['lang']['detallesActividad']['confirmar'] }}</a>
                   <a href="#"
                     class="flex justify-center items-center gap-5 px-4 py-3 w-full rounded-3xl border-2 border-[#F1F1F1]">
                     <span class="text-[#C8C8C8] font-acehSemibold text-center text-text20 md:text-text24">
-                      Comparte la actividad
+                      {{ $langInfo['lang']['detallesActividad']['shared'] }}
                     </span>
 
                     <img src="{{ asset('images/svg/comparte_actividad.svg') }}" alt="compartir" />
@@ -174,23 +174,23 @@
           <div class="text-white flex-col gap-5 contain flex">
             <h3
               class="font-acehbold md:text-[30px] 2md:text-[50px] xl:text-[60px] md:w-8/12 mx-auto text-center leading-none lg:leading-tight">
-              Tu viaje comienza aquí
+              {{ $langInfo['lang']['detallesActividad']['journey'] }}
             </h3>
             <p
               class="font-acehMedium w-9/12 mx-auto md:text-[14px] 2md:text-[16px] xl:text-[18px] md:w-6/12 text-center">
-              Regístrese ahora para recibir consejos de viaje, itinerarios
-              personalizados e inspiración para las vacaciones directamente en
-              su bandeja de entrada.
+              {{ $langInfo['lang']['detallesActividad']['register'] }}
+
             </p>
             <form id="inscribirseMailDesk" action="#">
               @csrf
               <div class="flex gap-5">
-                <input type="email" name="email" placeholder="Correo Electrónico"
+                <input type="email" name="email"
+                  placeholder=" {{ $langInfo['lang']['detallesActividad']['inscribirse'] }}"
                   class="rounded-[20px] border border-none px-3 py-3 focus:outline-none text-black w-80 text-center text-text20" />
                 <!-- ------ssss -->
                 <button id="correo" type="submit" value="Inscribirse"
                   class="rounded-[20px] bg-colorBackgroundHeader px-4 py-3 text-white hover:bg-colorBackgroundMainTop md:duration-500 font-acehSemibold text-text20">
-                  Inscribirse</button>
+                  {{ $langInfo['lang']['detallesActividad']['btnRegister'] }}</button>
               </div>
             </form>
           </div>
@@ -200,12 +200,10 @@
           <img src="./images/img/tu_viaje_mobile.png" alt="tu viaje" class="w-full" />
           <div class="text-white flex-col gap-5 contain-mobile flex">
             <h3 class="font-acehbold text-[30px] w-8/12 mx-auto text-center leading-none">
-              Tu viaje comienza aquí
+              {{ $langInfo['lang']['detallesActividad']['journey'] }}
             </h3>
             <p class="font-acehMedium mx-auto text-[18px] w-9/12 text-center">
-              Regístrese ahora para recibir consejos de viaje, itinerarios
-              personalizados e inspiración para las vacaciones directamente en
-              su bandeja de entrada.
+              {{ $langInfo['lang']['detallesActividad']['register'] }}
             </p>
             <form action="#" class="mt-5">
               <div class="flex flex-col gap-5 ">
@@ -226,7 +224,7 @@
     <section class="" data-aos="fade-up" data-aos-offset="150">
       <h2
         class="font-acehSemibold text-text40 md:text-text64 w-11/12 mx-auto py-8 md:py-5 leading-none md:leading-tight mb-5 text-[#141841]">
-        Explorar Destinos Relacionados
+        {{ $langInfo['lang']['detallesActividad']['explorer'] }}
       </h2>
       <div class="grid grid-cols-1  2lg:grid-cols-3 w-11/12 mx-auto gap-10 md:gap-4 2xl:gap-16">
         <!-- 1 -->
@@ -278,9 +276,9 @@
                   2,343
                   <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
                 </p>
-                <a href="{{ url('/actividad') . '/' . $item->id }}"
-                  class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader  py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500">Ver
-                  Destino</a>
+                <a href="{{ url($langInfo['selected'] . '/actividad') . '/' . $item->id }}"
+                  class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader  py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500">
+                  {{ $langInfo['lang']['detallesActividad']['ver'] }}</a>
               </div>
             </div>
           </div>
@@ -289,9 +287,9 @@
 
       </div>
       <div class="w-11/12 mx-auto mt-10">
-        <a href="/destino"
+        <a href="{{ url($langInfo['selected'] . '/destino') }}"
           class="font-acehSemibold text-text18 md:text-text22 rounded-[26px] border-colorBorder border-2 py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 inline-block w-full md:w-auto text-center">
-          Ver más Destinos
+          {{ $langInfo['lang']['detallesActividad']['all'] }}
           <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg"
             class="inline-block">
             <path
