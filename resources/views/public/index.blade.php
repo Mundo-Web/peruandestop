@@ -25,9 +25,9 @@
     }
 
     /* @font-face {
-                                                                                                                                      font-family: "acehSemibold";
-                                                                                                                                      src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
-                                                                                                                                      }  */
+                                                                                                                                                        font-family: "acehSemibold";
+                                                                                                                                                        src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
+                                                                                                                                                        }  */
 
     .bg_header_fondo {
       background-image: url({{ asset('images/img/header_fondo.png') }});
@@ -575,6 +575,7 @@
         </div>
         <div class="flex gap-5">
 
+
         </div>
       </div>
 
@@ -622,7 +623,8 @@
                   <span class="block font-acehMedium text-text16 md:text-text20">Por persona</span>
                 </p>
                 <a href="{{ url('/detalleActividad') . '/' . $actividad->id }}"
-                  class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">Ver
+                  class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white
+                   hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">Ver
                   Tour</a>
               </div>
             </div>
