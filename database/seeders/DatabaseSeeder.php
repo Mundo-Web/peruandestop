@@ -34,8 +34,8 @@ class DatabaseSeeder extends Seeder
             UsersSeeder::class,
             MessageSeeder::class,
             GeneralSeeder::class,
-            CategorySeeder::class,
-            TagSeeder::class,
+            // CategorySeeder::class,
+            // TagSeeder::class,
             LangsTableSeeder::class
             //ServiceSeeder::class,
         ]);
