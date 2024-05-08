@@ -285,38 +285,7 @@
                 </div> --}}
 
 
-                <div class="md:col-span-5">
-                  <label for="producto">Atributos</label>
-                  <div class="flex gap-2 mt-2 relative mb-2 ">
-                    @foreach ($atributos as $item)
-                      <div href="#"
-                        class="w-[300px] !important block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
 
-
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                          {{ $item->titulo }}
-                        </h5>
-                        <p class="font-normal text-gray-700 dark:text-gray-400">
-                          {{ $item->descripcion }}</p>
-                        @foreach ($valorAtributo as $value)
-                          @if ($value->attribute_id == $item->id)
-                            <div class="flex items-center mb-2 ">
-                              <input type="checkbox" id=" {{ $item->titulo }}:{{ $value->valor }} "
-                                name="{{ $item->titulo }}:{{ $value->valor }}"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                              <label for=" {{ $item->titulo }}:{{ $value->valor }} "
-                                class="ml-2">{{ $value->valor }}</label>
-                            </div>
-                          @endif
-                        @endforeach
-                        @if ($item->imagen)
-                          <img src="{{ asset($item->imagen) }}" class="rounded-lg mb-2 w-1/2" alt="Imagen actual">
-                        @endif
-
-                      </div>
-                    @endforeach
-                  </div>
-                </div>
 
               </div>
 
