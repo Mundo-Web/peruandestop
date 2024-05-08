@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Tag;
 use App\Http\Requests\StoreTagRequest;
 use App\Http\Requests\UpdateTagRequest;
+use App\Models\Langs;
 use Illuminate\Http\Request;
 use Intervention\Image\Drivers\Gd\Driver;
 use Intervention\Image\ImageManager;
@@ -30,7 +31,8 @@ class TagController extends Controller
    */
   public function create()
   {
-    return view('pages.tags.create');
+    $langs = Langs::all() ; 
+    return view('pages.tags.create', compact('langs'));
   }
 
   /**
