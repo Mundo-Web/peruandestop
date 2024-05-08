@@ -24,6 +24,12 @@ class UsersSeeder extends Seeder
         ])->assignRole('Admin');
 
         User::create([
+            'name' => 'Admin Peru Andes Top',
+            'email' => 'admin@peruandestop.com',
+            'password' => Hash::make('P3ru4nd3sT0p'),
+        ])->assignRole('Admin');
+
+        User::create([
             'name' => 'Customer Mundo Web',
             'email' => 'customer@mundoweb.pe',
             'password' => Hash::make('12345678'),
