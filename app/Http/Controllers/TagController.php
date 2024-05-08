@@ -67,6 +67,9 @@ class TagController extends Controller
 
       }
       Tag::create($data);
+      
+
+      
 
 
       return redirect()->route('tags.index')->with('success', 'Etiqueta creada');

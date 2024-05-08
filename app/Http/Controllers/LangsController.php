@@ -56,7 +56,7 @@ class LangsController extends Controller
      */
     public function update(Request $request, string $langs)
     {
-        dump($request->all()); 
+        
         $langs =  Langs::find($langs);
         $langs->update($request->all());
         return redirect()->route('langs.index');
