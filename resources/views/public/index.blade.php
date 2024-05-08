@@ -25,9 +25,9 @@
     }
 
     /* @font-face {
-                                                                                                                        font-family: "acehSemibold";
-                                                                                                                        src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
-                                                                                                                        }  */
+                                                                                                                                      font-family: "acehSemibold";
+                                                                                                                                      src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
+                                                                                                                                      }  */
 
     .bg_header_fondo {
       background-image: url({{ asset('images/img/header_fondo.png') }});
@@ -477,12 +477,12 @@
 
               @if ($destino->name_image == null)
                 <div class="relative mb-2 mt-2">
-                  <img src="{{ asset('images/noimage.png') }}" alt="cusco" class="w-full shadow-lg" />
+                  <img src="{{ asset('images/noimage.png') }}" alt="cusco" class="w-full shadow-lg object-cover" />
                 </div>
               @else
                 <div class="relative mb-2 mt-2">
                   <img src="{{ asset($destino->url_image . '/' . $destino->name_image) }}" alt="cusco"
-                    class="w-full shadow-lg" />
+                    class="w-full shadow-lg object-cover" />
                 </div>
               @endif
 
@@ -561,7 +561,8 @@
       <h2
         class="font-acehSemibold text-text40 md:text-text64 w-11/12 mx-auto my-5 leading-none md:leading-tight text-[#0F1B2C]">
 
-        Tours destacados
+        {{ $langInfo['lang']['section2']['Toursd'] }}
+
       </h2>
       <div class="flex-wrap w-11/12 mx-auto hidden 2md:flex md:flex-col gap-8 justify-center items-center text-center">
         <div class="flex gap-10">
@@ -654,19 +655,19 @@
           data-aos-offset="150">
           <div class="basis-3/4">
             <h2 class="font-acehSemibold text-text40 md:text-text64 leading-none">
-              Nuestro blog y artículos
+              {{ $langInfo['lang']['section2']['blogs'] }}
+
             </h2>
             <p class="font-acehMedium text-text18 md:text-text22 py-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-              laudantium autem dolor, harum a excepturi placeat commodi sapiente
-              labore quia repellat velit
+              {{ $langInfo['lang']['section2']['blogText'] }}
             </p>
           </div>
           <div class="basis-1/4 flex justify-start lg:justify-end w-full">
             <!-- Agregamos justify-end aquí -->
             <a href="#"
               class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader py-3 px-5 rounded-full hover:bg-colorBackgroundMainTop md:duration-500 text-center ">
-              Ver más publicaciones
+
+              {{ $langInfo['lang']['section2']['blogSeemores'] }}
             </a>
           </div>
         </div>
@@ -696,7 +697,8 @@
                 </div>
                 <a href="{{ url('post/' . $blog->id) }}"
                   class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader py-3 px-5 rounded-full hover:bg-colorBackgroundMainTop md:duration-500 inline-block text-center w-full md:inline md:w-auto">
-                  Ver detalles
+                  {{ $langInfo['lang']['section2']['detailBlog'] }}
+
                 </a>
               </div>
             @endforeach

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
+use App\Models\Langs;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\File;
@@ -32,7 +33,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('pages.categories.create');
+        $langs = Langs::all() ; 
+        return view('pages.categories.create', compact('langs'));
     }
 
     /**

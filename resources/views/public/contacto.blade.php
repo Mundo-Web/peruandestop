@@ -184,7 +184,7 @@
 
       <div class="col-span-1 row-span-1 lg:-mt-[50px] xl:-mt-[80px] 2xl:-mt-[100px] 3xl:-mt-[200px]" data-aos="fade-up"
         data-aos-offset="150">
-        <img src="./images/img/contacto_image.png" alt="imagen contacto" class="w-full h-full" />
+        <img src="{{ asset('images/img/contacto_image.png') }}" alt="imagen contacto" class="w-full h-full" />
       </div>
     </section>
   </main>

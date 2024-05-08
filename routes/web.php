@@ -25,6 +25,7 @@ use App\Http\Controllers\GalerieController;
 use App\Http\Controllers\LogosClientController;
 
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\LangsController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\StrengthController;
@@ -164,6 +165,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         Route::resource('/galerie', GalerieController::class);
         Route::post('/galerie/updateVisible', [GalerieController::class, 'updateVisible'])->name('galerie.updateVisible');
         Route::post('/galerie/borrar', [GalerieController::class, 'borrar'])->name('galerie.borrar');
+
+        Route::resource('/langs', LangsController::class);
+        Route::post('/langs/updateVisible', [LangsController::class, 'updateVisible'])->name('langs.updateVisible');
+        Route::post('/langs/borrar', [LangsController::class, 'borrar'])->name('langs.borrar');
 
 
 

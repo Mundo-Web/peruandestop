@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Attributes;
 use App\Models\AttributesValues;
 use App\Models\Category;
+use App\Models\Langs;
 use App\Models\Products;
 use App\Models\Specifications;
 use App\Models\Tag;
@@ -37,7 +38,8 @@ class ProductsController extends Controller
     $valorAtributo = AttributesValues::where("status", "=", true)->get();
     $categoria = Category::all();
     $tags = Tag::where("status", "=", true)->get();
-    return view('pages.products.create', compact('atributos', 'valorAtributo', 'categoria', 'tags'));
+    $langs = Langs::all() ; 
+    return view('pages.products.create', compact('atributos', 'valorAtributo', 'categoria', 'tags', 'langs'));
   }
 
   public function saveImg($file, $route, $nombreImagen)

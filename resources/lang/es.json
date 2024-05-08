@@ -31,7 +31,12 @@
   "section2": {
     "header": " Explorar Destinos populares",
     "btn": "See More",
-    "all": "Ver más Destinos"
+    "all": "Ver más Destinos",
+    "Toursd": "Tours destacados ",
+    "blogs": "Nuestro blog y artículos",
+    "blogText": "es Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius    laudantium autem dolor, harum a excepturi placeat commodi sapiente    labore quia repellat velit",
+    "blogSeemores": "Ver más publicaciones",
+    "detailBlog": "Ver detalles"
   },
   "actividad": {
     "ver": "Ver Tour",

@@ -87,7 +87,7 @@
               <div class="flex flex-col gap-4 row-span-2">
                 <div class="h-full w-[600px]">
                   <img src="{{ asset($blog->url_image . '/' . $blog->name_image) }}" alt="publicacion"
-                    class="w-full  h-80 rounded-3xl" />
+                    class="w-full  h-80 rounded-3xl object-cover" />
                 </div>
 
                 <div class="flex flex-col gap-2">
@@ -111,7 +111,7 @@
                 <div class="flex gap-5 h-full">
                   <div class="w-full">
                     <img src="{{ asset($blog->url_image . '/' . $blog->name_image) }}" alt="publicacion"
-                      class=" rounded-3xl" />
+                      class=" rounded-3xl object-cover" />
                   </div>
 
                   <div class="flex flex-col gap-2  ">

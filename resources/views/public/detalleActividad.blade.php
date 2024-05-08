@@ -170,8 +170,9 @@
       <div class="w-11/12 mx-auto my-10">
         <!-- mayor a  md -->
         <div class="image hidden 2md:block">
-          <img src="{{ asset('images/img/tu_viaje_comienza.png') }}" alt="tu viaje" class="w-full h-auto" />
-          <div class="text-white flex-col gap-5 contain flex">
+          <img src="{{ asset('images/img/tu_viaje_comienza.png') }}" alt="tu viaje"
+            class="w-full h-auto object-cover" />
+          <div class="text-white flex-col gap-5 contain flex ">
             <h3
               class="font-acehbold md:text-[30px] 2md:text-[50px] xl:text-[60px] md:w-8/12 mx-auto text-center leading-none lg:leading-tight">
               {{ $langInfo['lang']['detallesActividad']['journey'] }}
@@ -197,7 +198,7 @@
         </div>
         <!-- menor a md -->
         <div class="image-mobile block 2md:hidden">
-          <img src="./images/img/tu_viaje_mobile.png" alt="tu viaje" class="w-full" />
+          <img src="./images/img/tu_viaje_mobile.png" alt="tu viaje" class="w-full object-cover" />
           <div class="text-white flex-col gap-5 contain-mobile flex">
             <h3 class="font-acehbold text-[30px] w-8/12 mx-auto text-center leading-none">
               {{ $langInfo['lang']['detallesActividad']['journey'] }}
@@ -235,7 +236,7 @@
               <div class="relative">
 
                 <img src="{{ asset($item->url_image . '/' . $item->name_image) }}" alt="cusco"
-                  class="w-full shadow-lg rounded-[34px] md:rounded-[25px] lg:rounded-[20px] xl:rounded-[30px]" />
+                  class="w-full shadow-lg rounded-[34px] md:rounded-[25px] lg:rounded-[20px] xl:rounded-[30px] object-cover" />
                 <div
                   class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 bg-black bg-opacity-50 hover:opacity-100 rounded-[34px] md:rounded-[25px] lg:rounded-[20px] xl:rounded-[30px]">
                 </div>
