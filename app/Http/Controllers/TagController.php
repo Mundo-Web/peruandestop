@@ -170,7 +170,7 @@ class TagController extends Controller
 
     // $category->status = false;
 
-    $category->save();
+    $category->delete();
 
     return response()->json(['message' => 'Tag eliminada']);
   }
