@@ -91,7 +91,7 @@
               </div>
 
               <div class="md:col-span-5">
-                <label for="imagen1">Impagen #1 </label>
+                <label for="imagen1">Impagen #1 <span>(tamaño recomendado 205px x 530px)</span></label>
                 <div class="relative mb-2  mt-2">
                   <input id="imagen1" name="imagen1"
                     class="p-2.5 block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
@@ -99,7 +99,7 @@
                 </div>
               </div>
               <div class="md:col-span-5">
-                <label for="imagen2">Impagen #2</label>
+                <label for="imagen2">Impagen #2 <span>(tamaño recomendado 610px x 520px)</span></label>
                 <div class="relative mb-2  mt-2">
                   <input id="imagen2" name="imagen2"
                     class="p-2.5 block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
@@ -107,7 +107,7 @@
                 </div>
               </div>
               <div class="md:col-span-5">
-                <label for="imagen3">Impagen #3</label>
+                <label for="imagen3">Impagen #3 <span>(tamaño recomendado 410px x 260px)</span></label>
                 <div class="relative mb-2  mt-2">
                   <input id="imagen3" name="imagen3"
                     class="p-2.5 block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
@@ -115,7 +115,7 @@
                 </div>
               </div>
               <div class="md:col-span-5">
-                <label for="imagen4">Impagen #4</label>
+                <label for="imagen4">Impagen #4 <span>(tamaño recomendado 410px x 260px)</span></label>
                 <div class="relative mb-2  mt-2">
                   <input id="imagen4" name="imagen4"
                     class="p-2.5 block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"

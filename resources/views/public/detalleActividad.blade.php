@@ -150,14 +150,14 @@
                     {{-- href="https://peruandestop.com/?partner_id=3B3BJLW&partner_ticketing_activity_ids=166190" --}}
                     class="rounded-3xl bg-colorBackgroundHeader px-4 py-3 w-full text-white hover:bg-colorBackgroundMainTop md:duration-500 font-acehSemibold text-text20 md:text-text24 text-center">
                     {{ $langInfo['lang']['detallesActividad']['confirmar'] }}</a>
-                  <a href="#"
+                  {{-- <a href="#"
                     class="flex justify-center items-center gap-5 px-4 py-3 w-full rounded-3xl border-2 border-[#F1F1F1]">
                     <span class="text-[#C8C8C8] font-acehSemibold text-center text-text20 md:text-text24">
                       {{ $langInfo['lang']['detallesActividad']['shared'] }}
                     </span>
 
                     <img src="{{ asset('images/svg/comparte_actividad.svg') }}" alt="compartir" />
-                  </a>
+                  </a> --}}
                 </div>
               </div>
             </div>
@@ -170,15 +170,13 @@
       <div class="w-11/12 mx-auto my-10">
         <!-- mayor a  md -->
         <div class="image hidden 2md:block">
-          <img src="{{ asset('images/img/tu_viaje_comienza.png') }}" alt="tu viaje"
-            class="w-full h-auto object-cover" />
+          <img src="{{ asset('images/img/tu_viaje_comienza.png') }}" alt="tu viaje" class="w-full h-auto object-cover" />
           <div class="text-white flex-col gap-5 contain flex ">
             <h3
               class="font-acehbold md:text-[30px] 2md:text-[50px] xl:text-[60px] md:w-8/12 mx-auto text-center leading-none lg:leading-tight">
               {{ $langInfo['lang']['detallesActividad']['journey'] }}
             </h3>
-            <p
-              class="font-acehMedium w-9/12 mx-auto md:text-[14px] 2md:text-[16px] xl:text-[18px] md:w-6/12 text-center">
+            <p class="font-acehMedium w-9/12 mx-auto md:text-[14px] 2md:text-[16px] xl:text-[18px] md:w-6/12 text-center">
               {{ $langInfo['lang']['detallesActividad']['register'] }}
 
             </p>

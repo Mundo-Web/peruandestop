@@ -106,8 +106,9 @@ class TagController extends Controller
   public function edit(Tag $tag)
   {
     $idtag = $tag->id;
+    $langs = Langs::all() ; 
     $tags = Tag::where('id', $idtag)->first();
-    return view('pages.tags.edit', compact('tags'));
+    return view('pages.tags.edit', compact('tags', "langs"));
   }
 
   /**

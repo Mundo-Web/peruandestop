@@ -104,8 +104,9 @@ class CategoryController extends Controller
     public function edit(Category $category, $id)
     {
         $category = Category::findOrfail($id);
+        $langs = Langs::all() ; 
 
-        return view('pages.categories.edit', compact('category'));
+        return view('pages.categories.edit', compact('category', "langs"));
     }
 
     /**
@@ -159,6 +160,7 @@ class CategoryController extends Controller
         $category->description = $request->description;
         $category->color = $request->color;
         $category->slug = $slug;
+        $category->langs =$request->langs;
         
         $category->save();
 

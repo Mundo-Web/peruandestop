@@ -182,10 +182,12 @@ class ProductsController extends Controller
     $atributos = Attributes::where("status", "=", true)->get();
     $valorAtributo = AttributesValues::where("status", "=", true)->get();
     $allTags = Tag::all();
+
+    $langs = Langs::all() ; 
    
 
 
-    return view('pages.products.edit', compact('product', 'atributos', 'valorAtributo','allTags'));
+    return view('pages.products.edit', compact('langs','product', 'atributos', 'valorAtributo','allTags'));
   }
 
   /**
