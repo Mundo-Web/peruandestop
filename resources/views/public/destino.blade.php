@@ -1004,11 +1004,11 @@
               <div class="flex justify-between items-center ">
                 <div>
                   <div class="flex gap-2 py-2">
-                    <img src="./images/svg/start.svg" alt="estrella">
+                    {{-- <img src="./images/svg/start.svg" alt="estrella">
                     <img src="./images/svg/start.svg" alt="estrella">
                     <img src="./images/svg/start.svg" alt="estrella">
                     <img src="./images/svg/start_sin_color.svg" alt="estrella">
-                    <img src="./images/svg/start_sin_color.svg" alt="estrella">
+                    <img src="./images/svg/start_sin_color.svg" alt="estrella"> --}}
                   </div>
                   <p class="font-acehSemibold text-text28 md:text-text32 text-[#0F1B2C]">
                     2,343
