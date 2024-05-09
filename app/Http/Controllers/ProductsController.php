@@ -72,7 +72,7 @@ class ProductsController extends Controller
     $request->validate([
       'producto' => 'required',
       'precio' => 'min:0|required|numeric',
-      'descuento' => 'lt:' . $request->input('precio'),
+      
     ]);
 
     try {
