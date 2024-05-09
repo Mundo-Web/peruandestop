@@ -2,7 +2,7 @@
 
 
   <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
-    <form action="{{ route('activity.store') }}" method="POST" enctype="multipart/form-data">
+    <form id="formproducto" action="{{ route('activity.store') }}" method="POST" enctype="multipart/form-data">
       @csrf
 
       <div
@@ -561,6 +561,17 @@
       })
     });
   </script>
+  <script>
+    $('#formproducto').submit(function(e) {
+      let select = $('#tags_id').val();
+      console.log('validando etiqueta ')
+      if (!select || select.length === 0) { // Verifica si no se ha seleccionado ninguna opción
+        e.preventDefault(); // Detiene el envío del formulario
+        alert('Por favor, selecciona al menos una tag.'); // Muestra un mensaje de alerta
+      }
+    })
+  </script>
+
 
 
 
