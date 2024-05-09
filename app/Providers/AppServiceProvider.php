@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Blog;
 use App\Models\General;
 use App\Models\Langs;
 use App\Models\Message;
@@ -38,9 +39,15 @@ class AppServiceProvider extends ServiceProvider
         });
         View::composer('components.public.header', function ($view) {
             // Obtener los datos del footer
-            $langs = Langs::all() ;  // Suponiendo que tienes un modelo Footer y un método footerData() en él
+            $langs = Langs::all() ;
+            $blogs =  Blog::all()->count();
+            dump($blogs) ; // Suponiendo que tienes un modelo Footer y un método footerData() en él
             // Pasar los datos a la vista
-            $view->with('langs', $langs);
+            $view->with([
+                'langs' => $langs,
+                'blogs' => $blogs
+            
+            ]);
         });
         View::composer('components.public.footer', function ($view) {
             // Obtener los datos del footer

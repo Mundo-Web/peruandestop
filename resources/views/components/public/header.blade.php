@@ -27,11 +27,12 @@
           <a href="{{ url('destino?source=destino') }}">{{ $archivoObjeto->nav['destino'] }}</a>
         </li>
         <li>
-          <a href="{{ route('blog', ['lang' => $lang]) }}">{{ $archivoObjeto->nav['blog'] }}</a>
-        </li>
-        <li>
           <a href="{{ route('ayuda', ['lang' => $lang]) }}">{{ $archivoObjeto->nav['paquetes'] }}</a>
         </li>
+        <li>
+          <a href="{{ route('blog', ['lang' => $lang]) }}">{{ $archivoObjeto->nav['blog'] }}</a>
+        </li>
+
         <li>
           <a href="{{ route('contacto', ['lang' => $lang]) }}">{{ $archivoObjeto->nav['contact'] }}</a>
         </li>
@@ -93,12 +94,16 @@
               class="rounded-full hover:bg-colorBackgroundHeader md:duration-300 py-2 px-5 flex justify-center items-center gap-3">
               <span>{{ $archivoObjeto->nav['destino'] }}</span>
             </a>
-            <a href="{{ route('blog', ['lang' => $lang]) }}"
-              class="rounded-full hover:bg-colorBackgroundHeader md:duration-300 py-2 px-5">{{ $archivoObjeto->nav['blog'] }}
-            </a>
             <a href="{{ route('ayuda', ['lang' => $lang]) }}"
               class="rounded-full hover:bg-colorBackgroundHeader md:duration-300 py-2 px-5">{{ $archivoObjeto->nav['paquetes'] }}
             </a>
+            @if ($blogs > 0)
+              <a href="{{ route('blog', ['lang' => $lang]) }} "
+                class="rounded-full hover:bg-colorBackgroundHeader md:duration-300 py-2 px-5">{{ $archivoObjeto->nav['blog'] }}
+              </a>
+            @endif
+
+
             <a href="{{ route('contacto', ['lang' => $lang]) }}"
               class="rounded-full hover:bg-colorBackgroundHeader md:duration-300 py-2 px-5">{{ $archivoObjeto->nav['contact'] }}
             </a>
