@@ -25,7 +25,8 @@ class Products extends Model
     'peso',
     'categoria_id',
     'langs',
-    'id_marketplace'
+    'id_marketplace',
+    'costo_agencia'
   ];
 
 

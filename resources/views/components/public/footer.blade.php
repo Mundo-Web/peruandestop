@@ -6,7 +6,7 @@
         <p class="font-acehbold text-text22 pb-2">Lenguaje</p>
         <div class="dropdown-idioma inline-block relative font-acehbold">
           <button class="font-semibold py-2 px-6 rounded inline-flex items-center">
-            <span class="mr-12 text-white text-text18">Inglés</span>
+            <span id="selected-language2" class="mr-12 text-white text-text18">Inglés</span>
             <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M9.20711 0.792893C8.81658 0.402369 8.18342 0.402369 7.79289 0.792893L5 3.58579L2.20711 0.792893C1.81658 0.402369 1.18342 0.402369 0.792894 0.792893C0.402369 1.18342 0.402369 1.81658 0.792894 2.20711L4.29289 5.70711C4.68342 6.09763 5.31658 6.09763 5.70711 5.70711L9.20711 2.20711C9.59763 1.81658 9.59763 1.18342 9.20711 0.792893Z"
@@ -14,15 +14,14 @@
             </svg>
           </button>
           <ul class="dropdown-menu-idioma absolute text-[#141718] text-text18 w-full hidden z-20 bg-white rounded-md">
-            <li class="">
-              <a class="rounded-md hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="#">Español</a>
-            </li>
-            <li class="">
-              <a class="rounded-md hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="#">Portugués</a>
-            </li>
-            <li class="">
-              <a class="rounded-md hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="#">Frances</a>
-            </li>
+            @foreach ($langs as $item)
+              <li class="">
+                <a class="rounded-md hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap"
+                  href="/{{ $item->code }}">{{ $item->description }}</a>
+              </li>
+            @endforeach
+
+
           </ul>
         </div>
       </div>
@@ -94,4 +93,27 @@
       </div>
     </div>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Obtener el idioma seleccionado de la URL
+      const selectedLang = "{{ request()->segment(1) }}";
+
+      // Obtener el elemento donde se mostrará el idioma seleccionado
+      const selectedLanguageElement = document.getElementById('selected-language2');
+
+      // Definir los textos correspondientes según el idioma seleccionado
+      const languageTexts = {
+        'es': 'Español',
+        'en': 'Inglés',
+        'pt': 'Portugués',
+        'fr': 'Francés'
+      };
+
+      // Mostrar el texto del idioma seleccionado en el elemento correspondiente
+      if (selectedLang && languageTexts[selectedLang]) {
+        selectedLanguageElement.textContent = languageTexts[selectedLang];
+      }
+    });
+  </script>
 </footer>

@@ -52,12 +52,14 @@
           </svg>
         </button>
         <ul class="dropdown-menu-moneda absolute text-[#141718] text-text16 w-full hidden z-20 bg-white rounded-md">
-          <li class="">
-            <a class="rounded-md hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="/es">Español</a>
-          </li>
-          <li class="">
-            <a class="rounded-md hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="/en">Inglés</a>
-          </li>
+          @foreach ($langs as $item)
+            <li class="">
+              <a class="rounded-md hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap"
+                href="/{{ $item->code }}">{{ $item->description }}</a>
+            </li>
+          @endforeach
+
+
           {{--  <li class="">
             <a class="rounded-md hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="#">Portugués</a>
           </li>
