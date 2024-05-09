@@ -255,7 +255,7 @@ class ProductsController extends Controller
     //softdelete
     $product = Products::find($request->id);
     $product->status = 0;
-    $product->save();
+    $product->delete();
   }
 
   public function updateVisible(Request $request)
