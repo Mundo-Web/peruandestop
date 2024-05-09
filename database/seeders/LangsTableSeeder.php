@@ -19,13 +19,7 @@ class LangsTableSeeder extends Seeder
                 'code' => 'en',
                 'visible' => '1',
                 'status' => '1',
-            ],
-            [
-                'description' => 'Español',
-                'code' => 'es',
-                'visible' => '1',
-                'status' => '1',
-            ],
+            ]
             // Agrega más datos si es necesario
         ]);
     }
