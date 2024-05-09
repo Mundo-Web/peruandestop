@@ -53,10 +53,12 @@ class IndexController extends Controller
     $slider = Slider::where('status', '=', 1)->where('visible', '=', 1)->get();
     $category = Category::where('status', '=', 1)->where('destacar', '=', 1)->get();
 
+    $sliders = Slider::where('status', '=', 1)->where('visible', '=', 1)->get();
+
 
     $langInfo = $request->attributes->all(); 
     
-    return view('public.index', compact('productos', 'destacados', 'descuentos', 'general', 'benefit', 'faqs', 'testimonie', 'slider', 'categorias', 'category', 'tags', 'blogs', 'lang', 'langInfo'));
+    return view('public.index', compact('sliders','productos', 'destacados', 'descuentos', 'general', 'benefit', 'faqs', 'testimonie', 'slider', 'categorias', 'category', 'tags', 'blogs', 'lang', 'langInfo'));
   }
 
   public function catalogo($filtro, Request $request)
