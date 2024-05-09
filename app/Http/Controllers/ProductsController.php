@@ -47,7 +47,7 @@ class ProductsController extends Controller
     $manager = new ImageManager(new Driver());
     $img =  $manager->read($file);
 
-    $img->coverDown(669, 446);
+    $img->coverDown(1200, 800);
     if (!file_exists($route)) {
       mkdir($route, 0777, true); // Se crea la ruta con permisos de lectura, escritura y ejecución
     }

@@ -1090,7 +1090,7 @@
               <div class="overflow-hidden rounded-2xl">
                 <div class="img-container ">
                   <img src="{{ asset($item->imagen) }}" alt=""
-                    class=" object-cover w-[600px] h-[300px] rounded-2xl shadow-lg " />
+                    class=" object-cover w-[800px] h-[300px] rounded-2xl shadow-lg " />
                 </div>
               </div>
 
