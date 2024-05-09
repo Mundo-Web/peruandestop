@@ -93,5 +93,18 @@
     "title": "Software Developers World",
     "summary": "Somos una empresa que desarrolla software para hacerte la vida más fácil. Prueba nuestros servicios y/o productos que son para ti.",
     "button": "Ver productos"
+  },
+  "footer": {
+    "home": "Home",
+    "destino": "Destino",
+    "blog": "Blog",
+    "paquetes": "Paquetes",
+    "contact": "Contactanos",
+    "politicas": "Políticas",
+    "politicasP": "Políticas de privacidad",
+    "terms": "Términos y Condiciones",
+    "libroR": "Libro de reclamaciones",
+    "asistencia_agencias": "Asistencia para Agencias",
+    "paymentMethods": "Métodos de pago"
   }
 }

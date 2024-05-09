@@ -1,4 +1,16 @@
 <footer class="bg-colorBackgroundMainTop">
+  @php
+
+    $route = resource_path("lang/{$lang}.json");
+    $file = file_get_contents($route);
+    $archivoArray = json_decode($file, true);
+
+    $archivoArray;
+
+    //  Convertir el array en un objeto
+    $archivoObjeto = (object) $archivoArray;
+
+  @endphp
   <div class="py-10 ">
     <div class="flex flex-col gap-10 md:grid grid-cols-5 md:gap-5 lg:gap-16 text-white w-11/12 mx-auto">
       <!-- --corregir-- el responsive -->
@@ -29,27 +41,34 @@
 
       <div data-aos="fade-up" data-aos-offset="150">
         <nav class="flex flex-col lg:items-start">
-          <p class="font-acehbold text-text22 pb-4">Menú</p>
-          <a href="{{ route('index', ['lang' => $lang]) }}" class="font-acehLight text-text20 py-1">Home</a>
-          <a href="{{ url('destino?source=destino') }}" class="font-acehLight text-text20 py-1">Destinos</a>
-          <a href="{{ route('ayuda', ['lang' => $lang]) }}" class="font-acehLight text-text20 py-1">Paquetes</a>
-          <a href="{{ route('contacto', ['lang' => $lang]) }}" class="font-acehLight text-text20 py-1">Contacto</a>
+          <p class="font-acehbold text-text22 pb-4">{{ $archivoObjeto->footer['menu'] }}</p>
+          <a href="{{ route('index', ['lang' => $lang]) }}"
+            class="font-acehLight text-text20 py-1">{{ $archivoObjeto->footer['home'] }}</a>
+          <a href="{{ url('destino?source=destino') }}"
+            class="font-acehLight text-text20 py-1">{{ $archivoObjeto->footer['destino'] }}</a>
+          <a href="{{ route('ayuda', ['lang' => $lang]) }}"
+            class="font-acehLight text-text20 py-1">{{ $archivoObjeto->footer['paquetes'] }}</a>
+          <a href="{{ route('contacto', ['lang' => $lang]) }}"
+            class="font-acehLight text-text20 py-1">{{ $archivoObjeto->footer['contact'] }}</a>
         </nav>
       </div>
 
       <div data-aos="fade-up" data-aos-offset="150">
         <nav class="flex flex-col lg:items-start">
-          <p class="font-acehbold text-text22 pb-4">Políticas</p>
-          <a href="#politica_privacidad" class="font-acehLight text-text20  py-1">Políticas de privacidad</a>
-          <a href="#terminos_condiciones" class="font-acehLight text-text20  py-1">Términos y Condiciones</a>
-          <a href="#libro_reclamaciones" class="font-acehLight text-text20 py-1">Libro de reclamaciones</a>
+          <p class="font-acehbold text-text22 pb-4">{{ $archivoObjeto->footer['politicas'] }}</p>
+          <a href="#politica_privacidad"
+            class="font-acehLight text-text20  py-1">{{ $archivoObjeto->footer['politicasP'] }}</a>
+          <a href="#terminos_condiciones"
+            class="font-acehLight text-text20  py-1">{{ $archivoObjeto->footer['terms'] }}</a>
+          <a href="#libro_reclamaciones"
+            class="font-acehLight text-text20 py-1">{{ $archivoObjeto->footer['libroR'] }}</a>
         </nav>
       </div>
 
       <div data-aos="fade-up" data-aos-offset="150">
         <nav class="flex flex-col lg:items-start">
           <img src="{{ asset('images/svg/headphone.svg') }}" alt="auriculares" class="w-6 pb-4" />
-          <p class="font-acehbold text-text22  lg:text-left">Asistencia para Agencias</p>
+          <p class="font-acehbold text-text22  lg:text-left">{{ $archivoObjeto->footer['asistencia_agencias'] }}</p>
           <a href="#numero" class="font-acehLight text-text20 py-1">{{ $datosgenerales[0]->cellphone }}</a>
           <a href="#correo"
             class="font-acehLight text-text20 py-1 flex-initial w-44">{{ $datosgenerales[0]->email }}</a>
@@ -57,7 +76,7 @@
       </div>
 
       <div class="lg:items-start" data-aos="fade-up" data-aos-offset="150">
-        <h3 class="font-acehbold text-text22 pb-4 lg:text-left">Métodos de pago</h3>
+        <h3 class="font-acehbold text-text22 pb-4 lg:text-left">{{ $archivoObjeto->footer['paymentMethods'] }}</h3>
 
         <div class="flex md:justify-center justify-start">
           <div class="flex flex-wrap md:justify-center items-center lg:justify-start gap-2">
