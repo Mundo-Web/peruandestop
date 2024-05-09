@@ -15,15 +15,15 @@ class TagSeeder extends Seeder
     public function run(): void
     {
         //
-        $tag = ['Tour gastronómicos'];
-        for ($i = 0; $i < 7; $i++) {
+        
+        
             Tag::create([
-                'name' => $tag[$i],
-                'description' => 'Aquí va la descripción del destino '.$tag[$i],
+                'name' =>  'Tour gastronómicos',
+                'description' => 'Aquí va la descripción del destino Tour gastronómicos',
                 'status' => 1,
                 'visible' => 1,
                 'langs' => 'en'
             ]);
-        }
+        
     }
 }
