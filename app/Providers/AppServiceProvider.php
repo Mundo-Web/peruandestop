@@ -41,7 +41,6 @@ class AppServiceProvider extends ServiceProvider
             // Obtener los datos del footer
             $langs = Langs::all() ;
             $blogs =  Blog::all()->count();
-            dump($blogs) ; // Suponiendo que tienes un modelo Footer y un método footerData() en él
             // Pasar los datos a la vista
             $view->with([
                 'langs' => $langs,
