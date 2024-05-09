@@ -1,7 +1,7 @@
 <script>
   const lang = localStorage.getItem('lang')
   if (!lang) {
-    location.href = '/es'
+    location.href = '/en'
   } else {
     location.href = `/${lang}`
   }
