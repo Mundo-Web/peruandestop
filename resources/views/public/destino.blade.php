@@ -1011,8 +1011,8 @@
                     <img src="./images/svg/start_sin_color.svg" alt="estrella"> --}}
                   </div>
                   <p class="font-acehSemibold text-text28 md:text-text32 text-[#0F1B2C]">
-                    2,343
-                    <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
+                    {{-- 2,343
+                    <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span> --}}
                   </p>
 
                 </div>
