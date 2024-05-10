@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Attributes;
 use App\Models\AttributesValues;
 use App\Models\Category;
+use App\Models\Galerie;
 use App\Models\Langs;
 use App\Models\Products;
 use App\Models\Specifications;
@@ -16,6 +17,7 @@ use Intervention\Image\ImageManager;
 use Intervention\Image\Drivers\Gd\Driver;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;
+use SoDe\Extend\File as ExtendFile;
 
 class ProductsController extends Controller
 {
@@ -38,7 +40,7 @@ class ProductsController extends Controller
     $valorAtributo = AttributesValues::where("status", "=", true)->get();
     $categoria = Category::all();
     $tags = Tag::where("status", "=", true)->get();
-    $langs = Langs::all() ; 
+    $langs = Langs::all();
     return view('pages.products.create', compact('atributos', 'valorAtributo', 'categoria', 'tags', 'langs'));
   }
 
@@ -66,13 +68,15 @@ class ProductsController extends Controller
     $tagsSeleccionados = $request->input('tags_id');
     // Hacer algo con los valores seleccionados, como almacenarlos en la base de datos
     // Por ejemplo:
-    
+
     // $valorprecio = $request->input('precio') - 0.1;
+  
+
 
     $request->validate([
       'producto' => 'required',
       'precio' => 'min:0|required|numeric',
-      
+
     ]);
 
     try {
@@ -122,9 +126,36 @@ class ProductsController extends Controller
 
       $producto = Products::create($cleanedData);
       $this->GuardarEspecificaciones($producto->id, $especificaciones);
-      if(count($tagsSeleccionados) !== 0 ){
+      if (count($tagsSeleccionados) !== 0) {
         $this->TagsXProducts($producto->id, $tagsSeleccionados);
+      }
+      if ($data['files']) {
 
+        foreach ($data['files'] as $file) {
+          # code...
+
+          // data:image/png; base64,code
+          [$first, $code] = explode(';base64,', $file);
+          $imageData = base64_decode($code);
+          $routeImg = 'storage/images/imagen/';
+
+          $ext = ExtendFile::getExtention(str_replace("data:", '', $first));
+
+
+
+          $nombreImagen = Str::random(10) . '.' . $ext;
+
+          // Verificar si la ruta no existe y crearla si es necesario
+          if (!file_exists($routeImg)) {
+            mkdir($routeImg, 0777, true); // Se crea la ruta con permisos de lectura, escritura y ejecución
+          }
+
+          // Guardar los datos binarios en un archivo
+          file_put_contents($routeImg . $nombreImagen, $imageData);
+          $dataGalerie['imagen'] = $routeImg . $nombreImagen;
+          $dataGalerie['product_id'] = $producto->id;
+          Galerie::create($dataGalerie);
+        }
       }
       return redirect()->route('activity.index')->with('success', 'Publicación creado exitosamente.');
     } catch (\Throwable $th) {
@@ -132,11 +163,11 @@ class ProductsController extends Controller
       dump($th);
     }
   }
-  private function TagsXProducts($id, $nTags){
+  private function TagsXProducts($id, $nTags)
+  {
     foreach ($nTags as $key => $value) {
       DB::insert('insert into tags_xproducts (producto_id, tag_id) values (?, ?)', [$id, $value]);
     }
-
   }
   private function GuardarEspecificaciones($id, $especificaciones)
   {
@@ -183,11 +214,11 @@ class ProductsController extends Controller
     $valorAtributo = AttributesValues::where("status", "=", true)->get();
     $allTags = Tag::all();
 
-    $langs = Langs::all() ; 
-   
+    $langs = Langs::all();
 
 
-    return view('pages.products.edit', compact('langs','product', 'atributos', 'valorAtributo','allTags'));
+
+    return view('pages.products.edit', compact('langs', 'product', 'atributos', 'valorAtributo', 'allTags'));
   }
 
   /**

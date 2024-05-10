@@ -68,7 +68,9 @@
       <div data-aos="fade-up" data-aos-offset="150">
         <nav class="flex flex-col lg:items-start">
           <img src="{{ asset('images/svg/headphone.svg') }}" alt="auriculares" class="w-6 pb-4" />
-          <p class="font-acehbold text-text22  lg:text-left">{{ $archivoObjeto->footer['asistencia_agencias'] }}</p>
+          <a onclick="document.getElementById('tw-modal').click()" class="cursor-pointer">
+            <p class="font-acehbold text-text22  lg:text-left">{{ $archivoObjeto->footer['asistencia_agencias'] }}</p>
+          </a>
           <a href="#numero" class="font-acehLight text-text20 py-1">{{ $datosgenerales[0]->cellphone }}</a>
           <a href="#correo"
             class="font-acehLight text-text20 py-1 flex-initial w-44">{{ $datosgenerales[0]->email }}</a>
@@ -110,6 +112,19 @@
         <a href="#"><img src="{{ asset('images/svg/facebook.svg') }}" alt="facebook" /></a>
         <a href=""><img src="{{ asset('images/svg/youtube.svg') }}" alt="youtube" /></a>
       </div>
+    </div>
+  </div>
+  <div class="relative flex z-[500] flex-col items-center justify-center overflow-hidden bg-gray-50 ">
+    <div>
+      <input type="checkbox" id="tw-modal" class="peer fixed appearance-none opacity-0">
+      <label for="tw-modal"
+        class="pointer-events-none invisible fixed inset-0 flex cursor-pointer items-center justify-center overflow-hidden overscroll-contain bg-slate-700/30 opacity-0 transition-all duration-200 ease-in-out peer-checked:pointer-events-auto peer-checked:visible peer-checked:opacity-100 {{-- peer-checked:[&>*]:translate-y-0  --}}{{-- peer-checked::[&>*]:scale-100 --}}">
+        <label
+          class="max-h-[calc(100vh-5em)] h-fit max-w-lg {{-- scale-90 --}} overflow-y-auto overscroll-y-contain rounded-md 
+          bg-white p-6 text-black shadow-2xl transition">
+          Visualizacion del modal
+        </label>
+      </label>
     </div>
   </div>
 
