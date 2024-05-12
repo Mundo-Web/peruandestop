@@ -27,6 +27,7 @@ use App\Http\Controllers\LogosClientController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LangsController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\SliderController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\StrengthController;
 use App\Http\Controllers\ValoresAtributosController;
@@ -156,6 +157,11 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         //Etiquetas
         Route::resource('/tags', TagController::class);
         Route::post('/tags/deleteTags', [TagController::class, 'deleteTags'])->name('tags.deleteTags');
+
+        //sliders
+        Route::resource('/slider', SliderController::class);
+        Route::post('/slider/updateVisible', [SliderController::class, 'updateVisible'])->name('slider.updateVisible');
+        Route::post('/slider/deleteSlider', [SliderController::class, 'deleteSlider'])->name('slider.deleteSlider');
 
 
         Route::resource('/faqs', FaqsController::class);

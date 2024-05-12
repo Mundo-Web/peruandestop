@@ -9,6 +9,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Intervention\Image\Drivers\Gd\Driver;
 use Intervention\Image\ImageManager;
+use SoDe\Extend\File;
 
 class GalerieController extends Controller
 {
@@ -37,6 +38,9 @@ class GalerieController extends Controller
 	{
 
 		$data = $request->all();
+		
+	
+
 
 
 		try {
@@ -44,13 +48,39 @@ class GalerieController extends Controller
 				'product_id' => 'required',
 			]);
 
-			foreach ($data as $key => $value) {
+			
 
 
 				// Comprueba si la clave comienza con 'imagen'
-				if (strpos($key, 'imagen') === 0) {
+				if ($data['files']) {
+					
+					
+					foreach ($data['files'] as $file) {
+						# code...
+						
+						// data:image/png; base64,code
+						[$first, $code] = explode(';base64,', $file);
+						$imageData = base64_decode($code);
+						$routeImg = 'storage/images/imagen/';
 
-					if ($request->hasFile($key)) {
+						$ext = File::getExtention(str_replace("data:", '',$first));
+
+						
+
+						$nombreImagen = Str::random(10).'.'.$ext;
+
+						// Verificar si la ruta no existe y crearla si es necesario
+						if (!file_exists($routeImg)) {
+								mkdir($routeImg, 0777, true); // Se crea la ruta con permisos de lectura, escritura y ejecución
+						}
+
+						// Guardar los datos binarios en un archivo
+						file_put_contents($routeImg . $nombreImagen, $imageData);
+						$data['imagen'] = $routeImg . $nombreImagen;
+						$producto = Galerie::create($data);
+					}
+
+					/* if ($request->hasFile($key)) {
 						$file = $request->file($key);
 						$routeImg = 'storage/images/imagen/';
 						$nombreImagen = Str::random(10) . '_' . $file->getClientOriginalName();
@@ -60,13 +90,14 @@ class GalerieController extends Controller
 						$data['imagen'] = $routeImg . $nombreImagen;
 						$producto = Galerie::create($data);
 						// $AboutUs->name_image = $nombreImagen;
-					}
+					} */
 				}
-			}
+			
 
 			return redirect()->route('galerie.index')->with('success', 'Publicación creado exitosamente.');
 		} catch (\Throwable $th) {
 			// throw $th;
+			dump($th);
 		}
 	}
 	public function saveImg($file, $route, $nombreImagen)

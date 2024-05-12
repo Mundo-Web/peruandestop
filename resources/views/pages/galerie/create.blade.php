@@ -1,10 +1,9 @@
 <x-app-layout>
 
-  @section('css')
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css"
-      integrity="sha512-jU/7UFiaW5UBGODEopEqnbIAHOI8fO6T99m7Tsmqs2gkdujByJfkCbbfPSN4Wlqlb9TGnsuC0YgUgWkRBK7B9A=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-  @endsection
+
+
+
+
 
   <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
     <form action="{{ route('galerie.store') }}" method="POST" enctype="multipart/form-data">
@@ -90,46 +89,9 @@
                 </div>
               </div>
 
-              <div class="md:col-span-5">
-                <label for="imagen1">Impagen #1 <span>(tamaño recomendado 205px x 530px)</span></label>
-                <div class="relative mb-2  mt-2">
-                  <input id="imagen1" name="imagen1"
-                    class="p-2.5 block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                    aria-describedby="user_avatar_help" id="user_avatar" type="file">
-                </div>
-              </div>
-              <div class="md:col-span-5">
-                <label for="imagen2">Impagen #2 <span>(tamaño recomendado 610px x 520px)</span></label>
-                <div class="relative mb-2  mt-2">
-                  <input id="imagen2" name="imagen2"
-                    class="p-2.5 block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                    aria-describedby="user_avatar_help" id="user_avatar" type="file">
-                </div>
-              </div>
-              <div class="md:col-span-5">
-                <label for="imagen3">Impagen #3 <span>(tamaño recomendado 410px x 260px)</span></label>
-                <div class="relative mb-2  mt-2">
-                  <input id="imagen3" name="imagen3"
-                    class="p-2.5 block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                    aria-describedby="user_avatar_help" id="user_avatar" type="file">
-                </div>
-              </div>
-              <div class="md:col-span-5">
-                <label for="imagen4">Impagen #4 <span>(tamaño recomendado 410px x 260px)</span></label>
-                <div class="relative mb-2  mt-2">
-                  <input id="imagen4" name="imagen4"
-                    class="p-2.5 block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                    aria-describedby="user_avatar_help" id="user_avatar" type="file">
-                </div>
-              </div>
-              <div class="md:col-span-5">
-                <label for="imagen5">Impagen #5</label>
-                <div class="relative mb-2  mt-2">
-                  <input id="imagen5" name="imagen5"
-                    class="p-2.5 block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                    aria-describedby="user_avatar_help" id="user_avatar" type="file">
-                </div>
-              </div>
+
+
+
               <div class="md:col-span-1">
                 <label for="color">Color</label>
                 <input type="text" id="color" name="color" value=""
@@ -149,9 +111,8 @@
                   class="bg-red-500 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded">Volver</a>
               </div>
               <div class="inline-flex items-end">
-                <button type="submit"
-                  class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
-                  Guardar Atributo
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
+                  Guardar Imagenes
                 </button>
               </div>
             </div>
@@ -168,52 +129,7 @@
 
 
 
-      if (document.querySelector('#dropzoneImage')) {
-        Dropzone.options.dropzoneImage = {
-          url: 'https://httpbin.org/post',
-          thumbnailWidth: 160,
-          previewTemplate: DropzoneTemplates.previewTemplate,
-          init: function() {
-            this.on('success', function(file, responseText) {
-              console.log(responseText);
-            });
 
-            this.on('addedfile', (file) => {
-              // Showing file preview if it is not image
-              if (file.type && !file.type.match(/image.*/)) {
-                if (!file.documentPrev) {
-                  file.previewTemplate.classList.remove('dz-image-preview');
-                  file.previewTemplate.classList.add('dz-file-preview');
-                  file.previewTemplate.classList.add('dz-complete');
-                  file.documentPrev = true;
-                  this.emit('addedfile', file);
-                  this.removeFile(file);
-                }
-              }
-            });
-
-            // If you only have access to the original image sizes on your server,
-            // and want to resize them in the browser:
-            let mockFile1 = {
-              name: 'bauernbrot.jpg',
-              size: 12842
-            };
-            this.displayExistingFile(mockFile1, Helpers.UrlFix('/img/product/small/bauernbrot.jpg'));
-
-            // Setting extra type parameter to show icon instead of thumbnail. It still needs to have a image for some reason.
-            let mockFile2 = {
-              name: 'michetta.jpg',
-              size: 22354
-            };
-            this.displayExistingFile(mockFile2, Helpers.UrlFix('/img/product/small/michetta.jpg'));
-
-            // Adding dz-started class to remove drop message
-            this.element.classList.add('dz-started');
-
-
-          },
-        };
-      }
 
       tinymce.init({
         selector: 'textarea#description',
@@ -259,9 +175,8 @@
   </script>
 
 
-  @section('js')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.js"
-      integrity="sha512-U2WE1ktpMTuRBPoCFDzomoIorbOyUv0sP8B+INA3EzNAhehbzED1rOJg6bCqPf/Tuposxb5ja/MAUnC8THSbLQ=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  @endsection
+
+
+
+
 </x-app-layout>

@@ -35,16 +35,16 @@ class IndexController extends Controller
   /**
    * Display a listing of the resource.
    */
-  public function index(Request $request ,$lang)
+  public function index(Request $request, $lang)
   {
     // $productos =  Products::where("destacar", "=", true)->where("status","=",true)->get();
-    $productos =  Products::with('tags')->activeDestacado()->where('langs','=',$lang)->get();
+    $productos =  Products::with('tags')->activeDestacado()->where('langs', '=', $lang)->get();
     //$categorias = Category::all();
-    $categorias = Category::where("visible", "=", true)->where('langs','=',$lang)->get();
-    $destacados = Products::where('destacar', '=', 1)->where('status', '=', 1)->where('visible', '=', 1)->where('langs','=',$lang)->get();
-    $descuentos = Products::where('descuento', '>', 0)->where('status', '=', 1)->where('visible', '=', 1)->where('langs','=',$lang)->get();
-    $tags = Tag::where('status', '=', 1)->where('visible', '=', 1)->where('langs','=',$lang)->get();
-    $blogs = Blog::where('status', '=', 1)->where('visible', '=', 1)->where('langs','=',$lang)->orderByDesc('created_at')->limit(4)->get();
+    $categorias = Category::where("visible", "=", true)->where('langs', '=', $lang)->get();
+    $destacados = Products::where('destacar', '=', 1)->where('status', '=', 1)->where('visible', '=', 1)->where('langs', '=', $lang)->get();
+    $descuentos = Products::where('descuento', '>', 0)->where('status', '=', 1)->where('visible', '=', 1)->where('langs', '=', $lang)->get();
+    $tags = Tag::where('status', '=', 1)->where('visible', '=', 1)->where('langs', '=', $lang)->get();
+    $blogs = Blog::where('status', '=', 1)->where('visible', '=', 1)->where('langs', '=', $lang)->orderByDesc('created_at')->limit(4)->get();
 
     $general = General::all();
     $benefit = Strength::where('status', '=', 1)->get();
@@ -53,10 +53,12 @@ class IndexController extends Controller
     $slider = Slider::where('status', '=', 1)->where('visible', '=', 1)->get();
     $category = Category::where('status', '=', 1)->where('destacar', '=', 1)->get();
 
+    $sliders = Slider::where('status', '=', 1)->where('visible', '=', 1)->get();
+    $tours =  Products::where('status', '=', 1)->where('visible', '=', 1)->where('langs', '=', $lang)->get();
 
-    $langInfo = $request->attributes->all(); 
-    
-    return view('public.index', compact('productos', 'destacados', 'descuentos', 'general', 'benefit', 'faqs', 'testimonie', 'slider', 'categorias', 'category', 'tags', 'blogs', 'lang', 'langInfo'));
+    $langInfo = $request->attributes->all();
+
+    return view('public.index', compact('tours','sliders', 'productos', 'destacados', 'descuentos', 'general', 'benefit', 'faqs', 'testimonie', 'slider', 'categorias', 'category', 'tags', 'blogs', 'lang', 'langInfo'));
   }
 
   public function catalogo($filtro, Request $request)
@@ -137,10 +139,10 @@ class IndexController extends Controller
     return view('public.comentario', compact('general'));
   }
 
-  public function contacto(Request $request,string $lang)
+  public function contacto(Request $request, string $lang)
   {
     $general = General::all();
-    $langInfo = $request->attributes->all(); 
+    $langInfo = $request->attributes->all();
     return view('public.contacto', compact('general', 'lang', 'langInfo'));
   }
 
@@ -260,23 +262,23 @@ class IndexController extends Controller
     }
     return $codigoAleatorio;
   }
-  public function destino(Request $request , $lang )
+  public function destino(Request $request, $lang)
   {
     $tagsId = $request->input('tags');
     $source = $request->input('source');
-    $tipoCategoria = null ;
-    if($source == 'destino'){
+    $tipoCategoria = null;
+    if ($source == 'destino') {
       // dump('viene de paquetes');
-      $tipoCategoria = "Destino"; 
-    }else{
-      $tipoCategoria = "Paquetes"; 
+      $tipoCategoria = "Destino";
+    } else {
+      $tipoCategoria = "Paquetes";
     }
 
     //en categoria tenemos tipocategoria en donde tiene que ser igual al source
 
-    $destino = Category::where('status', '=', 1)->where('visible', '=', 1)->where('category_type', '=',$source)->where('langs','=',$lang)->with('productos')->paginate(6);
-    $tours =  Products::where('status', '=', 1)->where('visible', '=', 1)->where('langs','=',$lang)->get();
-    $tags = Tag::where('status', '=', 1)->where('visible', '=', 1)->where('langs','=',$lang)->get();
+    $destino = Category::where('status', '=', 1)->where('visible', '=', 1)->where('category_type', '=', $source)->where('langs', '=', $lang)->with('productos')->paginate(6);
+    $tours =  Products::where('status', '=', 1)->where('visible', '=', 1)->where('langs', '=', $lang)->get();
+    $tags = Tag::where('status', '=', 1)->where('visible', '=', 1)->where('langs', '=', $lang)->get();
 
     if ($tagsId !== null) {
       $tagsIdNumeric = intval($tagsId);
@@ -317,21 +319,21 @@ class IndexController extends Controller
     }
 
 
-    $langInfo = $request->attributes->all(); 
+    $langInfo = $request->attributes->all();
 
     return view('public.destino', compact('destino', 'tours', 'tags', 'tipoCategoria', 'lang', 'langInfo'));
   }
 
-  public function actividad(Request $request,string $lang ,  string $id)
+  public function actividad(Request $request, string $lang,  string $id)
   {
     //
     $destino = Category::find($request->id);
-    $langInfo = $request->attributes->all(); 
-    
+    $langInfo = $request->attributes->all();
+
     return view('public.actividad', compact('destino', 'lang', "langInfo"));
   }
 
-  public function detalleActividad(Request $request,string $lang , string $id)
+  public function detalleActividad(Request $request, string $lang, string $id)
   {
     //
     $destinos = Category::all();
@@ -351,24 +353,27 @@ class IndexController extends Controller
     // Ejecutar la consulta SQL y obtener los resultados
     $tagsDestinos = DB::select($sql);
 
-    $langInfo = $request->attributes->all(); 
+    $langInfo = $request->attributes->all();
     // producto -> categoria -> 
-    $tour = Products::find($id);
+    $tour = Products::with(['galeria' => function ($query) {
+      $query->where('type_img', '=', 'portada');
+    }])->find($id);
+    
     return view('public.detalleActividad', compact('tour', 'destinos', 'tagsDestinos', 'lang', 'langInfo'));
   }
 
-  public function blog(Request $request,string $lang )
+  public function blog(Request $request, string $lang)
   {
     //
-    $langInfo = $request->attributes->all(); 
-    $blogs = Blog::where('status', '=', 1)->where('visible', '=', 1)->where('langs','=',$lang)->orderByDesc('created_at')->limit(3)->get();
-    $blogsAll = Blog::where('status', '=', 1)->where('visible', '=', 1)->where('langs','=',$lang)->orderByDesc('created_at')->paginate(6);
+    $langInfo = $request->attributes->all();
+    $blogs = Blog::where('status', '=', 1)->where('visible', '=', 1)->where('langs', '=', $lang)->orderByDesc('created_at')->limit(3)->get();
+    $blogsAll = Blog::where('status', '=', 1)->where('visible', '=', 1)->where('langs', '=', $lang)->orderByDesc('created_at')->paginate(6);
 
 
     return view('public.blog', compact('blogs', 'blogsAll', 'lang', 'langInfo'));
   }
 
-  public function post(Request $request,string $lang , string $id)
+  public function post(Request $request, string $lang, string $id)
   {
     $blog = Blog::find($id);
     $blogsAll = Blog::all();
@@ -567,10 +572,11 @@ class IndexController extends Controller
     }
   }
 
-  public function guardarUserNewsLetter(Request $request){
+  public function guardarUserNewsLetter(Request $request)
+  {
 
     NewsletterSubscriber::create($request->all());
-    $data= $request->all(); 
+    $data = $request->all();
     $data['nombre'] = '';
     $this->envioCorreo($data);
     return response()->json(['message' => 'Newsletter guardado ']);

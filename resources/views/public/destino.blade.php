@@ -82,9 +82,13 @@
     <section>
       <div class="gap-10 w-11/12 mx-auto">
         <div class="flex flex-row justify-between items-center my-16 gap-5">
-          <h2 class="font-acehSemibold text-text32 md:text-text64 leading-none md:leading-tight text-left text-[#141841]">
-            {{ $langInfo['lang']['destino']['explorar'] }} {{ $tipoCategoria }}
-          </h2>
+          @if (count($destino))
+            <h2
+              class="font-acehSemibold text-text32 md:text-text64 leading-none md:leading-tight text-left text-[#141841]">
+              {{ $langInfo['lang']['destino']['explorar'] }} {{ $tipoCategoria }}
+            </h2>
+          @endif
+
 
           <!-- --------- modal -->
           {{-- <section class="modal-destino z-[100]">
@@ -509,9 +513,12 @@
 
     <section>
       <div class="w-11/12 mx-auto mt-16">
-        <h2 class="font-acehSemibold text-[40px] md:text-[64px] leading-none md:leading-tight text-left text-[#141841]">
-          {{ $langInfo['lang']['destino']['all'] }}
-        </h2>
+        @if (count($destino) > 0)
+          <h2 class="font-acehSemibold text-[40px] md:text-[64px] leading-none md:leading-tight text-left text-[#141841]">
+            {{ $langInfo['lang']['destino']['all'] }}
+          </h2>
+        @endif
+
 
         <div class="flex flex-col md:flex-row md:justify-between md:items-center">
           <div class="flex gap-10 py-10 justify-between">
@@ -950,9 +957,12 @@
               </div>
             </div> --}}
           </div>
-          <p class="font-acehSemibold text-text18 md:text-text22 hidden md:block text-[#0F1B2C]">
-            {{ count($tours) }} Tours en {{ count($destino) }} Destinos
-          </p>
+          @if (count($destino))
+            <p class="font-acehSemibold text-text18 md:text-text22 hidden md:block text-[#0F1B2C]">
+              {{ count($tours) }} Tours en {{ count($destino) }} Destinos
+            </p>
+          @endif
+
         </div>
       </div>
 
@@ -1004,15 +1014,15 @@
               <div class="flex justify-between items-center ">
                 <div>
                   <div class="flex gap-2 py-2">
-                    <img src="./images/svg/start.svg" alt="estrella">
+                    {{-- <img src="./images/svg/start.svg" alt="estrella">
                     <img src="./images/svg/start.svg" alt="estrella">
                     <img src="./images/svg/start.svg" alt="estrella">
                     <img src="./images/svg/start_sin_color.svg" alt="estrella">
-                    <img src="./images/svg/start_sin_color.svg" alt="estrella">
+                    <img src="./images/svg/start_sin_color.svg" alt="estrella"> --}}
                   </div>
                   <p class="font-acehSemibold text-text28 md:text-text32 text-[#0F1B2C]">
-                    2,343
-                    <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
+                    {{-- 2,343
+                    <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span> --}}
                   </p>
 
                 </div>

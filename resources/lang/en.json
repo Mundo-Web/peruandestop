@@ -14,6 +14,10 @@
       "it": "Italian"
     }
   },
+  "slider": {
+    "inputSearch": "What will be your next destination?",
+    "btnSearch": "Search"
+  },
   "section1": {
     "one": {
       "title": "Integer quis En",
@@ -36,11 +40,14 @@
     "blogs": "Our blog and articles",
     "blogText": "en Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius    laudantium autem dolor, harum a excepturi placeat commodi sapiente    labore quia repellat velit",
     "blogSeemores": "Se more Post",
-    "detailBlog": "See details"
+    "detailBlog": "See details",
+    "Opiniones": "Comments"
   },
   "actividad": {
     "ver": "See Tour",
-    "all": "See more destinations"
+    "all": "See more destinations",
+    "PorPersona": "Per person",
+    "horas": "Hours"
   },
   "detallesActividad": {
     "btnGaleria": "See Galerie",
@@ -89,5 +96,19 @@
     "title": "Software Developers World",
     "summary": "We are a company that develops software to make your life easier. Try our services and/or products that are for you.",
     "button": "View Products"
+  },
+  "footer": {
+    "menu": "Menu",
+    "home": "Home",
+    "destino": "Destination",
+    "blog": "Blog",
+    "paquetes": "Packages",
+    "contact": "Contact Us",
+    "politicas": "Policies",
+    "politicasP": "Privacy Policies",
+    "terms": "Terms and Conditions",
+    "libroR": "Complaints Book",
+    "asistencia_agencias": "Agency Assistance",
+    "paymentMethods": "Payment Methods"
   }
 }

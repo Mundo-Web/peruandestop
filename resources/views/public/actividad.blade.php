@@ -1090,7 +1090,7 @@
               <div class="overflow-hidden rounded-2xl">
                 <div class="img-container ">
                   <img src="{{ asset($item->imagen) }}" alt=""
-                    class=" object-cover w-[800px] h-[300px] rounded-2xl shadow-lg " />
+                    class=" object-cover  h-[300px] rounded-2xl shadow-lg " style="  width: 800px;" />
                 </div>
               </div>
 
@@ -1116,7 +1116,8 @@
                     </div>
                     <div class="flex gap-2 items-center">
                       <img src="{{ asset('images/svg/hora.svg') }}" alt="hora" />
-                      <p class="font-acehMedium text-text16 md:text-text20">4 horas</p>
+                      <p class="font-acehMedium text-text16 md:text-text20">4
+                        {{ $langInfo['lang']['actividad']['horas'] }}</p>
                     </div>
                   </div>
                 </div>
@@ -1124,7 +1125,8 @@
                 <div class="flex flex-col gap-5 md:flex-row justify-between items-start md:items-center ">
                   <p class="font-acehbold text-text40 md:text-text44">
                     {{ $item->precio }} US$
-                    <span class="block font-acehMedium text-text16 md:text-text20">Por persona</span>
+                    <span
+                      class="block font-acehMedium text-text16 md:text-text20">{{ $langInfo['lang']['actividad']['PorPersona'] }}</span>
                   </p>
                   <a href="{{ url($langInfo['selected'] . '/detalleActividad') . '/' . $item->id }}"
                     class="font-acehSemibold text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">

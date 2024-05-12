@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\Blog;
 use App\Models\General;
+use App\Models\Langs;
 use App\Models\Message;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
@@ -34,6 +36,23 @@ class AppServiceProvider extends ServiceProvider
             $mensajes = Message::where('is_read', '!=', 1 )->where('status', '!=', 0)->count(); // Suponiendo que tienes un modelo Footer y un método footerData() en él
             // Pasar los datos a la vista
             $view->with('mensajes', $mensajes);
+        });
+        View::composer('components.public.header', function ($view) {
+            // Obtener los datos del footer
+            $langs = Langs::all() ;
+            $blogs =  Blog::all()->count();
+            // Pasar los datos a la vista
+            $view->with([
+                'langs' => $langs,
+                'blogs' => $blogs
+            
+            ]);
+        });
+        View::composer('components.public.footer', function ($view) {
+            // Obtener los datos del footer
+            $langs = Langs::all() ;  // Suponiendo que tienes un modelo Footer y un método footerData() en él
+            // Pasar los datos a la vista
+            $view->with('langs', $langs);
         });
     }
 }
