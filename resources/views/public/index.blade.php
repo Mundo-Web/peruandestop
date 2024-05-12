@@ -25,9 +25,9 @@
     }
 
     /* @font-face {
-                                                                                                                                                                                      font-family: "acehSemibold";
-                                                                                                                                                                                      src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
-                                                                                                                                                                                      }  */
+                                                                                                                                                                                                  font-family: "acehSemibold";
+                                                                                                                                                                                                  src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
+                                                                                                                                                                                                  }  */
 
     .bg_header_fondo {
       background-image: url({{ asset('images/img/header_fondo.png') }});
@@ -238,15 +238,19 @@
 
               <div class="image__effect-content flex justify-around text-center gap-5">
                 <div class="text-white text-center">
-                  <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
-                  <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
+                  {{-- <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
+                  <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span> --}}
+
                 </div>
                 <div class="text-white text-center">
-                  <span class="block font-acehSemibold text-text28 xl:text-text34">23,534</span>
-                  <span class="block font-acehMedium text-text12 xl:text-text18">Tickets vendidos</span>
+                  <p
+                    class=" items-center text-center font-acehSemibold text-text24 md:text-text40 leading-none md:leading-tight">
+                    {{ $destino->productos->count() }}
+                    <span class="font-acehMedium text-text12 md:text-text18 block my-2">Tours</span>
+                  </p>
                 </div>
                 <div class="text-white text-center">
-                  <span class="block font-acehSemibold text-text28 xl:text-text34">9,0/10</span>
+                  <span class="block font-acehSemibold text-text28 xl:text-text34">10/10</span>
                   <span class="block font-acehMedium text-text12 xl:text-text18">Valoraciones</span>
                 </div>
               </div>
@@ -263,14 +267,15 @@
                 <img src="./images/svg/start.svg" alt="estrella" />
                 <img src="./images/svg/start.svg" alt="estrella" />
                 <img src="./images/svg/start.svg" alt="estrella" />
-                <img src="./images/svg/start_sin_color.svg" alt="estrella" />
-                <img src="./images/svg/start_sin_color.svg" alt="estrella" />
+                <img src="./images/svg/start.svg" alt="estrella" />
+                <img src="./images/svg/start.svg" alt="estrella" />
               </div>
 
               <div class="flex justify-between items-center">
                 <p class="font-acehSemibold text-text28 md:text-text32">
                   2,343
-                  <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
+                  <span
+                    class="font-acehMedium text-text16 md:text-text20">{{ $langInfo['lang']['section2']['Opiniones'] }}</span>
                 </p>
                 <a href="{{ url($langInfo['selected'] . '/actividad/' . $destino->id) }}"
                   class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">{{ $langInfo['lang']['section2']['btn'] }}</a>

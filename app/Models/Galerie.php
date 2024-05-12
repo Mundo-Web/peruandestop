@@ -13,7 +13,8 @@ class Galerie extends Model
         'valor',
         'descripcion',
         'color',
-        'imagen'
+        'imagen', 
+        'type_img'
     ];
 
     public function galeria()

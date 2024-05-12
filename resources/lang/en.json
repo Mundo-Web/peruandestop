@@ -40,11 +40,14 @@
     "blogs": "Our blog and articles",
     "blogText": "en Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius    laudantium autem dolor, harum a excepturi placeat commodi sapiente    labore quia repellat velit",
     "blogSeemores": "Se more Post",
-    "detailBlog": "See details"
+    "detailBlog": "See details",
+    "Opiniones": "Comments"
   },
   "actividad": {
     "ver": "See Tour",
-    "all": "See more destinations"
+    "all": "See more destinations",
+    "PorPersona": "Per person",
+    "horas": "Hours"
   },
   "detallesActividad": {
     "btnGaleria": "See Galerie",

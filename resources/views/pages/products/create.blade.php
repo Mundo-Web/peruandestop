@@ -666,11 +666,24 @@
 
                 <div class="md:col-span-5 mt-2">
                   <section class="scroll-section overflow-y-auto" id="uploadedFiles">
-                    <h2 class="small-title">Uploaded Files</h2>
+                    <h2 class="small-title">Uploaded Files Portada</h2>
                     <div class="card mb-5">
                       <div class="card-body">
 
                         <div class="dropzone border-gray-300  " id="dropzoneServerFiles"></div>
+
+                      </div>
+                    </div>
+                  </section>
+                </div>
+
+                <div class="md:col-span-5 mt-2">
+                  <section class="scroll-section overflow-y-auto" id="uploadedFilesGallery">
+                    <h2 class="small-title">Uploaded Files to Gallery</h2>
+                    <div class="card mb-5">
+                      <div class="card-body">
+
+                        <div class="dropzone border-gray-300  " id="dropzoneServerFilesGallery"></div>
 
                       </div>
                     </div>

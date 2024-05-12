@@ -208,16 +208,39 @@
                         <option value="{{ $item->code }}">{{ $item->description }}</option>
                       @endif
                     @endforeach
-
-
-
-
                   </select>
                 </div>
+
+                <div class="md:col-span-5">
+                  <label for="costo_x_art">Destino</label>
+                  <div class="relative mb-2  mt-2">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                      <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" width="512" height="512" x="0" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                      </svg>
+                    </div>
+                    <select name="categoria_id" id="categoriaSelect"
+                      class="mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                      <option value="">Seleccionar Destino </option>
+                      @foreach ($categoria as $item)
+                        @if ($item->id == $product->categoria_id)
+                          <option selected value="{{ $item->id }}">{{ $item->description }}</option>
+                        @else
+                          <option value="{{ $item->id }}">{{ $item->name }}</option>
+                        @endif
+                      @endforeach
+
+                    </select>
+                  </div>
+                </div>
+
                 <div class="md:col-span-5">
                   <label for="tags_id">Tags</label>
                   <select id="tags_id" name="tags_id[]" multiple
-                    class="mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    class="mt-1 selectTags bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     @foreach ($allTags as $tag)
                       <option value="{{ $tag->id }}"
                         {{ in_array($tag->id, $product->tags->pluck('id')->toArray()) ? 'selected' : '' }}>
@@ -304,46 +327,7 @@
                 </div>
  --}}
 
-                <div class="md:col-span-5">
-                  <label for="producto">Atributos</label>
-                  <div class="flex gap-2 mt-2 relative mb-2 ">
-                    @foreach ($atributos as $item)
-                      <div href="#"
-                        class="w-[300px] !important block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
 
-
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                          {{ $item->titulo }}
-                        </h5>
-                        <p class="font-normal text-gray-700 dark:text-gray-400">
-                          {{ $item->descripcion }}</p>
-                        @foreach ($valorAtributo as $value)
-                          @if ($value->attribute_id == $item->id)
-                            @php
-                              $atributesArray = json_decode($product->atributes, true);
-                              $titulo = strtolower($item->titulo);
-                              $valor = strtolower($value->valor);
-                            @endphp
-                            <div class="flex items-center mb-2">
-                              <input type="checkbox" id="{{ $titulo }}:{{ $valor }}"
-                                name="{{ $titulo }}:{{ $valor }}"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                                @if (is_array($atributesArray) &&
-                                        isset($atributesArray[$titulo]) &&
-                                        in_array(strtolower($valor), $atributesArray[$titulo])) checked @endif>
-                              <label for="{{ $titulo }}:{{ $valor }}"
-                                class="ml-2">{{ $valor }}</label>
-                            </div>
-                          @endif
-                        @endforeach
-                        @if ($item->imagen)
-                          <img src="{{ asset($item->imagen) }}" class="rounded-lg mb-2 w-1/2" alt="Imagen actual">
-                        @endif
-
-                      </div>
-                    @endforeach
-                  </div>
-                </div>
 
               </div>
 
@@ -401,7 +385,7 @@
     let editor = null
     $('document').ready(async function() {
 
-      $('#tags_id').select2()
+      $('.selectTags').select2()
 
       tinymce.init({
         selector: 'textarea#description',

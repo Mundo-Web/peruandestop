@@ -31,7 +31,7 @@ class TagController extends Controller
    */
   public function create()
   {
-    $langs = Langs::all() ; 
+    $langs = Langs::all();
     return view('pages.tags.create', compact('langs'));
   }
 
@@ -64,12 +64,11 @@ class TagController extends Controller
         $this->saveImg($file, $ruta, $nombreImagen);
 
         $data['imagen'] = $ruta . $nombreImagen;
-
       }
       Tag::create($data);
-      
 
-      
+
+
 
 
       return redirect()->route('tags.index')->with('success', 'Etiqueta creada');
@@ -106,7 +105,7 @@ class TagController extends Controller
   public function edit(Tag $tag)
   {
     $idtag = $tag->id;
-    $langs = Langs::all() ; 
+    $langs = Langs::all();
     $tags = Tag::where('id', $idtag)->first();
     return view('pages.tags.edit', compact('tags', "langs"));
   }
@@ -117,17 +116,21 @@ class TagController extends Controller
   public function update(Request $request, $id)
   {
 
+
     $tag = Tag::where('id', $id)->first();
     $data = $request->all();
+
     try {
       /*  $tags->name = $request->name;
         $tags->description = $request->description;
         $tags->type = $request->type;
         $tags->color = $request->color; */
 
-      
+
 
       if ($request->hasFile("imagen")) {
+
+       
         $file = $request->file('imagen');
         $nombreImagen = Str::random(10) . '_' . $file->getClientOriginalName();
 
@@ -140,11 +143,12 @@ class TagController extends Controller
 
         $this->saveImg($file, $ruta, $nombreImagen);
 
-        $tag->imagen= $ruta . $nombreImagen;
-
+        $tag->imagen = $ruta . $nombreImagen;
+        $data['imagen'] = $ruta . $nombreImagen;
       }
-      
-      $tag->update($data); 
+
+     
+      $tag->update($data);
 
 
       return redirect()->route('tags.index')->with('success', 'Etiqueta creada');
@@ -152,7 +156,6 @@ class TagController extends Controller
       //throw $th;
       dump($th);
     }
-   
   }
 
   /**
