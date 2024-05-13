@@ -738,81 +738,129 @@
 
 
     <script>
-      var tinycontent = `<div class="mt-8 md:mt-16 border-b-2 border-[#F1F1F1] aos-init aos-animate" data-aos="fade-up" data-aos-offset="150">
-                        <h2 class="font-semibold text-[32px] md:text-[40px] text-[#0F1B2C] mb-5">Descripci&oacute;n</h2>
-                        <p class="font-normal text-[18px] text-[#495560]">Donec tincidunt turpis lacinia nulla ultricies, quis sagittis nisl feugiat. Ut lobortis dui et risus vulputate, ut placerat felis rhoncus. Proin iaculis tellus massa, non mattis nulla malesuada ultrices. Nam a lorem ut dui ultrices efficitur vitae et metus. Mauris quis vulputate orci, ac hendrerit purus. Nunc sagittis lacus sem. Nam varius purus et urna vehicula, eget dictum magna efficitur. Vestibulum facilisis sapien id dolor suscipit malesuada. Cras tristique odio ipsum. Morbi at accumsan lacus. Phasellus efficitur magna eget orci posuere, at pretium metus ultricies. Proin sollicitudin at est non imperdiet. Morbi rhoncus tortor et sapien hendrerit, vel luctus ex feugiat. Ut leo dui, sollicitudin eu leo quis, commodo eleifend lectus.</p>
-                        </div>
-                        <div class="border-b-2 border-[#F1F1F1] aos-init aos-animate" data-aos="fade-up" data-aos-offset="150">
-                        <div class="mt-8 md:mt-16">
-                        <h2 class="font-semibold text-[32px] md:text-[40px] text-[#0F1B2C]">Actividad</h2>
-                        <p class="font-semibold text-[20px] md:text-[24px] text-[#0F1B2C]">Qu&eacute; har&aacute;s</p>
-                        </div>
-                        <div class="font-normal text-[18px] text-[#495560] my-5">
-                        <p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet conse, adipisicing elit fsfsd fsfs dfsf dsfd sdfsdfsdf.</p>
-                        <p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                        <p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                        <p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                        <p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                        </div>
-                        </div>
-                        <div class="border-b-2 border-[#F1F1F1] mt-8 md:mt-16 aos-init aos-animate" data-aos="fade-up" data-aos-offset="150">
-                        <div>
-                        <h2 class="font-semibold text-[32px] md:text-[40px] text-[#0F1B2C] leading-none md:leading-tight">Que est&aacute; incluido/no incluido</h2>
-                        </div>
-                        <div class="flex gap-5 md:gap-10 flex-col md:flex-row">
-                        <div class="font-normal text-[18px] text-[#495560] my-5 flex flex-col gap-1">
-                        <p class="font-semibold text-[20px] md:text-[24px] text-[#0F1B2C]">Incluido</p>
-                        <p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                        <p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                        <p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                        <p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                        <p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                        </div>
-                        <div class="font-normal text-[18px] text-[#495560] my-5 flex flex-col gap-1">
-                        <p class="font-semibold text-[20px] md:text-[24px] text-[#0F1B2C]">No incluido</p>
-                        <p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                        <p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                        <p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                        <p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                        <p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                        </div>
-                        </div>
-                        </div>
-                        <div class="border-b-2 border-[#F1F1F1] mt-8 md:mt-16 aos-init aos-animate" data-aos="fade-up" data-aos-offset="150">
-                        <div class="">
-                        <h2 class="font-semibold text-[32px] md:text-[40px] text-[#0F1B2C]">Seguridad</h2>
-                        <p class="font-semibold text-[20px] md:text-[24px] text-[#0F1B2C]">Precauciones de salud</p>
-                        </div>
-                        <div class="font-normal text-[18px] text-[#495560] my-5">
-                        <p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Se proporciona todo el equipo de protecci&oacute;n necesario.</p>
-                        <p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Todas las &aacute;reas que tocan los clientes se limpian con frecuencia.</p>
-                        <p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Debes mantener la distancia social mientras est&eacute;s en los veh&iacute;culos.</p>
-                        <p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Se limita el n&uacute;mero de visitantes para reducir aglomeraciones.</p>
-                        </div>
-                        </div>
-                        <div class="border-b-2 border-[#F1F1F1] mt-8 md:mt-16 aos-init aos-animate" data-aos="fade-up" data-aos-offset="150">
-                        <h2 class="font-semibold text-[32px] md:text-[40px] text-[#0F1B2C]">Detalles</h2>
-                        <div class="flex flex-col md:flex-row gap-5 md:gap-32 my-5">
-                        <div>
-                        <h3 class="font-semibold tex[24px] text-[#0F1B2C] my-2">Idioma</h3>
-                        <p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle"><span class="font-normal text-[18px] text-[#495560]">Espa&ntilde;ol</span></p>
-                        <p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle"><span class="font-normal text-[18px] text-[#495560]">Ingl&eacute;s</span></p>
-                        <p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle"><span class="font-normal text-[18px] text-[#495560]">Franc&eacute;s</span></p>
-                        </div>
-                        <div>
-                        <h3 class="font-semibold tex[24px] text-[#0F1B2C] my-2">Duraci&oacute;n</h3>
-                        <p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle"><span class="font-normal text-[18px] text-[#495560]">2 horas</span></p>
-                        </div>
-                        <div>
-                        <h3 class="font-semibold tex[24px] text-[#0F1B2C] my-2">N&uacute;mero de personas</h3>
-                        <p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle"><span class="font-normal text-[18px] text-[#495560]">7 personas</span></p>
-                        </div>
-                        </div>
-                        <div class="mt-5">
-                        <h3 class="font-semibold text-[24px] text-[#495560] my-5">Direcci&oacute;n del punto de encuentro</h3>
-                        <p class="flex gap-5 items-start my-5"><img class="mt-2" src="https://peruandestoptest.mundoweb.pe/images/svg/circle.svg" alt="circle"><span class="font-normal text-[18px] text-[#495560]">In cursus molestie dui, eget interdum nisi ullamcorper nec. Vestibulum sed gravida nulla, vel posuere diam. Nullam nisi dolor, malesuada sed felis sit amet, laoreet eleifend neque. Duis ex nunc, vehicula non posuere sed, tristique id erat. In tincidunt euismod pretium. Cras eu tristique neque. Phasellus finibus diam vel odio accumsan pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus.</span></p>
-                        </div>
-                        </div>
+      var tinycontent = `<div class="flex gap-5 flex-col md:flex-row md:gap-8 lg:gap-16 p-5 bg-[#FCFCFC]">
+<div class="flex flex-col gap-5 md:gap-10">
+<div class="flex items-start gap-5"><img class="mt-1" src="https://peruandestoptest.mundoweb.pe/images/svg/cancel.svg" alt="cancelar"><br>
+<div>
+<h2 class="font-semibold text-[20px] text-[#0F1B2C]">Cancelaci&oacute;n gratis</h2>
+<p class="font-medium text-[16px] text-[#495560]">Cancele con hasta 24 horas de anticipaci&oacute;n para recibir un reembolso.</p>
+</div>
+</div>
+<div class="flex items-start gap-5"><img class="mt-1" src="https://peruandestoptest.mundoweb.pe/images/svg/venta_billetes.svg" alt="venta billetes"><br>
+<div>
+<h2 class="font-semibold text-[20px] text-[#0F1B2C]">Venta de billetes m&oacute;viles</h2>
+<p class="font-medium text-[16px] text-[#495560]">Utilice su tel&eacute;fono o imprima su bono</p>
+</div>
+</div>
+<div class="flex items-start gap-5"><img class="mt-1" src="https://peruandestoptest.mundoweb.pe/images/svg/confirmacion.svg" alt="confirmacion instantanea"><br><br>
+<div>
+<h2 class="font-semibold text-[20px] text-[#0F1B2C]">Confirmaci&oacute;n ninstant&aacute;nea</h2>
+<p class="font-medium text-[16px] text-[#495560]">&iexcl;No espres la confirmaci&oacute;n!</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-5 md:gap-10">
+<div class="flex items-start gap-5"><img class="mt-1" src="https://peruandestoptest.mundoweb.pe/images/svg/precauciones.svg" alt="precauciones"><br>
+<div>
+<h2 class="font-semibold text-[20px] text-[#0F1B2C]">Precauciones de salud</h2>
+<p class="font-medium text-[16px] text-[#495560]">Se aplican medidas especiales de salud y seguridad. Aprende m&aacute;s.</p>
+</div>
+</div>
+<div class="flex items-start gap-5"><img class="mt-1" src="https://peruandestoptest.mundoweb.pe/images/svg/duracion.svg" alt="duracion de horas"><br>
+<div>
+<h2 class="font-semibold text-[20px] text-[#0F1B2C]">Duraci&oacute;n 3,5 horas</h2>
+<p class="font-medium text-[16px] text-[#495560]">Consulta disponibilidad para ver horarios de inicio.</p>
+</div>
+</div>
+<div class="flex items-start gap-5"><img class="mt-1" src="https://peruandestoptest.mundoweb.pe/images/svg/guia.svg" alt="guia turistico"><br>
+<div>
+<h2 class="font-semibold text-[20px] text-[#0F1B2C]">Gu&iacute;a tur&iacute;stico en vivo en ingl&eacute;s</h2>
+<p class="font-medium text-[16px] text-[#495560]">Ingl&eacute;s</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 md:mt-16 border-b-2 border-[#F1F1F1] aos-init aos-animate" data-aos="fade-up" data-aos-offset="150">
+<div class="flex flex-col gap-5 md:gap-10">
+<div class="flex items-start gap-5">
+<div>&nbsp;</div>
+</div>
+</div>
+<div class="flex flex-col gap-5 md:gap-10">&nbsp;</div>
+<h2 class="font-semibold text-[32px] md:text-[40px] text-[#0F1B2C] mb-5">Descripci&oacute;n</h2>
+<p class="font-normal text-[18px] text-[#495560]">Donec tincidunt turpis lacinia nulla ultricies, quis sagittis nisl feugiat. Ut lobortis dui et risus vulputate, ut placerat felis rhoncus. Proin iaculis tellus massa, non mattis nulla malesuada ultrices. Nam a lorem ut dui ultrices efficitur vitae et metus. Mauris quis vulputate orci, ac hendrerit purus. Nunc sagittis lacus sem. Nam varius purus et urna vehicula, eget dictum magna efficitur. Vestibulum facilisis sapien id dolor suscipit malesuada. Cras tristique odio ipsum. Morbi at accumsan lacus. Phasellus efficitur magna eget orci posuere, at pretium metus ultricies. Proin sollicitudin at est non imperdiet. Morbi rhoncus tortor et sapien hendrerit, vel luctus ex feugiat. Ut leo dui, sollicitudin eu leo quis, commodo eleifend lectus.</p>
+</div>
+<div class="border-b-2 border-[#F1F1F1] aos-init aos-animate" data-aos="fade-up" data-aos-offset="150">
+<div class="mt-8 md:mt-16">
+<h2 class="font-semibold text-[32px] md:text-[40px] text-[#0F1B2C]">Actividad</h2>
+<p class="font-semibold text-[20px] md:text-[24px] text-[#0F1B2C]">Qu&eacute; har&aacute;s</p>
+</div>
+<div class="font-normal text-[18px] text-[#495560] my-5">
+<p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet conse, adipisicing elit fsfsd fsfs dfsf dsfd sdfsdfsdf.</p>
+<p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+<p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+<p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+<p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+</div>
+</div>
+<div class="border-b-2 border-[#F1F1F1] mt-8 md:mt-16 aos-init aos-animate" data-aos="fade-up" data-aos-offset="150">
+<div>
+<h2 class="font-semibold text-[32px] md:text-[40px] text-[#0F1B2C] leading-none md:leading-tight">Que est&aacute; incluido/no incluido</h2>
+</div>
+<div class="flex gap-5 md:gap-10 flex-col md:flex-row">
+<div class="font-normal text-[18px] text-[#495560] my-5 flex flex-col gap-1">
+<p class="font-semibold text-[20px] md:text-[24px] text-[#0F1B2C]">Incluido</p>
+<p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+<p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+<p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+<p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+<p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+</div>
+<div class="font-normal text-[18px] text-[#495560] my-5 flex flex-col gap-1">
+<p class="font-semibold text-[20px] md:text-[24px] text-[#0F1B2C]">No incluido</p>
+<p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+<p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+<p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+<p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+<p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+</div>
+</div>
+</div>
+<div class="border-b-2 border-[#F1F1F1] mt-8 md:mt-16 aos-init aos-animate" data-aos="fade-up" data-aos-offset="150">
+<div class="">
+<h2 class="font-semibold text-[32px] md:text-[40px] text-[#0F1B2C]">Seguridad</h2>
+<p class="font-semibold text-[20px] md:text-[24px] text-[#0F1B2C]">Precauciones de salud</p>
+</div>
+<div class="font-normal text-[18px] text-[#495560] my-5">
+<p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Se proporciona todo el equipo de protecci&oacute;n necesario.</p>
+<p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Todas las &aacute;reas que tocan los clientes se limpian con frecuencia.</p>
+<p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Debes mantener la distancia social mientras est&eacute;s en los veh&iacute;culos.</p>
+<p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle">Se limita el n&uacute;mero de visitantes para reducir aglomeraciones.</p>
+</div>
+</div>
+<div class="border-b-2 border-[#F1F1F1] mt-8 md:mt-16 aos-init aos-animate" data-aos="fade-up" data-aos-offset="150">
+<h2 class="font-semibold text-[32px] md:text-[40px] text-[#0F1B2C]">Detalles</h2>
+<div class="flex flex-col md:flex-row gap-5 md:gap-32 my-5">
+<div>
+<h3 class="font-semibold tex[24px] text-[#0F1B2C] my-2">Idioma</h3>
+<p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle"><span class="font-normal text-[18px] text-[#495560]">Espa&ntilde;ol</span></p>
+<p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle"><span class="font-normal text-[18px] text-[#495560]">Ingl&eacute;s</span></p>
+<p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle"><span class="font-normal text-[18px] text-[#495560]">Franc&eacute;s</span></p>
+</div>
+<div>
+<h3 class="font-semibold tex[24px] text-[#0F1B2C] my-2">Duraci&oacute;n</h3>
+<p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle"><span class="font-normal text-[18px] text-[#495560]">2 horas</span></p>
+</div>
+<div>
+<h3 class="font-semibold tex[24px] text-[#0F1B2C] my-2">N&uacute;mero de personas</h3>
+<p class="flex gap-5 items-center"><img src="https://peruandestoptest.mundoweb.pe/images//svg/circle.svg" alt="circle"><span class="font-normal text-[18px] text-[#495560]">7 personas</span></p>
+</div>
+</div>
+<div class="mt-5">
+<h3 class="font-semibold text-[24px] text-[#495560] my-5">Direcci&oacute;n del punto de encuentro</h3>
+<p class="flex gap-5 items-start my-5"><img class="mt-2" src="https://peruandestoptest.mundoweb.pe/images/svg/circle.svg" alt="circle"><span class="font-normal text-[18px] text-[#495560]">In cursus molestie dui, eget interdum nisi ullamcorper nec. Vestibulum sed gravida nulla, vel posuere diam. Nullam nisi dolor, malesuada sed felis sit amet, laoreet eleifend neque. Duis ex nunc, vehicula non posuere sed, tristique id erat. In tincidunt euismod pretium. Cras eu tristique neque. Phasellus finibus diam vel odio accumsan pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus.</span></p>
+</div>
+</div>
                       `
 
       function capitalizeFirstLetter(string) {
