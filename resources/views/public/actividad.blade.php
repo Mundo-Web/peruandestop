@@ -78,290 +78,446 @@
                     <!--text-[26px] md:text-[32px]  -->
                     <section class="modal-mostrar z-[100]">
                         <div class="modal__mostrar-info">
-                            <div class="overflow-y-scroll h-[500px] md:h-[700px] actividades_scroll pr-4">
-                                <div class="flex justify-between items-center w-full">
-                                    <h2 class="font-acehSemibold  text-[36px] md:text-[48px] leading-none">
-                                        Explorar Actividades
-                                    </h2>
-                                    <a class="modal__close-mostrar">
-                                        <img src="./images/svg/close.svg" alt="close" />
-                                    </a>
-                                </div>
-
-                                <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5">
-                                    <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
-                                        Categorías
-                                    </h3>
-                                    <div class="flex flex-col gap-5">
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_1.png" alt="monumentos historicos" />
-                                            </div>
-
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Visita
-                                                a monumentos históricos</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_2.png" alt="tour gastronomico" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Tour
-                                                gastronómico</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_3.png" alt="recorrido en bicicleta" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Recorrido
-                                                en bicicleta</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_4.png" alt="excursion" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Excursión
-                                                en senderismo</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_5.png" alt="tour de vinos" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Tour
-                                                de vinos</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_6.png" alt="paseo en barco" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Paseo
-                                                en barco</a>
-                                        </div>
-
-                                        <a href="#"
-                                            class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
-                                            Mostrar Más Categorías
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5">
-                                    <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
-                                        Intereses del viaje
-                                    </h3>
-                                    <div class="flex flex-col gap-5">
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_1.png" alt="monumentos historicos" />
-                                            </div>
-
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Excursión
-                                                en senderismo</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_2.png" alt="tour gastronomico" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Visita
-                                                a monumentos históricos</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_3.png" alt="recorrido en bicicleta" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Paseo
-                                                en barco</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_4.png" alt="excursion" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Tour
-                                                gastronómico</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_5.png" alt="tour de vinos" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Tour
-                                                de vinos</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_6.png" alt="paseo en barco" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Recorrido
-                                                en bicicleta</a>
-                                        </div>
-
-                                        <a href="#"
-                                            class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
-                                            Mostrar Más Intereses
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5">
-                                    <h3 class="font-acehSemibold text-text26 md:text-text32 my-5">
-                                        Atracciones para explorar
-                                    </h3>
-                                    <div class="flex flex-col gap-5">
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_1.png" alt="monumentos historicos" />
-                                            </div>
-
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Excursión
-                                                en senderismo</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_2.png" alt="tour gastronomico" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Visita
-                                                a monumentos históricos</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_3.png" alt="recorrido en bicicleta" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Paseo
-                                                en barco</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_4.png" alt="excursion" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Tour
-                                                gastronómico</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_5.png" alt="tour de vinos" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Tour
-                                                de vinos</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_6.png" alt="paseo en barco" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Recorrido
-                                                en bicicleta</a>
-                                        </div>
-
-                                        <a href="#"
-                                            class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
-                                            Mostrar Más Atracciones
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="w-full text-[#0F1B2C]  py-5">
-                                    <h3
-                                        class="font-acehSemibold text-text26 md:text-text32 my-5 leading-none md:leading-tight">
-                                        Actividades para todo tipo de viajero
-                                    </h3>
-                                    <div class="flex flex-col gap-5">
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_1.png" alt="monumentos historicos" />
-                                            </div>
-
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Visita
-                                                a castillos</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_2.png" alt="tour gastronomico" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Visita
-                                                a monumentos históricos</a>
-                                        </div>
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_3.png" alt="recorrido en bicicleta" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Hitos
-                                                y monumentos</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_4.png" alt="excursion" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Aventura</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_5.png" alt="tour de vinos" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Cocina</a>
-                                        </div>
-
-                                        <div class="flex items-center justify-start gap-5">
-                                            <div>
-                                                <img src="./images/img/categoria_6.png" alt="paseo en barco" />
-                                            </div>
-                                            <a href="#"
-                                                class="font-acehRegular text-text18 md:text-text22 hover:text-colorLetter hover:font-acehbold md:duration-100">Recorrido
-                                                en bicicleta</a>
-                                        </div>
-
-                                        <a href="#"
-                                            class="text-colorLetter font-acehbold text-text20 md:text-text24 hover:text-blue-900 md:duration-500 min-w-[90px]">
-                                            Mostrar Más Actividades
-                                        </a>
-                                    </div>
-                                </div>
+                          <div
+                            class="overflow-y-scroll h-[400px] actividades_scroll pr-4"
+                          >
+                            <div class="flex justify-between items-center w-full">
+                              <h2
+                                class="font-semibold text-[36px] md:text-[48px] leading-none"
+                              >
+                                Explorar Actividades
+                              </h2>
+                              <a class="modal__close-mostrar">
+                                <img src="./images/svg/close.svg" alt="close" />
+                              </a>
                             </div>
+          
+                            <div
+                              class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5"
+                            >
+                              <h3 class="font-semibold text-[26px] md:text-[32px] my-5">
+                                Categorías
+                              </h3>
+                              <div class="flex flex-col gap-5">
+                                <div class="flex items-center justify-start gap-5">
+                                  <div>
+                                    <img
+                                      src="./images/img/categoria_1.png"
+                                      alt="monumentos historicos"
+                                    />
+                                  </div>
+          
+                                  <a
+                                    href="#"
+                                    class="font-normal text-[18px] hover:text-colorLetter hover:font-bold md:duration-100"
+                                    >Visita a monumentos históricos</a
+                                  >
+                                </div>
+                                <div class="flex items-center justify-start gap-5">
+                                  <div>
+                                    <img
+                                      src="./images/img/categoria_2.png"
+                                      alt="tour gastronomico"
+                                    />
+                                  </div>
+                                  <a
+                                    href="#"
+                                    class="font-normal text-[18px] hover:text-colorLetter hover:font-bold md:duration-100"
+                                    >Tour gastronómico</a
+                                  >
+                                </div>
+                                <div class="flex items-center justify-start gap-5">
+                                  <div>
+                                    <img
+                                      src="./images/img/categoria_3.png"
+                                      alt="recorrido en bicicleta"
+                                    />
+                                  </div>
+                                  <a
+                                    href="#"
+                                    class="font-normal text-[18px] hover:text-colorLetter hover:font-bold md:duration-100"
+                                    >Recorrido en bicicleta</a
+                                  >
+                                </div>
+          
+                                <div class="flex items-center justify-start gap-5">
+                                  <div>
+                                    <img
+                                      src="./images/img/categoria_4.png"
+                                      alt="excursion"
+                                    />
+                                  </div>
+                                  <a
+                                    href="#"
+                                    class="font-normal text-[18px] hover:text-colorLetter hover:font-bold md:duration-100"
+                                    >Excursión en senderismo</a
+                                  >
+                                </div>
+          
+                                <div class="flex items-center justify-start gap-5">
+                                  <div>
+                                    <img
+                                      src="./images/img/categoria_5.png"
+                                      alt="tour de vinos"
+                                    />
+                                  </div>
+                                  <a
+                                    href="#"
+                                    class="font-normal text-[18px] hover:text-colorLetter hover:font-bold md:duration-100"
+                                    >Tour de vinos</a
+                                  >
+                                </div>
+          
+                                <div class="flex items-center justify-start gap-5">
+                                  <div>
+                                    <img
+                                      src="./images/img/categoria_6.png"
+                                      alt="paseo en barco"
+                                    />
+                                  </div>
+                                  <a
+                                    href="#"
+                                    class="font-normal text-[18px] hover:text-colorLetter hover:font-bold md:duration-100"
+                                    >Paseo en barco</a
+                                  >
+                                </div>
+          
+                                <a
+                                  href="#"
+                                  class="text-colorLetter font-bold text-[20px] hover:text-blue-900 md:duration-500 min-w-[90px]"
+                                >
+                                  Mostrar Más Categorías
+                                </a>
+                              </div>
+                            </div>
+          
+                            <div
+                              class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5"
+                            >
+                              <h3 class="font-semibold text-[26px] md:text-[32px] my-5">
+                                Intereses del viaje
+                              </h3>
+                              <div class="flex flex-col gap-5">
+                                <div class="flex items-center justify-start gap-5">
+                                  <div>
+                                    <img
+                                      src="./images/img/categoria_1.png"
+                                      alt="monumentos historicos"
+                                    />
+                                  </div>
+          
+                                  <a
+                                    href="#"
+                                    class="font-normal text-[18px] hover:text-colorLetter hover:font-bold md:duration-100"
+                                    >Excursión en senderismo</a
+                                  >
+                                </div>
+                                <div class="flex items-center justify-start gap-5">
+                                  <div>
+                                    <img
+                                      src="./images/img/categoria_2.png"
+                                      alt="tour gastronomico"
+                                    />
+                                  </div>
+                                  <a
+                                    href="#"
+                                    class="font-normal text-[18px] hover:text-colorLetter hover:font-bold md:duration-100"
+                                    >Visita a monumentos históricos</a
+                                  >
+                                </div>
+                                <div class="flex items-center justify-start gap-5">
+                                  <div>
+                                    <img
+                                      src="./images/img/categoria_3.png"
+                                      alt="recorrido en bicicleta"
+                                    />
+                                  </div>
+                                  <a
+                                    href="#"
+                                    class="font-normal text-[18px] hover:text-colorLetter hover:font-bold md:duration-100"
+                                    >Paseo en barco</a
+                                  >
+                                </div>
+          
+                                <div class="flex items-center justify-start gap-5">
+                                  <div>
+                                    <img
+                                      src="./images/img/categoria_4.png"
+                                      alt="excursion"
+                                    />
+                                  </div>
+                                  <a
+                                    href="#"
+                                    class="font-normal text-[18px] hover:text-colorLetter hover:font-bold md:duration-100"
+                                    >Tour gastronómico</a
+                                  >
+                                </div>
+          
+                                <div class="flex items-center justify-start gap-5">
+                                  <div>
+                                    <img
+                                      src="./images/img/categoria_5.png"
+                                      alt="tour de vinos"
+                                    />
+                                  </div>
+                                  <a
+                                    href="#"
+                                    class="font-normal text-[18px] hover:text-colorLetter hover:font-bold md:duration-100"
+                                    >Tour de vinos</a
+                                  >
+                                </div>
+          
+                                <div class="flex items-center justify-start gap-5">
+                                  <div>
+                                    <img
+                                      src="./images/img/categoria_6.png"
+                                      alt="paseo en barco"
+                                    />
+                                  </div>
+                                  <a
+                                    href="#"
+                                    class="font-normal text-[18px] hover:text-colorLetter hover:font-bold md:duration-100"
+                                    >Recorrido en bicicleta</a
+                                  >
+                                </div>
+          
+                                <a
+                                  href="#"
+                                  class="text-colorLetter font-bold text-[20px] hover:text-blue-900 md:duration-500 min-w-[90px]"
+                                >
+                                  Mostrar Más Intereses
+                                </a>
+                              </div>
+                            </div>
+          
+                            <div
+                              class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5"
+                            >
+                              <h3 class="font-semibold text-[26px] md:text-[32px] my-5">
+                                Atracciones para explorar
+                              </h3>
+                              <div class="flex flex-col gap-5">
+                                <div class="flex items-center justify-start gap-5">
+                                  <div>
+                                    <img
+                                      src="./images/img/categoria_1.png"
+                                      alt="monumentos historicos"
+                                    />
+                                  </div>
+          
+                                  <a
+                                    href="#"
+                                    class="font-normal text-[18px] hover:text-colorLetter hover:font-bold md:duration-100"
+                                    >Excursión en senderismo</a
+                                  >
+                                </div>
+                                <div class="flex items-center justify-start gap-5">
+                                  <div>
+                                    <img
+                                      src="./images/img/categoria_2.png"
+                                      alt="tour gastronomico"
+                                    />
+                                  </div>
+                                  <a
+                                    href="#"
+                                    class="font-normal text-[18px] hover:text-colorLetter hover:font-bold md:duration-100"
+                                    >Visita a monumentos históricos</a
+                                  >
+                                </div>
+                                <div class="flex items-center justify-start gap-5">
+                                  <div>
+                                    <img
+                                      src="./images/img/categoria_3.png"
+                                      alt="recorrido en bicicleta"
+                                    />
+                                  </div>
+                                  <a
+                                    href="#"
+                                    class="font-normal text-[18px] hover:text-colorLetter hover:font-bold md:duration-100"
+                                    >Paseo en barco</a
+                                  >
+                                </div>
+          
+                                <div class="flex items-center justify-start gap-5">
+                                  <div>
+                                    <img
+                                      src="./images/img/categoria_4.png"
+                                      alt="excursion"
+                                    />
+                                  </div>
+                                  <a
+                                    href="#"
+                                    class="font-normal text-[18px] hover:text-colorLetter hover:font-bold md:duration-100"
+                                    >Tour gastronómico</a
+                                  >
+                                </div>
+          
+                                <div class="flex items-center justify-start gap-5">
+                                  <div>
+                                    <img
+                                      src="./images/img/categoria_5.png"
+                                      alt="tour de vinos"
+                                    />
+                                  </div>
+                                  <a
+                                    href="#"
+                                    class="font-normal text-[18px] hover:text-colorLetter hover:font-bold md:duration-100"
+                                    >Tour de vinos</a
+                                  >
+                                </div>
+          
+                                <div class="flex items-center justify-start gap-5">
+                                  <div>
+                                    <img
+                                      src="./images/img/categoria_6.png"
+                                      alt="paseo en barco"
+                                    />
+                                  </div>
+                                  <a
+                                    href="#"
+                                    class="font-normal text-[18px] hover:text-colorLetter hover:font-bold md:duration-100"
+                                    >Recorrido en bicicleta</a
+                                  >
+                                </div>
+          
+                                <a
+                                  href="#"
+                                  class="text-colorLetter font-bold text-[20px] hover:text-blue-900 md:duration-500 min-w-[90px]"
+                                >
+                                  Mostrar Más Atracciones
+                                </a>
+                              </div>
+                            </div>
+          
+                            <div
+                              class="w-full text-[#0F1B2C] border-b-[2px] border-gray-300 py-5"
+                            >
+                              <h3
+                                class="font-semibold text-[26px] md:text-[32px] my-5 leading-none md:leading-tight"
+                              >
+                                Actividades para todo tipo de viajero
+                              </h3>
+                              <div class="flex flex-col gap-5">
+                                <div class="flex items-center justify-start gap-5">
+                                  <div>
+                                    <img
+                                      src="./images/img/categoria_1.png"
+                                      alt="monumentos historicos"
+                                    />
+                                  </div>
+          
+                                  <a
+                                    href="#"
+                                    class="font-normal text-[18px] hover:text-colorLetter hover:font-bold md:duration-100"
+                                    >Visita a castillos</a
+                                  >
+                                </div>
+                                <div class="flex items-center justify-start gap-5">
+                                  <div>
+                                    <img
+                                      src="./images/img/categoria_2.png"
+                                      alt="tour gastronomico"
+                                    />
+                                  </div>
+                                  <a
+                                    href="#"
+                                    class="font-normal text-[18px] hover:text-colorLetter hover:font-bold md:duration-100"
+                                    >Visita a monumentos históricos</a
+                                  >
+                                </div>
+                                <div class="flex items-center justify-start gap-5">
+                                  <div>
+                                    <img
+                                      src="./images/img/categoria_3.png"
+                                      alt="recorrido en bicicleta"
+                                    />
+                                  </div>
+                                  <a
+                                    href="#"
+                                    class="font-normal text-[18px] hover:text-colorLetter hover:font-bold md:duration-100"
+                                    >Hitos y monumentos</a
+                                  >
+                                </div>
+          
+                                <div class="flex items-center justify-start gap-5">
+                                  <div>
+                                    <img
+                                      src="./images/img/categoria_4.png"
+                                      alt="excursion"
+                                    />
+                                  </div>
+                                  <a
+                                    href="#"
+                                    class="font-normal text-[18px] hover:text-colorLetter hover:font-bold md:duration-100"
+                                    >Aventura</a
+                                  >
+                                </div>
+          
+                                <div class="flex items-center justify-start gap-5">
+                                  <div>
+                                    <img
+                                      src="./images/img/categoria_5.png"
+                                      alt="tour de vinos"
+                                    />
+                                  </div>
+                                  <a
+                                    href="#"
+                                    class="font-normal text-[18px] hover:text-colorLetter hover:font-bold md:duration-100"
+                                    >Cocina</a
+                                  >
+                                </div>
+          
+                                <div class="flex items-center justify-start gap-5">
+                                  <div>
+                                    <img
+                                      src="./images/img/categoria_6.png"
+                                      alt="paseo en barco"
+                                    />
+                                  </div>
+                                  <a
+                                    href="#"
+                                    class="font-normal text-[18px] hover:text-colorLetter hover:font-bold md:duration-100"
+                                    >Recorrido en bicicleta</a
+                                  >
+                                </div>
+          
+                                <a
+                                  href="#"
+                                  class="text-colorLetter font-bold text-[20px] hover:text-blue-900 md:duration-500 min-w-[90px]"
+                                >
+                                  Mostrar Más Actividades
+                                </a>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                    </section>
-
-                    <a href="#"
-                        class="flex  items-center gap-2 mostrar-mas font-acehSemibold text-text18 lg:text-text22 rounded-md lg:rounded-full border-colorBorder border-2 py-4 lg:py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group lg:duration-500 flex-initial  w-auto ">{{-- mostrar-modal --}}
+                      </section>
+          
+                      <a
+                        href="#"
+                        class="mostrar-mas font-semibold text-[18px] rounded-md md:rounded-full border-colorBorder border-2 py-2 md:py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 flex-initial md:w-48 w-auto mostrar-modal"
+                      >
                         <!-- -----hidden md:block -->
                         <span class="hidden md:inline"> Mostrar mas</span>
-
-                        <svg width="18" height="13" viewBox="0 0 18 13" fill="none"
-                            xmlns="http://www.w3.org/2000/svg" class="inline-block">
-                            <path d="M3.46154 6.5H14.5385M1 1.5H17M7.15385 11.5H10.8462" stroke="#0F1B2C" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round"
-                                class="group-hover:stroke-white md:duration-500" />
+          
+                        <svg
+                          width="18"
+                          height="13"
+                          viewBox="0 0 18 13"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="inline-block"
+                        >
+                          <path
+                            d="M3.46154 6.5H14.5385M1 1.5H17M7.15385 11.5H10.8462"
+                            stroke="#0F1B2C"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="group-hover:stroke-white md:duration-500"
+                          />
                         </svg>
-                    </a>
+                      </a>
 
                     <!-- ------ -->
                 </div>

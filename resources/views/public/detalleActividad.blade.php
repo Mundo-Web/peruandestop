@@ -137,13 +137,15 @@
                                     </h2>
                                     <p class="font-acehMedium text-text16 md:text-text20 text-[#495560]">
                                         Se aplican medidas especiales de salud y seguridad.
-                                        Aprende más.
+                                        Aprende más. Cancele con hasta 24 horas de anticipación para recibir
+                                        un reembolso.Cancele con hasta 24 horas de anticipación para recibir
+                                        un reembolso.Cancele con hasta 24 horas de anticipación para recibir
+                                        un reembolso.Cancele con hasta 24 horas de anticipación para recibir
+                                        un reembolso.Cancele con hasta 24 horas de anticipación para recibir
+                                        un reembolso.
                                     </p>
                                 </div>
                             </div>
-
-
-
 
                             <div class="flex items-start gap-5">
                                 <div>

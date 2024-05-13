@@ -683,7 +683,8 @@
                                                             class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                     </div>
 
-                                                    <label for="peru" class="font-acehMedium text-text18 md:text-text22">
+                                                    <label for="peru"
+                                                        class="font-acehMedium text-text18 md:text-text22">
                                                         Perú
                                                     </label>
                                                 </div>
@@ -693,7 +694,8 @@
                                                             class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                     </div>
 
-                                                    <label for="usa" class="font-acehMedium text-text18 md:text-text22">
+                                                    <label for="usa"
+                                                        class="font-acehMedium text-text18 md:text-text22">
                                                         USA
                                                     </label>
                                                 </div>
@@ -704,7 +706,8 @@
                                                                 class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                         </div>
 
-                                                        <label for="francia" class="font-acehMedium text-text18 md:text-text22">
+                                                        <label for="francia"
+                                                            class="font-acehMedium text-text18 md:text-text22">
                                                             Francia
                                                         </label>
                                                     </div>
@@ -717,7 +720,8 @@
                                                                 class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                         </div>
 
-                                                        <label for="Reino Unido" class="font-acehMedium text-text18 md:text-text22">
+                                                        <label for="Reino Unido"
+                                                            class="font-acehMedium text-text18 md:text-text22">
                                                             Reino Unido
                                                         </label>
                                                     </div>
@@ -730,7 +734,8 @@
                                                                 class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                         </div>
 
-                                                        <label for="italia" class="font-acehMedium text-text18 md:text-text22">
+                                                        <label for="italia"
+                                                            class="font-acehMedium text-text18 md:text-text22">
                                                             Italia
                                                         </label>
                                                     </div>
@@ -753,7 +758,8 @@
                                                             class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                     </div>
 
-                                                    <label for="cusco" class="font-acehMedium text-text18 md:text-text22">
+                                                    <label for="cusco"
+                                                        class="font-acehMedium text-text18 md:text-text22">
                                                         Cusco
                                                     </label>
                                                 </div>
@@ -764,7 +770,8 @@
                                                                 class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                         </div>
 
-                                                        <label for="lima" class="font-acehMedium text-text18 md:text-text22">
+                                                        <label for="lima"
+                                                            class="font-acehMedium text-text18 md:text-text22">
                                                             Lima
                                                         </label>
                                                     </div>
@@ -776,7 +783,8 @@
                                                                 class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                         </div>
 
-                                                        <label for="arequipa" class="font-acehMedium text-text18 md:text-text22">
+                                                        <label for="arequipa"
+                                                            class="font-acehMedium text-text18 md:text-text22">
                                                             Arequipa
                                                         </label>
                                                     </div>
@@ -789,7 +797,8 @@
                                                                 class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                         </div>
 
-                                                        <label for="iquitos" class="font-acehMedium text-text18 md:text-text22">
+                                                        <label for="iquitos"
+                                                            class="font-acehMedium text-text18 md:text-text22">
                                                             Iquitos
                                                         </label>
                                                     </div>
@@ -802,7 +811,8 @@
                                                                 class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                         </div>
 
-                                                        <label for="florencia" class="font-acehMedium text-text18 md:text-text22">
+                                                        <label for="florencia"
+                                                            class="font-acehMedium text-text18 md:text-text22">
                                                             Florencia
                                                         </label>
                                                     </div>
@@ -826,7 +836,8 @@
                                                             class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                     </div>
 
-                                                    <label for="frio" class="font-acehMedium text-text18 md:text-text22">
+                                                    <label for="frio"
+                                                        class="font-acehMedium text-text18 md:text-text22">
                                                         Frío
                                                     </label>
                                                 </div>
@@ -837,7 +848,8 @@
                                                                 class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                         </div>
 
-                                                        <label for="templado" class="font-acehMedium text-text18 md:text-text22">
+                                                        <label for="templado"
+                                                            class="font-acehMedium text-text18 md:text-text22">
                                                             Templado
                                                         </label>
                                                     </div>
@@ -849,7 +861,8 @@
                                                                 class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                         </div>
 
-                                                        <label for="calido" class="font-acehMedium text-text18 md:text-text22">
+                                                        <label for="calido"
+                                                            class="font-acehMedium text-text18 md:text-text22">
                                                             Cálido
                                                         </label>
                                                     </div>
@@ -868,7 +881,8 @@
                                                             class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                     </div>
 
-                                                    <label for="todas_actividades" class="font-acehMedium text-text18 md:text-text22">
+                                                    <label for="todas_actividades"
+                                                        class="font-acehMedium text-text18 md:text-text22">
                                                         Todas las actividades
                                                     </label>
                                                 </div>
@@ -879,7 +893,8 @@
                                                                 class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                         </div>
 
-                                                        <label for="tracking" class="font-acehMedium text-text18 md:text-text22">
+                                                        <label for="tracking"
+                                                            class="font-acehMedium text-text18 md:text-text22">
                                                             Tracking
                                                         </label>
                                                     </div>
@@ -891,7 +906,8 @@
                                                                 class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                         </div>
 
-                                                        <label for="buceo" class="font-acehMedium text-text18 md:text-text22">
+                                                        <label for="buceo"
+                                                            class="font-acehMedium text-text18 md:text-text22">
                                                             Buceo
                                                         </label>
                                                     </div>
@@ -904,7 +920,8 @@
                                                                 class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                         </div>
 
-                                                        <label for="gastronomia" class="font-acehMedium text-text18 md:text-text22">
+                                                        <label for="gastronomia"
+                                                            class="font-acehMedium text-text18 md:text-text22">
                                                             Gastronomía
                                                         </label>
                                                     </div>
@@ -917,7 +934,8 @@
                                                                 class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                         </div>
 
-                                                        <label for="compras" class="font-acehMedium text-text18 md:text-text22">
+                                                        <label for="compras"
+                                                            class="font-acehMedium text-text18 md:text-text22">
                                                             Compras
                                                         </label>
                                                     </div>
@@ -930,7 +948,8 @@
                                                                 class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                         </div>
 
-                                                        <label for="visitas_culturales" class="font-acehMedium text-text18 md:text-text22">
+                                                        <label for="visitas_culturales"
+                                                            class="font-acehMedium text-text18 md:text-text22">
                                                             Visitas culturales
                                                         </label>
                                                     </div>
@@ -943,7 +962,8 @@
                                                                 class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                         </div>
 
-                                                        <label for="deportes_acuaticos" class="font-acehMedium text-text18 md:text-text22">
+                                                        <label for="deportes_acuaticos"
+                                                            class="font-acehMedium text-text18 md:text-text22">
                                                             Deportes acuáticos
                                                         </label>
                                                     </div>
@@ -956,7 +976,8 @@
                                                                 class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                         </div>
 
-                                                        <label for="vida_nocturna" class="font-acehMedium text-text18 md:text-text22">
+                                                        <label for="vida_nocturna"
+                                                            class="font-acehMedium text-text18 md:text-text22">
                                                             Vida nocturna
                                                         </label>
                                                     </div>
@@ -969,7 +990,8 @@
                                                                 class="h-5 w-5 border-colorBorder rounded focus:ring-offset-0 checked:bg-colorBackgroundHeader cursor-pointer" />
                                                         </div>
 
-                                                        <label for="aventura" class="font-acehMedium text-text18 md:text-text22">
+                                                        <label for="aventura"
+                                                            class="font-acehMedium text-text18 md:text-text22">
                                                             Aventura
                                                         </label>
                                                     </div>
@@ -999,7 +1021,7 @@
 
                         <div class="flex items-center">
                             <a href="#"
-                                class="font-acehSemibold text-[18px] rounded-[20px] border-colorBorder border-2 py-2 md:py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 flex gap-2 items-center ">
+                                class="font-acehSemibold text-[18px] rounded-[20px] border-colorBorder border-2 py-2 md:py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 flex gap-2 items-center">
                                 <span> Ordenar</span>
                                 <svg width="30" height="30" viewBox="0 0 25 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" class="inline-block">
@@ -1021,7 +1043,8 @@
                 <div data-aos="fade-up" data-aos-offset="150">
                     <div class="image__effect-hover  rounded-[20px]">
                         <img src="./images/img/cusco.png" alt="cusco" class="w-full shadow-lg" />
-                        <div class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
+                        <div
+                            class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
                             <div class="text-white text-center">
                                 <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
                                 <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
@@ -1070,7 +1093,8 @@
                     <div class="image__effect-hover rounded-[20px]">
                         <img src="./images/img/lisboa.png" alt="cusco" class="w-full shadow-lg" />
                         <!-- ------ -->
-                        <div class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
+                        <div
+                            class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
                             <div class="text-white text-center">
                                 <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
                                 <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
@@ -1115,9 +1139,10 @@
                 <!-- 3 -->
                 <div data-aos="fade-up" data-aos-offset="150">
                     <div class="image__effect-hover rounded-[20px]">
-                        
+
                         <img src="./images/img/dubai.png" alt="cusco" class="w-full shadow-lg" />
-                        <div class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
+                        <div
+                            class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
                             <div class="text-white text-center">
                                 <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
                                 <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
@@ -1163,7 +1188,8 @@
                 <div data-aos="fade-up" data-aos-offset="150">
                     <div class="image__effect-hover rounded-[20px]">
                         <img src="./images/img/paris.png" alt="cusco" class="w-full shadow-lg" />
-                        <div class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
+                        <div
+                            class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
                             <div class="text-white text-center">
                                 <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
                                 <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
@@ -1209,7 +1235,8 @@
                 <div data-aos="fade-up" data-aos-offset="150">
                     <div class="image__effect-hover rounded-[20px]">
                         <img src="./images/img/El_cairo.png" alt="cusco" class="w-full shadow-lg" />
-                        <div class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
+                        <div
+                            class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
                             <div class="text-white text-center">
                                 <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
                                 <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
@@ -1255,7 +1282,8 @@
                 <div data-aos="fade-up" data-aos-offset="150">
                     <div class="image__effect-hover rounded-[20px]">
                         <img src="./images/img/venecia.png" alt="cusco" class="w-full shadow-lg" />
-                        <div class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
+                        <div
+                            class="image__effect-content flex justify-center sm:justify-start text-center gap-5 md:gap-12 lg:gap-24 p-5 lg:p-10">
                             <div class="text-white text-center">
                                 <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
                                 <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span>
@@ -1323,6 +1351,8 @@
 
 
 @section('scripts_improtados')
+
+   
     <script>
         document.addEventListener("DOMContentLoaded", () => { // Captura el click de abrir
             const openModal = document.querySelector(".mostrar-modal");
@@ -1415,3 +1445,5 @@
 @stop
 
 @stop
+
+
