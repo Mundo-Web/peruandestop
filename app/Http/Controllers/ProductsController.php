@@ -158,7 +158,7 @@ class ProductsController extends Controller
           Galerie::create($dataGalerie);
         }
       }
-      if ($data['filesGallery']) {
+      if (isset($data['filesGallery'])) {
 
         foreach ($data['filesGallery'] as $file) {
           # code...
