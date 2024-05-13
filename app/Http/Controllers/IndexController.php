@@ -268,7 +268,6 @@ class IndexController extends Controller
     $source = $request->input('source');
     $tipoCategoria = null;
     if ($source == 'destino') {
-      // dump('viene de paquetes');
       $tipoCategoria = "Destino";
     } else {
       $tipoCategoria = "Paquetes";
