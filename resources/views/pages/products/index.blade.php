@@ -39,7 +39,7 @@
 
               @foreach ($products as $item)
                 <tr>
-                  <td>{{ $item->categoria->name }}</td>
+                  <td>{{ $item->categoria->name ?? '' }}</td>
 
                   <td>{{ $item->producto }}</td>
                   <td>{{ $item->langs }}</td>

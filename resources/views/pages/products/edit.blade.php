@@ -195,9 +195,9 @@
 
                   </div>
                 </div>
-                <div class="md:col-span-2">
+                <div class=" md:col-span-5">
                   <label for="description">Idioma</label>
-                  <select id="tags_id" name="langs"
+                  <select id="langSelect" name="langs"
                     class="mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     <option value="">Seleccionar Idioma </option>
 
@@ -352,7 +352,7 @@
 
 
   </div>
-  <script>
+  {{-- <script>
     // Obtener los enlaces de pestaña
     const generalTab = document.getElementById('general-tab');
     const attributesTab = document.getElementById('attributes-tab');
@@ -379,11 +379,14 @@
       // Mostrar el contenido de Attributes
       attributesContent.classList.remove('hidden');
     });
-  </script>
+  </script> --}}
 
   <script>
     let editor = null
     $('document').ready(async function() {
+
+
+
 
       $('.selectTags').select2()
 
