@@ -26,8 +26,8 @@
               <tr>
                 <th>Destino</th>
                 <th>Tour</th>
+                <th>Idioma</th>
                 <th>Precio</th>
-                <th>Descuento</th>
                 <th>Imagen</th>
                 <th>Destacar</th>
                 <th>Recomendar</th>
@@ -42,9 +42,9 @@
                   <td>{{ $item->categoria->name }}</td>
 
                   <td>{{ $item->producto }}</td>
-
+                  <td>{{ $item->langs }}</td>
                   <td>{{ $item->precio }}</td>
-                  <td>{{ $item->descuento }}</td>
+
 
 
                   <td class="px-3 py-2"><img class="w-20" src="{{ asset($item->imagen) }}" alt=""></td>
@@ -127,8 +127,8 @@
               <tr>
                 <th>Destino</th>
                 <th>Tour</th>
+                <th>Idioma</th>
                 <th>Precio</th>
-                <th>Descuento</th>
                 <th>Imagen</th>
                 <th>Destacar</th>
                 <th>Recomendar</th>
