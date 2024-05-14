@@ -130,6 +130,27 @@
             <p class="font-acehRegular text-text18 md:text-text22 text-[#495560] my-5">
               {{ $tour->extract }}
             </p>
+
+            <div class="flex gap-5 flex-col md:flex-row md:gap-8 lg:gap-16 p-5 bg-[#FCFCFC]">
+              @foreach ($tour->specifications->chunk(2) as $especificacion)
+                <div class="flex flex-col items-start gap-5">
+                  @foreach (@$especificacion as $item)
+                    <img src="{{ asset('images/svg/duracion.svg') }}" alt="duracion de horas" class="mt-1">
+                    <div>
+                      <h2 class="font-semibold text-[20px] text-[#0F1B2C]">
+                        {{ $item->tittle }}
+                      </h2>
+                      <p class="font-medium text-[16px] text-[#495560]">
+                        {{ $item->specifications }}
+                      </p>
+                    </div>
+                  @endforeach
+
+                </div>
+              @endforeach
+            </div>
+
+
             {!! $tour->description !!}
           </div>
 
@@ -169,13 +190,15 @@
       <div class="w-11/12 mx-auto my-10">
         <!-- mayor a  md -->
         <div class="image hidden 2md:block">
-          <img src="{{ asset('images/img/tu_viaje_comienza.png') }}" alt="tu viaje" class="w-full h-auto object-cover" />
+          <img src="{{ asset('images/img/tu_viaje_comienza.png') }}" alt="tu viaje"
+            class="w-full h-auto object-cover" />
           <div class="text-white flex-col gap-5 contain flex ">
             <h3
               class="font-acehbold md:text-[30px] 2md:text-[50px] xl:text-[60px] md:w-8/12 mx-auto text-center leading-none lg:leading-tight">
               {{ $langInfo['lang']['detallesActividad']['journey'] }}
             </h3>
-            <p class="font-acehMedium w-9/12 mx-auto md:text-[14px] 2md:text-[16px] xl:text-[18px] md:w-6/12 text-center">
+            <p
+              class="font-acehMedium w-9/12 mx-auto md:text-[14px] 2md:text-[16px] xl:text-[18px] md:w-6/12 text-center">
               {{ $langInfo['lang']['detallesActividad']['register'] }}
 
             </p>

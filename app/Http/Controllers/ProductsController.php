@@ -129,7 +129,7 @@ class ProductsController extends Controller
       if (count($tagsSeleccionados) !== 0) {
         $this->TagsXProducts($producto->id, $tagsSeleccionados);
       }
-      if ($data['files']) {
+      if (isset($data['files'])) {
 
         foreach ($data['files'] as $file) {
           # code...
@@ -188,7 +188,7 @@ class ProductsController extends Controller
         }
       }
 
-      return redirect()->route('activity.index')->with('success', 'Publicación creado exitosamente.');
+      // return redirect()->route('activity.index')->with('success', 'Publicación creado exitosamente.');
     } catch (\Throwable $th) {
       //throw $th;
       dump($th);

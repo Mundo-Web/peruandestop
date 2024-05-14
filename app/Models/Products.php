@@ -47,4 +47,8 @@ class Products extends Model
   {
       return $query->where('status', true)->where('destacar', true);
   }
+
+  public function specifications(){
+    return $this-> hasMany(Specifications::class, 'product_id');
+  }
 }
