@@ -188,7 +188,7 @@ class ProductsController extends Controller
         }
       }
 
-      // return redirect()->route('activity.index')->with('success', 'Publicación creado exitosamente.');
+      return redirect()->route('activity.index')->with('success', 'Publicación creado exitosamente.');
     } catch (\Throwable $th) {
       //throw $th;
       dump($th);
@@ -319,7 +319,7 @@ class ProductsController extends Controller
     $this->TagsXProducts($id, $tagsSeleccionados);
 
 
-    // return redirect()->route('activity.index')->with('success', 'Producto editado exitosamente.');
+    return redirect()->route('activity.index')->with('success', 'Producto editado exitosamente.');
   }
   public function actualizarSpecificaciones($especificaciones)
   {
