@@ -5,11 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Attributes;
 use App\Models\AttributesValues;
 use App\Models\Category;
+use App\Models\EntradasMultiples;
 use App\Models\Galerie;
 use App\Models\Langs;
 use App\Models\Products;
 use App\Models\Specifications;
 use App\Models\Tag;
+use App\Models\TipoEntrada;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
@@ -41,7 +43,8 @@ class ProductsController extends Controller
     $categoria = Category::all();
     $tags = Tag::where("status", "=", true)->get();
     $langs = Langs::all();
-    return view('pages.products.create', compact('atributos', 'valorAtributo', 'categoria', 'tags', 'langs'));
+    $tipoEntrada = TipoEntrada::all();
+    return view('pages.products.create', compact('atributos', 'valorAtributo', 'categoria', 'tags', 'langs', 'tipoEntrada'));
   }
 
   public function saveImg($file, $route, $nombreImagen)
@@ -63,6 +66,7 @@ class ProductsController extends Controller
   public function store(Request $request)
   {
     $especificaciones = [];
+    $entradaMultiple = [];
     $data = $request->all();
     $atributos = null;
     $tagsSeleccionados = $request->input('tags_id');
@@ -70,7 +74,6 @@ class ProductsController extends Controller
     // Por ejemplo:
 
     // $valorprecio = $request->input('precio') - 0.1;
-
 
 
     $request->validate([
@@ -106,10 +109,20 @@ class ProductsController extends Controller
             $num = substr($key, strrpos($key, '-') + 1); // Obtener el número de la especificación
             $especificaciones[$num]['specifications'] = $value; // Agregar las especificaciones al array asociativo
           }
+
+          if(strpos($key, 'tipo_entrada_id-') === 0){
+            $num = substr($key, strrpos($key, '-') + 1);
+            $entradaMultiple[$num]['tipo_entrada_id'] = $value; 
+          }elseif(strpos($key, 'entrada_multiple-') === 0){
+            $num = substr($key, strrpos($key, '-') + 1);
+            $entradaMultiple[$num]['entrada_multiple'] = $value; 
+
+          }
         }
       }
 
       $jsonAtributos = json_encode($atributos);
+
 
       if (array_key_exists('destacar', $data)) {
         if (strtolower($data['destacar']) == 'on') $data['destacar'] = 1;
@@ -126,6 +139,9 @@ class ProductsController extends Controller
 
       $producto = Products::create($cleanedData);
       $this->GuardarEspecificaciones($producto->id, $especificaciones);
+
+      $this->guardarEntradaMultiple($producto->id,$entradaMultiple);
+
       if (count($tagsSeleccionados) !== 0) {
         $this->TagsXProducts($producto->id, $tagsSeleccionados);
       }
@@ -188,7 +204,7 @@ class ProductsController extends Controller
         }
       }
 
-      return redirect()->route('activity.index')->with('success', 'Publicación creado exitosamente.');
+      // return redirect()->route('activity.index')->with('success', 'Publicación creado exitosamente.');
     } catch (\Throwable $th) {
       //throw $th;
       dump($th);
@@ -207,6 +223,16 @@ class ProductsController extends Controller
       $value['product_id'] = $id;
       Specifications::create($value);
     }
+  }
+  private function guardarEntradaMultiple ($id , $values) {
+    foreach ($values as $key => $value) {
+      EntradasMultiples::create([
+        'description' =>$value['entrada_multiple'], 
+        'tipo_entrada_id' =>$value['tipo_entrada_id']  , 
+        'producto_id' => $id 
+      ]);
+    }
+
   }
 
   private function stringToObject($key, $atributos)

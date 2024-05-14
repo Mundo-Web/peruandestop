@@ -20,6 +20,7 @@ use App\Models\Category;
 use App\Models\NewsletterSubscriber;
 use App\Models\Specifications;
 use App\Models\Tag;
+use App\Models\TipoEntrada;
 use App\Models\User;
 use App\Models\UserDetails;
 use Illuminate\Http\Request;
@@ -357,8 +358,11 @@ class IndexController extends Controller
     $tour = Products::with(['galeria' => function ($query) {
       $query->where('type_img', '=', 'portada');
     }])->find($id);
+
+    $entradasOrdenadas = $tour->entradasMulti->sortBy('tipo_entrada_id');
+    $tipo_entradas = TipoEntrada::all();
     
-    return view('public.detalleActividad', compact('tour', 'destinos', 'tagsDestinos', 'lang', 'langInfo'));
+    return view('public.detalleActividad', compact('tour', 'destinos', 'tagsDestinos', 'lang', 'langInfo' , 'entradasOrdenadas', 'tipo_entradas'));
   }
 
   public function blog(Request $request, string $lang)

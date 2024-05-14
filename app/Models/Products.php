@@ -51,4 +51,7 @@ class Products extends Model
   public function specifications(){
     return $this-> hasMany(Specifications::class, 'product_id');
   }
+  public function entradasMulti(){
+    return $this-> hasMany(EntradasMultiples::class, 'producto_id');
+  }
 }

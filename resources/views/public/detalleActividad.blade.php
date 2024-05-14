@@ -153,6 +153,31 @@
 
 
             {!! $tour->description !!}
+            @foreach ($tipo_entradas as $tipoEntrada)
+              @php
+                $entradasAsociadas = $entradasOrdenadas->where('tipo_entrada_id', $tipoEntrada->id);
+              @endphp
+
+              @if ($entradasAsociadas->isNotEmpty())
+                <div class="border-b-2 border-[#F1F1F1] aos-init aos-animate my-5" data-aos="fade-up"
+                  data-aos-offset="150">
+                  <p class="font-semibold text-[32px] md:text-[40px]  text-[#0F1B2C]">
+                    {{ $tipoEntrada->description }}
+                  </p>
+                  <div class="font-normal text-[18px] text-[#495560] my-5">
+                    @foreach ($entradasAsociadas as $entrada)
+                      <p class="flex gap-5 items-center">
+                        <img src="{{ asset('images//svg/circle.svg') }}" alt="circle">
+                        <span>{{ $entrada->description }}</span>
+                      </p>
+                    @endforeach
+                  </div>
+                </div>
+              @endif
+            @endforeach
+
+
+
           </div>
 
           <div class="basis-2/6">
