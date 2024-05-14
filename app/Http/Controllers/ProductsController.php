@@ -70,7 +70,7 @@ class ProductsController extends Controller
     // Por ejemplo:
 
     // $valorprecio = $request->input('precio') - 0.1;
-  
+
 
 
     $request->validate([
@@ -258,11 +258,11 @@ class ProductsController extends Controller
    */
   public function update(Request $request, string $id)
   {
+    $especificaciones = [];
     $product = Products::find($id);
     $tagsSeleccionados = $request->input('tags_id');
     $data = $request->all();
     $atributos = null;
-
     $request->validate([
       'producto' => 'required',
     ]);
@@ -284,8 +284,19 @@ class ProductsController extends Controller
         // Separa el nombre del atributo y su valor
         $atributos = $this->stringToObject($key, $atributos);
         unset($request[$key]);
+      } elseif (strstr($key, '-')) {
+
+        //strpos primera ocurrencia que enuentre
+        if (strpos($key, 'tittle-') === 0 || strpos($key, 'title-') === 0) {
+          $num = substr($key, strrpos($key, '-') + 1); // Obtener el número de la especificación
+          $especificaciones[$num]['tittle'] = $value; // Agregar el título al array asociativo
+        } elseif (strpos($key, 'specifications-') === 0) {
+          $num = substr($key, strrpos($key, '-') + 1); // Obtener el número de la especificación
+          $especificaciones[$num]['specifications'] = $value; // Agregar las especificaciones al array asociativo
+        }
       }
     }
+    $this->actualizarSpecificaciones($especificaciones);
 
     $jsonAtributos = json_encode($atributos);
 
@@ -307,7 +318,20 @@ class ProductsController extends Controller
 
     $this->TagsXProducts($id, $tagsSeleccionados);
 
-    return redirect()->route('activity.index')->with('success', 'Producto editado exitosamente.');
+
+    // return redirect()->route('activity.index')->with('success', 'Producto editado exitosamente.');
+  }
+  public function actualizarSpecificaciones($especificaciones)
+  {
+    foreach ($especificaciones as $id => $registro) {
+
+      $registroDB = Specifications::find($id);
+      if ($registroDB) {
+        $registroDB->tittle = $registro['tittle'];
+        $registroDB->specifications = $registro['specifications'];
+        $registroDB->save();
+      }
+    }
   }
 
   /**

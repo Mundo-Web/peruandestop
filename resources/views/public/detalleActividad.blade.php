@@ -79,10 +79,8 @@
                 class="w-full h-full rounded-tl-3xl rounded-bl-3xl object-cover" />
             @endif
 
-
-
-
           </div>
+
           <div class="grow basis-3/6">
             @if (isset($tour->galeria[1]->imagen))
               <img src="{{ asset($tour->galeria[1]->imagen) }}" alt="disfraces" class="w-full h-full   object-cover" />
@@ -131,18 +129,21 @@
               {{ $tour->extract }}
             </p>
 
-            <div class="flex gap-5 flex-col md:flex-row md:gap-8 lg:gap-16 p-5 bg-[#FCFCFC]">
+            <div class="flex gap-10 flex-col md:flex-row md:gap-8 lg:gap-16 p-5 bg-[#FCFCFC]">
               @foreach ($tour->specifications->chunk(2) as $especificacion)
                 <div class="flex flex-col items-start gap-5">
                   @foreach (@$especificacion as $item)
-                    <img src="{{ asset('images/svg/duracion.svg') }}" alt="duracion de horas" class="mt-1">
-                    <div>
-                      <h2 class="font-semibold text-[20px] text-[#0F1B2C]">
-                        {{ $item->tittle }}
-                      </h2>
-                      <p class="font-medium text-[16px] text-[#495560]">
-                        {{ $item->specifications }}
-                      </p>
+                    <div class="flex items-start justify-between gap-11   ">
+                      <img src="{{ asset('images/svg/point.svg') }}" alt="duracion de horas" class="mt-1">
+                      <div>
+                        <h2 class="font-semibold text-[20px] text-[#0F1B2C]">
+                          {{ $item->tittle }}
+                        </h2>
+                        <p class="font-medium text-[16px] text-[#495560]">
+                          {{ $item->specifications }}
+                        </p>
+                      </div>
+
                     </div>
                   @endforeach
 
