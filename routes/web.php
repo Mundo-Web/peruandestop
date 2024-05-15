@@ -114,6 +114,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         Route::resource('/activity', ProductsController::class);
         Route::post('/activity/updateVisible', [ProductsController::class, 'updateVisible'])->name('activity.updateVisible');
         Route::post('/activity/borrar', [ProductsController::class, 'borrar'])->name('activity.borrar');
+        Route::post('/activity/borrarimg', [ProductsController::class, 'borrarimg'])->name('activity.borrarimg');
 
 
         //Servicios

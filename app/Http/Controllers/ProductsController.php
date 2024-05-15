@@ -505,4 +505,28 @@ class ProductsController extends Controller
     ]);
     return response()->json(['message' => 'registro actualizado']);
   }
+  public function borrarimg(Request $request){
+    dump($request-> id );
+    try {
+      //code...
+      $imagenGaleria = Galerie::find($request->id);
+      $rutaCompleta  = $imagenGaleria->imagen;
+      if (file_exists($rutaCompleta)) {
+        // Intentar eliminar el archivo
+        if (unlink($rutaCompleta)) {
+            // Archivo eliminado con éxito
+           
+        } 
+      }
+      $imagenGaleria->delete();
+      return response()->json(['message'=>'imagen eliminada con exito ']);
+    } catch (\Throwable $th) {
+      //throw $th;
+      dump($th);
+      return response()->json(['message'=>'no se ha podido eliminar la imagen '], 400);
+
+    }
+   
+    
+  }
 }

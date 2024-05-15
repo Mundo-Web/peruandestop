@@ -416,10 +416,33 @@
 
                   </div>
                 </div>
+                <div class="md:col-span-5 mt-2">
+                  <div class="flex justify-between gap-5">
+                    @foreach ($product->galeria as $item)
+                      @if ($item->type_img == 'portada')
+                        <div id="portada-{{ $item->id }}">
+                          <i onclick="borrarImg({{ $item->id }})" class=" w-5 cursor-pointer"
+                            style="position: absolute;"><svg xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                              <path
+                                d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z" />
+                            </svg></i>
+
+
+                          <img src="{{ asset($item->imagen) }}" alt="" class="w-24">
+                        </div>
+                      @endif
+                    @endforeach
+
+                  </div>
+
+                </div>
 
                 <div class="md:col-span-5 mt-2">
                   <section class="scroll-section overflow-y-auto" id="uploadedFiles">
                     <h2 class="small-title">Uploaded Files Portada</h2>
+
+
                     <div class="card mb-5">
                       <div class="card-body">
 
@@ -428,6 +451,27 @@
                       </div>
                     </div>
                   </section>
+                </div>
+                <div class="md:col-span-5 mt-2">
+                  <div class="flex justify-between gap-5">
+                    @foreach ($product->galeria as $item)
+                      @if ($item->type_img == 'gall')
+                        <div id="portada-{{ $item->id }}">
+                          <i onclick="borrarImg({{ $item->id }})" class=" w-5 cursor-pointer"
+                            style="position: absolute;"><svg xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                              <path
+                                d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z" />
+                            </svg></i>
+
+
+                          <img src="{{ asset($item->imagen) }}" alt="" class="w-24">
+                        </div>
+                      @endif
+                    @endforeach
+
+                  </div>
+
                 </div>
 
                 <div class="md:col-span-5 mt-2">
@@ -745,6 +789,41 @@
         }
         reader.readAsDataURL(blob);
       });
+    }
+  </script>
+  <script>
+    function borrarImg(id) {
+      console.log('borranmdo ', id)
+
+      $.ajax({
+        url: "{{ route('activity.borrarimg') }}",
+        method: 'POST',
+        data: {
+          _token: $('input[name="_token"]').val(),
+          status: status,
+          id: id,
+
+        },
+        success: function(success) {
+          Swal.fire({
+
+            icon: "success",
+            title: 'Img borrada exitosamente',
+            showConfirmButton: false,
+            timer: 1500
+
+          });
+          $(`#portada-${id}`).remove()
+        },
+        error: function(error) {
+          console.log(error)
+        }
+
+      })
+
+
+
+
     }
   </script>
   @include('_layout.scripts')
