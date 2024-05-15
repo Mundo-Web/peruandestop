@@ -111,7 +111,7 @@
                       class="bg-yellow-400 px-3 py-2 rounded text-white  "><i
                         class="fa-regular fa-pen-to-square"></i></a>
 
-                    <form action="" method="POST">
+                    <form id='formdelete' action="" method="POST">
                       @csrf
                       <a data-idService='{{ $item->id }}'
                         class="btn_delete bg-red-600 px-3 py-2 rounded text-white cursor-pointer"><i
@@ -195,7 +195,7 @@
       })
     });
 
-    $(".btn_delete").on("click", function(e) {
+    $(document).on("click", '.btn_delete', function(e) {
       e.preventDefault()
 
       let id = $(this).attr('data-idService');
