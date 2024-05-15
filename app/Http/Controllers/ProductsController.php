@@ -273,10 +273,11 @@ class ProductsController extends Controller
 
     $langs = Langs::all();
     $categoria = Category::all();
+    $tipoEntrada = TipoEntrada::all();
 
 
 
-    return view('pages.products.edit', compact('langs', 'product', 'atributos', 'valorAtributo', 'allTags', 'categoria'));
+    return view('pages.products.edit', compact('langs', 'product', 'atributos', 'valorAtributo', 'allTags', 'categoria' , 'tipoEntrada'));
   }
 
   /**
@@ -367,6 +368,9 @@ class ProductsController extends Controller
   {
     //softdelete
     DB::delete('delete from galeries where product_id = ?', [$request->id]);
+    DB::delete('delete from entradas_multiples where producto_id = ?', [$request->id]);
+    DB::delete('delete from specifications where product_id = ?', [$request->id]);
+    
 
     $product = Products::find($request->id);
     $product->status = 0;
