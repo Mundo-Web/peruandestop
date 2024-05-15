@@ -146,7 +146,7 @@ class DropzoneControls {
     if (document.querySelector('#dropzoneServerFiles')) {
       new Dropzone('#dropzoneServerFiles', {
         url: 'https://httpbin.org/post',
-        
+        maxFilesize: 1,
         autoProcessQueue: false,
         thumbnailWidth: 160,
         previewTemplate: DropzoneTemplates.previewTemplate,
@@ -213,7 +213,7 @@ class DropzoneControls {
     if (document.querySelector('#dropzoneServerFilesGallery')) {
       new Dropzone('#dropzoneServerFilesGallery', {
         url: 'https://httpbin.org/post',
-        
+        maxFilesize: 1,
         autoProcessQueue: false,
         thumbnailWidth: 160,
         previewTemplate: DropzoneTemplates.previewTemplate,

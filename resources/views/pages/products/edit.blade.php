@@ -1,5 +1,21 @@
 <x-app-layout>
 
+  @section('css')
+    <link rel="stylesheet" href="{{ asset('/css/vendor/dropzone.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/css/cssDropzone.css') }}" />
+  @endsection
+
+  @section('js_vendor')
+    <script src="{{ asset('/js/cs/scrollspy.js') }}"></script>
+    <script src="{{ asset('/js/vendor/dropzone.min.js') }}"></script>
+    <script src="{{ asset('/js/vendor/singleimageupload.js') }}"></script>
+  @endsection
+
+  @section('js_page')
+    <script src="{{ asset('/js/cs/dropzone.templates.js') }}"></script>
+    <script src="{{ asset('/js/forms/controls.dropzone.js') }}"></script>
+  @endsection
+
 
   <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
     <form action="{{ route('activity.update', $product->id) }}" method="POST" enctype="multipart/form-data">
@@ -401,6 +417,31 @@
                   </div>
                 </div>
 
+                <div class="md:col-span-5 mt-2">
+                  <section class="scroll-section overflow-y-auto" id="uploadedFiles">
+                    <h2 class="small-title">Uploaded Files Portada</h2>
+                    <div class="card mb-5">
+                      <div class="card-body">
+
+                        <div class="dropzone border-gray-300  " id="dropzoneServerFiles"></div>
+
+                      </div>
+                    </div>
+                  </section>
+                </div>
+
+                <div class="md:col-span-5 mt-2">
+                  <section class="scroll-section overflow-y-auto" id="uploadedFilesGallery">
+                    <h2 class="small-title">Uploaded Files to Gallery</h2>
+                    <div class="card mb-5">
+                      <div class="card-body">
+
+                        <div class="dropzone border-gray-300  " id="dropzoneServerFilesGallery"></div>
+
+                      </div>
+                    </div>
+                  </section>
+                </div>
                 {{-- <div class="md:col-span-5 mt-2">
                   <div class=" flex items-end justify-between gap-2 ">
                     <label for="especificacion">Especificacion </label>
@@ -658,5 +699,19 @@
   </script>
 
 
-
+  <script>
+    File.toBase64 = function(blob) {
+      return new Promise((resolve, reject) => {
+        let reader = new FileReader();
+        reader.onloadend = () => {
+          resolve(reader.result);
+        }
+        reader.onerror = () => {
+          reject(new Error('No se pudo convertir el archivo en base64'));
+        }
+        reader.readAsDataURL(blob);
+      });
+    }
+  </script>
+  @include('_layout.scripts')
 </x-app-layout>

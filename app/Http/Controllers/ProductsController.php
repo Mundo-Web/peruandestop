@@ -331,6 +331,8 @@ class ProductsController extends Controller
 
     foreach ($request->all() as $key => $value) {
 
+      
+
       if (strstr($key, ':')) {
         // Separa el nombre del atributo y su valor
         $atributos = $this->stringToObject($key, $atributos);
@@ -354,6 +356,64 @@ class ProductsController extends Controller
           $entradaMultiple[$num]['entrada_multiple'] = $value; 
 
         }
+      }
+    }
+    if (isset($data['files'])) {
+
+      foreach ($data['files'] as $file) {
+        # code...
+
+        // data:image/png; base64,code
+        [$first, $code] = explode(';base64,', $file);
+        $imageData = base64_decode($code);
+        $routeImg = 'storage/images/imagen/';
+
+        $ext = ExtendFile::getExtention(str_replace("data:", '', $first));
+
+
+
+        $nombreImagen = Str::random(10) . '.' . $ext;
+
+        // Verificar si la ruta no existe y crearla si es necesario
+        if (!file_exists($routeImg)) {
+          mkdir($routeImg, 0777, true); // Se crea la ruta con permisos de lectura, escritura y ejecución
+        }
+
+        // Guardar los datos binarios en un archivo
+        file_put_contents($routeImg . $nombreImagen, $imageData);
+        $dataGalerie['imagen'] = $routeImg . $nombreImagen;
+        $dataGalerie['product_id'] = $id;
+        $dataGalerie['type_img'] = 'portada';
+        Galerie::create($dataGalerie);
+      }
+    }
+    if (isset($data['filesGallery'])) {
+
+      foreach ($data['filesGallery'] as $file) {
+        # code...
+
+        // data:image/png; base64,code
+        [$first, $code] = explode(';base64,', $file);
+        $imageData = base64_decode($code);
+        $routeImg = 'storage/images/gallery/';
+
+        $ext = ExtendFile::getExtention(str_replace("data:", '', $first));
+
+
+
+        $nombreImagen = Str::random(10) . '.' . $ext;
+
+        // Verificar si la ruta no existe y crearla si es necesario
+        if (!file_exists($routeImg)) {
+          mkdir($routeImg, 0777, true); // Se crea la ruta con permisos de lectura, escritura y ejecución
+        }
+
+        // Guardar los datos binarios en un archivo
+        file_put_contents($routeImg . $nombreImagen, $imageData);
+        $dataGalerie['imagen'] = $routeImg . $nombreImagen;
+        $dataGalerie['product_id'] = $id;
+        $dataGalerie['type_img'] = 'gall';
+        Galerie::create($dataGalerie);
       }
     }
     $this->actualizarSpecificaciones($especificaciones);
