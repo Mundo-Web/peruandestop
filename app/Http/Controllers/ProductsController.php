@@ -416,7 +416,7 @@ class ProductsController extends Controller
         Galerie::create($dataGalerie);
       }
     }
-    $this->actualizarSpecificaciones($especificaciones);
+    $this->actualizarSpecificaciones($id,$especificaciones);
 
     
     $this->actEntradaMultiple($id, $entradaMultiple); 
@@ -445,17 +445,29 @@ class ProductsController extends Controller
 
     return redirect()->route('activity.index')->with('success', 'Producto editado exitosamente.');
   }
-  public function actualizarSpecificaciones($especificaciones)
+  public function actualizarSpecificaciones($id,$especificaciones)
   {
-    foreach ($especificaciones as $id => $registro) {
 
-      $registroDB = Specifications::find($id);
-      if ($registroDB) {
+    foreach ($especificaciones as $key => $registro) {
+
+      $registroDB = Specifications::find($key);
+      if($registro['specifications'] == null ){
+        $registroDB->delete();
+      }
+      elseif ($registroDB) {
         $registroDB->tittle = $registro['tittle'];
         $registroDB->specifications = $registro['specifications'];
         $registroDB->save();
+      }else{
+        Specifications::create([
+          'tittle' =>$registro['tittle'], 
+          'specifications' =>$registro['specifications']  , 
+          'product_id' => $id 
+        ]);
       }
     }
+
+   
   }
 
   /**
