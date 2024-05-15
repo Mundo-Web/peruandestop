@@ -129,7 +129,7 @@
               {{ $tour->extract }}
             </p>
 
-            <div class="flex gap-10 flex-col md:flex-row md:gap-8 lg:gap-16 p-5 bg-[#FCFCFC]">
+            <div class="grid grid-cols-1 md:grid-cols-2 p-5 bg-[#FCFCFC]">
               @foreach ($tour->specifications->chunk(2) as $especificacion)
                 <div class="flex flex-col items-start gap-5">
                   @foreach (@$especificacion as $item)
