@@ -279,6 +279,29 @@ class ProductsController extends Controller
 
     return view('pages.products.edit', compact('langs', 'product', 'atributos', 'valorAtributo', 'allTags', 'categoria' , 'tipoEntrada'));
   }
+  private function actEntradaMultiple ($id , $values) {
+    
+    foreach ($values as $key => $entrada) {
+
+      $registroDB = EntradasMultiples::find($key);
+      if($entrada['entrada_multiple'] == null ){
+        $registroDB->delete();
+      }
+      elseif ($registroDB) {
+        $registroDB->description = $entrada['entrada_multiple'];
+        $registroDB->tipo_entrada_id = $entrada['tipo_entrada_id'];
+        $registroDB->save();
+      }else{
+        EntradasMultiples::create([
+          'description' =>$entrada['entrada_multiple'], 
+          'tipo_entrada_id' =>$entrada['tipo_entrada_id']  , 
+          'producto_id' => $id 
+        ]);
+      }
+    }
+   
+
+  }
 
   /**
    * Update the specified resource in storage.
@@ -286,6 +309,7 @@ class ProductsController extends Controller
   public function update(Request $request, string $id)
   {
     $especificaciones = [];
+    $entradaMultiple = [];
     $product = Products::find($id);
     $tagsSeleccionados = $request->input('tags_id');
     $data = $request->all();
@@ -321,9 +345,22 @@ class ProductsController extends Controller
           $num = substr($key, strrpos($key, '-') + 1); // Obtener el número de la especificación
           $especificaciones[$num]['specifications'] = $value; // Agregar las especificaciones al array asociativo
         }
+
+        if(strpos($key, 'tipo_entrada_id-') === 0){
+          $num = substr($key, strrpos($key, '-') + 1);
+          $entradaMultiple[$num]['tipo_entrada_id'] = $value; 
+        }elseif(strpos($key, 'entrada_multiple-') === 0){
+          $num = substr($key, strrpos($key, '-') + 1);
+          $entradaMultiple[$num]['entrada_multiple'] = $value; 
+
+        }
       }
     }
     $this->actualizarSpecificaciones($especificaciones);
+
+    
+    $this->actEntradaMultiple($id, $entradaMultiple); 
+
 
     $jsonAtributos = json_encode($atributos);
 
