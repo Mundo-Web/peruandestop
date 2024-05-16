@@ -25,9 +25,9 @@
     }
 
     /* @font-face {
-                                                                                                                                                                                                  font-family: "acehSemibold";
-                                                                                                                                                                                                  src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
-                                                                                                                                                                                                  }  */
+                                                                                                                                                                                                        font-family: "acehSemibold";
+                                                                                                                                                                                                        src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
+                                                                                                                                                                                                        }  */
 
     .bg_header_fondo {
       background-image: url({{ asset('images/img/header_fondo.png') }});
@@ -225,14 +225,14 @@
             <div class="image__effect-hover rounded-[20px]">
 
               @if ($destino->name_image == null)
-                <div class="relative mb-2 mt-2">
-                  <img src="{{ asset('images/noimage.png') }}" alt="cusco" class="w-full shadow-lg object-cover" />
-                </div>
+                {{-- <div class="relative mb-2 mt-2"> --}}
+                <img src="{{ asset('images/noimage.png') }}" alt="cusco" class="w-full shadow-lg object-cover" />
+                {{-- </div> --}}
               @else
-                <div class="relative mb-2 mt-2">
-                  <img src="{{ asset($destino->url_image . '/' . $destino->name_image) }}" alt="cusco"
-                    class="w-full shadow-lg object-cover" />
-                </div>
+                {{-- <div class="relative mb-2 mt-2"> --}}
+                <img src="{{ asset($destino->url_image . '/' . $destino->name_image) }}" alt="cusco"
+                  class="w-full shadow-lg object-cover" />
+                {{-- </div> --}}
               @endif
 
 
@@ -320,7 +320,7 @@
       </h2>
       <div class="flex-wrap w-11/12 mx-auto hidden 2md:flex md:flex-col gap-8 justify-center items-center text-center">
         <div class="flex gap-10">
-
+          {{-- imprimir de 5 en 5  --}}
           @foreach ($tags as $item)
             <a href="{{ 'destino?tags=' . $item->id }}"
               class="font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-3 px-5 hover:text-white hover:bg-[#3F76BB] md:duration-500 leading-none text-center h-full">{{ $item->name }}
