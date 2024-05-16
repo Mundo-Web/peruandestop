@@ -41,7 +41,7 @@ class IndexController extends Controller
     // $productos =  Products::where("destacar", "=", true)->where("status","=",true)->get();
     $productos =  Products::with('tags')->activeDestacado()->where('langs', '=', $lang)->get();
     //$categorias = Category::all();
-    $categorias = Category::where("visible", "=", true)->where('langs', '=', $lang)->get();
+    $categorias = Category::where("visible", "=", true)->where('status', '=', 1)->where('langs', '=', $lang)->where('category_type', '=','destino')->get();
     $destacados = Products::where('destacar', '=', 1)->where('status', '=', 1)->where('visible', '=', 1)->where('langs', '=', $lang)->get();
     $descuentos = Products::where('descuento', '>', 0)->where('status', '=', 1)->where('visible', '=', 1)->where('langs', '=', $lang)->get();
     $tags = Tag::where('status', '=', 1)->where('visible', '=', 1)->where('langs', '=', $lang)->get();
