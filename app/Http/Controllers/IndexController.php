@@ -41,7 +41,7 @@ class IndexController extends Controller
     // $productos =  Products::where("destacar", "=", true)->where("status","=",true)->get();
     $productos =  Products::with('tags')->activeDestacado()->where('langs', '=', $lang)->get();
     //$categorias = Category::all();
-    $categorias = Category::where("visible", "=", true)->where('status', '=', 1)->where('langs', '=', $lang)->where('category_type', '=','destino')->get();
+    $categorias = Category::where("visible", "=", true)->where('status', '=', 1)->where('langs', '=', $lang)->where('category_type', '=', 'destino')->get();
     $destacados = Products::where('destacar', '=', 1)->where('status', '=', 1)->where('visible', '=', 1)->where('langs', '=', $lang)->get();
     $descuentos = Products::where('descuento', '>', 0)->where('status', '=', 1)->where('visible', '=', 1)->where('langs', '=', $lang)->get();
     $tags = Tag::where('status', '=', 1)->where('visible', '=', 1)->where('langs', '=', $lang)->get();
@@ -59,7 +59,7 @@ class IndexController extends Controller
 
     $langInfo = $request->attributes->all();
 
-    return view('public.index', compact('tours','sliders', 'productos', 'destacados', 'descuentos', 'general', 'benefit', 'faqs', 'testimonie', 'slider', 'categorias', 'category', 'tags', 'blogs', 'lang', 'langInfo'));
+    return view('public.index', compact('tours', 'sliders', 'productos', 'destacados', 'descuentos', 'general', 'benefit', 'faqs', 'testimonie', 'slider', 'categorias', 'category', 'tags', 'blogs', 'lang', 'langInfo'));
   }
 
   public function catalogo($filtro, Request $request)
@@ -326,11 +326,51 @@ class IndexController extends Controller
 
   public function actividad(Request $request, string $lang,  string $id)
   {
-    //
-    $destino = Category::find($request->id);
-    $langInfo = $request->attributes->all();
+    $destino = null;
+    $tours = null;
+    $tagsId = $request->input('tags');
+    try {
+      
 
-    return view('public.actividad', compact('destino', 'lang', "langInfo"));
+      if ($id == 0) {
+        $destino = Category::where("visible", "=", true)->where('status', '=', 1)->where('langs', '=', $lang)->first();
+        $tours = Products::where('destacar', '=', 1)
+                  ->where('status', '=', 1)
+                  ->where('visible', '=', 1)
+                  ->where('langs', '=', $lang) ;
+                  if($tagsId !== null ){
+                       $tours = $tours->whereHas('tags', function ($query) use ($tagsId) {
+                        $query->where('tags.id', $tagsId);
+                    })
+                    ->get();
+
+                    $destino->name = 'Nuestros Tours';
+                    $destino->pais =  Tag::find($tagsId)->name;
+                  }else{
+                       $tours = $tours->get();
+                       $destino->name = 'Nuestros Tours';
+                       $destino->pais =  'Todos';
+                  }
+                  
+                 
+        
+       
+        
+       
+        
+      } else {
+
+        $destino = Category::find($request->id);
+        $tours = Products::where('destacar', '=', 1)->where('status', '=', 1)->where('visible', '=', 1)->where('categoria_id', '=',$id)->where('langs', '=', $lang)->get();
+      }
+      $langInfo = $request->attributes->all();
+      
+      $tags = Tag::where('status', '=', 1)->where('visible', '=', 1)->where('langs', '=', $lang)->get();
+
+      return view('public.actividad', compact('destino', 'lang', "langInfo", 'tours', 'tags'));
+    } catch (\Throwable $th) {
+      //throw $th;
+    }
   }
 
   public function detalleActividad(Request $request, string $lang, string $id)
@@ -361,8 +401,8 @@ class IndexController extends Controller
 
     $entradasOrdenadas = $tour->entradasMulti->sortBy('tipo_entrada_id');
     $tipo_entradas = TipoEntrada::all();
-    
-    return view('public.detalleActividad', compact('tour', 'destinos', 'tagsDestinos', 'lang', 'langInfo' , 'entradasOrdenadas', 'tipo_entradas'));
+
+    return view('public.detalleActividad', compact('tour', 'destinos', 'tagsDestinos', 'lang', 'langInfo', 'entradasOrdenadas', 'tipo_entradas'));
   }
 
   public function blog(Request $request, string $lang)

@@ -25,9 +25,9 @@
     }
 
     /* @font-face {
-                                                                                                                                                                                                              font-family: "acehSemibold";
-                                                                                                                                                                                                              src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
-                                                                                                                                                                                                              }  */
+                                                                                                                                                                                                                    font-family: "acehSemibold";
+                                                                                                                                                                                                                    src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
+                                                                                                                                                                                                                    }  */
 
     .bg_header_fondo {
       background-image: url({{ asset('images/img/header_fondo.png') }});
@@ -226,7 +226,7 @@
         <div class="flex gap-10">
           {{-- imprimir de 5 en 5  --}}
           @foreach ($tags as $item)
-            <a href="{{ $langInfo['selected'] . '/destino?tags=' . $item->id }}"
+            <a href="{{ $langInfo['selected'] . '/actividad/0?tags=' . $item->id }}"
               class="font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-3 px-5 hover:text-white hover:bg-[#3F76BB] md:duration-500 leading-none text-center h-full">{{ $item->name }}
             </a>
           @endforeach
@@ -294,9 +294,10 @@
 
       <div class="w-11/12 mx-auto pb-20">
         @if (isset($actividad))
-          <a href="{{ url($langInfo['selected'] . '/actividad/' . $actividad->id) }}"
+          <a href="{{ url($langInfo['selected'] . '/actividad/0') }}"
             class="font-acehSemibold text-text18 md:text-text22 rounded-full border-colorBorder border-2 py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 inline-block w-full md:w-auto text-center">
             Ver más Tours
+
             <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg"
               class="inline-block">
               <path

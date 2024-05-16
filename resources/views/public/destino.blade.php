@@ -82,12 +82,7 @@
     <section>
       <div class="gap-10 w-11/12 mx-auto">
         <div class="flex flex-row justify-between items-center my-16 gap-5">
-          @if (count($destino))
-            <h2
-              class="font-acehSemibold text-text32 md:text-text64 leading-none md:leading-tight text-left text-[#141841]">
-              {{ $langInfo['lang']['destino']['explorar'] }} {{ $tipoCategoria }}
-            </h2>
-          @endif
+
 
 
           <!-- --------- modal -->
@@ -486,28 +481,7 @@
                 </div> --}}
         <!-- CARRUSEL PARRA MOBILE -->
 
-        <div data-aos="fade-up" data-aos-offset="150">
-          <div class="swiper productos-explorar-destino">
-            <div class="swiper-wrapper text-[#0F1B2C]">
-              @foreach ($tags as $item)
-                <div class="swiper-slide rounded-2xl">
-                  <div class="rounded-2xl">
-                    <div class="">
-                      <img src="{{ asset($item->imagen) }}" alt="{{ $item->name }}"
-                        class="w-full rounded-2xl shadow-lg object-cover" />
-                    </div>
-                  </div>
 
-                  <a href="{{ url($langInfo['selected'] . '/destino?tags=' . $item->id) }}"
-                    class="font-acehSemibold text-text18 md:text-text22 text-center py-5 inline-block w-full">{{ $item->name }}</a>
-                </div>
-              @endforeach
-
-
-            </div>
-
-          </div>
-        </div>
       </div>
     </section>
 
