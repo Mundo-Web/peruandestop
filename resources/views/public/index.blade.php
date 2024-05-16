@@ -25,9 +25,9 @@
     }
 
     /* @font-face {
-                                                                                                                                                                                                            font-family: "acehSemibold";
-                                                                                                                                                                                                            src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
-                                                                                                                                                                                                            }  */
+                                                                                                                                                                                                              font-family: "acehSemibold";
+                                                                                                                                                                                                              src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
+                                                                                                                                                                                                              }  */
 
     .bg_header_fondo {
       background-image: url({{ asset('images/img/header_fondo.png') }});
@@ -226,7 +226,7 @@
         <div class="flex gap-10">
           {{-- imprimir de 5 en 5  --}}
           @foreach ($tags as $item)
-            <a href="{{ 'destino?tags=' . $item->id }}"
+            <a href="{{ $langInfo['selected'] . '/destino?tags=' . $item->id }}"
               class="font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-3 px-5 hover:text-white hover:bg-[#3F76BB] md:duration-500 leading-none text-center h-full">{{ $item->name }}
             </a>
           @endforeach
