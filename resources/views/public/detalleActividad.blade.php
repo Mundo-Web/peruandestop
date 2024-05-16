@@ -129,25 +129,25 @@
               {{ $tour->extract }}
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 p-5 bg-[#FCFCFC]">
+            <div class="grid gap-5 grid-cols-1 md:grid-cols-2   bg-[#FCFCFC]">
               @foreach ($tour->specifications->chunk(2) as $especificacion)
-                <div class="flex flex-col items-start gap-5">
-                  @foreach (@$especificacion as $item)
-                    <div class="flex items-start justify-between gap-11   ">
-                      <img src="{{ asset('images/svg/point.svg') }}" alt="duracion de horas" class="mt-1">
-                      <div>
-                        <h2 class="font-semibold text-[20px] text-[#0F1B2C]">
-                          {{ $item->tittle }}
-                        </h2>
-                        <p class="font-medium text-[16px] text-[#495560]">
-                          {{ $item->specifications }}
-                        </p>
-                      </div>
-
+                {{-- <div class="flex flex-col items-start gap-5"> --}}
+                @foreach (@$especificacion as $item)
+                  <div class="flex items-start gap-5 ">
+                    <img src="{{ asset('images/svg/point.svg') }}" alt="duracion de horas" class="mt-1">
+                    <div>
+                      <h2 class="font-acehSemibold text-text20 md:text-text24 text-[#0F1B2C] leading-none">
+                        {{ $item->tittle }}
+                      </h2>
+                      <p class="font-acehMedium text-text16 md:text-text20 text-[#495560]">
+                        {{ $item->specifications }}
+                      </p>
                     </div>
-                  @endforeach
 
-                </div>
+                  </div>
+                @endforeach
+
+                {{-- </div> --}}
               @endforeach
             </div>
 
