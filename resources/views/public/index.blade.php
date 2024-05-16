@@ -25,9 +25,9 @@
     }
 
     /* @font-face {
-                                                                                                                                                                                                        font-family: "acehSemibold";
-                                                                                                                                                                                                        src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
-                                                                                                                                                                                                        }  */
+                                                                                                                                                                                                          font-family: "acehSemibold";
+                                                                                                                                                                                                          src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
+                                                                                                                                                                                                          }  */
 
     .bg_header_fondo {
       background-image: url({{ asset('images/img/header_fondo.png') }});
@@ -213,6 +213,101 @@
       </div>
     </section>
 
+
+
+    <section data-aos="fade-up" data-aos-offset="150">
+      <h2
+        class="font-acehSemibold text-text40 md:text-text64 w-11/12 mx-auto my-5 leading-none md:leading-tight text-[#0F1B2C]">
+
+        {{ $langInfo['lang']['section2']['Toursd'] }}
+
+      </h2>
+      <div class="flex-wrap w-11/12 mx-auto hidden 2md:flex md:flex-col gap-8 justify-center items-center text-center">
+        <div class="flex gap-10">
+          {{-- imprimir de 5 en 5  --}}
+          @foreach ($tags as $item)
+            <a href="{{ 'destino?tags=' . $item->id }}"
+              class="font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-3 px-5 hover:text-white hover:bg-[#3F76BB] md:duration-500 leading-none text-center h-full">{{ $item->name }}
+            </a>
+          @endforeach
+        </div>
+        <div class="flex gap-5">
+
+
+        </div>
+      </div>
+
+      <div class="w-11/12 mx-auto">
+
+        @foreach ($productos as $actividad)
+          <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 pt-10 pb-5 lg:py-10" data-aos="fade-up"
+            data-aos-offset="150">
+            <div class="">
+              <img src="{{ asset($actividad->imagen) }}" alt="" class="w-full rounded-2xl object-cover" />
+            </div>
+
+            <div class="w-full mx-auto flex flex-col justify-center">
+              <div class="flex flex-col-reverse gap-5 md:gap-5 md:flex-row md:justify-start md:items-center">
+                @foreach ($actividad->tags as $tags)
+                  <span
+                    class="font-acehMedium text-text16 md:text-text20 rounded-full border-colorBorder border-2 py-2 px-5 inline-block max-w-max text-center leading-none">
+                    {{ $tags->name }}
+                  </span>
+                @endforeach
+
+
+
+              </div>
+              <div>
+                <h2 class="font-acehSemibold text-text48 md:text-text52 py-5 md:py-10 leading-none">
+                  {{ $actividad->producto }}
+                </h2>
+                <div class="flex gap-10">
+                  <div class="flex gap-2">
+                    <img src="./images/svg/ubicacion.svg" alt="ubigeo" />
+                    <p class="font-acehMedium text-text16 md:text-text20">{{ $actividad->categoria->name }} -
+                      {{ $actividad->categoria->pais }} </p>
+                  </div>
+                  {{-- <div class="flex gap-2">
+                    <img src="./images/svg/hora.svg" alt="hora" />
+                    <p class="font-acehMedium text-text16 md:text-text20">4 horas</p>
+                  </div> --}}
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-5 md:flex-row justify-between items-start md:items-center py-5 md:py-10">
+                <p class="font-acehbold text-text40 md:text-text44 leading-none">
+                  {{ $actividad->precio }} US$
+                  <span class="block font-acehMedium text-text16 md:text-text20">Por persona</span>
+                </p>
+                <a href="{{ url($langInfo['selected'] . '/detalleActividad') . '/' . $actividad->id }}"
+                  class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white
+                   hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">Ver
+                  Tour</a>
+              </div>
+            </div>
+          </div>
+        @endforeach
+
+
+      </div>
+
+      <div class="w-11/12 mx-auto pb-20">
+        @if (isset($actividad))
+          <a href="{{ url('/actividad/' . $actividad->id) }}"
+            class="font-acehSemibold text-text18 md:text-text22 rounded-full border-colorBorder border-2 py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 inline-block w-full md:w-auto text-center">
+            Ver más Tours
+            <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="inline-block">
+              <path
+                d="M11.043 15.7637C10.4437 15.918 9.81541 16 9.16797 16C5.02583 16 1.66797 12.6421 1.66797 8.5C1.66797 4.35786 5.02583 1 9.16797 1C12.9926 1 16.1486 3.86283 16.6099 7.5625M2.60547 11.3125H4.79297C5.65592 11.3125 6.35547 10.6129 6.35547 9.75V7.71875C6.35547 6.8558 7.05502 6.15625 7.91797 6.15625H9.48047C10.3434 6.15625 11.043 5.4567 11.043 4.59375V1.9375M15.7676 13.2048L17.9146 12.4625C18.3171 12.3233 18.3305 11.7591 17.9352 11.601L12.6122 9.47145C12.2419 9.32331 11.8714 9.6846 12.0103 10.0585L14.038 15.5181C14.1862 15.9171 14.7502 15.9179 14.8996 15.5194L15.7676 13.2048Z"
+                stroke="#0F1B2C" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"
+                class="group-hover:stroke-white md:duration-500" />
+            </svg>
+          </a>
+        @endif
+      </div>
+    </section>
     <section class="z-0" data-aos="fade-up" data-aos-offset="150"> {{-- section2 --}}
       <h2
         class="font-acehSemibold text-text40 md:text-text64 w-11/12 mx-auto py-8 md:py-5 leading-none md:leading-tight my-10 text-[#141841]">
@@ -309,100 +404,6 @@
             class="group-hover:stroke-white md:duration-500" />
         </svg>
       </a>
-    </section>
-
-    <section data-aos="fade-up" data-aos-offset="150">
-      <h2
-        class="font-acehSemibold text-text40 md:text-text64 w-11/12 mx-auto my-5 leading-none md:leading-tight text-[#0F1B2C]">
-
-        {{ $langInfo['lang']['section2']['Toursd'] }}
-
-      </h2>
-      <div class="flex-wrap w-11/12 mx-auto hidden 2md:flex md:flex-col gap-8 justify-center items-center text-center">
-        <div class="flex gap-10">
-          {{-- imprimir de 5 en 5  --}}
-          @foreach ($tags as $item)
-            <a href="{{ 'destino?tags=' . $item->id }}"
-              class="font-acehSemibold text-text18 md:text-text22 rounded-[20px] border-colorBorder border-2 py-3 px-5 hover:text-white hover:bg-[#3F76BB] md:duration-500 leading-none text-center h-full">{{ $item->name }}
-            </a>
-          @endforeach
-        </div>
-        <div class="flex gap-5">
-
-
-        </div>
-      </div>
-
-      <div class="w-11/12 mx-auto">
-
-        @foreach ($productos as $actividad)
-          <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 pt-10 pb-5 lg:py-10" data-aos="fade-up"
-            data-aos-offset="150">
-            <div class="">
-              <img src="{{ asset($actividad->imagen) }}" alt="" class="w-full rounded-2xl object-cover" />
-            </div>
-
-            <div class="w-full mx-auto flex flex-col justify-center">
-              <div class="flex flex-col-reverse gap-5 md:gap-5 md:flex-row md:justify-start md:items-center">
-                @foreach ($actividad->tags as $tags)
-                  <span
-                    class="font-acehMedium text-text16 md:text-text20 rounded-full border-colorBorder border-2 py-2 px-5 inline-block max-w-max text-center leading-none">
-                    {{ $tags->name }}
-                  </span>
-                @endforeach
-
-
-
-              </div>
-              <div>
-                <h2 class="font-acehSemibold text-text48 md:text-text52 py-5 md:py-10 leading-none">
-                  {{ $actividad->producto }}
-                </h2>
-                <div class="flex gap-10">
-                  <div class="flex gap-2">
-                    <img src="./images/svg/ubicacion.svg" alt="ubigeo" />
-                    <p class="font-acehMedium text-text16 md:text-text20">{{ $actividad->categoria->name }} -
-                      {{ $actividad->categoria->pais }} </p>
-                  </div>
-                  {{-- <div class="flex gap-2">
-                    <img src="./images/svg/hora.svg" alt="hora" />
-                    <p class="font-acehMedium text-text16 md:text-text20">4 horas</p>
-                  </div> --}}
-                </div>
-              </div>
-
-              <div class="flex flex-col gap-5 md:flex-row justify-between items-start md:items-center py-5 md:py-10">
-                <p class="font-acehbold text-text40 md:text-text44 leading-none">
-                  {{ $actividad->precio }} US$
-                  <span class="block font-acehMedium text-text16 md:text-text20">Por persona</span>
-                </p>
-                <a href="{{ url($langInfo['selected'] . '/detalleActividad') . '/' . $actividad->id }}"
-                  class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white
-                   hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">Ver
-                  Tour</a>
-              </div>
-            </div>
-          </div>
-        @endforeach
-
-
-      </div>
-
-      <div class="w-11/12 mx-auto pb-20">
-        @if (isset($actividad))
-          <a href="{{ url('/actividad/' . $actividad->id) }}"
-            class="font-acehSemibold text-text18 md:text-text22 rounded-full border-colorBorder border-2 py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 inline-block w-full md:w-auto text-center">
-            Ver más Tours
-            <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg"
-              class="inline-block">
-              <path
-                d="M11.043 15.7637C10.4437 15.918 9.81541 16 9.16797 16C5.02583 16 1.66797 12.6421 1.66797 8.5C1.66797 4.35786 5.02583 1 9.16797 1C12.9926 1 16.1486 3.86283 16.6099 7.5625M2.60547 11.3125H4.79297C5.65592 11.3125 6.35547 10.6129 6.35547 9.75V7.71875C6.35547 6.8558 7.05502 6.15625 7.91797 6.15625H9.48047C10.3434 6.15625 11.043 5.4567 11.043 4.59375V1.9375M15.7676 13.2048L17.9146 12.4625C18.3171 12.3233 18.3305 11.7591 17.9352 11.601L12.6122 9.47145C12.2419 9.32331 11.8714 9.6846 12.0103 10.0585L14.038 15.5181C14.1862 15.9171 14.7502 15.9179 14.8996 15.5194L15.7676 13.2048Z"
-                stroke="#0F1B2C" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"
-                class="group-hover:stroke-white md:duration-500" />
-            </svg>
-          </a>
-        @endif
-      </div>
     </section>
 
     <section id="blog">
