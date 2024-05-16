@@ -498,7 +498,7 @@
                     </div>
                   </div>
 
-                  <a href="{{ url('/destino?tags=' . $item->id) }}"
+                  <a href="{{ url($langInfo['selected'] . '/destino?tags=' . $item->id) }}"
                     class="font-acehSemibold text-text18 md:text-text22 text-center py-5 inline-block w-full">{{ $item->name }}</a>
                 </div>
               @endforeach
