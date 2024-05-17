@@ -229,6 +229,7 @@
             title: response.message,
             icon: "success",
           });
+          $('#formContacto')[0].reset()
         },
         error: function(response) {
 
