@@ -612,6 +612,7 @@ class IndexController extends Controller
       $mail->send();
     } catch (\Throwable $th) {
       //throw $th;
+      dump($th);
     }
   }
 

@@ -62,8 +62,8 @@
             {{ $langInfo['lang']['contacto']['ourDirection'] }}
           </p>
           <div class="font-acehMedium text-text18 md:text-text22 text-[#495560]">
-            <p>Samblas tandapata 160</p>
-            <p>Cusco - Perú</p>
+            <p>{{ $general[0]->district }} {{ $general[0]->ddress }}</p>
+            <p>{{ $general[0]->city }} - {{ $general[0]->country }}</p>
           </div>
         </div>
 
@@ -73,8 +73,8 @@
 
           </p>
           <div class="font-acehMedium text-text18 md:text-text22 text-[#495560]">
-            <p>+51 999 000 999</p>
-            <p>+51 900 999 000</p>
+            <p>{{ $general[0]->cellphone }}</p>
+
           </div>
         </div>
       </div>
