@@ -16,6 +16,24 @@
 
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        ‘
+        gtm.start’: new Date().getTime(),
+        event: ‘gtm.js’
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != ‘dataLayer’ ? ‘ & l = ‘+l : ‘’;
+      j.async = true;
+      j.src = ’https: //www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window, document, ‘script’, ‘dataLayer’, ‘GTM - 5 P7RQPW6’);
+  </script>
+  <!-- End Google Tag Manager -->
+
   <style>
     /* @font-face {
             font-family: "acehSemibold";
@@ -76,6 +94,10 @@
 </head>
 
 <body class="scroll__hidden_explorar">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src=“https://www.googletagmanager.com/ns.html?id=GTM-5P7RQPW6” height=“0" width=“0”
+      style=“display:none;visibility:hidden”></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   @include('components.public.header', ['lang' => $lang])
 
   <div>
