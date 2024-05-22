@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Helpers\EmailConfig;
 use App\Http\Requests\StoreIndexRequest;
 use App\Http\Requests\UpdateIndexRequest;
+use App\Models\Agencias;
 use App\Models\Attributes;
 use App\Models\AttributesValues;
 use App\Models\Blog;
@@ -624,5 +625,21 @@ class IndexController extends Controller
     $data['nombre'] = '';
     $this->envioCorreo($data);
     return response()->json(['message' => 'Newsletter guardado ']);
+  }
+
+  public function guardarAgencia(Request $request){
+
+   
+    try {
+      dump($request->formDataObject);
+
+      Agencias::create($request->formDataObject);
+  
+      return response()->json(['message'=>'Agencia Guardada']);
+    } catch (\Throwable $th) {
+      //throw $th;
+      dump($th);
+    }
+
   }
 }
