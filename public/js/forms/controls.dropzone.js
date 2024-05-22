@@ -282,7 +282,7 @@ class DropzoneControls {
       console.log('inicializando dropzoneHeader')
       new Dropzone('#dropzoneHeader', {
         url: 'https://httpbin.org/post',
-        maxFiles: 1, 
+        // maxFiles: 1, 
         maxFilesize: 50,
         autoProcessQueue: false,
         acceptedFiles: ".pdf,.doc,.docx",
@@ -296,6 +296,7 @@ class DropzoneControls {
           });
           let container = 0 
           this.on('addedfile', async (file) => {
+            console.log(container)
             console.log('addedfile', file)
             if(container < 1 ){
               container++
@@ -308,19 +309,19 @@ class DropzoneControls {
               
               $('#dropzoneHeader').append($(input))
               // Showing file preview if it is not image
-              if (file.type && !file.type.match(/image.*/)) {
-                if (!file.documentPrev) {
-                  file.previewTemplate.classList.remove('dz-image-preview');
-                  file.previewTemplate.classList.add('dz-file-preview');
-                  file.previewTemplate.classList.add('dz-complete');
-                  file.documentPrev = true;
-                  this.emit('addedfile', file);
-                  this.removeFile(file);
+              // if (file.type && !file.type.match(/image.*/)) {
+              //   if (!file.documentPrev) {
+              //     file.previewTemplate.classList.remove('dz-image-preview');
+              //     file.previewTemplate.classList.add('dz-file-preview');
+              //     file.previewTemplate.classList.add('dz-complete');
+              //     file.documentPrev = true;
+              //     this.emit('addedfile', file);
+              //     this.removeFile(file);
   
                 
-                }
-              }
-            }
+              //   }
+              // }
+            }//
            
           });
 

@@ -11,6 +11,10 @@
     padding-bottom: initial !important; */
     }
 
+    .dz-default.dz-message {
+      display: none;
+    }
+
     .dropzone .img-thumbnail {
       height: 58px;
       width: 100% !important;

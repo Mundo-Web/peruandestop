@@ -229,12 +229,13 @@
 
                       <div id="dropzoneHeader"
                         class="dropzone border border-dashed border-black roundex-2xl flex flex-col justify-center items-center py-10">
-                        <div class="flex justify-center items-center">
+                        {{-- <div class="flex justify-center items-center">
                           <img src="{{ asset('images/img/header_1.png') }}" alt="">
                         </div>
                         <label for="upload"
                           class="font-acehSemibold text-text16 text-[#3F76BB] text-center cursor-pointer">Haga click
-                          para cargar <span class="text-[#495560]">o arrastre y suelte</span> </label>
+                          para cargar <span class="text-[#495560]">o arrastre y suelte</span> 
+                        </label> --}}
 
 
                       </div>
