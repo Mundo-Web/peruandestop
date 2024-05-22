@@ -631,14 +631,12 @@ class IndexController extends Controller
 
    
     try {
-      dump($request->formDataObject);
 
       Agencias::create($request->formDataObject);
   
       return response()->json(['message'=>'Agencia Guardada']);
     } catch (\Throwable $th) {
       //throw $th;
-      dump($th);
     }
 
   }
