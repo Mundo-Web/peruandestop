@@ -29,6 +29,8 @@ use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
+use SoDe\Extend\File as ExtendFile;
+use Illuminate\Support\Str;
 
 use function PHPUnit\Framework\isNull;
 
@@ -613,7 +615,6 @@ class IndexController extends Controller
       $mail->send();
     } catch (\Throwable $th) {
       //throw $th;
-      dump($th);
     }
   }
 
@@ -629,14 +630,43 @@ class IndexController extends Controller
 
   public function guardarAgencia(Request $request){
 
-   
+   $data = $request->all();
     try {
+      
 
-      Agencias::create($request->formDataObject);
+      if(isset($request['url_declaracion'])){
+        foreach ($request['url_declaracion'] as $file) {
+          # code...
+
+          // data:image/png; base64,code
+          [$first, $code] = explode(';base64,', $file);
+          $imageData = base64_decode($code);
+          $routeImg = 'storage/docs/declaracion_jurada/';
+
+          $ext = ExtendFile::getExtention(str_replace("data:", '', $first));
+
+
+
+          $nombreImagen = Str::random(10) . '.' . $ext;
+
+          // Verificar si la ruta no existe y crearla si es necesario
+          if (!file_exists($routeImg)) {
+            mkdir($routeImg, 0777, true); // Se crea la ruta con permisos de lectura, escritura y ejecución
+          }
+
+          // Guardar los datos binarios en un archivo
+          file_put_contents($routeImg . $nombreImagen, $imageData);
+          $data['url_declaracion'] =  $routeImg . $nombreImagen;
+        }
+        
+      }
+
+      Agencias::create($data);
   
       return response()->json(['message'=>'Agencia Guardada']);
     } catch (\Throwable $th) {
       //throw $th;
+      return response()->json(['message'=> 'Estamos trabajando en una solucion'], 400);
     }
 
   }

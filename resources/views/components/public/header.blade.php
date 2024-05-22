@@ -11,6 +11,7 @@
   @endphp
 
 
+
   <div class="navigation z-10">
     <button aria-label="hamburguer" type="button" class="hamburger onMenu" id="position">
       <svg width="25" height="25" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -75,7 +76,8 @@
 
             <div class="overflow-y-scroll h-[300px] md:h-[500px] actividades_scroll pr-4">
               <div>
-                <form action="" id='formAgencia' enctype="multipart/form-data">
+                <form id='formAgencia' action="{{ route('activity.store') }}" method="POST"
+                  enctype="multipart/form-data">
                   @csrf
                   <div class="flex flex-col gap-5">
                     <div class="flex flex-col gap-2 flex-auto">
@@ -225,16 +227,15 @@
                       </div>
 
 
-                      <div
-                        class="border border-dashed border-black roundex-2xl flex flex-col justify-center items-center py-10">
+                      <div id="dropzoneHeader"
+                        class="dropzone border border-dashed border-black roundex-2xl flex flex-col justify-center items-center py-10">
                         <div class="flex justify-center items-center">
                           <img src="{{ asset('images/img/header_1.png') }}" alt="">
                         </div>
                         <label for="upload"
                           class="font-acehSemibold text-text16 text-[#3F76BB] text-center cursor-pointer">Haga click
-                          para cargar <span class="text-[#495560]">o arrastre y suele</span> </label>
-                        <input type="file" hidden id="url_declaracion" name="url_declaracion">
-                        <p class="font-acehRegular text-[#344054] text-text14">Tamaño máximo de archivo 50mb</p>
+                          para cargar <span class="text-[#495560]">o arrastre y suelte</span> </label>
+
 
                       </div>
                     </div>
@@ -531,11 +532,7 @@
       $.ajax({
         url: "{{ route('guardarAgencia') }}",
         method: 'POST',
-        data: {
-
-          _token: $('input[name="_token"]').val(),
-          formDataObject,
-        },
+        data: formDataObject,
         success: function(success) {
           console.log(success)
           const openModal = document.querySelector(".mostrar-modal");
@@ -574,6 +571,21 @@
       })
     })
   </script>
+  <script>
+    File.toBase64 = function(blob) {
+      return new Promise((resolve, reject) => {
+        let reader = new FileReader();
+        reader.onloadend = () => {
+          resolve(reader.result);
+        }
+        reader.onerror = () => {
+          reject(new Error('No se pudo convertir el archivo en base64'));
+        }
+        reader.readAsDataURL(blob);
+      });
+    }
+  </script>
+  @include('_layout.scripts')
 
 
 </header>

@@ -17,7 +17,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- Google Tag Manager -->
-  <script>
+  {{-- <script>
     (function(w, d, s, l, i) {
       w[l] = w[l] || [];
       w[l].push({
@@ -31,7 +31,7 @@
       j.async = true;
       j.src = ’https: //www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window, document, ‘script’, ‘dataLayer’, ‘GTM - 5 P7RQPW6’);
-  </script>
+  </script> --}}
   <!-- End Google Tag Manager -->
 
   <style>
@@ -91,6 +91,13 @@
     }
   </style>
   <title>Index</title>
+  <link rel="stylesheet" href="{{ asset('/css/vendor/dropzone.min.css') }}" />
+  <link rel="stylesheet" href="{{ asset('/css/cssDropzone.css') }}" />
+  <script src="{{ asset('/js/cs/scrollspy.js') }}"></script>
+  <script src="{{ asset('/js/vendor/dropzone.min.js') }}"></script>
+  <script src="{{ asset('/js/vendor/singleimageupload.js') }}"></script>
+  <script src="{{ asset('/js/cs/dropzone.templates.js') }}"></script>
+  <script src="{{ asset('/js/forms/controls.dropzone.js') }}"></script>
 </head>
 
 <body class="scroll__hidden_explorar">
@@ -110,6 +117,7 @@
 
 
   @yield('scripts_improtados')
+
 
   <script>
     $('#formContactos').submit(function(event) {

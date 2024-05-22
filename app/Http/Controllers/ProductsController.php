@@ -207,7 +207,6 @@ class ProductsController extends Controller
       return redirect()->route('activity.index')->with('success', 'Publicación creado exitosamente.');
     } catch (\Throwable $th) {
       //throw $th;
-      dump($th);
     }
   }
   private function TagsXProducts($id, $nTags)
@@ -506,7 +505,6 @@ class ProductsController extends Controller
     return response()->json(['message' => 'registro actualizado']);
   }
   public function borrarimg(Request $request){
-    dump($request-> id );
     try {
       //code...
       $imagenGaleria = Galerie::find($request->id);
@@ -522,7 +520,6 @@ class ProductsController extends Controller
       return response()->json(['message'=>'imagen eliminada con exito ']);
     } catch (\Throwable $th) {
       //throw $th;
-      dump($th);
       return response()->json(['message'=>'no se ha podido eliminar la imagen '], 400);
 
     }
