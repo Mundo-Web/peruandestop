@@ -14,6 +14,37 @@
       "it": "Italiano"
     }
   },
+  "ModalAgencia": {
+    "eresAgencia": "¿Eres agencia?",
+    "modalTitle": "Registration Form",
+    "formAdvertice": "All fields are necessary to complete your registration",
+    "formTitle": "General information",
+    "nombre_agencia": "Nombre de la Agencia de Viajes",
+    "ruc": "Numero de identificacion fiscal",
+    "no_registro": "No. de Registro de la Agencia",
+    "direccion": "Dirección legal",
+    "telefono": "Número de teléfono",
+    "email": "NE-mail",
+    "pagina_web": "Página Web",
+    "nombre_representante": "Nombre del Representante Legal",
+    "identificacion_representante": "Identificación del Representante Legal",
+    "telefono_representante": "Teléfono del Representante Legal",
+    "email_representante": "Email del Representante Legal",
+    "tipo_agencia": "Tipo de Agencia obligatorio.",
+    "url_declaracion": "Documento de la declaracion jurada",
+    "minorista": "Minorista",
+    "mayorista": "Mayorista",
+    "DescargarDeclaracion": "Descargar Modelo de Declaración Jurada",
+    "containerDoc1": "Haga click para cargar ",
+    "containerDoc2": "o arrastre y suelte",
+    "confimarRegistro": "Confirmar Registro",
+    "aceptTerms": "Usted acepta nuestra amigable política de privacidad",
+    "needHelp": "¿Necesitas ayuda?",
+    "ChatTeam": "Por favor chatee con nuestro amigable equipo de soporte",
+    "getInContact": "Ponerse en contacto",
+    "finishRegister": "Registro realizado con Éxitos",
+    "finalMessage": "Es Lorem ipsum dolor sit amet consectetur adipisicing    elit. Possimus sint beatae dolorum similiq."
+  },
   "slider": {
     "inputSearch": "¿Cuál será tu próximo destino?",
     "btnSearch": "Buscar"

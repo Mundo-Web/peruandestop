@@ -41,10 +41,12 @@ class AppServiceProvider extends ServiceProvider
             // Obtener los datos del footer
             $langs = Langs::all() ;
             $blogs =  Blog::all()->count();
+            $datosgenerales = General::all(); 
             // Pasar los datos a la vista
             $view->with([
                 'langs' => $langs,
-                'blogs' => $blogs
+                'blogs' => $blogs,
+                'datosgenerales' => $datosgenerales
             
             ]);
         });

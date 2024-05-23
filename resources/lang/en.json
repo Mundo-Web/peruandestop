@@ -14,6 +14,37 @@
       "it": "Italian"
     }
   },
+  "ModalAgencia": {
+    "eresAgencia": "Are you an agency?",
+    "modalTitle": "Registration Form",
+    "formAdvertice": "All fields are necessary to complete your registration",
+    "formTitle": "General information",
+    "nombre_agencia": "Travel Agency Name",
+    "ruc": "Tax Identification Number",
+    "no_registro": "Agency Registration Number",
+    "direccion": "Legal Address",
+    "telefono": "Phone Number",
+    "email": "NE-mail",
+    "pagina_web": "Website",
+    "nombre_representante": "Legal Representative Name",
+    "identificacion_representante": "Legal Representative Identification",
+    "telefono_representante": "Legal Representative Phone Number",
+    "email_representante": "Legal Representative Email",
+    "tipo_agencia": "Agency Type",
+    "url_declaracion": "Affidavit Document",
+    "minorista": "Retail",
+    "mayorista": "Wholesaler",
+    "DescargarDeclaracion": "Download Affidavit Model",
+    "containerDoc1": "Click to load",
+    "containerDoc2": "or drag and drop",
+    "confimarRegistro": "Confirm Registration",
+    "aceptTerms": "You accept our friendly privacy policy",
+    "needHelp": "¿Need help?",
+    "ChatTeam": "Please chat with our friendly support team",
+    "getInContact": "Get in touch",
+    "finishRegister": " Registration made with Successes",
+    "finalMessage": "En Lorem ipsum dolor sit amet consectetur adipisicing    elit. Possimus sint beatae dolorum similiq."
+  },
   "slider": {
     "inputSearch": "What will be your next destination?",
     "btnSearch": "Search"

@@ -50,7 +50,7 @@
       {{--  --}}
       <a href="#"
         class="flex text-white  items-center gap-2 font-acehSemibold text-text18 py-4 lg:py-3 px-5 mostrar-modal ">
-        ¿Eres agencia?
+        {{ $archivoObjeto->ModalAgencia['eresAgencia'] }}
       </a>
 
       <section class="modal-destino z-[100]">
@@ -66,14 +66,15 @@
 
               <div class="flex flex-col justify-start items-start">
                 <h2 class="font-acehSemibold text-text40 leading-none text-[#3F76BB]">
-                  Formulario de Resgistro
+                  {{ $archivoObjeto->ModalAgencia['modalTitle'] }}
                 </h2>
 
                 <p class="text-[#495560] text-text18 font-acehRegular">
-                  Todos los campos son necesarios para completar tu registro
+                  {{ $archivoObjeto->ModalAgencia['formAdvertice'] }}
                 </p>
 
-                <h3 class="text-[#3F76BB] font-acehSemibold text-text20">Información General</h3>
+                <h3 class="text-[#3F76BB] font-acehSemibold text-text20">
+                  {{ $archivoObjeto->ModalAgencia['formTitle'] }}</h3>
               </div>
             </div>
 
@@ -84,8 +85,8 @@
                   @csrf
                   <div class="flex flex-col gap-5">
                     <div class="flex flex-col gap-2 flex-auto">
-                      <label for="nombre" class="font-medium text-text14 text-[#344054]">Nombre de la Agencia de
-                        Viajes</label>
+                      <label for="nombre"
+                        class="font-medium text-text14 text-[#344054]">{{ $archivoObjeto->ModalAgencia['nombre_agencia'] }}</label>
 
                       <input name="nombre_agencia" type="text"
                         class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
@@ -97,8 +98,8 @@
 
                     <div class="flex flex-col md:flex-row gap-5 w-full">
                       <div class="flex flex-col gap-2 flex-auto">
-                        <label for="nombre" class="font-medium text-text14  text-[#344054]">Numero de identificacion
-                          fiscal
+                        <label for="nombre"
+                          class="font-medium text-text14  text-[#344054]">{{ $archivoObjeto->ModalAgencia['ruc'] }}
                         </label>
 
                         <input name="ruc" type="text"
@@ -106,14 +107,15 @@
                       </div>
 
                       <div class="flex flex-col gap-2 flex-auto">
-                        <label for="no_registro" class="font-medium text-text14 text-[#344054]">No. de Registro de la
-                          Agencia</label>
+                        <label for="no_registro"
+                          class="font-medium text-text14 text-[#344054]">{{ $archivoObjeto->ModalAgencia['no_registro'] }}</label>
                         <input id="apellido" type="text" name="no_registro"
                           class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
                       </div>
                     </div>
                     <div class="flex flex-col gap-2 flex-auto">
-                      <label for="direccion" class="font-medium text-text14  text-[#344054]">Dirección legal</label>
+                      <label for="direccion"
+                        class="font-medium text-text14  text-[#344054]">{{ $archivoObjeto->ModalAgencia['direccion'] }}</label>
 
                       <input id="direccion" type="text" name="direccion"
                         class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
@@ -122,7 +124,7 @@
                     <div class="flex flex-col gap-2">
                       <div class="flex flex-col gap-2">
                         <label for="codigo_pais" class="font-medium text-text14 md:text-text18 text-[#344054]">
-                          Número de teléfono
+                          {{ $archivoObjeto->ModalAgencia['telefono'] }}
                         </label>
                         <div class="border-gray-200 border-[1.5px] flex rounded-xl">
 
@@ -135,8 +137,8 @@
 
                       <div>
                         <div class="flex flex-col gap-2 flex-auto">
-                          <label for="email"
-                            class="font-medium text-text14 md:text-text18 text-[#344054]">NE-mail</label>
+                          <label for="email" class="font-medium text-text14 md:text-text18 text-[#344054]">
+                            {{ $archivoObjeto->ModalAgencia['email'] }}</label>
                           <input id="apellido" type="email" name="email"
                             class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
                         </div>
@@ -144,16 +146,16 @@
                     </div>
 
                     <div class="flex flex-col gap-2 flex-auto">
-                      <label for="nombre" class="font-medium text-text14  text-[#344054]">Página Web</label>
+                      <label for="nombre" class="font-medium text-text14  text-[#344054]">
+                        {{ $archivoObjeto->ModalAgencia['pagina_web'] }}</label>
 
                       <input id="nombre" type="text" name="pagina_web"
                         class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
                     </div>
 
                     <div class="flex flex-col gap-2 flex-auto">
-                      <label for="nombre_representante" class="font-medium text-text14  text-[#344054]">Nombre del
-                        Representante
-                        Legal</label>
+                      <label for="nombre_representante"
+                        class="font-medium text-text14  text-[#344054]">{{ $archivoObjeto->ModalAgencia['nombre_representante'] }}</label>
 
                       <input id="nombre_representante" name="nombre_representante" type="text"
                         class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
@@ -161,41 +163,42 @@
 
                     <div class="flex flex-col md:flex-row gap-5 w-full">
                       <div class="flex flex-col gap-2 flex-auto">
-                        <label for="identificacion_representante"
-                          class="font-medium text-text14  text-[#344054]">Identificación del
-                          Representante Legal</label>
+                        <label for="identificacion_representante" class="font-medium text-text14  text-[#344054]">
+                          {{ $archivoObjeto->ModalAgencia['identificacion_representante'] }}</label>
 
                         <input id="nombre" name="identificacion_representante" type="text"
                           class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
                       </div>
 
                       <div class="flex flex-col gap-2 flex-auto">
-                        <label for="telefono_representante" class="font-medium text-text14 text-[#344054]">Teléfono
-                          del
-                          Representante Legal</label>
+                        <label for="telefono_representante"
+                          class="font-medium text-text14 text-[#344054]">{{ $archivoObjeto->ModalAgencia['telefono_representante'] }}</label>
                         <input id="apellido" name="telefono_representante" type="text"
                           class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
                       </div>
                     </div>
 
                     <div class="flex flex-col gap-2 flex-auto">
-                      <label for="email_representante" class="font-medium text-text14  text-[#344054]">Email del
-                        Representante
-                        Legal</label>
+                      <label for="email_representante" class="font-medium text-text14  text-[#344054]">
+                        {{ $archivoObjeto->ModalAgencia['email_representante'] }}
+                      </label>
 
                       <input id="nombre" name="email_representante" type="email"
                         class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
                     </div>
 
                     <div>
-                      <h2 class="text-text20 font-acehSemibold text-[#3F76BB]"> Tipo de Agencia</h2>
+                      <h2 class="text-text20 font-acehSemibold text-[#3F76BB]">
+                        {{ $archivoObjeto->ModalAgencia['tipo_agencia'] }}
+                      </h2>
                       <div class="flex flex-col gap-2">
-                        <h3 class="text-[#344054] font-acehMedium text-text14">Tipo de Agencia</h3>
+                        <h3 class="text-[#344054] font-acehMedium text-text14">
+                          {{ $archivoObjeto->ModalAgencia['tipo_agencia'] }}</h3>
                         <div class="flex flex-col md:flex-row gap-5 w-full justify-between">
                           <div class="flex items-center ps-4 w-full border-gray-200 border-[1px] rounded-xl px-5">
                             <label for="bordered-radio-minorista"
                               class="w-full py-4 text-text16 font-acehRegular text-[#495560] flex justify-between items-center px-4">
-                              <span>Minorista</span>
+                              <span>{{ $archivoObjeto->ModalAgencia['minorista'] }}</span>
                             </label>
                             <input type="radio" id="tipo_agencia" name="tipo_agencia" value="minorista"
                               class="focus:ring-transparent w-5 h-5 cursor-pointer border-[1px] border-gray-200 " />
@@ -205,7 +208,7 @@
                           <div class="flex items-center ps-4 w-full border-gray-200 border-[1px] rounded-xl px-5">
                             <label for="bordered-radio-mayorista"
                               class="w-full py-4 text-text16 font-acehRegular text-[#495560] flex justify-between items-center px-4">
-                              <span>Mayorista</span>
+                              <span>{{ $archivoObjeto->ModalAgencia['mayorista'] }}</span>
                             </label>
                             <input type="radio" id="bordered-radio-mayorista" name="tipo_agencia"
                               value="mayorista"
@@ -217,11 +220,13 @@
                     </div>
 
                     <div class="flex flex-col gap-3">
-                      <h2 class="text-text20 font-acehSemibold text-[#3F76BB]">Declaración Jurada</h2>
+                      <h2 class="text-text20 font-acehSemibold text-[#3F76BB]">
+                        {{ $archivoObjeto->ModalAgencia['url_declaracion'] }}
+                      </h2>
                       <div>
                         <a href="#"
                           class="bg-[#244D82] text-white py-2 px-5 inline-flex justify-start items-center rounded-full gap-2">
-                          <span class="text-text14">Descargar Modelo de Declaración Jurada </span>
+                          <span class="text-text14">{{ $archivoObjeto->ModalAgencia['DescargarDeclaracion'] }}</span>
                           <div>
                             <img src="{{ asset('images/svg/file-download.svg') }}" alt="">
                           </div>
@@ -235,8 +240,8 @@
                           <img src="{{ asset('images/img/header_1.png') }}" alt="">
                         </div>
                         <label for="upload"
-                          class="font-acehSemibold text-text16 text-[#3F76BB] text-center cursor-pointer">Haga click
-                          para cargar <span class="text-[#495560]">o arrastre y suelte</span>
+                          class="font-acehSemibold text-text16 text-[#3F76BB] text-center cursor-pointer">{{ $archivoObjeto->ModalAgencia['containerDoc1'] }}<span
+                            class="text-[#495560]"> {{ $archivoObjeto->ModalAgencia['containerDoc2'] }}</span>
                         </label>
 
 
@@ -244,13 +249,14 @@
                     </div>
 
                     <div class="w-full flex flex-col gap-2">
-                      <input type="submit" id="confirmarRegistro" value="Confirmar Registro"
+                      <input type="submit" id="confirmarRegistro"
+                        value="{{ $archivoObjeto->ModalAgencia['confimarRegistro'] }}"
                         class="text-white bg-[#3F76BB] py-3 rounded-2xl cursor-pointer border-2 font-acehSemibold text-text20 md:text-text24 text-center border-none w-full hover:bg-colorBackgroundMainTop duration-500 openNewModal" />
 
                       <div class="flex justify-start items-center gap-2">
                         <input type="checkbox" id="acepta">
-                        <label for="acepta" class="text-[#495560] font-acehRegular text-text16">Usted acepta nuestra
-                          amigable política de privacidad</label>
+                        <label for="acepta"
+                          class="text-[#495560] font-acehRegular text-text16">{{ $archivoObjeto->ModalAgencia['aceptTerms'] }}</label>
                       </div>
                     </div>
 
@@ -260,16 +266,17 @@
                           <img src="{{ asset('images/img/Avatar group.png') }}" alt="" />
                         </div>
                         <h2 class="font-acehMedium text-text24 md:text-text28 text-[#101828] mt-5">
-                          ¿Necesitas ayuda?
+                          {{ $archivoObjeto->ModalAgencia['needHelp'] }}
                         </h2>
                         <p class="font-acehRegular text-text18 md:text-text22 text-[#667085] mt-2 mb-12">
-                          Por favor chatee con nuestro amigable equipo de soporte
+                          {{ $archivoObjeto->ModalAgencia['ChatTeam'] }}
                         </p>
                         <div class="flex justify-center items-center">
-                          <a href="#"
+                          https://api.whatsapp.com/send?phone=983325433&text=Fit2Finance%20estamos%20para%20servirle
+                          <a href="https://api.whatsapp.com/send?phone={{ $datosgenerales[0]->whatsapp }}&text={{ $datosgenerales[0]->mensaje_whatsapp }}"
                             class="text-white bg-[#3F76BB] py-3 px-5 rounded-3xl cursor-pointer border-2 font-acehSemibold text-text20 md:text-text24
                                                          text-center border-none inline-block hover:bg-colorBackgroundMainTop duration-500">
-                            Ponerse en contacto
+                            {{ $archivoObjeto->ModalAgencia['getInContact'] }}
                           </a>
                         </div>
                       </div>
@@ -299,10 +306,10 @@
               </a>
             </div>
             <div class="flex flex-col gap-5">
-              <p class="text-[#3F76BB] font-acehSemibold text-text32 md:text-text40 leading-tight">Registro realizado
-                con Éxitos</p>
-              <p class="text-[#495560] text-text18 font-acehRegular">Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Possimus sint beatae dolorum similiq.</p>
+              <p class="text-[#3F76BB] font-acehSemibold text-text32 md:text-text40 leading-tight">
+                {{ $archivoObjeto->ModalAgencia['finishRegister'] }}</p>
+              <p class="text-[#495560] text-text18 font-acehRegular">
+                {{ $archivoObjeto->ModalAgencia['finalMessage'] }}</p>
 
               <div class="flex justify-center items-center">
                 <img src="{{ asset('images/img/exitooo.png') }}" alt=""
