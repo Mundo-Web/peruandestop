@@ -10,6 +10,9 @@
 
   @endphp
 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <script src="https://sandbox-checkout.izipay.pe/payments/v1/js/index.js"></script>
 
 
   <div class="navigation z-10">
@@ -84,30 +87,35 @@
                       <label for="nombre" class="font-medium text-text14 text-[#344054]">Nombre de la Agencia de
                         Viajes</label>
 
-                      <input name="nombre_agencia" type="text" placeholder="Agencia"
+                      <input name="nombre_agencia" type="text"
                         class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
                     </div>
+                    @error('nombre_agencia')
+                      <span>{{ $message }}</span>
+                    @enderror
 
 
                     <div class="flex flex-col md:flex-row gap-5 w-full">
                       <div class="flex flex-col gap-2 flex-auto">
-                        <label for="nombre" class="font-medium text-text14  text-[#344054]">RUC</label>
+                        <label for="nombre" class="font-medium text-text14  text-[#344054]">Numero de identificacion
+                          fiscal
+                        </label>
 
-                        <input name="ruc" type="text" placeholder="20 ...."
+                        <input name="ruc" type="text"
                           class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
                       </div>
 
                       <div class="flex flex-col gap-2 flex-auto">
                         <label for="no_registro" class="font-medium text-text14 text-[#344054]">No. de Registro de la
                           Agencia</label>
-                        <input id="apellido" type="text" name="no_registro" placeholder="00000-000"
+                        <input id="apellido" type="text" name="no_registro"
                           class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
                       </div>
                     </div>
                     <div class="flex flex-col gap-2 flex-auto">
                       <label for="direccion" class="font-medium text-text14  text-[#344054]">Dirección legal</label>
 
-                      <input id="direccion" type="text" name="direccion" placeholder="Av, Calle, Jr, Psj..."
+                      <input id="direccion" type="text" name="direccion"
                         class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
                     </div>
 
@@ -117,12 +125,7 @@
                           Número de teléfono
                         </label>
                         <div class="border-gray-200 border-[1.5px] flex rounded-xl">
-                          <select name="codigo_pais" id="pais"
-                            class=" border-0 px-4 py-2 bg-white appearance-none focus:outline-none focus:ring-0 rounded-xl text-text14 md:text-text18 text-[#344054]">
-                            <option value="0">US</option>
-                            <option value="1">PE</option>
-                            <option value="2">MXC</option>
-                          </select>
+
 
                           <input type="tel" name="telefono"
                             class="font-acehRegular border-none focus:outline-none w-full py-4 rounded-xl text-text16 md:text-text20 text-[#344054]" />
@@ -134,7 +137,7 @@
                         <div class="flex flex-col gap-2 flex-auto">
                           <label for="email"
                             class="font-medium text-text14 md:text-text18 text-[#344054]">NE-mail</label>
-                          <input id="apellido" type="email" name="email" placeholder="hola@mail.com"
+                          <input id="apellido" type="email" name="email"
                             class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
                         </div>
                       </div>
@@ -143,7 +146,7 @@
                     <div class="flex flex-col gap-2 flex-auto">
                       <label for="nombre" class="font-medium text-text14  text-[#344054]">Página Web</label>
 
-                      <input id="nombre" type="text" name="pagina_web" placeholder="www..."
+                      <input id="nombre" type="text" name="pagina_web"
                         class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
                     </div>
 
@@ -153,7 +156,6 @@
                         Legal</label>
 
                       <input id="nombre_representante" name="nombre_representante" type="text"
-                        placeholder="Nombre completo"
                         class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
                     </div>
 
@@ -163,7 +165,7 @@
                           class="font-medium text-text14  text-[#344054]">Identificación del
                           Representante Legal</label>
 
-                        <input id="nombre" name="identificacion_representante" type="text" placeholder="DNI"
+                        <input id="nombre" name="identificacion_representante" type="text"
                           class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
                       </div>
 
@@ -171,7 +173,7 @@
                         <label for="telefono_representante" class="font-medium text-text14 text-[#344054]">Teléfono
                           del
                           Representante Legal</label>
-                        <input id="apellido" name="telefono_representante" type="text" placeholder="+51 ...."
+                        <input id="apellido" name="telefono_representante" type="text"
                           class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
                       </div>
                     </div>
@@ -181,7 +183,7 @@
                         Representante
                         Legal</label>
 
-                      <input id="nombre" name="email_representante" type="email" placeholder="EMAIL"
+                      <input id="nombre" name="email_representante" type="email"
                         class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
                     </div>
 
@@ -292,7 +294,7 @@
         <div class="modal__mostrar-ordenar">
           <div class="flex flex-col gap-5">
             <div class="flex justify-end items-center w-full">
-              <a href="#" class="modal__close-ordenar">
+              <a href="#" class="modal__close-ordenar" onclick="cerrarModal()">
                 <img src="{{ asset('images/svg/close.svg') }}" alt="close" />
               </a>
             </div>
@@ -308,9 +310,7 @@
               </div>
 
               <div class="flex justify-center items-center">
-                <a href="#"
-                  class="bg-[#3F76BB] text-white font-acehbold text-text20 rounded-3xl py-2 px-5 cerrar_modal">Iniciar
-                  Sesión</a>
+
               </div>
 
             </div>
@@ -410,6 +410,11 @@
     </div>
   </div>
   <script>
+    function cerrarModal() {
+      console.log('cerrando modal');
+      $('.modal-ordenar').removeClass('modal--show');
+      $('.scroll__hidden_explorar').removeClass('overflow-hidden');
+    }
     document.addEventListener('DOMContentLoaded', function() {
       // Obtener el idioma seleccionado de la URL
       const selectedLang = "{{ request()->segment(1) }}";
@@ -530,6 +535,7 @@
         formDataObject[item.name] = item.value;
       });
 
+
       $.ajax({
         url: "{{ route('guardarAgencia') }}",
         method: 'POST',
@@ -563,10 +569,42 @@
           modalOrdenar.classList.add("modal--show");
           body.classList.add("overflow-hidden");
           modalOrdenar.style.display = "flex";
+          const cerrar_modal = document.querySelector('.cerrar_modal');
+          cerrar_modal.addEventListener('click', (e) => {
+            e.preventDefault();
+            modalOrdenar.classList.remove("modal--show");
+            body.classList.remove("overflow-hidden");
+
+          })
+          closeModalOrdenar.addEventListener("click", (e) => {
+            e.preventDefault();
+            modalOrdenar.classList.remove("modal--show");
+            body.classList.remove("overflow-hidden");
+          });
 
         },
         error: function(error) {
-          console.log(error)
+          console.log(error.responseJSON.errors)
+
+          let errors = error.responseJSON.errors
+
+          let errorMessages = '';
+
+          for (let field in errors) {
+            if (errors.hasOwnProperty(field)) {
+              errorMessages += `${errors[field][0]}  <br>`;
+            }
+          }
+
+
+
+          Swal.fire({
+
+            icon: "warning",
+            title: "Opss ",
+            html: `${errorMessages}`
+          });
+
         }
 
       })

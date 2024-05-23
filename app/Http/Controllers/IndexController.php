@@ -31,6 +31,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use SoDe\Extend\File as ExtendFile;
 use Illuminate\Support\Str;
+use Illuminate\Validation\ValidationException;
 
 use function PHPUnit\Framework\isNull;
 
@@ -333,41 +334,34 @@ class IndexController extends Controller
     $tours = null;
     $tagsId = $request->input('tags');
     try {
-      
+
 
       if ($id == 0) {
         $destino = Category::where("visible", "=", true)->where('status', '=', 1)->where('langs', '=', $lang)->first();
         $tours = Products::where('destacar', '=', 1)
-                  ->where('status', '=', 1)
-                  ->where('visible', '=', 1)
-                  ->where('langs', '=', $lang) ;
-                  if($tagsId !== null ){
-                       $tours = $tours->whereHas('tags', function ($query) use ($tagsId) {
-                        $query->where('tags.id', $tagsId);
-                    })
-                    ->get();
+          ->where('status', '=', 1)
+          ->where('visible', '=', 1)
+          ->where('langs', '=', $lang);
+        if ($tagsId !== null) {
+          $tours = $tours->whereHas('tags', function ($query) use ($tagsId) {
+            $query->where('tags.id', $tagsId);
+          })
+            ->get();
 
-                    $destino->name = 'Nuestros Tours';
-                    $destino->pais =  Tag::find($tagsId)->name;
-                  }else{
-                       $tours = $tours->get();
-                       $destino->name = 'Nuestros Tours';
-                       $destino->pais =  'Todos';
-                  }
-                  
-                 
-        
-       
-        
-       
-        
+          $destino->name = 'Nuestros Tours';
+          $destino->pais =  Tag::find($tagsId)->name;
+        } else {
+          $tours = $tours->get();
+          $destino->name = 'Nuestros Tours';
+          $destino->pais =  'Todos';
+        }
       } else {
 
         $destino = Category::find($request->id);
-        $tours = Products::where('destacar', '=', 1)->where('status', '=', 1)->where('visible', '=', 1)->where('categoria_id', '=',$id)->where('langs', '=', $lang)->get();
+        $tours = Products::where('destacar', '=', 1)->where('status', '=', 1)->where('visible', '=', 1)->where('categoria_id', '=', $id)->where('langs', '=', $lang)->get();
       }
       $langInfo = $request->attributes->all();
-      
+
       $tags = Tag::where('status', '=', 1)->where('visible', '=', 1)->where('langs', '=', $lang)->get();
 
       return view('public.actividad', compact('destino', 'lang', "langInfo", 'tours', 'tags'));
@@ -628,13 +622,51 @@ class IndexController extends Controller
     return response()->json(['message' => 'Newsletter guardado ']);
   }
 
-  public function guardarAgencia(Request $request){
+  public function guardarAgencia(Request $request)
+  {
 
-   $data = $request->all();
+    $data = $request->all();
     try {
-      
+      dump($data);
 
-      if(isset($request['url_declaracion'])){
+
+      $rules = [
+        "nombre_agencia" => 'required',
+        "ruc" => 'required',
+        "no_registro" => 'required',
+        "direccion" => 'required',
+        "telefono" => 'required',
+        "email" => 'required',
+        "pagina_web" => 'required',
+        "nombre_representante" => 'required',
+        "identificacion_representante" => 'required',
+        "telefono_representante" => 'required',
+        "email_representante" => 'required',
+        "tipo_agencia" => 'required',
+        "url_declaracion" => 'required'
+      ];
+
+      $messages = [
+        'nombre_agencia.required' => 'El campo Nombre de la Agencia de Viajes es obligatorio.',
+        "ruc.required" => 'El campo Numero de identificacion fiscal es obligatorio.',
+        "no_registro.required" => 'El campo No. de Registro de la Agencia es obligatorio.',
+        "direccion.required" => 'El campo Dirección legal es obligatorio.',
+        "telefono.required" => 'El campo Número de teléfono es obligatorio.',
+        "email.required" => 'El campo NE-mail es obligatorio.',
+        "pagina_web.required" => 'El campo Página Web es obligatorio.',
+        "nombre_representante.required" => 'El campo Nombre del Representante Legal es obligatorio.',
+        "identificacion_representante.required" => 'El campo Identificación del Representante Legal es obligatorio.',
+        "telefono_representante.required" => 'El campo Teléfono del Representante Legal es obligatorio.',
+        "email_representante.required" => 'El campo Email del Representante Legal es obligatorio.',
+        "tipo_agencia.required" => 'El campo Tipo de Agencia obligatorio.',
+        "url_declaracion.required" => 'El Documento de la declaracion jurada es obligatorio.'
+        // Agrega más mensajes personalizados según sea necesario
+      ];
+
+      $request->validate($rules, $messages);
+
+
+      if (isset($request['url_declaracion'])) {
         foreach ($request['url_declaracion'] as $file) {
           # code...
 
@@ -658,16 +690,19 @@ class IndexController extends Controller
           file_put_contents($routeImg . $nombreImagen, $imageData);
           $data['url_declaracion'] =  $routeImg . $nombreImagen;
         }
-        
       }
 
       Agencias::create($data);
-  
-      return response()->json(['message'=>'Agencia Guardada']);
-    } catch (\Throwable $th) {
-      //throw $th;
-      return response()->json(['message'=> 'Estamos trabajando en una solucion'], 400);
-    }
 
+      return response()->json(['message' => 'Agencia Guardada']);
+    } catch (ValidationException $e) {
+      //throw $th;
+      // return response()->json(['message'=> 'Estamos trabajando en una solucion'], 400);
+      return response()->json([
+        'status' => 'error',
+        'message' => 'Validation Error',
+        'errors' => $e->errors()
+      ], 400);
+    }
   }
 }
