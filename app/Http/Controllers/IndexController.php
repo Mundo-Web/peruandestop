@@ -627,7 +627,6 @@ class IndexController extends Controller
 
     $data = $request->all();
     try {
-      dump($data);
 
 
       $rules = [
