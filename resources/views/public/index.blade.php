@@ -25,9 +25,9 @@
     }
 
     /* @font-face {
-                                                                                                                                                                                                                          font-family: "acehSemibold";
-                                                                                                                                                                                                                          src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
-                                                                                                                                                                                                                          }  */
+                                                                                                                                                                                                                                                                                        font-family: "acehSemibold";
+                                                                                                                                                                                                                                                                                        src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
+                                                                                                                                                                                                                                                                                        }  */
 
     .bg_header_fondo {
       background-image: url({{ asset('images/img/header_fondo.png') }});
@@ -95,11 +95,16 @@
                     <form action="#" class="w-11/12 lg:w-8/12 mx-auto ">
                       <div
                         class="flex flex-col gap-5 2md:flex-row items-center justify-center 2md:bg-white py-2 md:px-2 rounded-full ">
-                        <input type="text"
+
+                        <input type="text" id="BuscarToursInput"
                           class="py-4 2md:py-2 rounded-full focus:outline-none w-full text-gray-700 text-center border-none text-text16 md:text-text20"
                           placeholder="{{ $langInfo['lang']['slider']['inputSearch'] }}" />
 
-                        <button type="submit"
+
+
+
+
+                        <button type="button" id="Buscartours"
                           class="px-10 py-3 rounded-full bg-colorBackgroundHeader flex justify-center items-center gap-2 hover:bg-colorBackgroundMainTop duration-500">
                           <span class="font-acehSemibold text-text20 ">
                             {{ $langInfo['lang']['slider']['btnSearch'] }}</span><img src="./images/svg/icono_buscar.svg"
@@ -107,6 +112,8 @@
                         </button>
                       </div>
                     </form>
+                    <div id="mostrarToursInput"
+                      class="bg-white p-[1px] rounded-xl  overflow-y-auto max-h-[300px] w-11/12 lg:w-8/12 mx-auto "></div>
                   </div>
                 </div>
               </div>
@@ -494,6 +501,57 @@
         pauseOnMouseEnter: true
       },
     });
+  </script>
+
+  <script>
+    $("#Buscartours").on('click', function(e) {
+      e.preventDefault()
+      console.log('buscando producto ')
+
+      let promp = $("#BuscarToursInput").val()
+      console.log(promp)
+
+      $.ajax({
+        url: "{{ route('buscartour') }}",
+        method: 'POST',
+        data: {
+          promp
+        },
+        success: function(response) {
+
+          let html = '';
+          baseUrl = window.location.href;
+
+          $('#mostrarToursInput').empty();
+          // Agregar nuevos resultados
+          response.data.forEach(function(producto) {
+            console.log(producto)
+            html += `
+                <a href="${baseUrl}/detalleActividad/${producto.id}" class="block text-blue-500 w-full flex flex-row py-3 px-5  hover:bg-slate-200" my-2">
+                    ${producto.producto}
+                </a>
+            `;
+          });
+
+          // Insertar el HTML justo después del input
+          $('#mostrarToursInput').append(html);
+
+
+        },
+        error: function(error) {
+
+          Swal.fire({
+
+            icon: "warning",
+            title: "Opss ",
+            html: `Algo malo ha ocurrido`
+          });
+
+        }
+
+      })
+
+    })
   </script>
 @stop
 

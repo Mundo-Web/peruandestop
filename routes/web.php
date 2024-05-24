@@ -85,6 +85,7 @@ Route::middleware(['language'])->group(function () {
 });
 Route::post('guardarUserNewsLetter', [IndexController::class, 'guardarUserNewsLetter'])->name('guardarUserNewsLetter');
 Route::post('guardarAgencia', [IndexController::class, 'guardarAgencia'])->name('guardarAgencia');
+Route::post('buscartour', [IndexController::class, 'buscartour'])->name('buscartour');
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 

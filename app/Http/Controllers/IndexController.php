@@ -703,4 +703,14 @@ class IndexController extends Controller
       ], 400);
     }
   }
+
+  public function buscartour(Request $request){
+
+  
+    $promp= $request->promp;
+
+    $ToursSearch = Products::where('producto', 'like', "%$promp%")->get();
+
+    return response()->json(['message' => 'llegamos a buscartour', 'data' => $ToursSearch]);
+  }
 }
