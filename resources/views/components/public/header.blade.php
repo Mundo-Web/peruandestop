@@ -272,7 +272,6 @@
                           {{ $archivoObjeto->ModalAgencia['ChatTeam'] }}
                         </p>
                         <div class="flex justify-center items-center">
-                          https://api.whatsapp.com/send?phone=983325433&text=Fit2Finance%20estamos%20para%20servirle
                           <a href="https://api.whatsapp.com/send?phone={{ $datosgenerales[0]->whatsapp }}&text={{ $datosgenerales[0]->mensaje_whatsapp }}"
                             class="text-white bg-[#3F76BB] py-3 px-5 rounded-3xl cursor-pointer border-2 font-acehSemibold text-text20 md:text-text24
                                                          text-center border-none inline-block hover:bg-colorBackgroundMainTop duration-500">
