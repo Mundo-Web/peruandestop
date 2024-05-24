@@ -338,8 +338,7 @@ class IndexController extends Controller
 
       if ($id == 0) {
         $destino = Category::where("visible", "=", true)->where('status', '=', 1)->where('langs', '=', $lang)->first();
-        $tours = Products::where('destacar', '=', 1)
-          ->where('status', '=', 1)
+        $tours = Products::where('status', '=', 1)
           ->where('visible', '=', 1)
           ->where('langs', '=', $lang);
         if ($tagsId !== null) {
