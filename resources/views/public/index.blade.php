@@ -25,9 +25,9 @@
     }
 
     /* @font-face {
-                                                                                                                                                                                                                    font-family: "acehSemibold";
-                                                                                                                                                                                                                    src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
-                                                                                                                                                                                                                    }  */
+                                                                                                                                                                                                                          font-family: "acehSemibold";
+                                                                                                                                                                                                                          src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
+                                                                                                                                                                                                                          }  */
 
     .bg_header_fondo {
       background-image: url({{ asset('images/img/header_fondo.png') }});
@@ -239,55 +239,61 @@
 
       <div class="w-11/12 mx-auto">
 
-        @foreach ($productos as $actividad)
-          <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 pt-10 pb-5 lg:py-10" data-aos="fade-up"
-            data-aos-offset="150">
-            <div class="">
-              <img src="{{ asset($actividad->imagen) }}" alt="" class="w-full rounded-2xl object-cover" />
-            </div>
-
-            <div class="w-full mx-auto flex flex-col justify-center">
-              <div class="flex flex-col-reverse gap-5 md:gap-5 md:flex-row md:justify-start md:items-center">
-                @foreach ($actividad->tags as $tags)
-                  <span
-                    class="font-acehMedium text-text16 md:text-text20 rounded-full border-colorBorder border-2 py-2 px-5 inline-block max-w-max text-center leading-none">
-                    {{ $tags->name }}
-                  </span>
-                @endforeach
-
-
-
-              </div>
-              <div>
-                <h2 class="font-acehSemibold text-text48 md:text-text52 py-5 md:py-10 leading-none">
-                  {{ $actividad->producto }}
-                </h2>
-                <div class="flex gap-10">
-                  <div class="flex gap-2">
-                    <img src="./images/svg/ubicacion.svg" alt="ubigeo" />
-                    <p class="font-acehMedium text-text16 md:text-text20">{{ $actividad->categoria->name }} -
-                      {{ $actividad->categoria->pais }} </p>
-                  </div>
-                  {{-- <div class="flex gap-2">
-                    <img src="./images/svg/hora.svg" alt="hora" />
-                    <p class="font-acehMedium text-text16 md:text-text20">4 horas</p>
-                  </div> --}}
+        <div class="grid grid-cols-1 2lg:grid-cols-3 mt-10 gap-20 md:gap-10 text-[#0F1B2C]">
+          {{-- @foreach ($destino->productos as $item) --}}
+          @foreach ($productos as $item)
+            <div class="" data-aos="fade-up" data-aos-offset="150">
+              <div class="overflow-hidden rounded-2xl">
+                <div class="img-container ">
+                  <img src="{{ asset($item->imagen) }}" alt=""
+                    class=" object-cover  h-[300px] rounded-2xl shadow-lg " style="  width: 100%;" />
                 </div>
               </div>
 
-              <div class="flex flex-col gap-5 md:flex-row justify-between items-start md:items-center py-5 md:py-10">
-                <p class="font-acehbold text-text40 md:text-text44 leading-none">
-                  {{ $actividad->precio }} US$
-                  <span class="block font-acehMedium text-text16 md:text-text20">Por persona</span>
-                </p>
-                <a href="{{ url($langInfo['selected'] . '/detalleActividad') . '/' . $actividad->id }}"
-                  class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white
-                   hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">Ver
-                  Tour</a>
+              <div class="w-full mx-auto flex flex-col justify-center gap-5">
+                <div class="flex flex-col-row gap-5 md:gap-5 md:flex-row md:justify-start md:items-center mt-5">
+                  @foreach ($item->tags as $tag)
+                    <span
+                      class="font-acehMedium text-text16 md:text-text20 rounded-full border-colorBorder border-2 py-1 px-5 inline-block max-w-max text-center">
+
+                      {{ Str::limit($tag->name, 10) }}
+                    </span>
+                  @endforeach
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h2 class="font-acehSemibold text-text48 md:text-text40 leading-none">
+                    {{ $item->producto }}
+                  </h2>
+                  <div class="flex gap-10">
+                    <div class="flex gap-2 items-center">
+                      <img src="{{ asset('images/svg/ubicacion.svg') }}" alt="ubigeo" />
+                      <p class="font-acehMedium text-text18 md:text-text22">{{ $item->categoria->name }} -
+                        {{ $item->categoria->pais }}
+                      </p>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                      <img src="{{ asset('images/svg/hora.svg') }}" alt="hora" />
+                      <p class="font-acehMedium text-text16 md:text-text20">4
+                        {{ $langInfo['lang']['actividad']['horas'] }}</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex flex-col gap-5 md:flex-row justify-between items-start md:items-center ">
+                  <p class="font-acehbold text-text40 md:text-text44">
+                    {{ $item->precio }} US$
+                    <span
+                      class="block font-acehMedium text-text16 md:text-text20">{{ $langInfo['lang']['actividad']['PorPersona'] }}</span>
+                  </p>
+                  <a href="{{ url($langInfo['selected'] . '/detalleActividad') . '/' . $item->id }}"
+                    class="font-acehSemibold text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">
+                    {{ $langInfo['lang']['actividad']['ver'] }}
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        @endforeach
+          @endforeach
+        </div>
 
 
       </div>
