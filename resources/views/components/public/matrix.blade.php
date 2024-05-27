@@ -17,21 +17,22 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- Google Tag Manager -->
-  {{-- <script>
+  <script>
     (function(w, d, s, l, i) {
       w[l] = w[l] || [];
       w[l].push({
-        ‘
-        gtm.start’: new Date().getTime(),
-        event: ‘gtm.js’
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
       });
       var f = d.getElementsByTagName(s)[0],
         j = d.createElement(s),
-        dl = l != ‘dataLayer’ ? ‘ & l = ‘+l : ‘’;
+        dl = l != 'dataLayer' ? '&l=' + l : '';
       j.async = true;
-      j.src = ’https: //www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window, document, ‘script’, ‘dataLayer’, ‘GTM - 5 P7RQPW6’);
-  </script> --}}
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5P7RQPW6');
+  </script>
   <!-- End Google Tag Manager -->
 
   <style>
