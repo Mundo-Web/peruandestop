@@ -25,9 +25,9 @@
     }
 
     /* @font-face {
-                                                                                                                                                                                                                                                                                                                  font-family: "acehSemibold";
-                                                                                                                                                                                                                                                                                                                  src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
-                                                                                                                                                                                                                                                                                                                  }  */
+                                                                                                                                                                                                                                                                                                                      font-family: "acehSemibold";
+                                                                                                                                                                                                                                                                                                                      src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
+                                                                                                                                                                                                                                                                                                                      }  */
 
     .bg_header_fondo {
       background-image: url({{ asset('images/img/header_fondo.png') }});
@@ -94,7 +94,8 @@
             </div>
           </form>
           <div id="mostrarToursInput"
-            class="bg-white p-[1px] rounded-xl  overflow-y-auto max-h-[300px] w-11/12 lg:w-4/12 mx-auto "></div>
+            class="bg-white p-[1px] rounded-xl  overflow-y-auto max-h-[177px] w-11/12 lg:w-4/12 mx-auto z-index:200; ">
+          </div>
         </div>
         <div class="swiper-wrapper">
 
