@@ -43,7 +43,7 @@
           {{ $langInfo['lang']['contacto']['title'] }}
         </h1>
         <p class="font-acehRegular text-text18 md:text-text22 text-[#495560]">
-          {{ $langInfo['lang']['contacto']['p1'] }}
+          {{-- {{ $langInfo['lang']['contacto']['p1'] }} --}}
         </p>
 
         <div>
@@ -121,12 +121,7 @@
                   {{ $langInfo['lang']['contacto']['telefono'] }}
                 </label>
                 <div class="border-gray-200 border-[1.5px] flex rounded-xl">
-                  <select name="codigoPais" id="pais"
-                    class=" border-0 px-4 py-2 bg-white appearance-none focus:outline-none focus:ring-0 rounded-xl text-text14 md:text-text18 text-[#344054]">
-                    <option value="0">US</option>
-                    <option value="1">PE</option>
-                    <option value="2">MXC</option>
-                  </select>
+
                   {{-- <div class="dropdown-telefono inline-block relative py-4">
                                         <button class="font-acehRegular px-6 rounded inline-flex items-center">
                                             <span class="mr-12 text-[#101828] text-[16px]">US</span>

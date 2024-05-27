@@ -592,6 +592,7 @@ class IndexController extends Controller
     $formlanding = Message::create($data);
 
     $this->envioCorreo($formlanding);
+    $this->envioCorreoAdmin($formlanding);
     // return redirect()->route('landingaplicativos', $formlanding)->with('mensaje','Mensaje enviado exitoso')->with('name', $request->nombre);
     return response()->json(['message' => 'Mensaje enviado con exito']);
   }
@@ -602,13 +603,29 @@ class IndexController extends Controller
     $name = $data['nombre'];
     $mail = EmailConfig::config();
     try {
-      $mail->addAddress($data['email']);
-      $mail->Body = "Buenas tardes $name su solicitud fue procesada.";
+      $mail->addAddress($data['email']); // correo del administrador 
+      $mail->Body = "Gracias Por comunicarte con nosotros, en breve le atenderemos";
       $mail->isHTML(true);
       $mail->send();
     } catch (\Throwable $th) {
       //throw $th;
     }
+  }
+  private function envioCorreoAdmin($data)
+  {
+    $name = $data['nombre'];
+    $mail = EmailConfig::config();
+    $DataGeneral = General::find(1);
+
+    try {
+      $mail->addAddress($DataGeneral->email); // correo del administrador 
+      $mail->Body = "Buenas tardes un cliente se ha puesto en contacto via correo ";
+      $mail->isHTML(true);
+      $mail->send();
+    } catch (\Throwable $th) {
+      //throw $th;
+    }
+
   }
 
   public function guardarUserNewsLetter(Request $request)
@@ -625,6 +642,7 @@ class IndexController extends Controller
   {
 
     $data = $request->all();
+    $attachmentPath = null;
     try {
 
 
@@ -686,11 +704,17 @@ class IndexController extends Controller
 
           // Guardar los datos binarios en un archivo
           file_put_contents($routeImg . $nombreImagen, $imageData);
+
           $data['url_declaracion'] =  $routeImg . $nombreImagen;
+          $attachmentPath = $routeImg . $nombreImagen;
         }
       }
 
       Agencias::create($data);
+
+      $this->enviarMailFormularioAgencia($data, $attachmentPath);
+
+
 
       return response()->json(['message' => 'Agencia Guardada']);
     } catch (ValidationException $e) {
@@ -703,11 +727,52 @@ class IndexController extends Controller
       ], 400);
     }
   }
+  private function enviarMailFormularioAgencia($data, $attachtment)
+  {
+    $name = $data['nombre_agencia'];
+    $ruc  = $data['ruc'];
+    $no_registro = $data['no_registro'];
+    $direccion = $data['direccion'];
+    $telefono = $data['telefono'];
+    $email = $data['email'];
+    $pagina_web = $data['pagina_web'];
+    $nombre_representante = $data['nombre_representante'];
+    $identificacion_representante = $data['identificacion_representante'];
+    $telefono_representante = $data['telefono_representante'];
+    $email_representante = $data['email_representante'];
+    $tipo_agencia = $data['tipo_agencia'];
 
-  public function buscartour(Request $request){
+    $mail = EmailConfig::config();
+    try {
+      $mail->addAddress($data['email']); // correo del administrador 
+      $mail->Body = "Buenas tardes un cliente se ha puesto en contacto via correo <br>
+      RUC: $ruc <br>
+      N REGISTRO : $no_registro <br>
+      DIRECCION: $direccion <br>
+      TELEFONO: $telefono <br>
+      EMAIL: $email <br>
+      PAGINA WEB: $pagina_web <br>
+      NOMBRE REPRESENTANTE: $nombre_representante <br>
+      N IDENTIFICACION REPRESENTANTE: $identificacion_representante <br>
+      N TELEFONO REPRESENTANTE: $telefono_representante <br>
+      EMAIL REPRESENTANTE: $email_representante <br>
+      TIPO AGENCIA REPRESENTANTE: $tipo_agencia <br>
+      ";
+      $mail->isHTML(true);
+      if (file_exists($attachtment)) {
+        $mail->addAttachment($attachtment);
+      }
+      $mail->send();
+    } catch (\Throwable $th) {
+      //throw $th;
+    }
+  }
 
-  
-    $promp= $request->promp;
+  public function buscartour(Request $request)
+  {
+
+
+    $promp = $request->promp;
 
     $ToursSearch = Products::where('producto', 'like', "%$promp%")->get();
 

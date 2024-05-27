@@ -64,9 +64,11 @@
 
   <script>
     $('document').ready(function() {
-      new DataTable('#tabladatos');
+      // new DataTable('#tabladatos');
 
-
+      ('#tabladatos').DataTable({
+        ordering: false,
+      })
 
     })
 
