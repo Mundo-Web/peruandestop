@@ -43,7 +43,11 @@
     "ChatTeam": "Please chat with our friendly support team",
     "getInContact": "Get in touch",
     "finishRegister": " Registration made with Successes",
-    "finalMessage": "Thank you for joining us. We look forward to building a future full of amazing travels and adventures together!"
+    "finalMessage": "Thank you for joining us. We look forward to building a future full of amazing travels and adventures together!",
+    "listaTittle": "Attach",
+    "option1": "• Affidavit",
+    "option2": "• Copy of the operations license.",
+    "option3": "• Copy of the identification of the legal representative"
   },
   "slider": {
     "inputSearch": "What will be your next destination?",

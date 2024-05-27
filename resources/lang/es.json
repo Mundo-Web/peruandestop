@@ -43,7 +43,11 @@
     "ChatTeam": "Por favor chatee con nuestro amigable equipo de soporte",
     "getInContact": "Ponerse en contacto",
     "finishRegister": "Registro realizado con Éxitos",
-    "finalMessage": "Gracias por unirte a nosotros. ¡Esperamos construir un futuro lleno de increíbles viajes y aventuras juntos!"
+    "finalMessage": "Gracias por unirte a nosotros. ¡Esperamos construir un futuro lleno de increíbles viajes y aventuras juntos!",
+    "listaTittle": "Adjuntar",
+    "option1": "• Declaración Jurada",
+    "option2": "• Copia de la licencia de operaciones.",
+    "option3": "• Copia de la identificación del representante legal"
   },
   "slider": {
     "inputSearch": "¿Cuál será tu próximo destino?",

@@ -224,13 +224,17 @@
                         {{ $archivoObjeto->ModalAgencia['url_declaracion'] }}
                       </h2>
                       <div>
-                        <a href="#"
-                          class="bg-[#244D82] text-white py-2 px-5 inline-flex justify-start items-center rounded-full gap-2">
-                          <span class="text-text14">{{ $archivoObjeto->ModalAgencia['DescargarDeclaracion'] }}</span>
-                          <div>
-                            <img src="{{ asset('images/svg/file-download.svg') }}" alt="">
-                          </div>
-                        </a>
+                        <span> {{ $archivoObjeto->ModalAgencia['listaTittle'] }}</span>
+                        <ul>
+                          <li> {{ $archivoObjeto->ModalAgencia['option1'] }}</li>
+                          <li> {{ $archivoObjeto->ModalAgencia['option2'] }}</li>
+                          <li> {{ $archivoObjeto->ModalAgencia['option3'] }}</li>
+                        </ul>
+
+
+
+
+
                       </div>
 
 

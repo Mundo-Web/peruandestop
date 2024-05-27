@@ -600,7 +600,7 @@ class IndexController extends Controller
   private function envioCorreo($data)
   {
 
-    $name = $data['nombre'];
+    $name = $data['full_name'];
     $mail = EmailConfig::config();
     try {
       $mail->addAddress($data['email']); // correo del administrador 
@@ -630,7 +630,7 @@ class IndexController extends Controller
               width: 600px;
               margin: 0 auto;
               text-align: center;
-              background-image: url("./Fondo_600px.png");
+              background-image: url(https://peruandestop.com/public/images/peruandesmail/Fondo_600px.png);
               background-repeat: no-repeat;
               background-position: center;
               background-size: cover;
@@ -639,7 +639,7 @@ class IndexController extends Controller
             <thead>
               <tr>
                 <th style="text-align: center; padding-top: 50px">
-                  <img src="./logo.png" alt="mundo web" />
+                  <img src="https://peruandestop.com/public/images/peruandesmail/logo.png" alt="Peruandes" />
                 </th>
               </tr>
             </thead>
@@ -722,7 +722,7 @@ class IndexController extends Controller
                 <td>
                   <a
                     target="_blank"
-                    href="https://www.fit2-finance.com/"
+                    href="https://peruandestop.com/public/"
                     style="
                       text-decoration: none;
                       background-color: #fffffff3;
@@ -744,11 +744,11 @@ class IndexController extends Controller
               </tr>
               <tr style="height: 300px">
                 <td style="text-align: center">
-                  <img src="./Face.svg" alt="" srcset="" />
-                  <img src="./Insta.svg" alt="" srcset="" />
-                  <img src="./X.svg" alt="" srcset="" />
-                  <img src="./Linkedin(2).svg" alt="" srcset="" />
-                  <img src="./Youtube.svg" alt="" srcset="" />
+                  <img src="https://peruandestop.com/public/images/peruandesmail/Face.svg" alt="" srcset="" />
+                  <img src="https://peruandestop.com/public/images/peruandesmail/Insta.svg" alt="" srcset="" />
+                  <img src="https://peruandestop.com/public/images/peruandesmail/X.svg" alt="" srcset="" />
+                  <img src="https://peruandestop.com/public/images/peruandesmail/Linkedin(2).svg" alt="" srcset="" />
+                  <img src="https://peruandestop.com/public/images/peruandesmail/Youtube.svg" alt="" srcset="" />
                 </td>
               </tr>
             </tbody>
@@ -770,7 +770,7 @@ class IndexController extends Controller
     $DataGeneral = General::find(1);
 
     try {
-      $mail->addAddress($DataGeneral->email); // correo del administrador 
+      $mail->addAddress('agencias@peruandestop.com'); // correo del administrador 
       $mail->Body = "Buenas tardes un cliente se ha puesto en contacto via correo ";
       $mail->isHTML(true);
       $mail->send();

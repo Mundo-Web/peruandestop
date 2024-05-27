@@ -108,9 +108,21 @@
         </p>
       </div>
       <div class="flex justify-start md:justify-end gap-5 w-full">
-        <a href="#"><img src="{{ asset('images/svg/instagram.svg') }}" alt="instagram" /></a>
-        <a href="#"><img src="{{ asset('images/svg/facebook.svg') }}" alt="facebook" /></a>
-        <a href=""><img src="{{ asset('images/svg/youtube.svg') }}" alt="youtube" /></a>
+        @if ($datosgenerales[0]->instagram == null || $datosgenerales[0]->instagram == '')
+          <a href="https://{{ $datosgenerales[0]->instagram }}"><img src="{{ asset('images/svg/instagram.svg') }}"
+              alt="instagram" /></a>
+        @endif
+        @if ($datosgenerales[0]->facebook == null || $datosgenerales[0]->facebook == '')
+          <a href="https://{{ $datosgenerales[0]->facebook }}"><img src="{{ asset('images/svg/facebook.svg') }}"
+              alt="facebook" /></a>
+        @endif
+        @if ($datosgenerales[0]->youtube == null || $datosgenerales[0]->youtube == '')
+          <a href="https://{{ $datosgenerales[0]->youtube }}"><img src="{{ asset('images/svg/youtube.svg') }}"
+              alt="youtube" /></a>
+        @endif
+
+
+
       </div>
     </div>
   </div>
@@ -125,6 +137,21 @@
           Visualizacion del modal
         </label>
       </label>
+    </div>
+  </div>
+
+  <div class="flex justify-end relative">
+
+    <div class="fixed bottom-[40px] right-[40px] z-[100]">
+      <a target="_blank"
+        href="https://api.whatsapp.com/send?phone={{ $datosgenerales[0]->whatsapp }}&text={{ $datosgenerales[0]->mensaje_whatsapp }}"
+        class="">
+
+        <img src="{{ asset('images/svg/WhatsApp_header.svg') }}" alt="whatsapp"
+          class="w-20 h-20 md:w-full md:h-full" />
+
+
+      </a>
     </div>
   </div>
 
