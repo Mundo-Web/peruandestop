@@ -91,7 +91,7 @@
       src: url({{ asset('fonts/mont-heavydemo-webfont.woff') }}) format("woff");
     }
   </style>
-  <title>Index</title>
+  <title>PeruAndesTop | Travel More</title>
   <link rel="stylesheet" href="{{ asset('/css/vendor/dropzone.min.css') }}" />
   <link rel="stylesheet" href="{{ asset('/css/cssDropzone.css') }}" />
   <script src="{{ asset('/js/cs/scrollspy.js') }}"></script>
