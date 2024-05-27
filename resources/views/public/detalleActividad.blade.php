@@ -108,12 +108,12 @@
                 <img src="{{ asset('images/noimage.png') }}" alt="disfraces"
                   class="w-full h-full rounded-br-3xl  object-cover" />
               @endif
-              <a href="#"
+              {{-- <a href="#"
                 class="hidden md:absolute bottom-[10px] right-[10px] bg-transparent p-2 text-white md:flex gap-2 items-center rounded-3xl border-2 font-acehSemibold text-text16 md:text-text20">
                 <span>{{ $langInfo['lang']['detallesActividad']['btnGaleria'] }}</span>
 
                 <img src="{{ asset('images/svg/camara.svg') }}" alt="camara" class="w-8" />
-              </a>
+              </a> --}}
             </div>
           </div>
         </div>
