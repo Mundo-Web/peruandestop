@@ -604,7 +604,159 @@ class IndexController extends Controller
     $mail = EmailConfig::config();
     try {
       $mail->addAddress($data['email']); // correo del administrador 
-      $mail->Body = "Gracias Por comunicarte con nosotros, en breve le atenderemos";
+      $mail->Body = '<html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fit2finance</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet"
+        />
+        <style>
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+        </style>
+      </head>
+      <body>
+        <main>
+          <table
+            style="
+              width: 600px;
+              margin: 0 auto;
+              text-align: center;
+              background-image: url("./Fondo_600px.png");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+            "
+          >
+            <thead>
+              <tr>
+                <th style="text-align: center; padding-top: 50px">
+                  <img src="./logo.png" alt="mundo web" />
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <p
+                    style="
+                      color: #ffffff;
+                      font-weight: 500;
+                      font-size: 18px;
+                      text-align: center;
+                      width: 500px;
+                      margin: 0 auto;
+                      padding: 20px 0;
+                      font-family: Montserrat, sans-serif;
+                    "
+                  ></p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p
+                    style="
+                      color: #e38533;
+                      font-size: 40px;
+                      line-height: 20px;
+                      font-family: Montserrat, sans-serif;
+                    "
+                  ></p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p
+                    style="
+                      font-size: 40px;
+                      line-height: 70px;
+                      font-family: Montserrat, sans-serif;
+                      font-weight: bold;
+                    "
+                  >
+                    <span style="color: #ffffff">¡Gracias por escribirnos!</span>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p
+                    style="
+                      color: #ffffff;
+                      font-weight: 500;
+                      font-size: 18px;
+                      text-align: center;
+                      width: 500px;
+                      margin: 0 auto;
+                      padding: 20px 0;
+                      font-family: Montserrat, sans-serif;
+                    "
+                  >
+                    !Hola '.$name.'
+                  </p>
+                  <p
+                    style="
+                      color: #ffffff;
+                      font-weight: 500;
+                      font-size: 18px;
+                      text-align: center;
+                      width: 500px;
+                      margin: 0 auto;
+                      padding: 20px 0;
+                      font-family: Montserrat, sans-serif;
+                    "
+                  >
+                    En breve estaremos comunicandonos contigo.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a
+                    target="_blank"
+                    href="https://www.fit2-finance.com/"
+                    style="
+                      text-decoration: none;
+                      background-color: #fffffff3;
+                      color: rgb(101, 110, 226);
+                      padding: 12px 16px;
+                      display: inline-flex;
+                      justify-content: center;
+                      align-items: center;
+                      gap: 10px;
+                      font-weight: 600;
+                      font-family: Montserrat, sans-serif;
+                      font-size: 16px;
+                      border-radius: 10px;
+                    "
+                  >
+                    <span>Visita nuestra Web</span>
+                  </a>
+                </td>
+              </tr>
+              <tr style="height: 300px">
+                <td style="text-align: center">
+                  <img src="./Face.svg" alt="" srcset="" />
+                  <img src="./Insta.svg" alt="" srcset="" />
+                  <img src="./X.svg" alt="" srcset="" />
+                  <img src="./Linkedin(2).svg" alt="" srcset="" />
+                  <img src="./Youtube.svg" alt="" srcset="" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </main>
+      </body>
+    </html>
+    ';
       $mail->isHTML(true);
       $mail->send();
     } catch (\Throwable $th) {
