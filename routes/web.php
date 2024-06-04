@@ -26,6 +26,7 @@ use App\Http\Controllers\LogosClientController;
 
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LangsController;
+use App\Http\Controllers\LegalesController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\StaffController;
@@ -79,7 +80,12 @@ Route::middleware(['language'])->group(function () {
     Route::get('/nosotros', [IndexController::class, 'index'])->name('nosotros');
     Route::get('/servicios', [IndexController::class, 'index'])->name('servicios');
 
+    Route::get('/politica_privacidad', [IndexController::class, 'politicaprivacidad'])->name('politica_privacidad');
+    Route::get('/term_condiciones', [IndexController::class, 'term_condiciones'])->name('term_condiciones');
+
     Route::post('guardarContactos', [IndexController::class, 'guardarContacto'])->name('guardarContactos');
+
+    
     
   });
 });
@@ -95,9 +101,22 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         Route::get('/dashboard/analytics', [DashboardController::class, 'analytics'])->name('analytics');
         Route::get('/dashboard/fintech', [DashboardController::class, 'fintech'])->name('fintech');
 
+
+        Route::get('/verTerminosCondiciones', [LegalesController::class, 'verTerminosCondiciones'])->name('verTerminosCondiciones');
+        Route::post('/terminosycondicionesUpdate/{id}', [LegalesController::class, 'terminosycondicionesUpdate'])->name('terminosycondicionesUpdate');
+
+
+        Route::get('/verPoliticasPrivacidad', [LegalesController::class, 'verPoliticasPrivacidad'])->name('verPoliticasPrivacidad');
+        Route::post('/politicasPrivacidadUpdate/{id}', [LegalesController::class, 'politicasPrivacidadUpdate'])->name('politicasPrivacidadUpdate');
+
+
+
+
         //messages
         Route::resource('/mensajes', MessageController::class);
         Route::post('/mensajes/borrar', [MessageController::class, 'borrar'])->name('mensajes.borrar');
+
+        
 
         //Datos Generales
         Route::resource('/datosgenerales', GeneralController::class);

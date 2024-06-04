@@ -19,8 +19,10 @@ use App\Models\Strength;
 use App\Models\Testimony;
 use App\Models\Category;
 use App\Models\NewsletterSubscriber;
+use App\Models\politycsCondition;
 use App\Models\Specifications;
 use App\Models\Tag;
+use App\Models\termsCondition;
 use App\Models\TipoEntrada;
 use App\Models\User;
 use App\Models\UserDetails;
@@ -929,5 +931,13 @@ class IndexController extends Controller
     $ToursSearch = Products::where('producto', 'like', "%$promp%")->get();
 
     return response()->json(['message' => 'llegamos a buscartour', 'data' => $ToursSearch]);
+  }
+  public function politicaprivacidad(string $lang){
+    $politicas = politycsCondition::all();
+    return view('public.politicaPriv', compact('politicas', 'lang'));
+  }
+  public function term_condiciones(string $lang){
+    $terms = termsCondition::all();
+    return view('public.termsCondiciones', compact('terms', 'lang'));
   }
 }

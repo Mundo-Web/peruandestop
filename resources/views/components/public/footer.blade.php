@@ -56,9 +56,9 @@
       <div data-aos="fade-up" data-aos-offset="150">
         <nav class="flex flex-col lg:items-start">
           <p class="font-acehbold text-text22 pb-4">{{ $archivoObjeto->footer['politicas'] }}</p>
-          <a href="#politica_privacidad"
+          <a href="{{ $lang }}/politica_privacidad"
             class="font-acehLight text-text20  py-1">{{ $archivoObjeto->footer['politicasP'] }}</a>
-          <a href="#terminos_condiciones"
+          <a href="{{ $lang }}/term_condiciones"
             class="font-acehLight text-text20  py-1">{{ $archivoObjeto->footer['terms'] }}</a>
           <a href="#libro_reclamaciones"
             class="font-acehLight text-text20 py-1">{{ $archivoObjeto->footer['libroR'] }}</a>
