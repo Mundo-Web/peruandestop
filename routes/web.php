@@ -27,6 +27,7 @@ use App\Http\Controllers\LogosClientController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LangsController;
 use App\Http\Controllers\LegalesController;
+use App\Http\Controllers\LibroReclamacionesController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\StaffController;
@@ -85,6 +86,9 @@ Route::middleware(['language'])->group(function () {
 
     Route::post('guardarContactos', [IndexController::class, 'guardarContacto'])->name('guardarContactos');
 
+    Route::get('/libro-de-reclamaciones', [IndexController::class, 'librodereclamaciones'] )->name('librodereclamaciones');
+    Route::get('/esnapolicies', [IndexController::class, 'esnapolicies'] )->name('esnapolicies');
+
     
     
   });
@@ -92,6 +96,12 @@ Route::middleware(['language'])->group(function () {
 Route::post('guardarUserNewsLetter', [IndexController::class, 'guardarUserNewsLetter'])->name('guardarUserNewsLetter');
 Route::post('guardarAgencia', [IndexController::class, 'guardarAgencia'])->name('guardarAgencia');
 Route::post('buscartour', [IndexController::class, 'buscartour'])->name('buscartour');
+
+Route::post('guardarformulario', [LibroReclamacionesController::class, 'storePublic'] )->name('guardarFormReclamo');
+
+Route::get('/obtenerProvincia/{departmentId}', [IndexController::class, 'obtenerProvincia'])->name('obtenerProvincia');
+Route::get('/obtenerDistritos/{provinceId}', [IndexController::class, 'obtenerDistritos'])->name('obtenerDistritos');
+
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
@@ -111,6 +121,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
 
 
+        //Libro de reclamaciones
+        Route::resource('/reclamo', LibroReclamacionesController::class);
+        Route::post('/reclamo/borrar', [LibroReclamacionesController::class, 'borrar'])->name('reclamo.borrar');
 
         //messages
         Route::resource('/mensajes', MessageController::class);

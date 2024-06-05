@@ -194,7 +194,7 @@
 
       event.preventDefault();
 
-      console.log($(this).serialize());
+
       Swal.fire({
 
         title: 'Procesando información',

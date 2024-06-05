@@ -940,4 +940,31 @@ class IndexController extends Controller
     $terms = termsCondition::all();
     return view('public.termsCondiciones', compact('terms', 'lang'));
   }
+
+  public function librodereclamaciones(string $lang)
+  {
+    $departamentofiltro = DB::select('select * from departments where active = ? order by 2', [1]);
+    
+    return view('public.librodereclamaciones', compact('departamentofiltro', 'lang'));
+  }
+  public function esnapolicies(string $lang)
+  {
+    $departamentofiltro = DB::select('select * from departments where active = ? order by 2', [1]);
+    
+    return view('public.esnnacode', compact( 'lang'));
+  }
+
+  public function obtenerProvincia($departmentId)
+  {
+      $provinces = DB::select('select * from provinces where active = ? and department_id = ? order by description', [1, $departmentId]);
+      return response()->json($provinces);
+  }
+
+  public function obtenerDistritos($provinceId)
+  {
+      $distritos = DB::select('select * from districts where active = ? and province_id = ? order by description', [1, $provinceId]);
+      return response()->json($distritos);
+  }
+
+  
 }

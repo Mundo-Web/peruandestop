@@ -60,7 +60,9 @@
             class="font-acehLight text-text20  py-1">{{ $archivoObjeto->footer['politicasP'] }}</a>
           <a href="{{ route('term_condiciones', ['lang' => $lang]) }}"
             class="font-acehLight text-text20  py-1">{{ $archivoObjeto->footer['terms'] }}</a>
-          <a href="#" class="font-acehLight text-text20 py-1">{{ $archivoObjeto->footer['libroR'] }}</a>
+          <a href="{{ route('librodereclamaciones', ['lang' => $lang]) }}"
+            class="font-acehLight text-text20 py-1">{{ $archivoObjeto->footer['libroR'] }}</a>
+          <a href="{{ route('esnapolicies', ['lang' => $lang]) }}" class="font-acehLight text-text20 py-1">ESNNA</a>
         </nav>
       </div>
 
