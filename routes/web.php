@@ -36,6 +36,7 @@ use App\Http\Controllers\StrengthController;
 use App\Http\Controllers\ValoresAtributosController;
 
 use App\Http\Controllers\TagController;
+use App\Http\Controllers\TerminosycondicionesController;
 use App\Models\AboutUs;
 use Illuminate\Http\Request;
 use SoDe\Extend\JSON;
@@ -113,11 +114,14 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         Route::get('/dashboard/fintech', [DashboardController::class, 'fintech'])->name('fintech');
 
 
-        Route::get('/verTerminosCondiciones', [LegalesController::class, 'verTerminosCondiciones'])->name('verTerminosCondiciones');
-        Route::post('/terminosycondicionesUpdate/{id}', [LegalesController::class, 'terminosycondicionesUpdate'])->name('terminosycondicionesUpdate');
 
 
         Route::resource('/verPoliticasPrivacidad', PoliticasdePrivacidadController::class);
+        Route::post('verPoliticasPrivacidad/delete', [PoliticasdePrivacidadController::class, 'delete'])->name('PoliticasPrivacidad.delete');
+
+
+        Route::resource('terminoscondiciones', TerminosycondicionesController::class);
+        Route::post('terminoscondiciones/delete', [TerminosycondicionesController::class, 'delete'])->name('terminoscondiciones.delete');
        
 
 

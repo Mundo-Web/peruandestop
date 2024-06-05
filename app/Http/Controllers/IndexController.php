@@ -937,7 +937,7 @@ class IndexController extends Controller
     return view('public.politicaPriv', compact('politicas', 'lang'));
   }
   public function term_condiciones(string $lang){
-    $terms = termsCondition::all();
+    $terms = termsCondition::where('langs', '=', $lang)->get();
     return view('public.termsCondiciones', compact('terms', 'lang'));
   }
 

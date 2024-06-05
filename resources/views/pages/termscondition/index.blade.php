@@ -2,8 +2,9 @@
   <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
 
     <section class="py-4 border-b border-slate-100 dark:border-slate-700">
-      <a href="{{ route('verPoliticasPrivacidad.create') }}"
-        class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded text-sm">Agregar Politicas</a>
+      <a href="{{ route('terminoscondiciones.create') }}"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded text-sm">Agregar Terminos y
+        condiciones</a>
     </section>
 
 
@@ -12,7 +13,7 @@
 
 
       <header class="px-5 py-4 border-b border-slate-100 dark:border-slate-700">
-        <h2 class="font-semibold text-slate-800 dark:text-slate-100 text-2xl tracking-tight">Politicas</h2>
+        <h2 class="font-semibold text-slate-800 dark:text-slate-100 text-2xl tracking-tight"> Terminos y condiciones</h2>
       </header>
       <div class="p-3">
 
@@ -31,7 +32,7 @@
             </thead>
             <tbody>
 
-              @foreach ($politicas as $item)
+              @foreach ($terminos as $item)
                 <tr>
 
                   <td>{{ $item->langs }}</td>
@@ -39,7 +40,7 @@
 
                   <td class="flex flex-row justify-end items-center gap-5">
 
-                    <a href="{{ route('verPoliticasPrivacidad.edit', $item->id) }}"
+                    <a href="{{ route('terminoscondiciones.edit', $item->id) }}"
                       class="bg-yellow-400 px-3 py-2 rounded text-white  "><i
                         class="fa-regular fa-pen-to-square"></i></a>
                     {{-- {{  route('servicios.destroy', $item->id) }} --}}
@@ -86,7 +87,7 @@
 
         Swal.fire({
           title: "Seguro que deseas eliminar?",
-          text: "Si eliminas, se perderán todas las relaciones con los productos",
+          text: "Si eliminas, se perderán todas la informacion",
           icon: "warning",
           showCancelButton: true,
           confirmButtonColor: "#3085d6",
@@ -98,7 +99,7 @@
 
             $.ajax({
 
-              url: '{{ route('PoliticasPrivacidad.delete') }}',
+              url: `{{ route('terminoscondiciones.delete') }}`,
               method: 'POST',
               data: {
                 _token: $('input[name="_token"]').val(),

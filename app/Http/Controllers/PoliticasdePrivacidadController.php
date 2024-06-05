@@ -74,4 +74,9 @@ class PoliticasdePrivacidadController extends Controller
     {
         //
     }
+    public function delete(Request $request){
+        politycsCondition::find($request->id)->delete();
+
+        return response()->json(['message'=> 'borrado correctamente']);
+    }
 }

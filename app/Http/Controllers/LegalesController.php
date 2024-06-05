@@ -12,8 +12,7 @@ class LegalesController extends Controller
     //
     public function verTerminosCondiciones()
     {
-        $terminos = termsCondition::all();
-        return view('pages.termscondition.edit', compact('terminos'));
+        
     }
     public function verPoliticasPrivacidad()
     {
@@ -23,14 +22,7 @@ class LegalesController extends Controller
 
     public function terminosycondicionesUpdate(Request $request, String $id)
     {
-        try {
-            
-            termsCondition::find($id)->update($request->all());
-            return redirect()->route('verTerminosCondiciones')->with('success', 'Publicación creado exitosamente.');
-        } catch (\Throwable $th) {
-            //throw $th;
-            
-        }
+       
     }
     public function politicasPrivacidadUpdate(Request $request, String $id)
     {

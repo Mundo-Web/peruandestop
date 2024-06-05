@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Langs;
+use App\Models\termsCondition;
 use Illuminate\Http\Request;
 
 class TerminosycondicionesController extends Controller
@@ -12,6 +14,8 @@ class TerminosycondicionesController extends Controller
     public function index()
     {
         //
+        $terminos = termsCondition::all();
+        return view('pages.termscondition.index',compact('terminos'));
     }
 
     /**
@@ -20,6 +24,8 @@ class TerminosycondicionesController extends Controller
     public function create()
     {
         //
+        $langs = Langs::all();
+        return view('pages.termscondition.create',compact( 'langs'));
     }
 
     /**
@@ -28,6 +34,10 @@ class TerminosycondicionesController extends Controller
     public function store(Request $request)
     {
         //
+        termsCondition::create($request->all());
+        return redirect()->route('terminoscondiciones.index')->with('success', 'Publicación creado exitosamente.');
+
+
     }
 
     /**
@@ -44,6 +54,8 @@ class TerminosycondicionesController extends Controller
     public function edit(string $id)
     {
         //
+        $terminos = termsCondition::find($id);
+        return view('pages.termscondition.edit', compact('terminos'));
     }
 
     /**
@@ -52,6 +64,14 @@ class TerminosycondicionesController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        try {
+            
+            termsCondition::find($id)->update($request->all());
+            return redirect()->route('terminoscondiciones.index')->with('success', 'Publicación creado exitosamente.');
+        } catch (\Throwable $th) {
+            //throw $th;
+            
+        }
     }
 
     /**
@@ -60,5 +80,12 @@ class TerminosycondicionesController extends Controller
     public function destroy(string $id)
     {
         //
+    
+    }
+
+    public function delete(Request $request){
+        termsCondition::find($request->id)->delete();
+
+        return response()->json(['message'=> 'borrado correctamente']);
     }
 }

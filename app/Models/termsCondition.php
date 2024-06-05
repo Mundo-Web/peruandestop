@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class termsCondition extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'content', 'phone', 'finaltitle'];
+    protected $fillable = ['title', 'content', 'phone', 'finaltitle', 'langs'];
 
 }
