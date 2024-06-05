@@ -49,7 +49,10 @@
                 src="{{ asset('images\esnna\1.png') }}"></span></strong></p>
         <p class="MsoNormal" style="text-align: center;" align="center"><strong><span
               style="font-size: 14.0pt; line-height: 107%; mso-ansi-language: ES;"><img
-                src="{{ asset('images\esnna\2.png') }}"></span></strong></p>
+                src="{{ asset('images\esnna\afiche-esnna-49x69-29ago_orig.webp') }}"></span></strong></p>
+        <p class="MsoNormal" style="text-align: center;" align="center"><strong><span
+              style="font-size: 14.0pt; line-height: 107%; mso-ansi-language: ES;"><img
+                src="{{ asset('images\esnna\ESNNA _1.jpg') }}"></span></strong></p>
         <p class="MsoNormal" style="text-align: justify;"><strong><span
               style="font-size: 14.0pt; line-height: 107%; mso-ansi-language: ES;">La ESNNA es el uso del cuerpo de
               menores de edad con fines sexuales, pornogr&aacute;ficos o er&oacute;ticos a cambio de un pago, promesa de
