@@ -949,7 +949,7 @@ class IndexController extends Controller
   }
   public function esnapolicies(string $lang)
   {
-    dump($lang);
+    
     if($lang === 'es'){
       return view('public.esnnacode', compact( 'lang'));
     }elseif($lang === 'en'){
