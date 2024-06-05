@@ -18,7 +18,7 @@ class LegalesController extends Controller
     public function verPoliticasPrivacidad()
     {
         $politicas = politycsCondition::all();
-        return view('pages.politicas_privacidad.edit', compact('politicas'));
+        return view('pages.politicas_privacidad.index', compact('politicas'));
     }
 
     public function terminosycondicionesUpdate(Request $request, String $id)

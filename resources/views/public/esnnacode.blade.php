@@ -40,7 +40,7 @@
     <section class="w-11/12 mx-auto gap-5 grid grid-cols-1 grid-rows-1  pt-60 px-10 lg:px-40">
       <div class="flex flex-col items-center gap-5 col-span-1 row-span-1 leading-relaxed pb-10" data-aos="fade-up"
         data-aos-offset="150">
-        <h1>Esnna code</h1>
+
 
         <p class="MsoNormal" style="text-align: center;" align="center"><strong><span
               style="font-size: 14.0pt; line-height: 107%; mso-ansi-language: ES;">POLITICAS ESNNA</span></strong></p>

@@ -28,6 +28,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LangsController;
 use App\Http\Controllers\LegalesController;
 use App\Http\Controllers\LibroReclamacionesController;
+use App\Http\Controllers\PoliticasdePrivacidadController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\StaffController;
@@ -116,7 +117,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         Route::post('/terminosycondicionesUpdate/{id}', [LegalesController::class, 'terminosycondicionesUpdate'])->name('terminosycondicionesUpdate');
 
 
-        Route::get('/verPoliticasPrivacidad', [LegalesController::class, 'verPoliticasPrivacidad'])->name('verPoliticasPrivacidad');
+        Route::resource('/verPoliticasPrivacidad', PoliticasdePrivacidadController::class);
+       
+
+
         Route::post('/politicasPrivacidadUpdate/{id}', [LegalesController::class, 'politicasPrivacidadUpdate'])->name('politicasPrivacidadUpdate');
 
 

@@ -949,9 +949,15 @@ class IndexController extends Controller
   }
   public function esnapolicies(string $lang)
   {
-    $departamentofiltro = DB::select('select * from departments where active = ? order by 2', [1]);
+    dump($lang);
+    if($lang === 'es'){
+      return view('public.esnnacode', compact( 'lang'));
+    }elseif($lang === 'en'){
+      return view('public.esnnacodeEn', compact( 'lang'));
+    }
     
-    return view('public.esnnacode', compact( 'lang'));
+    
+    
   }
 
   public function obtenerProvincia($departmentId)
