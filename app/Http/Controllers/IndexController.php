@@ -933,7 +933,7 @@ class IndexController extends Controller
     return response()->json(['message' => 'llegamos a buscartour', 'data' => $ToursSearch]);
   }
   public function politicaprivacidad(string $lang){
-    $politicas = politycsCondition::all();
+    $politicas = politycsCondition::where('langs', '=', $lang)->get();
     return view('public.politicaPriv', compact('politicas', 'lang'));
   }
   public function term_condiciones(string $lang){
