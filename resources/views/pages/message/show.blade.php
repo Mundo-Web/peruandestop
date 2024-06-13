@@ -24,7 +24,7 @@
           <p class="mb-5 ">{{ $message->created_at->translatedFormat('j \d\e F \d\e\l Y') }} a las
             {{ $message->created_at->format('H:i') }} </p>
 
-          <p class="font-bold ">Origen:</p>
+          <p class="font-bold ">País:</p>
           <p class="mb-5 ">{{ $message->pais }} -
             {{ $message->ciudad }} </p>
 
