@@ -11,20 +11,23 @@
         <!-- Table -->
         <div class="overflow-x-auto">
 
-          <table id="tabladatos" class="display text-lg" style="width:100%">
+          <table id="tabladatos" class="display text-lg table" style="width:100%">
             <thead>
               <tr>
                 <th>Nombre</th>
                 <th>Correo</th>
+
                 <th>Teléfono</th>
+                <th>Fecha</th>
+                <th>Origen</th>
                 <th>Acción</th>
               </tr>
             </thead>
             <tbody>
 
               @foreach ($mensajes as $item)
-                <tr>
-                  <td>
+                <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-100 even:dark:bg-gray-800">
+                  <td class="text-center">
                     @if ($item->is_read == '0')
                       <a href="{{ route('mensajes.show', $item->id) }}"><span class="mr-4"><i
                             class="fa-regular fa-envelope"></i></span><span
@@ -35,9 +38,11 @@
                     @endif
 
                   </td>
-                  <td>{{ $item->email }}</td>
-                  <td>{{ $item->phone }}</td>
-                  <td>
+                  <td class="text-center">{{ $item->email }}</td>
+                  <td class="text-center">{{ $item->phone }}</td>
+                  <td class="text-center">{{ $item->created_at->translatedFormat('j \d\e F \d\e\l Y') }}</td>
+                  <td class="text-center">{{ $item->pais }} , {{ $item->ciudad }}</td>
+                  <td class="text-center">
                     <button method="POST" onclick="borrarmensaje({{ $item->id }})"
                       class="bg-red-600 p-2 rounded text-white"><i class="fa-regular fa-trash-can"></i></button>
                     <!--a href="" class="bg-yellow-400 p-2 rounded text-white mr-6"><i class="fa-regular fa-pen-to-square"></i></a-->
@@ -51,6 +56,9 @@
                 <th>Nombre</th>
                 <th>Correo</th>
                 <th>Teléfono</th>
+                <th>Fecha</th>
+                <th>Origen</th>
+
                 <th>Tool</th>
               </tr>
             </tfoot>

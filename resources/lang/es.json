@@ -124,7 +124,9 @@
     "horario2": "Lunes - Sábados",
     "ourDirection": "Nuestra dirección",
     "getInContact": "Ponerse en contacto",
-    "politica": "Usted acepta nuestra amigable política de privacidad"
+    "politica": "Usted acepta nuestra amigable política de privacidad",
+    "pais": "País",
+    "ciudad": "Ciudad"
   },
   "main": {
     "hash": "#sode-world",

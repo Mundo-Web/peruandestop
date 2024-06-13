@@ -109,6 +109,22 @@
                     class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
                 </div>
               </div>
+              <div class="flex flex-col md:flex-row gap-5 w-full">
+                <div class="flex flex-col gap-2 flex-auto">
+                  <label for="pais"
+                    class="font-acehMedium text-text14 md:text-text18 text-[#344054]">{{ $langInfo['lang']['contacto']['pais'] }}</label>
+
+                  <input name="pais" type="text" placeholder="Ingresa tu pais"
+                    class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
+                </div>
+
+                <div class="flex flex-col gap-2 flex-auto">
+                  <label for="ciudad"
+                    class="font-acehMedium text-text14 md:text-text18 text-[#344054]">{{ $langInfo['lang']['contacto']['ciudad'] }}</label>
+                  <input id="ciudad" name="ciudad" type="text" placeholder="Ingresa tu Ciudad"
+                    class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
+                </div>
+              </div>
               <div class="flex flex-col gap-2">
                 <label for="email"
                   class="font-acehMedium text-text14 md:text-text18 text-[#344054]">{{ $langInfo['lang']['contacto']['email'] }}</label>
