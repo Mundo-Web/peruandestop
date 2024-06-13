@@ -59,8 +59,8 @@
         </div>
 
         <div class="flex flex-col col-span-4 lg:col-span-1 gap-2">
-          <label for="department" class="font-medium text-[12px] text-[#6C7275]">Pais</label>
-          <input id="selectDepartamento" placeholder="Pais" required name="pais"
+          <label for="department" class="font-medium text-[12px] text-[#6C7275]">País</label>
+          <input id="selectDepartamento" placeholder="País" required name="pais"
             class="w-full py-3 px-4 focus:outline-none placeholder-gray-400 font-normal text-[16px] border-[1.5px] border-gray-200 rounded-xl text-[#6C7275]">
 
           </input>
@@ -280,56 +280,56 @@
 
   <script>
     /*  $(document).ready(function() {
-                $('#selectDepartamento').change(function() {
-                  var departmentId = $(this).val();
-                  if (departmentId) {
-                    $.ajax({
-                      url: '/obtenerProvincia/' + departmentId,
-                      type: 'GET',
-                      dataType: 'json',
-                      success: function(data) {
-                        $('#selectProvincia').prop('disabled', false).empty().append(
-                          '<option value="">Selecciona una provincia</option>');
-                        $.each(data, function(key, value) {
-                          $('#selectProvincia').append('<option value="' + value
-                            .id +
-                            '">' + value.description + '</option>');
+                    $('#selectDepartamento').change(function() {
+                      var departmentId = $(this).val();
+                      if (departmentId) {
+                        $.ajax({
+                          url: '/obtenerProvincia/' + departmentId,
+                          type: 'GET',
+                          dataType: 'json',
+                          success: function(data) {
+                            $('#selectProvincia').prop('disabled', false).empty().append(
+                              '<option value="">Selecciona una provincia</option>');
+                            $.each(data, function(key, value) {
+                              $('#selectProvincia').append('<option value="' + value
+                                .id +
+                                '">' + value.description + '</option>');
+                            });
+                            $('#selectDistrito').prop('disabled', true).empty().append(
+                              '<option value="">Selecciona un distrito</option>');
+                          }
                         });
+                      } else {
+                        $('#selectProvincia').prop('disabled', true).empty().append(
+                          '<option value="">Selecciona una provincia</option>');
                         $('#selectDistrito').prop('disabled', true).empty().append(
                           '<option value="">Selecciona un distrito</option>');
                       }
                     });
-                  } else {
-                    $('#selectProvincia').prop('disabled', true).empty().append(
-                      '<option value="">Selecciona una provincia</option>');
-                    $('#selectDistrito').prop('disabled', true).empty().append(
-                      '<option value="">Selecciona un distrito</option>');
-                  }
-                });
 
-                $('#selectProvincia').change(function() {
-                  var provinceId = $(this).val();
-                  if (provinceId) {
-                    $.ajax({
-                      url: '/obtenerDistritos/' + provinceId,
-                      type: 'GET',
-                      dataType: 'json',
-                      success: function(data) {
-                        $('#selectDistrito').prop('disabled', false).empty().append(
-                          '<option value="">Selecciona un distrito</option>');
-                        $.each(data, function(key, value) {
-                          $('#selectDistrito').append('<option value="' + value
-                            .id +
-                            '">' + value.description + '</option>');
+                    $('#selectProvincia').change(function() {
+                      var provinceId = $(this).val();
+                      if (provinceId) {
+                        $.ajax({
+                          url: '/obtenerDistritos/' + provinceId,
+                          type: 'GET',
+                          dataType: 'json',
+                          success: function(data) {
+                            $('#selectDistrito').prop('disabled', false).empty().append(
+                              '<option value="">Selecciona un distrito</option>');
+                            $.each(data, function(key, value) {
+                              $('#selectDistrito').append('<option value="' + value
+                                .id +
+                                '">' + value.description + '</option>');
+                            });
+                          }
                         });
+                      } else {
+                        $('#selectDistrito').prop('disabled', true).empty().append(
+                          '<option value="">Selecciona un distrito</option>');
                       }
                     });
-                  } else {
-                    $('#selectDistrito').prop('disabled', true).empty().append(
-                      '<option value="">Selecciona un distrito</option>');
-                  }
-                });
-              }); */
+                  }); */
   </script>
 
 @section('scripts_importados')

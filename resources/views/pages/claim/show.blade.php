@@ -29,7 +29,7 @@
               <td class="text-sm border px-4 py-2">{{ $message->email }}</td>
             </tr>
             <tr>
-              <td class="font-bold text-base border px-4 py-2">Pais:</td>
+              <td class="font-bold text-base border px-4 py-2">País:</td>
               <td class="text-sm border px-4 py-2">{{ $message->pais }}</td>
               <td class="font-bold text-base border px-4 py-2">Departamento:</td>
               <td class="text-sm border px-4 py-2">{{ $message->department }}</td>
