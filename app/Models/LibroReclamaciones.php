@@ -11,5 +11,5 @@ class LibroReclamaciones extends Model
     protected $fillable = ['fullname', 'type_document', 'number_document', 'cellphone', 
     'email', 'department', 'province', 'district', 'address', 'typeitem', 'amounttotal', 'category_product_service',
     'description', 'type_claim', 'date_incident', 'address_incident', 'detail_incident',
-    'archivo', 'is_read', 'status'];
+    'archivo', 'is_read', 'status' , 'pais'];
 }

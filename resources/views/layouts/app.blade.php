@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
   <!-- TinyMCE -->
-  <script src="https://cdn.tiny.cloud/1/41pqjtwlo21jv3jnqyysf1s9i4j9dy630pfcy44lqdi649ko/tinymce/7/tinymce.min.js"
+  <script src="https://cdn.tiny.cloud/1/5gebqo9d3se6n15cbwbhhzw0xeq2f6vf5z9su934vitm6m01/tinymce/7/tinymce.min.js"
     referrerpolicy="origin"></script>
 
   <!-- Select2 -->

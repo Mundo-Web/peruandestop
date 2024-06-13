@@ -72,9 +72,8 @@
           <a onclick="document.getElementById('tw-modal').click()" class="cursor-pointer">
             <p class="font-acehbold text-text22  lg:text-left">{{ $archivoObjeto->footer['asistencia_agencias'] }}</p>
           </a>
-          <a href="#numero" class="font-acehLight text-text20 py-1">{{ $datosgenerales[0]->cellphone }}</a>
-          <a href="#correo"
-            class="font-acehLight text-text20 py-1 flex-initial w-44">{{ $datosgenerales[0]->email }}</a>
+          <a href="#numero" class="font-acehLight text-text20 py-1">{{ $datosgenerales->cellphone }}</a>
+          <a href="#correo" class="font-acehLight text-text20 py-1 flex-initial w-44">{{ $datosgenerales->email }}</a>
         </nav>
       </div>
 
@@ -109,16 +108,17 @@
         </p>
       </div>
       <div class="flex justify-start md:justify-end gap-5 w-full">
-        @if ($datosgenerales[0]->instagram == null || $datosgenerales[0]->instagram == '')
-          <a href="https://{{ $datosgenerales[0]->instagram }}"><img src="{{ asset('images/svg/instagram.svg') }}"
+
+        @if (strlen($datosgenerales->instagram) > 0)
+          <a href="https://{{ $datosgenerales->instagram }}"><img src="{{ asset('images/svg/instagram.svg') }}"
               alt="instagram" /></a>
         @endif
-        @if ($datosgenerales[0]->facebook == null || $datosgenerales[0]->facebook == '')
-          <a href="https://{{ $datosgenerales[0]->facebook }}"><img src="{{ asset('images/svg/facebook.svg') }}"
+        @if (strlen($datosgenerales->facebook) > 0)
+          <a href="https://{{ $datosgenerales->facebook }}"><img src="{{ asset('images/svg/facebook.svg') }}"
               alt="facebook" /></a>
         @endif
-        @if ($datosgenerales[0]->youtube == null || $datosgenerales[0]->youtube == '')
-          <a href="https://{{ $datosgenerales[0]->youtube }}"><img src="{{ asset('images/svg/youtube.svg') }}"
+        @if (strlen($datosgenerales->youtube) > 0)
+          <a href="https://{{ $datosgenerales->youtube }}"><img src="{{ asset('images/svg/youtube.svg') }}"
               alt="youtube" /></a>
         @endif
 
@@ -145,7 +145,7 @@
 
     <div class="fixed bottom-[40px] right-[40px] z-[100]">
       <a target="_blank"
-        href="https://api.whatsapp.com/send?phone={{ $datosgenerales[0]->whatsapp }}&text={{ $datosgenerales[0]->mensaje_whatsapp }}"
+        href="https://api.whatsapp.com/send?phone={{ $datosgenerales->whatsapp }}&text={{ $datosgenerales->mensaje_whatsapp }}"
         class="">
 
         <img src="{{ asset('images/svg/WhatsApp_header.svg') }}" alt="whatsapp"

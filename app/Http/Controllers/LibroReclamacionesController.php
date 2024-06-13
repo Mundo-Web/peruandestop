@@ -53,6 +53,7 @@ class LibroReclamacionesController extends Controller
             'number_document'=> 'required|string',
             'cellphone'=> 'required|numeric',
             'email'=> 'required|string',
+            'pais' => 'required|string',
             'department'=> 'required|string',
             'province'=> 'required|string',
             'district'=> 'required|string',
