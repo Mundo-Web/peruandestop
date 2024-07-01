@@ -99,6 +99,17 @@
   <script src="{{ asset('/js/vendor/singleimageupload.js') }}"></script>
   <script src="{{ asset('/js/cs/dropzone.templates.js') }}"></script>
   <script src="{{ asset('/js/forms/controls.dropzone.js') }}"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16627577590"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'AW-16627577590');
+  </script>
 </head>
 
 <body class="scroll__hidden_explorar">
