@@ -40,7 +40,7 @@
             font-family: "acehSemibold";
             src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
         }
- */
+    */
     @font-face {
       font-family: "acehblack";
       src: url({{ asset('fonts/acehsoft-black-webfont') }}) format("woff");
@@ -91,6 +91,8 @@
       src: url({{ asset('fonts/mont-heavydemo-webfont.woff') }}) format("woff");
     }
   </style>
+  {{-- favicon  --}}
+  <link rel="icon" href="{{ asset('/images/img/favicon.png') }}" type="image/x-icon">
   <title>PeruAndesTop | Travel More</title>
   <link rel="stylesheet" href="{{ asset('/css/vendor/dropzone.min.css') }}" />
   <link rel="stylesheet" href="{{ asset('/css/cssDropzone.css') }}" />
