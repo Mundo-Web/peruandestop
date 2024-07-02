@@ -28,6 +28,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LangsController;
 use App\Http\Controllers\LegalesController;
 use App\Http\Controllers\LibroReclamacionesController;
+use App\Http\Controllers\NewsletterSubscriberController;
 use App\Http\Controllers\PoliticasdePrivacidadController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\SliderController;
@@ -90,12 +91,11 @@ Route::middleware(['language'])->group(function () {
 
     Route::get('/libro-de-reclamaciones', [IndexController::class, 'librodereclamaciones'] )->name('librodereclamaciones');
     Route::get('/esnapolicies', [IndexController::class, 'esnapolicies'] )->name('esnapolicies');
-
     
     
   });
 });
-Route::post('guardarUserNewsLetter', [IndexController::class, 'guardarUserNewsLetter'])->name('guardarUserNewsLetter');
+// Route::post('guardarUserNewsLetter', [IndexController::class, 'guardarUserNewsLetter'])->name('guardarUserNewsLetter');
 Route::post('guardarAgencia', [IndexController::class, 'guardarAgencia'])->name('guardarAgencia');
 Route::post('buscartour', [IndexController::class, 'buscartour'])->name('buscartour');
 
@@ -103,6 +103,8 @@ Route::post('guardarformulario', [LibroReclamacionesController::class, 'storePub
 
 Route::get('/obtenerProvincia/{departmentId}', [IndexController::class, 'obtenerProvincia'])->name('obtenerProvincia');
 Route::get('/obtenerDistritos/{provinceId}', [IndexController::class, 'obtenerDistritos'])->name('obtenerDistritos');
+Route::post('guardarUserNewsLetter', [NewsletterSubscriberController::class, 'guardarUserNewsLetter'])->name('guardarUserNewsLetter');
+
 
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
@@ -113,7 +115,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         Route::get('/dashboard/analytics', [DashboardController::class, 'analytics'])->name('analytics');
         Route::get('/dashboard/fintech', [DashboardController::class, 'fintech'])->name('fintech');
 
-
+        /* subscripciones */
+        Route::get('/subscripciones', [NewsletterSubscriberController::class, 'showSubscripciones'])->name('subscripciones') ;
 
 
         Route::resource('/verPoliticasPrivacidad', PoliticasdePrivacidadController::class);
