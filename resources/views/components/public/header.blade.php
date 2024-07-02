@@ -366,7 +366,7 @@
     <div class="flex justify-between items-center w-11/12 mx-auto">
       <div>
         <a href="{{ route('index', ['lang' => $lang]) }}">
-          <img src="{{ asset('images/img/logo.png') }}" alt="logo peruandestop travel more" class="" />
+          <img src="{{ asset('images/img/logo2.png') }}" alt="logo peruandestop travel more" class="w-40" />
         </a>
       </div>
 
