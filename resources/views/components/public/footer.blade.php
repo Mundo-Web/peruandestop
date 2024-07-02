@@ -110,15 +110,15 @@
       <div class="flex justify-start md:justify-end gap-5 w-full">
 
         @if (strlen($datosgenerales->instagram) > 0)
-          <a href="https://{{ $datosgenerales->instagram }}"><img src="{{ asset('images/svg/instagram.svg') }}"
-              alt="instagram" /></a>
+          <a href="{{ $datosgenerales->instagram }}" target="_blank"><img
+              src="{{ asset('images/svg/instagram.svg') }}" alt="instagram" /></a>
         @endif
         @if (strlen($datosgenerales->facebook) > 0)
-          <a href="https://{{ $datosgenerales->facebook }}"><img src="{{ asset('images/svg/facebook.svg') }}"
+          <a href="{{ $datosgenerales->facebook }}" target="_blank"><img src="{{ asset('images/svg/facebook.svg') }}"
               alt="facebook" /></a>
         @endif
         @if (strlen($datosgenerales->youtube) > 0)
-          <a href="https://{{ $datosgenerales->youtube }}"><img src="{{ asset('images/svg/youtube.svg') }}"
+          <a href="{{ $datosgenerales->youtube }}" target="_blank"><img src="{{ asset('images/svg/youtube.svg') }}"
               alt="youtube" /></a>
         @endif
 
