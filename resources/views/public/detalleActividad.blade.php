@@ -1,8 +1,9 @@
 @extends('components.public.matrix')
 
 @section('css_improtados')
-  <script defer data-gyg-partner-hash="3B3BJLW" data-gyg-currency="USD"
-    src="https://cdn.getyourguide.com/partner-ticketing/latest/ticketing.umd.min.js"></script>
+ {{--  <script defer data-gyg-partner-hash="3B3BJLW" data-gyg-currency="USD"
+    src="https://cdn.getyourguide.com/partner-ticketing/latest/ticketing.umd.min.js"></script> --}}
+
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
   <style>

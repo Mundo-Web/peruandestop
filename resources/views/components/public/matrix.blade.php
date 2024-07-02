@@ -110,6 +110,10 @@
     gtag('js', new Date());
     gtag('config', 'AW-16627577590');
   </script>
+  <!-- Partner ticketing -->
+  <script defer data-gyg-partner-hash="3B3BJLW" data-gyg-currency="USD"
+    src="https://cdn.getyourguide.com/partner-ticketing/latest/ticketing.umd.min.js"></script>
+  <!-- End partner ticketing -->
 </head>
 
 <body class="scroll__hidden_explorar">
