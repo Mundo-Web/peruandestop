@@ -73,7 +73,8 @@
             <p class="font-acehbold text-text22  lg:text-left">{{ $archivoObjeto->footer['asistencia_agencias'] }}</p>
           </a>
           <a href="#numero" class="font-acehLight text-text20 py-1">{{ $datosgenerales->cellphone }}</a>
-          <a href="#correo" class="font-acehLight text-text20 py-1 flex-initial w-44">{{ $datosgenerales->email }}</a>
+          <a href="mailto:{{ $datosgenerales->email }}"
+            class="font-acehLight text-text20 py-1 flex-initial w-44">{{ $datosgenerales->email }}</a>
         </nav>
       </div>
 
