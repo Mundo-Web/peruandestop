@@ -98,7 +98,7 @@
                   <label for="name"
                     class="font-acehMedium text-text14 md:text-text18 text-[#344054]">{{ $langInfo['lang']['contacto']['nombre'] }}</label>
 
-                  <input name="name" type="text" placeholder="Ingresa tu nombre"
+                  <input name="name" type="text" placeholder="Ingresa tu nombre" required
                     class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
                 </div>
 
@@ -128,7 +128,7 @@
               <div class="flex flex-col gap-2">
                 <label for="email"
                   class="font-acehMedium text-text14 md:text-text18 text-[#344054]">{{ $langInfo['lang']['contacto']['email'] }}</label>
-                <input name="email" type="email" placeholder="Ingresa tu correo electrónico"
+                <input name="email" type="email" placeholder="Ingresa tu correo electrónico" required
                   class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular text-[#344054]" />
               </div>
 
@@ -164,7 +164,7 @@
                                             </li>
                                         </ul>
                                     </div> --}}
-                  <input type="tel" name="phone"
+                  <input type="tel" name="phone" required
                     class="font-acehRegular border-none focus:outline-none w-full py-4 rounded-xl text-text16 md:text-text20 text-[#344054]" />
                 </div>
               </div>

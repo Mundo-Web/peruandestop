@@ -19,7 +19,7 @@ class EmailConfig
         $mail->Port = 465;
         $mail->Subject = 'Notificación de informacion Recibida';
         $mail->CharSet = 'UTF-8';
-        $mail->setFrom('peruandestop@gmail.com', 'Mundo Web');
+        $mail->setFrom('peruandestop@gmail.com', 'Peru Andes Top');
         return $mail;
     }
 }
