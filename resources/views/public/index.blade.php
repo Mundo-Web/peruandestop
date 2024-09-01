@@ -25,9 +25,9 @@
     }
 
     /* @font-face {
-                                                                                                                                                                                                                                                                                                                          font-family: "acehSemibold";
-                                                                                                                                                                                                                                                                                                                          src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
-                                                                                                                                                                                                                                                                                                                          }  */
+                                                                                                                                                                                                                                                                                                                            font-family: "acehSemibold";
+                                                                                                                                                                                                                                                                                                                            src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
+                                                                                                                                                                                                                                                                                                                            }  */
 
     .bg_header_fondo {
       background-image: url({{ asset('images/img/header_fondo.png') }});
@@ -503,18 +503,34 @@
   </script>
 
   <script>
-    $("#Buscartours").on('click', function(e) {
-      e.preventDefault();
-      console.log('buscando producto ');
+    $(document).ready(function() {
+      // Función para manejar la búsqueda
+      function handleSearch() {
+        console.log('buscando producto ');
 
-      let promp = $("#BuscarToursInput").val();
-      console.log(promp);
+        let promp = $("#BuscarToursInput").val();
+        console.log(promp);
 
-      // Construir la URL con los parámetros de búsqueda
-      let searchUrl = "{{ url($langInfo['selected'] . '/buscartour') }}?serch=" + encodeURIComponent(promp);
+        // Construir la URL con los parámetros de búsqueda
+        let searchUrl = "{{ url($langInfo['selected'] . '/buscartour') }}?serch=" + encodeURIComponent(promp);
 
-      // Redirigir a la URL construida
-      window.location.href = searchUrl;
+        // Redirigir a la URL construida
+        window.location.href = searchUrl;
+      }
+
+      // Manejar el clic en el botón de búsqueda
+      $("#Buscartours").on('click', function(e) {
+        e.preventDefault();
+        handleSearch();
+      });
+
+      // Manejar la tecla Enter en el campo de entrada
+      $("#BuscarToursInput").on('keypress', function(e) {
+        if (e.which === 13) { // 13 es el código de la tecla Enter
+          e.preventDefault();
+          handleSearch();
+        }
+      });
     });
   </script>
 @stop
