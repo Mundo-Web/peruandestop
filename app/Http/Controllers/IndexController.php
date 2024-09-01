@@ -925,7 +925,7 @@ class IndexController extends Controller
   public function buscartour(string $lang, Request $request)
   {
 
-    dump($request->query('serch'));
+    
 
     $slider = Slider::where('status', '=', 1)->where('visible', '=', 1)->get();
     $category = Category::where('status', '=', 1)->where('destacar', '=', 1)->get();
@@ -937,8 +937,8 @@ class IndexController extends Controller
 
 
 
-    $productos  = Products::where('producto', 'like', "%$promp%")->get();
-    dump($productos->count());
+    $productos  = Products::where('producto', 'like', "%$promp%")->where('langs', '=', $lang)->get();
+    
 
     // return response()->json(['message' => 'llegamos a buscartour', 'data' => $ToursSearch]);
     return view('public.buscqueda', compact('productos', 'langInfo', 'sliders', 'tags', 'lang'));
