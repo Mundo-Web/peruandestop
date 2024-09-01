@@ -122,6 +122,18 @@
           <a href="{{ $datosgenerales->youtube }}" target="_blank"><img class="w-10 h-10"
               src="{{ asset('images/svg/youtube.svg') }}" alt="youtube" /></a>
         @endif
+        @if (strlen($datosgenerales->twitter) > 0)
+          <a href="{{ $datosgenerales->twitter }}" target="_blank">
+            <img class="w-10 h-10" src="{{ asset('images/svg/twitter.svg') }}" alt="youtube" />
+
+          </a>
+        @endif
+        @if (strlen($datosgenerales->tiktok) > 0)
+          <a href="{{ $datosgenerales->tiktok }}" target="_blank">
+            <img class="w-10 h-10" src="{{ asset('images/svg/tiktok.svg') }}" alt="youtube" />
+
+          </a>
+        @endif
 
 
 

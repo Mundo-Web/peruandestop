@@ -1,7 +1,7 @@
 @extends('components.public.matrix')
 
 @section('css_improtados')
- {{--  <script defer data-gyg-partner-hash="3B3BJLW" data-gyg-currency="USD"
+  {{--  <script defer data-gyg-partner-hash="3B3BJLW" data-gyg-currency="USD"
     src="https://cdn.getyourguide.com/partner-ticketing/latest/ticketing.umd.min.js"></script> --}}
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -64,9 +64,12 @@
               <img src="{{ asset('images/svg/start_sin_color.svg') }}" alt="estrella" />
               <img src="{{ asset('images/svg/start_sin_color.svg') }}" alt="estrella" />
             </div>
-            <p class="font-acehSemibold text-text28 md:text-text32">
-              2,343 <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
-            </p>
+            <div class="flex flex-row md:pl-24">
+              <p class="font-acehSemibold text-text28 md:text-text32">
+                2,343 <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
+              </p>
+            </div>
+
           </div>
         </div>
 
