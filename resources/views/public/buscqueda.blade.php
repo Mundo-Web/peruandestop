@@ -25,9 +25,9 @@
     }
 
     /* @font-face {
-                                                                                                                                                                                                                                                                                                                          font-family: "acehSemibold";
-                                                                                                                                                                                                                                                                                                                          src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
-                                                                                                                                                                                                                                                                                                                          }  */
+                                                                                                                                                                                                                                                                                                                                  font-family: "acehSemibold";
+                                                                                                                                                                                                                                                                                                                                  src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
+                                                                                                                                                                                                                                                                                                                                  }  */
 
     .bg_header_fondo {
       background-image: url({{ asset('images/img/header_fondo.png') }});
@@ -157,7 +157,7 @@
             </div>
         </section> --}}
 
-    <section class="bg-colorBackgroundMainTop">
+    {{--  <section class="bg-colorBackgroundMainTop">
       <div class=" w-11/12 md:w-full mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-3 " data-aos="fade-up" data-aos-offset="150">
           <div class="group  hover:bg-white  md:duration-500 flex flex-col justify-center py-10 md:p-20 gap-5 ">
@@ -217,7 +217,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> --}}
 
 
 
@@ -321,165 +321,11 @@
         @endif
       </div>
     </section>
-    <section class="z-0" data-aos="fade-up" data-aos-offset="150"> {{-- section2 --}}
-      <h2
-        class="font-acehSemibold text-text40 md:text-text64 w-11/12 mx-auto py-8 md:py-5 leading-none md:leading-tight my-10 text-[#141841]">
-        {{ $langInfo['lang']['section2']['header'] }}
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-11/12 mx-auto gap-10 md:gap-4 2xl:gap-16">
-        <!-- 1 -->
-        @foreach ($categorias as $destino)
-          <div data-aos="fade-up" data-aos-offset="150">
-            <div class="image__effect-hover rounded-[20px]">
-
-              @if ($destino->name_image == null)
-                {{-- <div class="relative mb-2 mt-2"> --}}
-                <img src="{{ asset('images/noimage.png') }}" alt="cusco" class="w-full shadow-lg object-cover" />
-                {{-- </div> --}}
-              @else
-                {{-- <div class="relative mb-2 mt-2"> --}}
-                <img src="{{ asset($destino->url_image . '/' . $destino->name_image) }}" alt="cusco"
-                  class="w-full shadow-lg object-cover" />
-                {{-- </div> --}}
-              @endif
-
-
-              <div class="image__effect-content flex justify-around text-center gap-5">
-                <div class="text-white text-center">
-                  {{-- <span class="block font-acehSemibold text-text28 xl:text-text34">98</span>
-                  <span class="block font-acehMedium text-text12 xl:text-text18">Actividades</span> --}}
-
-                </div>
-                <div class="text-white text-center">
-                  <p
-                    class=" items-center text-center font-acehSemibold text-text24 md:text-text40 leading-none md:leading-tight">
-                    {{ $destino->productos->count() }}
-                    <span class="font-acehMedium text-text12 md:text-text18 block my-2">Tours</span>
-                  </p>
-                </div>
-                <div class="text-white text-center">
-                  <span class="block font-acehSemibold text-text28 xl:text-text34">10/10</span>
-                  <span class="block font-acehMedium text-text12 xl:text-text18">Valoraciones</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- -- -->
-
-            <div class="pb-5">
-              <h3 class="font-acehSemibold text-text48 md:text-text52 pt-5 pb-2">{{ $destino->name }}</h3>
-              <p class="font-acehMedium text-text18 md:text-text22 py-3  ">
-                {{ $destino->description }}
-              </p>
-              <div class="flex gap-2 py-2">
-                <img src="./images/svg/start.svg" alt="estrella" />
-                <img src="./images/svg/start.svg" alt="estrella" />
-                <img src="./images/svg/start.svg" alt="estrella" />
-                <img src="./images/svg/start.svg" alt="estrella" />
-                <img src="./images/svg/start.svg" alt="estrella" />
-              </div>
-
-              <div class="flex justify-between items-center">
-                <p class="font-acehSemibold text-text28 md:text-text32">
-                  2,343
-                  <span
-                    class="font-acehMedium text-text16 md:text-text20">{{ $langInfo['lang']['section2']['Opiniones'] }}</span>
-                </p>
-                <a href="{{ url($langInfo['selected'] . '/actividad/' . $destino->id) }}"
-                  class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">{{ $langInfo['lang']['section2']['btn'] }}</a>
-              </div>
-            </div>
-          </div>
-        @endforeach
-
-        <!-- 2 -->
-
-        <!-- 3 -->
-
-        <!-- 4 -->
-
-        <!-- 5 -->
-
-        <!-- 6 -->
-
-      </div>
-    </section>
-
-    <section class="py-12 w-11/12 mx-auto flex" data-aos="fade-up" data-aos-offset="150">
-      <a href="{{ url($langInfo['selected'] . '/destino?source=destino') }}"
-        class="font-acehSemibold text-text18 md:text-text22 rounded-full border-colorBorder border-2 py-3 px-5 hover:bg-colorBackgroundHeader hover:text-white group md:duration-500 inline-block w-full md:w-auto text-center">
-        {{ $langInfo['lang']['section2']['all'] }}
-        <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg"
-          class="inline-block">
-          <path
-            d="M11.043 15.7637C10.4437 15.918 9.81541 16 9.16797 16C5.02583 16 1.66797 12.6421 1.66797 8.5C1.66797 4.35786 5.02583 1 9.16797 1C12.9926 1 16.1486 3.86283 16.6099 7.5625M2.60547 11.3125H4.79297C5.65592 11.3125 6.35547 10.6129 6.35547 9.75V7.71875C6.35547 6.8558 7.05502 6.15625 7.91797 6.15625H9.48047C10.3434 6.15625 11.043 5.4567 11.043 4.59375V1.9375M15.7676 13.2048L17.9146 12.4625C18.3171 12.3233 18.3305 11.7591 17.9352 11.601L12.6122 9.47145C12.2419 9.32331 11.8714 9.6846 12.0103 10.0585L14.038 15.5181C14.1862 15.9171 14.7502 15.9179 14.8996 15.5194L15.7676 13.2048Z"
-            stroke="#0F1B2C" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"
-            class="group-hover:stroke-white md:duration-500" />
-        </svg>
-      </a>
-    </section>
-
-    <section id="blog">
-      @if (count($blogs) > 0)
-        <div class="flex flex-col lg:flex-row justify-between items-center w-11/12 mx-auto pb-16" data-aos="fade-up"
-          data-aos-offset="150">
-          <div class="basis-3/4">
-            <h2 class="font-acehSemibold text-text40 md:text-text64 leading-none">
-              {{ $langInfo['lang']['section2']['blogs'] }}
-
-            </h2>
-            <p class="font-acehMedium text-text18 md:text-text22 py-5">
-              {{ $langInfo['lang']['section2']['blogText'] }}
-            </p>
-          </div>
-          <div class="basis-1/4 flex justify-start lg:justify-end w-full">
-            <!-- Agregamos justify-end aquí -->
-            <a href="#"
-              class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader py-3 px-5 rounded-full hover:bg-colorBackgroundMainTop md:duration-500 text-center ">
-
-              {{ $langInfo['lang']['section2']['blogSeemores'] }}
-            </a>
-          </div>
-        </div>
-
-        <div>
-
-          <div class="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-11/12 mx-auto">
-
-            @foreach ($blogs as $blog)
-              <div data-aos="fade-up" data-aos-offset="150" class="pb-5">
-                <div class="overflow-hidden rounded-3xl">
-                  <div class="transform transition-transform scale-100 hover:scale-110 duration-500">
-                    <img src="{{ asset($blog->url_image . '/' . $blog->name_image) }}" alt="indonesia"
-                      class="w-full shadow-lg object-cover" />
-                  </div>
-                </div>
-
-                <!-- -- -->
-
-                <div class="pb-5">
-                  <h3 class="font-acehSemibold text-text24 md:text-text28 pt-5">
-                    {{ $blog->title }}
-                  </h3>
-                  <p class="font-acehMedium text-text16 md:text-text20 py-3">
-                    {!! Str::limit($blog->description, 180) !!}
-                  </p>
-                </div>
-                <a href="{{ url($langInfo['selected'] . '/post/' . $blog->id) }}"
-                  class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader py-3 px-5 rounded-full hover:bg-colorBackgroundMainTop md:duration-500 inline-block text-center w-full md:inline md:w-auto">
-                  {{ $langInfo['lang']['section2']['detailBlog'] }}
-
-                </a>
-              </div>
-            @endforeach
-
-          </div>
 
 
 
-        </div>
-      @endif
-    </section>
+
+
   </main>
 
 
@@ -517,6 +363,8 @@
       window.location.href = searchUrl;
     });
   </script>
+
+
 @stop
 
 @stop

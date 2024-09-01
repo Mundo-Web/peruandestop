@@ -91,13 +91,13 @@ Route::middleware(['language'])->group(function () {
 
     Route::get('/libro-de-reclamaciones', [IndexController::class, 'librodereclamaciones'] )->name('librodereclamaciones');
     Route::get('/esnapolicies', [IndexController::class, 'esnapolicies'] )->name('esnapolicies');
-    
+    Route::get('buscartour', [IndexController::class, 'buscartour'])->name('buscartour');
     
   });
 });
 // Route::post('guardarUserNewsLetter', [IndexController::class, 'guardarUserNewsLetter'])->name('guardarUserNewsLetter');
 Route::post('guardarAgencia', [IndexController::class, 'guardarAgencia'])->name('guardarAgencia');
-Route::post('buscartour', [IndexController::class, 'buscartour'])->name('buscartour');
+
 
 Route::post('guardarformulario', [LibroReclamacionesController::class, 'storePublic'] )->name('guardarFormReclamo');
 

@@ -922,15 +922,26 @@ class IndexController extends Controller
     }
   }
 
-  public function buscartour(Request $request)
+  public function buscartour(string $lang, Request $request)
   {
 
+    dump($request->query('serch'));
 
-    $promp = $request->promp;
+    $slider = Slider::where('status', '=', 1)->where('visible', '=', 1)->get();
+    $category = Category::where('status', '=', 1)->where('destacar', '=', 1)->get();
 
-    $ToursSearch = Products::where('producto', 'like', "%$promp%")->get();
+    $sliders = Slider::where('status', '=', 1)->where('visible', '=', 1)->get();
+    $promp = $request->query('serch');
+    $langInfo = $request->attributes->all();
+    $tags = Tag::where('status', '=', 1)->where('visible', '=', 1)->where('langs', '=', $lang)->get();
 
-    return response()->json(['message' => 'llegamos a buscartour', 'data' => $ToursSearch]);
+
+
+    $productos  = Products::where('producto', 'like', "%$promp%")->get();
+    dump($productos->count());
+
+    // return response()->json(['message' => 'llegamos a buscartour', 'data' => $ToursSearch]);
+    return view('public.buscqueda', compact('productos', 'langInfo', 'sliders', 'tags', 'lang'));
   }
   public function politicaprivacidad(string $lang){
     $politicas = politycsCondition::where('langs', '=', $lang)->get();
