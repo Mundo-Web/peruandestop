@@ -38,9 +38,10 @@
                       </g>
                     </svg>
                   </div>
-                  <textarea id="description" name="content"
+                  <x-quill id="content" name="content" value="" />
+                  {{--  <textarea id="description" name="content"
                     class="mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="content"></textarea>
+                    placeholder="content"></textarea> --}}
                 </div>
               </div>
 
@@ -70,20 +71,6 @@
   let editor = null
   $('document').ready(async function() {
 
-    editor = await tinymce.init({
-      selector: 'textarea#description',
-      height: 500,
-      plugins: [
-        'advlist', 'autolink', 'lists', 'link', 'charmap', 'preview',
-        'searchreplace', 'visualblocks', 'code', 'fullscreen',
-        'insertdatetime', 'table'
-      ],
-      toolbar: 'undo redo | blocks | ' +
-        'bold italic backcolor | alignleft aligncenter ' +
-        'alignright alignjustify | bullist numlist outdent indent | ' +
-        'removeformat | help',
-      content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px;}'
-    });
 
   })
 </script>
