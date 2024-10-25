@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Helpers\EmailConfig;
 use App\Http\Requests\StoreIndexRequest;
 use App\Http\Requests\UpdateIndexRequest;
+use App\Models\AboutUs;
 use App\Models\Agencias;
 use App\Models\Attributes;
 use App\Models\AttributesValues;
@@ -983,5 +984,10 @@ class IndexController extends Controller
       return response()->json($distritos);
   }
 
+  public function nosotros(Request $request, string $lang)
+  {
+    $langInfo = $request->attributes->all();
+    return view('public.nosotros', compact('lang', 'langInfo'));
+  }
   
 }

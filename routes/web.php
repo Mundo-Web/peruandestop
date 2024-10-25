@@ -73,6 +73,7 @@ Route::middleware(['language'])->group(function () {
     Route::get('/post/{id}', [IndexController::class, 'post'])->name('post');
 
     Route::get('/contacto', [IndexController::class, 'contacto'])->name('contacto');
+    Route::get('/nosotros', [IndexController::class, 'nosotros'])->name('nosotros');
 
     Route::get('/destino?source=paquete', [IndexController::class, 'destino'])->name('ayuda');
 
@@ -81,7 +82,7 @@ Route::middleware(['language'])->group(function () {
     // Route::get('/comentario', [IndexController::class, 'destino'])->name('comentario');
 
 
-    Route::get('/nosotros', [IndexController::class, 'index'])->name('nosotros');
+
     Route::get('/servicios', [IndexController::class, 'index'])->name('servicios');
 
     Route::get('/politica_privacidad', [IndexController::class, 'politicaprivacidad'])->name('politica_privacidad');

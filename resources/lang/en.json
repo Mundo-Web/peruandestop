@@ -7,6 +7,7 @@
     "paquetes": "Packages",
     "contact": "Contact Us",
     "login": "Login",
+    "nosotros": "About us",
     "lang": {
       "es": "Spanish",
       "en": "English",
@@ -67,6 +68,7 @@
       "description": " We have sold more than a million tickets, offering confidence and experience in planning your trips."
     }
   },
+
   "section2": {
     "header": "Explore Popular Destinations",
     "btn": "See More",
@@ -78,6 +80,21 @@
     "detailBlog": "See details",
     "Opiniones": "Comments"
   },
+
+  "nosotros": {
+    "titulonosotros": "ABOUT US",
+    "descripcion1": "At Perú Andes Top, we are a team passionate about travel that is dedicated to creating unique and personalized experiences for each of our visitors. We are local operators, with more than 10 years of experience, so, with us, you will travel with the peace of mind of knowing that every detail is taken care of to make your experience unforgettable.",
+    "descripcion2": "Commitment: Our commitment is to offer you a high quality service, always listening to your needs and expectations. We are recognized by the Ministry of Culture, so we have all the authorizations and equipment necessary to manage all the logistics that lead to the realization of the wonderful route of the Inca Trail, Machu Picchu, among others.",
+    "titulomision": "OUR MISSION",
+    "descripcionmision": "Provide quality services for all our passengers through personalization that seeks to generate unique experiences. In addition to our collaboration with the local population for their development, economic and sustainable growth.",
+    "titulovision": "OUR VISIÓN",
+    "descripcionvision": "Position ourselves as the main leading operating agency in Peru, standing out for our dedication to excellence in service, innovation in tourist experiences and commitment to responsible tourism. We aspire to be the first option for all travelers looking to discover new experiences",
+    "titulopromesas": "OUR PROMISES",
+    "promesas1": "Quality service and support: We are very clear about our business values, as we are local operators, we manage all the execution of our services, focused on quality, to ensure in each of our activities, total satisfaction, our passion for adventure. and fulfilling the realization of great experiences characterizes us.",
+    "promesas2": "The best price, guaranteed: In addition to offering quality service, we have the best prices on the market as direct tour operators. We invite you to try our services and have a better offer.",
+    "promesas3": "Social responsibility: With your help, Perú Andes Top invests a percentage of its income in the “Piecitos Andinos” project, which provides not only educational resources and medical assistance, but also seeks the development, economic and sustainable growth of our local population." 
+  },
+
   "actividad": {
     "ver": "See Tour",
     "all": "See more destinations",
@@ -146,6 +163,7 @@
     "terms": "Terms and Conditions",
     "libroR": "Complaints Book",
     "asistencia_agencias": "Agency Assistance",
-    "paymentMethods": "Payment Methods"
+    "paymentMethods": "Payment Methods",
+    "nosotros": "About us"
   }
 }

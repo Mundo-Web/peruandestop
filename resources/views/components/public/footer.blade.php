@@ -50,6 +50,8 @@
             class="font-acehLight text-text20 py-1">{{ $archivoObjeto->footer['paquetes'] }}</a>
           <a href="{{ route('contacto', ['lang' => $lang]) }}"
             class="font-acehLight text-text20 py-1">{{ $archivoObjeto->footer['contact'] }}</a>
+          <a href="{{ route('nosotros', ['lang' => $lang]) }}"
+            class="font-acehLight text-text20 py-1">{{ $archivoObjeto->footer['nosotros'] }}</a>
         </nav>
       </div>
 

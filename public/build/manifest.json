@@ -4,7 +4,7 @@
     "src": "public/images/img/header_fondo.png"
   },
   "resources/css/app.css": {
-    "file": "assets/app-4Fhw0UF7.css",
+    "file": "assets/app-tQtROats.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -12,7 +12,7 @@
     "css": [
       "assets/app-dGvTjJ5y.css"
     ],
-    "file": "assets/app-EC3LqEp8.js",
+    "file": "assets/app-WIpV0JTq.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }

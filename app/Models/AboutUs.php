@@ -8,8 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class AboutUs extends Model
 {
     use HasFactory;
-    protected $filiable = ['titulo',
+    protected $filiable = [
+    'titulo',
     'descripcion',
     'imagen',
-    'status'];
+    'status',
+    'langs'
+    ];
 }
