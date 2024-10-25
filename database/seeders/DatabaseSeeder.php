@@ -36,8 +36,9 @@ class DatabaseSeeder extends Seeder
             GeneralSeeder::class,
             // CategorySeeder::class,
             TagSeeder::class,
-            LangsTableSeeder::class
+            LangsTableSeeder::class,
             //ServiceSeeder::class,
+            EntradasMultiples::class
         ]);
     }
 }

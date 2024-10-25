@@ -11,19 +11,22 @@
         <!-- Table -->
         <div class="overflow-x-auto">
 
-          <table id="tabladatos" class="display text-lg" style="width:100%">
+          <table id="tabladatos" class="display text-lg table" style="width:100%">
             <thead>
               <tr>
                 <th>Nombre</th>
                 <th>Correo</th>
+
                 <th>Teléfono</th>
+                <th>Fecha</th>
+                <th>Origen</th>
                 <th>Acción</th>
               </tr>
             </thead>
             <tbody>
 
               @foreach ($mensajes as $item)
-                <tr>
+                <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-100 even:dark:bg-gray-800">
                   <td>
                     @if ($item->is_read == '0')
                       <a href="{{ route('mensajes.show', $item->id) }}"><span class="mr-4"><i
@@ -37,6 +40,8 @@
                   </td>
                   <td>{{ $item->email }}</td>
                   <td>{{ $item->phone }}</td>
+                  <td>{{ $item->created_at->translatedFormat('j \d\e F \d\e\l Y') }}</td>
+                  <td>{{ $item->pais }} , {{ $item->ciudad }}</td>
                   <td>
                     <button method="POST" onclick="borrarmensaje({{ $item->id }})"
                       class="bg-red-600 p-2 rounded text-white"><i class="fa-regular fa-trash-can"></i></button>
@@ -51,6 +56,9 @@
                 <th>Nombre</th>
                 <th>Correo</th>
                 <th>Teléfono</th>
+                <th>Fecha</th>
+                <th>Origen</th>
+
                 <th>Tool</th>
               </tr>
             </tfoot>
@@ -64,9 +72,11 @@
 
   <script>
     $('document').ready(function() {
-      new DataTable('#tabladatos');
+      // new DataTable('#tabladatos');
 
-
+      ('#tabladatos').DataTable({
+        ordering: false,
+      })
 
     })
 

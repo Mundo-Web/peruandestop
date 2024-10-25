@@ -27,7 +27,7 @@ class AppServiceProvider extends ServiceProvider
     {
         View::composer('components.public.footer', function ($view) {
             // Obtener los datos del footer
-            $datosgenerales = General::all(); // Suponiendo que tienes un modelo Footer y un método footerData() en él
+            $datosgenerales = General::first(); // Suponiendo que tienes un modelo Footer y un método footerData() en él
             // Pasar los datos a la vista
             $view->with('datosgenerales', $datosgenerales);
         });
@@ -41,10 +41,12 @@ class AppServiceProvider extends ServiceProvider
             // Obtener los datos del footer
             $langs = Langs::all() ;
             $blogs =  Blog::all()->count();
+            $datosgenerales = General::all(); 
             // Pasar los datos a la vista
             $view->with([
                 'langs' => $langs,
-                'blogs' => $blogs
+                'blogs' => $blogs,
+                'datosgenerales' => $datosgenerales
             
             ]);
         });

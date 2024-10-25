@@ -43,7 +43,7 @@
           {{ $langInfo['lang']['contacto']['title'] }}
         </h1>
         <p class="font-acehRegular text-text18 md:text-text22 text-[#495560]">
-          {{ $langInfo['lang']['contacto']['p1'] }}
+          {{-- {{ $langInfo['lang']['contacto']['p1'] }} --}}
         </p>
 
         <div>
@@ -62,8 +62,8 @@
             {{ $langInfo['lang']['contacto']['ourDirection'] }}
           </p>
           <div class="font-acehMedium text-text18 md:text-text22 text-[#495560]">
-            <p>Samblas tandapata 160</p>
-            <p>Cusco - Perú</p>
+            <p>{{ $general[0]->district }} {{ $general[0]->ddress }}</p>
+            <p>{{ $general[0]->city }} - {{ $general[0]->country }}</p>
           </div>
         </div>
 
@@ -73,8 +73,8 @@
 
           </p>
           <div class="font-acehMedium text-text18 md:text-text22 text-[#495560]">
-            <p>+51 999 000 999</p>
-            <p>+51 900 999 000</p>
+            <p>{{ $general[0]->cellphone }}</p>
+
           </div>
         </div>
       </div>
@@ -98,7 +98,7 @@
                   <label for="name"
                     class="font-acehMedium text-text14 md:text-text18 text-[#344054]">{{ $langInfo['lang']['contacto']['nombre'] }}</label>
 
-                  <input name="name" type="text" placeholder="Ingresa tu nombre"
+                  <input name="name" type="text" placeholder="Ingresa tu nombre" required
                     class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
                 </div>
 
@@ -109,10 +109,26 @@
                     class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
                 </div>
               </div>
+              <div class="flex flex-col md:flex-row gap-5 w-full">
+                <div class="flex flex-col gap-2 flex-auto">
+                  <label for="pais"
+                    class="font-acehMedium text-text14 md:text-text18 text-[#344054]">{{ $langInfo['lang']['contacto']['pais'] }}</label>
+
+                  <input name="pais" type="text" placeholder="Ingresa tu pais"
+                    class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
+                </div>
+
+                <div class="flex flex-col gap-2 flex-auto">
+                  <label for="ciudad"
+                    class="font-acehMedium text-text14 md:text-text18 text-[#344054]">{{ $langInfo['lang']['contacto']['ciudad'] }}</label>
+                  <input id="ciudad" name="ciudad" type="text" placeholder="Ingresa tu Ciudad"
+                    class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular" />
+                </div>
+              </div>
               <div class="flex flex-col gap-2">
                 <label for="email"
                   class="font-acehMedium text-text14 md:text-text18 text-[#344054]">{{ $langInfo['lang']['contacto']['email'] }}</label>
-                <input name="email" type="email" placeholder="Ingresa tu correo electrónico"
+                <input name="email" type="email" placeholder="Ingresa tu correo electrónico" required
                   class="w-full border-[1px] focus:outline-none border-gray-200 rounded-xl py-4 text-text16 md:text-text20 font-acehRegular text-[#344054]" />
               </div>
 
@@ -121,12 +137,7 @@
                   {{ $langInfo['lang']['contacto']['telefono'] }}
                 </label>
                 <div class="border-gray-200 border-[1.5px] flex rounded-xl">
-                  <select name="codigoPais" id="pais"
-                    class=" border-0 px-4 py-2 bg-white appearance-none focus:outline-none focus:ring-0 rounded-xl text-text14 md:text-text18 text-[#344054]">
-                    <option value="0">US</option>
-                    <option value="1">PE</option>
-                    <option value="2">MXC</option>
-                  </select>
+
                   {{-- <div class="dropdown-telefono inline-block relative py-4">
                                         <button class="font-acehRegular px-6 rounded inline-flex items-center">
                                             <span class="mr-12 text-[#101828] text-[16px]">US</span>
@@ -153,7 +164,7 @@
                                             </li>
                                         </ul>
                                     </div> --}}
-                  <input type="tel" name="phone"
+                  <input type="tel" name="phone" required
                     class="font-acehRegular border-none focus:outline-none w-full py-4 rounded-xl text-text16 md:text-text20 text-[#344054]" />
                 </div>
               </div>
@@ -199,7 +210,7 @@
 
       event.preventDefault();
 
-      console.log($(this).serialize());
+
       Swal.fire({
 
         title: 'Procesando información',
@@ -229,6 +240,7 @@
             title: response.message,
             icon: "success",
           });
+          $('#formContacto')[0].reset()
         },
         error: function(response) {
 

@@ -16,12 +16,31 @@
 
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5P7RQPW6');
+  </script>
+  <!-- End Google Tag Manager -->
+
   <style>
     /* @font-face {
             font-family: "acehSemibold";
             src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
         }
- */
+    */
     @font-face {
       font-family: "acehblack";
       src: url({{ asset('fonts/acehsoft-black-webfont') }}) format("woff");
@@ -72,10 +91,38 @@
       src: url({{ asset('fonts/mont-heavydemo-webfont.woff') }}) format("woff");
     }
   </style>
-  <title>Index</title>
+  {{-- favicon  --}}
+  <link rel="icon" href="{{ asset('/images/img/favicon.png') }}" type="image/x-icon">
+  <title>PeruAndesTop | Travel More</title>
+  <link rel="stylesheet" href="{{ asset('/css/vendor/dropzone.min.css') }}" />
+  <link rel="stylesheet" href="{{ asset('/css/cssDropzone.css') }}" />
+  <script src="{{ asset('/js/cs/scrollspy.js') }}"></script>
+  <script src="{{ asset('/js/vendor/dropzone.min.js') }}"></script>
+  <script src="{{ asset('/js/vendor/singleimageupload.js') }}"></script>
+  <script src="{{ asset('/js/cs/dropzone.templates.js') }}"></script>
+  <script src="{{ asset('/js/forms/controls.dropzone.js') }}"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16627577590"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'AW-16627577590');
+  </script>
+  <!-- Partner ticketing -->
+  <script defer data-gyg-partner-hash="3B3BJLW" data-gyg-currency="USD"
+    src="https://cdn.getyourguide.com/partner-ticketing/latest/ticketing.umd.min.js"></script>
+  <!-- End partner ticketing -->
 </head>
 
 <body class="scroll__hidden_explorar">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src=“https://www.googletagmanager.com/ns.html?id=GTM-5P7RQPW6” height=“0" width=“0”
+      style=“display:none;visibility:hidden”></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   @include('components.public.header', ['lang' => $lang])
 
   <div>
@@ -88,6 +135,7 @@
 
 
   @yield('scripts_improtados')
+
 
   <script>
     $('#formContactos').submit(function(event) {

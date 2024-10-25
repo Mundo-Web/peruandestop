@@ -6,6 +6,7 @@ use App\Http\Requests\StoreMessageRequest;
 use App\Http\Requests\UpdateMessageRequest;
 use App\Models\Message;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 
 class MessageController extends Controller
@@ -16,7 +17,7 @@ class MessageController extends Controller
     public function index()
     {
         //
-        $mensajes = Message::where('status' , '=', 1 )->orderBy('created_at', 'DESC')->get();
+        $mensajes = Message::where('status' , '=', 1 )->orderBy('id', 'DESC')->get();
         return view('pages.message.index', compact('mensajes'));
     
     }
@@ -38,6 +39,8 @@ class MessageController extends Controller
     }
     function storePublic(Request $request)
     {
+
+         
         $mensaje = new Message();
 
         $mensaje->full_name = $request-> nombre; 

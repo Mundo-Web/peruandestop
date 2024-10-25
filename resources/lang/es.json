@@ -14,22 +14,57 @@
       "it": "Italiano"
     }
   },
+  "ModalAgencia": {
+    "eresAgencia": "¿Eres agencia?",
+    "modalTitle": "Registration Form",
+    "formAdvertice": "All fields are necessary to complete your registration",
+    "formTitle": "General information",
+    "nombre_agencia": "Nombre de la Agencia de Viajes",
+    "ruc": "Numero de identificacion fiscal",
+    "no_registro": "No. de Registro de la Agencia",
+    "direccion": "Dirección legal",
+    "telefono": "Número de teléfono",
+    "email": "NE-mail",
+    "pagina_web": "Página Web",
+    "nombre_representante": "Nombre del Representante Legal",
+    "identificacion_representante": "Identificación del Representante Legal",
+    "telefono_representante": "Teléfono del Representante Legal",
+    "email_representante": "Email del Representante Legal",
+    "tipo_agencia": "Tipo de Agencia obligatorio.",
+    "url_declaracion": "Documento de la declaracion jurada",
+    "minorista": "Minorista",
+    "mayorista": "Mayorista",
+    "DescargarDeclaracion": "Descargar Modelo de Declaración Jurada",
+    "containerDoc1": "Haga click para cargar ",
+    "containerDoc2": "o arrastre y suelte",
+    "confimarRegistro": "Confirmar Registro",
+    "aceptTerms": "Usted acepta nuestra amigable política de privacidad",
+    "needHelp": "¿Necesitas ayuda?",
+    "ChatTeam": "Por favor chatee con nuestro amigable equipo de soporte",
+    "getInContact": "Ponerse en contacto",
+    "finishRegister": "Registro realizado con Éxitos",
+    "finalMessage": "Gracias por unirte a nosotros. ¡Esperamos construir un futuro lleno de increíbles viajes y aventuras juntos!",
+    "listaTittle": "Adjuntar",
+    "option1": "• Declaración Jurada",
+    "option2": "• Copia de la licencia de operaciones.",
+    "option3": "• Copia de la identificación del representante legal"
+  },
   "slider": {
     "inputSearch": "¿Cuál será tu próximo destino?",
     "btnSearch": "Buscar"
   },
   "section1": {
     "one": {
-      "title": "Integer quis es",
-      "description": "Nam venenatis elementum lorem, in sodales massa dictum at. Phasellus sed libero. es"
+      "title": "Plataforma Segura",
+      "description": "Sistema robusto con certificaciones de seguridad que protegen tus datos personales y financieros en todas las transacciones."
     },
     "two": {
-      "title": "Integer quis  Tupes es",
-      "description": " Tupes Nam venenatis elementum lorem, in sodales massa dictum at. Phasellus sed libero. es"
+      "title": "Atención 24/7",
+      "description": "Soporte al cliente disponible 24 horas al día, 7 días a la semana, garantizando asistencia en cualquier momento."
     },
     "three": {
-      "title": "Integer quis Surpes es",
-      "description": " Surpes Nam venenatis elementum lorem, in sodales massa dictum at. Phasellus sed libero. es"
+      "title": "Más 1M Tickets",
+      "description": " Hemos vendido más de un millón de tickets, ofreciendo confianza y experiencia en la planificación de tus viajes."
     }
   },
   "section2": {
@@ -38,7 +73,7 @@
     "all": "Ver más Destinos",
     "Toursd": "Tours destacados ",
     "blogs": "Nuestro blog y artículos",
-    "blogText": "es Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius    laudantium autem dolor, harum a excepturi placeat commodi sapiente    labore quia repellat velit",
+    "blogText": "Descubre destinos asombrosos y obtén consejos para viajar con nuestro blog. ¡Inspírate y planea tu próxima aventura con nosotros!",
     "blogSeemores": "Ver más publicaciones",
     "detailBlog": "Ver detalles",
     "Opiniones": "Opiniones"
@@ -70,7 +105,7 @@
   "blog": {
     "title": "Nuestro Blog",
     "title2": "Historias del mundo",
-    "parrafo1": "Es Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenamet, consectetur adipisicing elit.",
+    "parrafo1": "",
     "btnSusbcribir": "Suscribir",
     "Pr": "Publicaciones Recientes",
     "pAll": "Todas las publicaciones"
@@ -89,7 +124,9 @@
     "horario2": "Lunes - Sábados",
     "ourDirection": "Nuestra dirección",
     "getInContact": "Ponerse en contacto",
-    "politica": "Usted acepta nuestra amigable política de privacidad"
+    "politica": "Usted acepta nuestra amigable política de privacidad",
+    "pais": "País",
+    "ciudad": "Ciudad"
   },
   "main": {
     "hash": "#sode-world",

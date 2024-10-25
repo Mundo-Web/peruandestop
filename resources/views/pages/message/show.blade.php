@@ -20,6 +20,16 @@
           <p class="mb-5">
             {{ $message->message }}
           </p>
+          <p class="font-bold ">Fecha:</p>
+          <p class="mb-5 ">{{ $message->created_at->translatedFormat('j \d\e F \d\e\l Y') }} a las
+            {{ $message->created_at->format('H:i') }} </p>
+
+          <p class="font-bold ">País:</p>
+          <p class="mb-5 ">{{ $message->pais }} -
+            {{ $message->ciudad }} </p>
+
+
+
 
           <a href="{{ route('mensajes.index') }}" class="bg-blue-500 px-4 py-2 rounded text-white"><span><i
                 class="fa-solid fa-arrow-left mr-2"></i></span> Volver</a>

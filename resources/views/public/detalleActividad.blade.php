@@ -1,8 +1,9 @@
 @extends('components.public.matrix')
 
 @section('css_improtados')
-  <script defer data-gyg-partner-hash="3B3BJLW" data-gyg-currency="USD"
-    src="https://cdn.getyourguide.com/partner-ticketing/latest/ticketing.umd.min.js"></script>
+  {{--  <script defer data-gyg-partner-hash="3B3BJLW" data-gyg-currency="USD"
+    src="https://cdn.getyourguide.com/partner-ticketing/latest/ticketing.umd.min.js"></script> --}}
+
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
   <style>
@@ -63,9 +64,12 @@
               <img src="{{ asset('images/svg/start_sin_color.svg') }}" alt="estrella" />
               <img src="{{ asset('images/svg/start_sin_color.svg') }}" alt="estrella" />
             </div>
-            <p class="font-acehSemibold text-text28 md:text-text32">
-              2,343 <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
-            </p>
+            <div class="flex flex-row md:pl-24">
+              <p class="font-acehSemibold text-text28 md:text-text32">
+                2,343 <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
+              </p>
+            </div>
+
           </div>
         </div>
 
@@ -79,10 +83,8 @@
                 class="w-full h-full rounded-tl-3xl rounded-bl-3xl object-cover" />
             @endif
 
-
-
-
           </div>
+
           <div class="grow basis-3/6">
             @if (isset($tour->galeria[1]->imagen))
               <img src="{{ asset($tour->galeria[1]->imagen) }}" alt="disfraces" class="w-full h-full   object-cover" />
@@ -110,12 +112,12 @@
                 <img src="{{ asset('images/noimage.png') }}" alt="disfraces"
                   class="w-full h-full rounded-br-3xl  object-cover" />
               @endif
-              <a href="#"
+              {{-- <a href="#"
                 class="hidden md:absolute bottom-[10px] right-[10px] bg-transparent p-2 text-white md:flex gap-2 items-center rounded-3xl border-2 font-acehSemibold text-text16 md:text-text20">
                 <span>{{ $langInfo['lang']['detallesActividad']['btnGaleria'] }}</span>
 
                 <img src="{{ asset('images/svg/camara.svg') }}" alt="camara" class="w-8" />
-              </a>
+              </a> --}}
             </div>
           </div>
         </div>
@@ -130,7 +132,56 @@
             <p class="font-acehRegular text-text18 md:text-text22 text-[#495560] my-5">
               {{ $tour->extract }}
             </p>
+
+            <div class="grid gap-5 grid-cols-1 md:grid-cols-2   bg-[#FCFCFC]">
+              @foreach ($tour->specifications->chunk(2) as $especificacion)
+                {{-- <div class="flex flex-col items-start gap-5"> --}}
+                @foreach (@$especificacion as $item)
+                  <div class="flex items-start gap-5 ">
+                    <img src="{{ asset('images/svg/point.svg') }}" alt="duracion de horas" class="mt-1">
+                    <div>
+                      <h2 class="font-acehSemibold text-text20 md:text-text24 text-[#0F1B2C] leading-none">
+                        {{ $item->tittle }}
+                      </h2>
+                      <p class="font-acehMedium text-text16 md:text-text20 text-[#495560]">
+                        {{ $item->specifications }}
+                      </p>
+                    </div>
+
+                  </div>
+                @endforeach
+
+                {{-- </div> --}}
+              @endforeach
+            </div>
+
+
             {!! $tour->description !!}
+            @foreach ($tipo_entradas as $tipoEntrada)
+              @php
+                $entradasAsociadas = $entradasOrdenadas->where('tipo_entrada_id', $tipoEntrada->id);
+              @endphp
+
+              @if ($entradasAsociadas->isNotEmpty())
+                <div class="border-b-2 border-[#F1F1F1] aos-init aos-animate my-5" data-aos="fade-up"
+                  data-aos-offset="150">
+                  <p class="font-semibold text-[32px] md:text-[40px]  text-[#0F1B2C]">
+                    {{ $tipoEntrada->description }}
+                  </p>
+                  <div class="font-normal text-[18px] text-[#495560] my-5">
+                    @foreach ($entradasAsociadas as $entrada)
+                      <p class="flex gap-5 items-center">
+                        <img src="{{ asset('images//svg/circle.svg') }}" alt="circle">
+                        <span>{{ $entrada->description }}</span>
+                      </p>
+                    @endforeach
+                  </div>
+                </div>
+              @endif
+            @endforeach
+
+
+
           </div>
 
           <div class="basis-2/6">
@@ -169,13 +220,15 @@
       <div class="w-11/12 mx-auto my-10">
         <!-- mayor a  md -->
         <div class="image hidden 2md:block">
-          <img src="{{ asset('images/img/tu_viaje_comienza.png') }}" alt="tu viaje" class="w-full h-auto object-cover" />
+          <img src="{{ asset('images/img/tu_viaje_comienza.png') }}" alt="tu viaje"
+            class="w-full h-auto object-cover" />
           <div class="text-white flex-col gap-5 contain flex ">
             <h3
               class="font-acehbold md:text-[30px] 2md:text-[50px] xl:text-[60px] md:w-8/12 mx-auto text-center leading-none lg:leading-tight">
               {{ $langInfo['lang']['detallesActividad']['journey'] }}
             </h3>
-            <p class="font-acehMedium w-9/12 mx-auto md:text-[14px] 2md:text-[16px] xl:text-[18px] md:w-6/12 text-center">
+            <p
+              class="font-acehMedium w-9/12 mx-auto md:text-[14px] 2md:text-[16px] xl:text-[18px] md:w-6/12 text-center">
               {{ $langInfo['lang']['detallesActividad']['register'] }}
 
             </p>

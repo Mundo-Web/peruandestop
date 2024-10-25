@@ -26,8 +26,8 @@
               <tr>
                 <th>Destino</th>
                 <th>Tour</th>
+                <th>Idioma</th>
                 <th>Precio</th>
-                <th>Descuento</th>
                 <th>Imagen</th>
                 <th>Destacar</th>
                 <th>Recomendar</th>
@@ -39,12 +39,12 @@
 
               @foreach ($products as $item)
                 <tr>
-                  <td>{{ $item->categoria->name }}</td>
+                  <td>{{ $item->categoria->name ?? '' }}</td>
 
                   <td>{{ $item->producto }}</td>
-
+                  <td>{{ $item->langs }}</td>
                   <td>{{ $item->precio }}</td>
-                  <td>{{ $item->descuento }}</td>
+
 
 
                   <td class="px-3 py-2"><img class="w-20" src="{{ asset($item->imagen) }}" alt=""></td>
@@ -111,7 +111,7 @@
                       class="bg-yellow-400 px-3 py-2 rounded text-white  "><i
                         class="fa-regular fa-pen-to-square"></i></a>
 
-                    <form action="" method="POST">
+                    <form id='formdelete' action="" method="POST">
                       @csrf
                       <a data-idService='{{ $item->id }}'
                         class="btn_delete bg-red-600 px-3 py-2 rounded text-white cursor-pointer"><i
@@ -127,8 +127,8 @@
               <tr>
                 <th>Destino</th>
                 <th>Tour</th>
+                <th>Idioma</th>
                 <th>Precio</th>
-                <th>Descuento</th>
                 <th>Imagen</th>
                 <th>Destacar</th>
                 <th>Recomendar</th>
@@ -195,7 +195,7 @@
       })
     });
 
-    $(".btn_delete").on("click", function(e) {
+    $(document).on("click", '.btn_delete', function(e) {
       e.preventDefault()
 
       let id = $(this).attr('data-idService');

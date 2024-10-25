@@ -1084,13 +1084,36 @@
       </div> --}}
 
       <div class="w-11/12 mx-auto">
+        <div data-aos="fade-up" data-aos-offset="150">
+          <div class="swiper productos-explorar-destino">
+            <div class="swiper-wrapper text-[#0F1B2C]">
+              @foreach ($tags as $item)
+                <div class="swiper-slide rounded-2xl">
+                  <div class="rounded-2xl">
+                    <div class="">
+                      <img src="{{ asset($item->imagen) }}" alt="{{ $item->name }}"
+                        class="w-full rounded-2xl shadow-lg object-cover" />
+                    </div>
+                  </div>
+
+                  <a href="{{ url($langInfo['selected'] . '/actividad/0?tags=' . $item->id) }}"
+                    class="font-acehSemibold text-text18 md:text-text22 text-center py-5 inline-block w-full">{{ $item->name }}</a>
+                </div>
+              @endforeach
+
+
+            </div>
+
+          </div>
+        </div>
         <div class="grid grid-cols-1 2lg:grid-cols-2 mt-10 gap-20 md:gap-10 text-[#0F1B2C]">
-          @foreach ($destino->productos as $item)
+          {{-- @foreach ($destino->productos as $item) --}}
+          @foreach ($tours as $item)
             <div class="" data-aos="fade-up" data-aos-offset="150">
               <div class="overflow-hidden rounded-2xl">
                 <div class="img-container ">
                   <img src="{{ asset($item->imagen) }}" alt=""
-                    class=" object-cover  h-[300px] rounded-2xl shadow-lg " style="  width: 800px;" />
+                    class=" object-cover  h-[300px] rounded-2xl shadow-lg " style="  width: 100%;" />
                 </div>
               </div>
 
@@ -1285,6 +1308,142 @@
           },
         },
       });
+    })
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => { // Captura el click de abrir
+      const openModal = document.querySelector(".mostrar-modal");
+      // Captura al modal que se quiere mostrar
+      const modal = document.querySelector(".modal-destino");
+      //Captura el evento de cierre
+      const closeModal = document.querySelector(".modal__close");
+      // Captura el body para bloqueo
+      const body = document.querySelector(".scroll__hidden_explorar");
+
+      /* ------------------------------------------------ */
+
+      const openModalFiltro = document.querySelector(".open-filtro");
+      const modalFiltro = document.querySelector(".modal-filtro");
+      const closeModalFiltro = document.querySelector(".close-filtro");
+
+      /* -------------------------------------------- */
+
+
+      // Captura el click de abrir
+      const openOrdenar = document.querySelector(".open-ordenar");
+      // Captura al modal que se quiere mostrar
+      const modalOrdenar = document.querySelector(".modal-ordenar");
+      //Captura el evento de cierre
+      const closeModalOrdenar = document.querySelector(".modal__close-ordenar");
+      // Captura el body para bloqueo
+
+      /* ------------------- */
+
+      const ordenarDropdown = document.querySelectorAll('.ordenar-destinos');
+
+      ordenarDropdown.forEach(ordenar => {
+        ordenar.addEventListener("click", (e) => {
+          if (!e.target.classList.contains('bg__dropdown-ordenar')) {
+            e.target.classList.add("bg__dropdown-ordenar");
+            ordenarDropdown.forEach(item => {
+              if (e.target !== item) {
+                item.classList.remove('bg__dropdown-ordenar')
+              }
+            })
+          }
+        })
+      });
+
+      /* ----------- */
+
+      const swiper = new Swiper(".productos-explorar-destino", {
+        slidesPerView: 6,
+        spaceBetween: 40,
+        loop: true,
+        grabCursor: false,
+        centeredSlides: false,
+        initialSlide: 0,
+        allowTouchMove: false,
+        autoplay: {
+          delay: 1500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 2,
+            centeredSlides: true,
+          },
+          768: {
+            slidesPerView: 4,
+            centeredSlides: true,
+          },
+          1280: {
+            slidesPerView: 6,
+          },
+        },
+      });
+
+      openModal.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        modal.classList.add("modal--show");
+        body.classList.add("overflow-hidden");
+        modal.style.display = "flex";
+      });
+
+      closeModal.addEventListener("click", (e) => {
+        e.preventDefault();
+        modal.classList.remove("modal--show");
+        body.classList.remove("overflow-hidden");
+      });
+      /* ------------------------------------------- */
+      openModalFiltro.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        modalFiltro.classList.add("modal--show-filtros");
+        body.classList.add("overflow-hidden");
+        modalFiltro.style.display = "flex";
+      });
+
+      closeModalFiltro.addEventListener("click", (e) => {
+        e.preventDefault();
+        modalFiltro.classList.remove("modal--show-filtros");
+        body.classList.remove("overflow-hidden");
+      });
+
+      /* --------------------------- */
+      openOrdenar.addEventListener("click", (e) => {
+        e.preventDefault();
+        modalOrdenar.classList.add("modal--show");
+        body.classList.add("overflow-hidden");
+        modalOrdenar.style.display = "flex";
+      });
+
+      closeModalOrdenar.addEventListener("click", (e) => {
+        e.preventDefault();
+        modalOrdenar.classList.remove("modal--show");
+        body.classList.remove("overflow-hidden");
+      });
+
+      // Función para cerrar el modal
+      function resetEffects(event) {
+        if (event.target === modal) {
+          modal.classList.remove("modal--show");
+          body.classList.remove("overflow-hidden");
+        }
+        if (event.target === modalFiltro) {
+          modalFiltro.classList.remove("modal--show-filtros");
+          body.classList.remove("overflow-hidden");
+        }
+
+        if (event.target === modalOrdenar) {
+          modalOrdenar.classList.remove("modal--show");
+          body.classList.remove("overflow-hidden");
+        }
+      }
+
+      window.addEventListener("click", resetEffects);
     })
   </script>
 @stop

@@ -16,4 +16,9 @@ class Specifications extends Model
         'visible',
         'status',
     ];
+
+    public function productos(){
+        return $this->belongsTo(Products::class , 'product_id');
+    }
+
 }

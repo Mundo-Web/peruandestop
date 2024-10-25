@@ -5,11 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Attributes;
 use App\Models\AttributesValues;
 use App\Models\Category;
+use App\Models\EntradasMultiples;
 use App\Models\Galerie;
 use App\Models\Langs;
 use App\Models\Products;
 use App\Models\Specifications;
 use App\Models\Tag;
+use App\Models\TipoEntrada;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
@@ -41,7 +43,8 @@ class ProductsController extends Controller
     $categoria = Category::all();
     $tags = Tag::where("status", "=", true)->get();
     $langs = Langs::all();
-    return view('pages.products.create', compact('atributos', 'valorAtributo', 'categoria', 'tags', 'langs'));
+    $tipoEntrada = TipoEntrada::all();
+    return view('pages.products.create', compact('atributos', 'valorAtributo', 'categoria', 'tags', 'langs', 'tipoEntrada'));
   }
 
   public function saveImg($file, $route, $nombreImagen)
@@ -63,6 +66,7 @@ class ProductsController extends Controller
   public function store(Request $request)
   {
     $especificaciones = [];
+    $entradaMultiple = [];
     $data = $request->all();
     $atributos = null;
     $tagsSeleccionados = $request->input('tags_id');
@@ -70,7 +74,6 @@ class ProductsController extends Controller
     // Por ejemplo:
 
     // $valorprecio = $request->input('precio') - 0.1;
-  
 
 
     $request->validate([
@@ -106,10 +109,20 @@ class ProductsController extends Controller
             $num = substr($key, strrpos($key, '-') + 1); // Obtener el número de la especificación
             $especificaciones[$num]['specifications'] = $value; // Agregar las especificaciones al array asociativo
           }
+
+          if(strpos($key, 'tipo_entrada_id-') === 0){
+            $num = substr($key, strrpos($key, '-') + 1);
+            $entradaMultiple[$num]['tipo_entrada_id'] = $value; 
+          }elseif(strpos($key, 'entrada_multiple-') === 0){
+            $num = substr($key, strrpos($key, '-') + 1);
+            $entradaMultiple[$num]['entrada_multiple'] = $value; 
+
+          }
         }
       }
 
       $jsonAtributos = json_encode($atributos);
+
 
       if (array_key_exists('destacar', $data)) {
         if (strtolower($data['destacar']) == 'on') $data['destacar'] = 1;
@@ -126,10 +139,13 @@ class ProductsController extends Controller
 
       $producto = Products::create($cleanedData);
       $this->GuardarEspecificaciones($producto->id, $especificaciones);
+
+      $this->guardarEntradaMultiple($producto->id,$entradaMultiple);
+
       if (count($tagsSeleccionados) !== 0) {
         $this->TagsXProducts($producto->id, $tagsSeleccionados);
       }
-      if ($data['files']) {
+      if (isset($data['files'])) {
 
         foreach ($data['files'] as $file) {
           # code...
@@ -158,7 +174,7 @@ class ProductsController extends Controller
           Galerie::create($dataGalerie);
         }
       }
-      if ($data['filesGallery']) {
+      if (isset($data['filesGallery'])) {
 
         foreach ($data['filesGallery'] as $file) {
           # code...
@@ -191,7 +207,6 @@ class ProductsController extends Controller
       return redirect()->route('activity.index')->with('success', 'Publicación creado exitosamente.');
     } catch (\Throwable $th) {
       //throw $th;
-      dump($th);
     }
   }
   private function TagsXProducts($id, $nTags)
@@ -207,6 +222,16 @@ class ProductsController extends Controller
       $value['product_id'] = $id;
       Specifications::create($value);
     }
+  }
+  private function guardarEntradaMultiple ($id , $values) {
+    foreach ($values as $key => $value) {
+      EntradasMultiples::create([
+        'description' =>$value['entrada_multiple'], 
+        'tipo_entrada_id' =>$value['tipo_entrada_id']  , 
+        'producto_id' => $id 
+      ]);
+    }
+
   }
 
   private function stringToObject($key, $atributos)
@@ -247,10 +272,34 @@ class ProductsController extends Controller
 
     $langs = Langs::all();
     $categoria = Category::all();
+    $tipoEntrada = TipoEntrada::all();
 
 
 
-    return view('pages.products.edit', compact('langs', 'product', 'atributos', 'valorAtributo', 'allTags', 'categoria'));
+    return view('pages.products.edit', compact('langs', 'product', 'atributos', 'valorAtributo', 'allTags', 'categoria' , 'tipoEntrada'));
+  }
+  private function actEntradaMultiple ($id , $values) {
+    
+    foreach ($values as $key => $entrada) {
+
+      $registroDB = EntradasMultiples::find($key);
+      if($entrada['entrada_multiple'] == null ){
+        $registroDB->delete();
+      }
+      elseif ($registroDB) {
+        $registroDB->description = $entrada['entrada_multiple'];
+        $registroDB->tipo_entrada_id = $entrada['tipo_entrada_id'];
+        $registroDB->save();
+      }else{
+        EntradasMultiples::create([
+          'description' =>$entrada['entrada_multiple'], 
+          'tipo_entrada_id' =>$entrada['tipo_entrada_id']  , 
+          'producto_id' => $id 
+        ]);
+      }
+    }
+   
+
   }
 
   /**
@@ -258,11 +307,12 @@ class ProductsController extends Controller
    */
   public function update(Request $request, string $id)
   {
+    $especificaciones = [];
+    $entradaMultiple = [];
     $product = Products::find($id);
     $tagsSeleccionados = $request->input('tags_id');
     $data = $request->all();
     $atributos = null;
-
     $request->validate([
       'producto' => 'required',
     ]);
@@ -280,12 +330,96 @@ class ProductsController extends Controller
 
     foreach ($request->all() as $key => $value) {
 
+      
+
       if (strstr($key, ':')) {
         // Separa el nombre del atributo y su valor
         $atributos = $this->stringToObject($key, $atributos);
         unset($request[$key]);
+      } elseif (strstr($key, '-')) {
+
+        //strpos primera ocurrencia que enuentre
+        if (strpos($key, 'tittle-') === 0 || strpos($key, 'title-') === 0) {
+          $num = substr($key, strrpos($key, '-') + 1); // Obtener el número de la especificación
+          $especificaciones[$num]['tittle'] = $value; // Agregar el título al array asociativo
+        } elseif (strpos($key, 'specifications-') === 0) {
+          $num = substr($key, strrpos($key, '-') + 1); // Obtener el número de la especificación
+          $especificaciones[$num]['specifications'] = $value; // Agregar las especificaciones al array asociativo
+        }
+
+        if(strpos($key, 'tipo_entrada_id-') === 0){
+          $num = substr($key, strrpos($key, '-') + 1);
+          $entradaMultiple[$num]['tipo_entrada_id'] = $value; 
+        }elseif(strpos($key, 'entrada_multiple-') === 0){
+          $num = substr($key, strrpos($key, '-') + 1);
+          $entradaMultiple[$num]['entrada_multiple'] = $value; 
+
+        }
       }
     }
+    if (isset($data['files'])) {
+
+      foreach ($data['files'] as $file) {
+        # code...
+
+        // data:image/png; base64,code
+        [$first, $code] = explode(';base64,', $file);
+        $imageData = base64_decode($code);
+        $routeImg = 'storage/images/imagen/';
+
+        $ext = ExtendFile::getExtention(str_replace("data:", '', $first));
+
+
+
+        $nombreImagen = Str::random(10) . '.' . $ext;
+
+        // Verificar si la ruta no existe y crearla si es necesario
+        if (!file_exists($routeImg)) {
+          mkdir($routeImg, 0777, true); // Se crea la ruta con permisos de lectura, escritura y ejecución
+        }
+
+        // Guardar los datos binarios en un archivo
+        file_put_contents($routeImg . $nombreImagen, $imageData);
+        $dataGalerie['imagen'] = $routeImg . $nombreImagen;
+        $dataGalerie['product_id'] = $id;
+        $dataGalerie['type_img'] = 'portada';
+        Galerie::create($dataGalerie);
+      }
+    }
+    if (isset($data['filesGallery'])) {
+
+      foreach ($data['filesGallery'] as $file) {
+        # code...
+
+        // data:image/png; base64,code
+        [$first, $code] = explode(';base64,', $file);
+        $imageData = base64_decode($code);
+        $routeImg = 'storage/images/gallery/';
+
+        $ext = ExtendFile::getExtention(str_replace("data:", '', $first));
+
+
+
+        $nombreImagen = Str::random(10) . '.' . $ext;
+
+        // Verificar si la ruta no existe y crearla si es necesario
+        if (!file_exists($routeImg)) {
+          mkdir($routeImg, 0777, true); // Se crea la ruta con permisos de lectura, escritura y ejecución
+        }
+
+        // Guardar los datos binarios en un archivo
+        file_put_contents($routeImg . $nombreImagen, $imageData);
+        $dataGalerie['imagen'] = $routeImg . $nombreImagen;
+        $dataGalerie['product_id'] = $id;
+        $dataGalerie['type_img'] = 'gall';
+        Galerie::create($dataGalerie);
+      }
+    }
+    $this->actualizarSpecificaciones($id,$especificaciones);
+
+    
+    $this->actEntradaMultiple($id, $entradaMultiple); 
+
 
     $jsonAtributos = json_encode($atributos);
 
@@ -307,7 +441,32 @@ class ProductsController extends Controller
 
     $this->TagsXProducts($id, $tagsSeleccionados);
 
+
     return redirect()->route('activity.index')->with('success', 'Producto editado exitosamente.');
+  }
+  public function actualizarSpecificaciones($id,$especificaciones)
+  {
+
+    foreach ($especificaciones as $key => $registro) {
+
+      $registroDB = Specifications::find($key);
+      if($registro['specifications'] == null ){
+        $registroDB->delete();
+      }
+      elseif ($registroDB) {
+        $registroDB->tittle = $registro['tittle'];
+        $registroDB->specifications = $registro['specifications'];
+        $registroDB->save();
+      }else{
+        Specifications::create([
+          'tittle' =>$registro['tittle'], 
+          'specifications' =>$registro['specifications']  , 
+          'product_id' => $id 
+        ]);
+      }
+    }
+
+   
   }
 
   /**
@@ -316,6 +475,11 @@ class ProductsController extends Controller
   public function borrar(Request $request)
   {
     //softdelete
+    DB::delete('delete from galeries where product_id = ?', [$request->id]);
+    DB::delete('delete from entradas_multiples where producto_id = ?', [$request->id]);
+    DB::delete('delete from specifications where product_id = ?', [$request->id]);
+    
+
     $product = Products::find($request->id);
     $product->status = 0;
     $product->delete();
@@ -339,5 +503,27 @@ class ProductsController extends Controller
       $field => $status
     ]);
     return response()->json(['message' => 'registro actualizado']);
+  }
+  public function borrarimg(Request $request){
+    try {
+      //code...
+      $imagenGaleria = Galerie::find($request->id);
+      $rutaCompleta  = $imagenGaleria->imagen;
+      if (file_exists($rutaCompleta)) {
+        // Intentar eliminar el archivo
+        if (unlink($rutaCompleta)) {
+            // Archivo eliminado con éxito
+           
+        } 
+      }
+      $imagenGaleria->delete();
+      return response()->json(['message'=>'imagen eliminada con exito ']);
+    } catch (\Throwable $th) {
+      //throw $th;
+      return response()->json(['message'=>'no se ha podido eliminar la imagen '], 400);
+
+    }
+   
+    
   }
 }

@@ -74,7 +74,6 @@ class TagController extends Controller
       return redirect()->route('tags.index')->with('success', 'Etiqueta creada');
     } catch (\Throwable $th) {
       //throw $th;
-      dump($th);
     }
   }
   public function saveImg($file, $route, $nombreImagen)
@@ -154,7 +153,6 @@ class TagController extends Controller
       return redirect()->route('tags.index')->with('success', 'Etiqueta creada');
     } catch (\Throwable $th) {
       //throw $th;
-      dump($th);
     }
   }
 

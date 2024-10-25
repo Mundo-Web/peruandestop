@@ -24,7 +24,7 @@
               <tr>
                 <th>Destino</th>
                 <th>Pais</th>
-                <th>Descripción</th>
+                <th>Idioma</th>
                 <th>Destacar</th>
                 <th>Visible</th>
                 <th>Acciones</th>
@@ -36,7 +36,7 @@
                 <tr>
                   <td>{{ $item->name }}</td>
                   <td>{{ $item->pais }}</td>
-                  <td>{{ $item->description }}</td>
+                  <td>{{ $item->langs }}</td>
                   <td>
                     <form method="POST" action="">
                       @csrf
@@ -96,7 +96,7 @@
               <tr>
                 <th>Destino</th>
                 <th>Pais</th>
-                <th>Descripción</th>
+                <th>Idioma</th>
                 <th>Destacar</th>
                 <th>Visible</th>
                 <th>Acciones</th>

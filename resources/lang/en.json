@@ -14,22 +14,57 @@
       "it": "Italian"
     }
   },
+  "ModalAgencia": {
+    "eresAgencia": "Are you an agency?",
+    "modalTitle": "Registration Form",
+    "formAdvertice": "All fields are necessary to complete your registration",
+    "formTitle": "General information",
+    "nombre_agencia": "Travel Agency Name",
+    "ruc": "Tax Identification Number",
+    "no_registro": "Agency Registration Number",
+    "direccion": "Legal Address",
+    "telefono": "Phone Number",
+    "email": "NE-mail",
+    "pagina_web": "Website",
+    "nombre_representante": "Legal Representative Name",
+    "identificacion_representante": "Legal Representative Identification",
+    "telefono_representante": "Legal Representative Phone Number",
+    "email_representante": "Legal Representative Email",
+    "tipo_agencia": "Agency Type",
+    "url_declaracion": "Affidavit Document",
+    "minorista": "Retail",
+    "mayorista": "Wholesaler",
+    "DescargarDeclaracion": "Download Affidavit Model",
+    "containerDoc1": "Click to load",
+    "containerDoc2": "or drag and drop",
+    "confimarRegistro": "Confirm Registration",
+    "aceptTerms": "You accept our friendly privacy policy",
+    "needHelp": "¿Need help?",
+    "ChatTeam": "Please chat with our friendly support team",
+    "getInContact": "Get in touch",
+    "finishRegister": " Registration made with Successes",
+    "finalMessage": "Thank you for joining us. We look forward to building a future full of amazing travels and adventures together!",
+    "listaTittle": "Attach",
+    "option1": "• Affidavit",
+    "option2": "• Copy of the operations license.",
+    "option3": "• Copy of the identification of the legal representative"
+  },
   "slider": {
     "inputSearch": "What will be your next destination?",
     "btnSearch": "Search"
   },
   "section1": {
     "one": {
-      "title": "Integer quis En",
-      "description": "Nam venenatis elementum lorem, in sodales massa dictum at. Phasellus sed libero. EN"
+      "title": "Secure Platform",
+      "description": "Robust system with security certifications that protect your personal and financial data in all transactions."
     },
     "two": {
-      "title": "Integer quis  Tupes En",
-      "description": " Tupes Nam venenatis elementum lorem, in sodales massa dictum at. Phasellus sed libero. EN"
+      "title": "Attention 24/7",
+      "description": " Customer support available 24/7, ensuring assistance at any time."
     },
     "three": {
-      "title": "Integer quis Surpes En",
-      "description": " Surpes Nam venenatis elementum lorem, in sodales massa dictum at. Phasellus sed libero. EN"
+      "title": "More 1M Tickets",
+      "description": " We have sold more than a million tickets, offering confidence and experience in planning your trips."
     }
   },
   "section2": {
@@ -38,7 +73,7 @@
     "all": "See more destinations",
     "Toursd": "Featured tours ",
     "blogs": "Our blog and articles",
-    "blogText": "en Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius    laudantium autem dolor, harum a excepturi placeat commodi sapiente    labore quia repellat velit",
+    "blogText": "Discover amazing destinations and get travel tips with our blog. Get inspired and plan your next adventure with us!",
     "blogSeemores": "Se more Post",
     "detailBlog": "See details",
     "Opiniones": "Comments"
@@ -70,7 +105,7 @@
   "blog": {
     "title": "Our Blog",
     "title2": "Stories of the world",
-    "parrafo1": "EN Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenamet, consectetur adipisicing elit.",
+    "parrafo1": "",
     "btnSusbcribir": "Suscribe",
     "Pr": "Recent Blogs",
     "pAll": " All Blogs"
@@ -89,7 +124,9 @@
     "horario2": "Monday - Saturday",
     "ourDirection": "Our address",
     "getInContact": "Get in touch",
-    "politica": "You accept our friendly privacy policy"
+    "politica": "You accept our friendly privacy policy",
+    "pais": "Country",
+    "ciudad": "City"
   },
   "main": {
     "hash": "#sode-world",

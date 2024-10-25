@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        
+        Schema::table('politycs_conditions', function (Blueprint $table) {
+            $table->string('langs')->nullable();
+        });
+        Schema::table('terms_conditions', function (Blueprint $table) {
+            $table->string('langs')->nullable();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+       
+        Schema::table('politycs_conditions', function (Blueprint $table) {
+            $table->dropColumn('langs')->nullable();
+        });
+        Schema::table('terms_conditions', function (Blueprint $table) {
+            $table->dropColumn('langs')->nullable();
+        });
+    }
+};

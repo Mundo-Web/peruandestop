@@ -26,7 +26,6 @@ class LanguageMiddleware
        
         if (file_exists($route)) {
             $lang = file_get_contents($route);
-            // dump($lang);
             
             $request->attributes->add(['selected' => $request->lang]);
             $request->attributes->add(['lang' => json_decode($lang, true)]);

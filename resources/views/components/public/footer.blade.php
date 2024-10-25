@@ -56,12 +56,13 @@
       <div data-aos="fade-up" data-aos-offset="150">
         <nav class="flex flex-col lg:items-start">
           <p class="font-acehbold text-text22 pb-4">{{ $archivoObjeto->footer['politicas'] }}</p>
-          <a href="#politica_privacidad"
+          <a href="{{ route('politica_privacidad', ['lang' => $lang]) }}"
             class="font-acehLight text-text20  py-1">{{ $archivoObjeto->footer['politicasP'] }}</a>
-          <a href="#terminos_condiciones"
+          <a href="{{ route('term_condiciones', ['lang' => $lang]) }}"
             class="font-acehLight text-text20  py-1">{{ $archivoObjeto->footer['terms'] }}</a>
-          <a href="#libro_reclamaciones"
+          <a href="{{ route('librodereclamaciones', ['lang' => $lang]) }}"
             class="font-acehLight text-text20 py-1">{{ $archivoObjeto->footer['libroR'] }}</a>
+          <a href="{{ route('esnapolicies', ['lang' => $lang]) }}" class="font-acehLight text-text20 py-1">ESNNA</a>
         </nav>
       </div>
 
@@ -71,9 +72,9 @@
           <a onclick="document.getElementById('tw-modal').click()" class="cursor-pointer">
             <p class="font-acehbold text-text22  lg:text-left">{{ $archivoObjeto->footer['asistencia_agencias'] }}</p>
           </a>
-          <a href="#numero" class="font-acehLight text-text20 py-1">{{ $datosgenerales[0]->cellphone }}</a>
-          <a href="#correo"
-            class="font-acehLight text-text20 py-1 flex-initial w-44">{{ $datosgenerales[0]->email }}</a>
+          <a href="#numero" class="font-acehLight text-text20 py-1">{{ $datosgenerales->cellphone }}</a>
+          <a href="mailto:{{ $datosgenerales->email }}"
+            class="font-acehLight text-text20 py-1 flex-initial w-44">{{ $datosgenerales->email }}</a>
         </nav>
       </div>
 
@@ -108,9 +109,34 @@
         </p>
       </div>
       <div class="flex justify-start md:justify-end gap-5 w-full">
-        <a href="#"><img src="{{ asset('images/svg/instagram.svg') }}" alt="instagram" /></a>
-        <a href="#"><img src="{{ asset('images/svg/facebook.svg') }}" alt="facebook" /></a>
-        <a href=""><img src="{{ asset('images/svg/youtube.svg') }}" alt="youtube" /></a>
+
+        @if (strlen($datosgenerales->instagram) > 0)
+          <a href="{{ $datosgenerales->instagram }}" target="_blank"><img class="w-10 h-10"
+              src="{{ asset('images/svg/instagram.svg') }}" alt="instagram" /></a>
+        @endif
+        @if (strlen($datosgenerales->facebook) > 0)
+          <a href="{{ $datosgenerales->facebook }}" target="_blank"><img class="w-10 h-10"
+              src="{{ asset('images/svg/facebook.svg') }}" alt="facebook" /></a>
+        @endif
+        @if (strlen($datosgenerales->youtube) > 0)
+          <a href="{{ $datosgenerales->youtube }}" target="_blank"><img class="w-10 h-10"
+              src="{{ asset('images/svg/youtube.svg') }}" alt="youtube" /></a>
+        @endif
+        @if (strlen($datosgenerales->twitter) > 0)
+          <a href="{{ $datosgenerales->twitter }}" target="_blank">
+            <img class="w-10 h-10" src="{{ asset('images/svg/twitter.svg') }}" alt="youtube" />
+
+          </a>
+        @endif
+        @if (strlen($datosgenerales->tiktok) > 0)
+          <a href="{{ $datosgenerales->tiktok }}" target="_blank">
+            <img class="w-10 h-10" src="{{ asset('images/svg/tiktok.svg') }}" alt="youtube" />
+
+          </a>
+        @endif
+
+
+
       </div>
     </div>
   </div>
@@ -125,6 +151,21 @@
           Visualizacion del modal
         </label>
       </label>
+    </div>
+  </div>
+
+  <div class="flex justify-end relative">
+
+    <div class="fixed bottom-[40px] right-[40px] z-[100] fixed-whastapp">
+      <a target="_blank"
+        href="https://api.whatsapp.com/send?phone={{ $datosgenerales->whatsapp }}&text={{ $datosgenerales->mensaje_whatsapp }}"
+        class="">
+
+        <img src="{{ asset('images/svg/WhatsApp_header.svg') }}" alt="whatsapp"
+          class="w-20 h-20 md:w-full md:h-full" />
+
+
+      </a>
     </div>
   </div>
 
@@ -148,6 +189,30 @@
       if (selectedLang && languageTexts[selectedLang]) {
         selectedLanguageElement.textContent = languageTexts[selectedLang];
       }
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+      const icon = $('.fixed-whastapp');
+      const footer = $('footer');
+      const offset = 24; // Offset from the bottom of the footer
+
+      $(window).on('scroll', function() {
+        const scrollTop = $(window).scrollTop();
+        const windowHeight = $(window).height();
+        const footerTop = footer.offset().top;
+
+        // Calculate the bottom position of the icon
+        const iconBottom = scrollTop + windowHeight - icon.outerHeight(true) - offset;
+
+        console.log(iconBottom, footerTop)
+        // Check if the icon is overlapping with the footer
+        if (iconBottom > footerTop) {
+          icon.css('bottom', (iconBottom - footerTop + offset * 6) + 'px');
+        } else {
+          icon.css('bottom', offset + 'px');
+        }
+      });
     });
   </script>
 </footer>
