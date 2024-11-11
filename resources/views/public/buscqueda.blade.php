@@ -75,7 +75,7 @@
   <main class="pb-24">
     <section>
       <div class="swiper slider__headers">
-        <div class="pt-10 md:pt-20 w-full grid grid-cols-1 " style="position: absolute; z-index:200; top:50%">
+        <div class="pt-16 md:pt-20 lg:pt-24 w-full grid grid-cols-1 " style="position: absolute; z-index:200; top:50%">
           <form action="#" class="w-11/12 lg:w-4/12 mx-auto ">
             <div
               class="flex flex-col gap-5 2md:flex-row items-center justify-center 2md:bg-white py-2 md:px-2 rounded-full ">
@@ -109,7 +109,7 @@
                     <p class="font-acehMedium text-text14 md:text-text20">
                       {{ $imagen->description }}
                     </p>
-                    <h1 class="text-text48 font-acehSemibold md:text-text92 leading-none">
+                    <h1 class="text-text48 font-acehSemibold md:text-text92 leading-none truncate text-ellipsis" style="text-shadow: 0 0 10px rgba(0,0,0,.5)">
                       {{ $imagen->title }}
                     </h1>
                   </div>

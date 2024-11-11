@@ -109,7 +109,7 @@
                     <p class="font-acehMedium text-text14 md:text-text20">
                       {{ $imagen->description }}
                     </p>
-                    <h1 class="text-text48 font-acehSemibold md:text-text92 leading-none truncate text-ellipsis">
+                    <h1 class="text-text48 font-acehSemibold md:text-text92 leading-none truncate text-ellipsis" style="text-shadow: 0 0 10px rgba(0,0,0,.5)">
                       {{ $imagen->title }}
                     </h1>
                   </div>

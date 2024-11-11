@@ -6,6 +6,7 @@ use App\Helpers\EmailConfig;
 use App\Http\Requests\StoreIndexRequest;
 use App\Http\Requests\UpdateIndexRequest;
 use App\Jobs\AgencyJob;
+use App\Jobs\MailingJob;
 use App\Models\AboutUs;
 use App\Models\Agencias;
 use App\Models\Attributes;
@@ -582,7 +583,8 @@ class IndexController extends Controller
     $reglasValidacion = [
       'name' => 'required|string|max:255',
       'email' => 'required|email|max:255',
-      'phone' => 'required|integer|max:99999999999',
+      // 'phone' => 'required|integer|max:99999999999',
+      'phone' => 'required|string',
     ];
     $mensajes = [
       'name.required' => 'El campo nombre es obligatorio.',
@@ -590,13 +592,16 @@ class IndexController extends Controller
       'email.email' => 'El formato del correo electrónico no es válido.',
       'email.max' => 'El campo correo electrónico no puede tener más de :max caracteres.',
       'phone.required' => 'El campo teléfono es obligatorio.',
-      'phone.integer' => 'El campo teléfono debe ser un número entero.',
+      // 'phone.integer' => 'El campo teléfono debe ser un número entero.',
     ];
     $request->validate($reglasValidacion, $mensajes);
     $formlanding = Message::create($data);
 
-    $this->envioCorreo($formlanding);
-    $this->envioCorreoAdmin($formlanding);
+    // $this->envioCorreo($formlanding);
+    // $this->envioCorreoAdmin($formlanding);
+
+    MailingJob::dispatchAfterResponse($formlanding);
+
     // return redirect()->route('landingaplicativos', $formlanding)->with('mensaje','Mensaje enviado exitoso')->with('name', $request->nombre);
     return response()->json(['message' => 'Mensaje enviado con exito']);
   }
