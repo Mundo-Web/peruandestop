@@ -80,7 +80,7 @@
               </div>
             </div>
 
-            <div class="overflow-y-scroll h-[300px] md:h-[500px] actividades_scroll pr-4">
+            <div class="overflow-y-scroll h-[300px] md:h-[400px] actividades_scroll pr-4">
               <div>
                 <form id='formAgencia' action="{{ route('activity.store') }}" method="POST"
                   enctype="multipart/form-data">
