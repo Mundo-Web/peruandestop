@@ -33,7 +33,8 @@ class ContactController extends Controller
         $reglasValidacion = [
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
-            'cellphone' => 'required|integer|max:99999999999',
+            // 'cellphone' => 'required|integer|max:99999999999',
+            'cellphone' => 'required|string',
             'typeservice' => 'required|string|max:255',
             'typecontact' => 'required|string|max:255',
             'hourcontact' => 'required|string|max:20',
@@ -46,7 +47,7 @@ class ContactController extends Controller
             'email.email' => 'El formato del correo electrónico no es válido.',
             'email.max' => 'El campo correo electrónico no puede tener más de :max caracteres.',
             'cellphone.required' => 'El campo teléfono es obligatorio.',
-            'cellphone.integer' => 'El campo teléfono debe ser un número entero.',
+            // 'cellphone.integer' => 'El campo teléfono debe ser un número entero.',
             'typeservice.required' => 'El campo tipo de proyecto es obligatorio.',
             'typeservice.max' => 'El campo tipo de proyecto no puede tener más de :max caracteres.',
             'message.required' => 'El campo mensaje es obligatorio.',

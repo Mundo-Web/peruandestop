@@ -75,7 +75,7 @@
   <main class="pb-24">
     <section>
       <div class="swiper slider__headers">
-        <div class="pt-10 md:pt-20 w-full grid grid-cols-1 " style="position: absolute; z-index:200; top:50%">
+        <div class="pt-16 md:pt-20 lg:pt-24 w-full grid grid-cols-1 " style="position: absolute; z-index:200; top:50%">
           <form action="#" class="w-11/12 lg:w-4/12 mx-auto ">
             <div
               class="flex flex-col gap-5 2md:flex-row items-center justify-center 2md:bg-white py-2 md:px-2 rounded-full ">
@@ -94,7 +94,7 @@
             </div>
           </form>
           <div id="mostrarToursInput"
-            class="bg-white p-[1px] rounded-xl  overflow-y-auto max-h-[177px] w-11/12 lg:w-4/12 mx-auto z-index:200; ">
+            class="bg-white p-0 rounded-xl  overflow-y-auto max-h-[177px] w-11/12 lg:w-4/12 mx-auto z-index:200; ">
           </div>
         </div>
         <div class="swiper-wrapper">
@@ -103,13 +103,13 @@
             <div class="swiper-slide">
               <div class=" bg-cover bg-center bg-no-repeat sm:w-full h-full"
                 style="background: url('{{ asset($imagen->url_image . $imagen->name_image) }}') ; background-repeat: no-repeat; background-size:cover">
-                <div class="text-white flex flex-col items-center pt-80 md:pt-80 pb-60 w-full sm:w-6/12   mx-auto"
+                <div class="text-white flex flex-col items-center pt-80 md:pt-80 pb-60 w-full   mx-auto"
                   data-aos="fade-up" data-aos-offset="150">
                   <div class="text-center w-11/12 mx-auto">
                     <p class="font-acehMedium text-text14 md:text-text20">
                       {{ $imagen->description }}
                     </p>
-                    <h1 class="text-text48 font-acehSemibold md:text-text92 leading-none">
+                    <h1 class="text-text48 font-acehSemibold md:text-text92 leading-none truncate text-ellipsis">
                       {{ $imagen->title }}
                     </h1>
                   </div>
@@ -257,7 +257,7 @@
               </div>
 
               <div class="w-full mx-auto flex flex-col justify-center gap-5">
-                <div class="flex flex-col-row gap-5 md:gap-5 md:flex-row md:justify-start md:items-center mt-5">
+                {{-- <div class="flex flex-col-row gap-5 md:gap-5 md:flex-row md:justify-start md:items-center mt-5">
                   @foreach ($item->tags as $tag)
                     <span
                       class="font-acehMedium text-text16 md:text-text20 rounded-full border-colorBorder border-2 py-1 px-5 inline-block max-w-max text-center">
@@ -265,16 +265,16 @@
                       {{ Str::limit($tag->name, 10) }}
                     </span>
                   @endforeach
-                </div>
-                <div class="flex flex-col gap-2">
-                  <h2 class="font-acehSemibold text-text48 md:text-text40 leading-none">
+                </div> --}}
+                <div class="flex flex-col gap-2 mt-5">
+                  <h2 class="font-acehSemibold text-[36px] md:text-text40 leading-none">
                     {{ $item->producto }}
                   </h2>
                   <div class="flex gap-10">
                     <div class="flex gap-2 items-center">
                       <img src="{{ asset('images/svg/ubicacion.svg') }}" alt="ubigeo" />
                       <p class="font-acehMedium text-text18 md:text-text22">{{ $item->categoria->name }} -
-                        {{ $item->categoria->pais }}
+                        {{ strip_tags($item->categoria->pais) }}
                       </p>
                     </div>
                     <div class="flex gap-2 items-center">
@@ -371,20 +371,20 @@
               <p class="font-acehMedium text-text18 md:text-text22 py-3  ">
                 {{ $destino->description }}
               </p>
-              <div class="flex gap-2 py-2">
+              {{-- <div class="flex gap-2 py-2">
                 <img src="./images/svg/start.svg" alt="estrella" />
                 <img src="./images/svg/start.svg" alt="estrella" />
                 <img src="./images/svg/start.svg" alt="estrella" />
                 <img src="./images/svg/start.svg" alt="estrella" />
                 <img src="./images/svg/start.svg" alt="estrella" />
-              </div>
+              </div> --}}
 
               <div class="flex justify-between items-center">
-                <p class="font-acehSemibold text-text28 md:text-text32">
+                {{-- <p class="font-acehSemibold text-text28 md:text-text32">
                   2,343
                   <span
                     class="font-acehMedium text-text16 md:text-text20">{{ $langInfo['lang']['section2']['Opiniones'] }}</span>
-                </p>
+                </p> --}}
                 <a href="{{ url($langInfo['selected'] . '/actividad/' . $destino->id) }}"
                   class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">{{ $langInfo['lang']['section2']['btn'] }}</a>
               </div>

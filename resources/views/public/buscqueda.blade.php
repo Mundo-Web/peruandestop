@@ -94,7 +94,7 @@
             </div>
           </form>
           <div id="mostrarToursInput"
-            class="bg-white p-[1px] rounded-xl  overflow-y-auto max-h-[177px] w-11/12 lg:w-4/12 mx-auto z-index:200; ">
+            class="bg-white p-0 rounded-xl  overflow-y-auto max-h-[177px] w-11/12 lg:w-4/12 mx-auto z-index:200; ">
           </div>
         </div>
         <div class="swiper-wrapper">
@@ -257,7 +257,7 @@
               </div>
 
               <div class="w-full mx-auto flex flex-col justify-center gap-5">
-                <div class="flex flex-col-row gap-5 md:gap-5 md:flex-row md:justify-start md:items-center mt-5">
+                {{-- <div class="flex flex-col-row gap-5 md:gap-5 md:flex-row md:justify-start md:items-center mt-5">
                   @foreach ($item->tags as $tag)
                     <span
                       class="font-acehMedium text-text16 md:text-text20 rounded-full border-colorBorder border-2 py-1 px-5 inline-block max-w-max text-center">
@@ -265,16 +265,16 @@
                       {{ Str::limit($tag->name, 10) }}
                     </span>
                   @endforeach
-                </div>
+                </div> --}}
                 <div class="flex flex-col gap-2">
-                  <h2 class="font-acehSemibold text-text48 md:text-text40 leading-none">
+                  <h2 class="font-acehSemibold text-[36px] md:text-text40 leading-none">
                     {{ $item->producto }}
                   </h2>
                   <div class="flex gap-10">
                     <div class="flex gap-2 items-center">
                       <img src="{{ asset('images/svg/ubicacion.svg') }}" alt="ubigeo" />
                       <p class="font-acehMedium text-text18 md:text-text22">{{ $item->categoria->name }} -
-                        {{ $item->categoria->pais }}
+                        {{ strip_tags($item->categoria->pais) }}
                       </p>
                     </div>
                     <div class="flex gap-2 items-center">

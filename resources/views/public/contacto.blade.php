@@ -62,7 +62,7 @@
             {{ $langInfo['lang']['contacto']['ourDirection'] }}
           </p>
           <div class="font-acehMedium text-text18 md:text-text22 text-[#495560]">
-            <p>{{ $general[0]->district }} {{ $general[0]->ddress }}</p>
+            <p>{{ $general[0]->district }} {{ $general[0]->address }}</p>
             <p>{{ $general[0]->city }} - {{ $general[0]->country }}</p>
           </div>
         </div>

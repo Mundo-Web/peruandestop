@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Helpers\EmailConfig;
 use App\Http\Requests\StoreIndexRequest;
 use App\Http\Requests\UpdateIndexRequest;
+use App\Jobs\AgencyJob;
 use App\Models\AboutUs;
 use App\Models\Agencias;
 use App\Models\Attributes;
@@ -867,7 +868,8 @@ class IndexController extends Controller
 
       Agencias::create($data);
 
-      $this->enviarMailFormularioAgencia($data, $attachmentPath);
+      // $this->enviarMailFormularioAgencia($data, $attachmentPath);
+      AgencyJob::dispatchAfterResponse($data, $attachmentPath);
 
 
 

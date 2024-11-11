@@ -92,7 +92,7 @@
     }
   </style>
   {{-- favicon  --}}
-  <link rel="icon" href="{{ asset('/images/img/favicon.png') }}" type="image/x-icon">
+  <link rel="icon" href="{{ asset('/images/img/favicon.png') }}" type="image/png">
   <title>PeruAndesTop | Travel More</title>
   <link rel="stylesheet" href="{{ asset('/css/vendor/dropzone.min.css') }}" />
   <link rel="stylesheet" href="{{ asset('/css/cssDropzone.css') }}" />

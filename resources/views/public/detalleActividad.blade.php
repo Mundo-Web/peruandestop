@@ -50,13 +50,13 @@
           <div class="flex gap-2 items-center justify-center">
             <img src="{{ asset('images/svg/ubicacion.svg') }}" alt="ubigeo" class="w-6 h-6" />
             <p class="font-acehSemibold text-text28 md:text-text32">
-              <span class="font-acehMedium text-text16 md:text-text20">- {{ $tour->categoria->pais }}</span>
+              <span class="font-acehMedium text-text16 md:text-text20">{{ strip_tags($tour->categoria->pais) }}</span>
             </p>
           </div>
           <div class="hidden md:block">
             <p>|</p>
           </div>
-          <div class="flex gap-5 justify-between md:justify-start">
+          {{-- <div class="flex gap-5 justify-between md:justify-start">
             <div class="flex gap-2 py-2">
               <img src="{{ asset('images/svg/start.svg') }}" alt="estrella" />
               <img src="{{ asset('images/svg/start.svg') }}" alt="estrella" />
@@ -70,7 +70,7 @@
               </p>
             </div>
 
-          </div>
+          </div> --}}
         </div>
 
         <div class="flex gap-2" data-aos="fade-up" data-aos-offset="150">
@@ -314,19 +314,19 @@
               <p class="font-acehMedium text-text18 md:text-text22">
                 {{ $item->description }}
               </p>
-              <div class="flex gap-2 ">
+              {{-- <div class="flex gap-2 ">
                 <img src="{{ asset('images/svg/start.svg') }}" alt="estrella" />
                 <img src="{{ asset('images/svg/start.svg') }}" alt="estrella" />
                 <img src="{{ asset('images/svg/start.svg') }}" alt="estrella" />
                 <img src="{{ asset('images/svg/start_sin_color.svg') }}" alt="estrella" />
                 <img src="{{ asset('images/svg/start_sin_color.svg') }}" alt="estrella" />
-              </div>
+              </div> --}}
               <!-- corregir este div -->
               <div class="flex justify-between items-center">
-                <p class="font-acehSemibold text-text28 md:text-text32">
+                {{-- <p class="font-acehSemibold text-text28 md:text-text32">
                   2,343
                   <span class="font-acehMedium text-text16 md:text-text20">Opiniones</span>
-                </p>
+                </p> --}}
                 <a href="{{ url($langInfo['selected'] . '/actividad') . '/' . $item->id }}"
                   class="font-acehMedium text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader  py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500">
                   {{ $langInfo['lang']['detallesActividad']['ver'] }}</a>
