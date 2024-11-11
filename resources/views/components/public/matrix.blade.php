@@ -91,7 +91,7 @@
       src: url({{ asset('fonts/mont-heavydemo-webfont.woff') }}) format("woff");
     } */
      * {
-      font-family: 'Comfortaa', sans-serif;
+      font-family: 'Karla', sans-serif;
      }
   </style>
   {{-- favicon  --}}
