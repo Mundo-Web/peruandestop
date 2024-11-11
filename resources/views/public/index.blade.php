@@ -268,7 +268,7 @@
                   @endforeach
                 </div> --}}
                 <div class="flex flex-col gap-2 mt-5">
-                  <h2 class="font-acehSemibold text-[36px] line-clamp-3 text-ellipsis md:text-text40 leading-none h-[108px] md:h-[120px]">
+                  <h2 class="font-acehSemibold text-[36px] line-clamp-3 text-ellipsis leading-none h-[108px]">
                     {{ $item->producto }}
                   </h2>
                   <div class="flex gap-10">
