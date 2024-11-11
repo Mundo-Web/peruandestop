@@ -7,6 +7,8 @@
 
 @import "tailwindcss/utilities";
 
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+
 @layer components {
     #tabladatos_wrapper .dt-length select {
         @apply px-5;

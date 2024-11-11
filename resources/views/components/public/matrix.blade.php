@@ -41,7 +41,7 @@
             src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
         }
     */
-    @font-face {
+    /* @font-face {
       font-family: "acehblack";
       src: url({{ asset('fonts/acehsoft-black-webfont') }}) format("woff");
     }
@@ -89,7 +89,10 @@
     @font-face {
       font-family: "extraHeavyDemo";
       src: url({{ asset('fonts/mont-heavydemo-webfont.woff') }}) format("woff");
-    }
+    } */
+     * {
+      font-family: 'Comfortaa', sans-serif;
+     }
   </style>
   {{-- favicon  --}}
   <link rel="icon" href="{{ asset('/images/img/favicon.png') }}" type="image/png">
