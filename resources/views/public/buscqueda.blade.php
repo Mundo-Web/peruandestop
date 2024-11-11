@@ -25,9 +25,9 @@
     }
 
     /* @font-face {
-                                                                                                                                                                                                                                                                                                                                    font-family: "acehSemibold";
-                                                                                                                                                                                                                                                                                                                                    src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
-                                                                                                                                                                                                                                                                                                                                    }  */
+                                                                                                                                                                                                                                                                                                                                      font-family: "acehSemibold";
+                                                                                                                                                                                                                                                                                                                                      src: url({{ asset('fonts/acehsoft-bold-webfont.woff') }}) format("woff");
+                                                                                                                                                                                                                                                                                                                                      }  */
 
     .bg_header_fondo {
       background-image: url({{ asset('images/img/header_fondo.png') }});
@@ -109,7 +109,8 @@
                     <p class="font-acehMedium text-text14 md:text-text20">
                       {{ $imagen->description }}
                     </p>
-                    <h1 class="text-text48 font-acehSemibold md:text-text92 leading-none truncate text-ellipsis" style="text-shadow: 0 0 10px rgba(0,0,0,.5)">
+                    <h1 class="text-text48 font-acehSemibold md:text-text92 leading-none truncate text-ellipsis"
+                      style="text-shadow: 0 0 10px rgba(0,0,0,.5)">
                       {{ $imagen->title }}
                     </h1>
                   </div>
@@ -278,9 +279,11 @@
                       </p>
                     </div>
                     <div class="flex gap-2 items-center">
-                      <img src="{{ asset('images/svg/hora.svg') }}" alt="hora" />
-                      <p class="font-acehMedium text-text16 md:text-text20">4
-                        {{ $langInfo['lang']['actividad']['horas'] }}</p>
+                      @if ($item->hours > 0)
+                        <img src="{{ asset('images/svg/hora.svg') }}" alt="hora" />
+                        <p class="font-acehMedium text-text16 md:text-text20">{{ $item->hours }}
+                          {{ $langInfo['lang']['actividad']['horas'] }}</p>
+                      @endif
                     </div>
                   </div>
                 </div>

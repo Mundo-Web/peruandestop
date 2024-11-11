@@ -26,6 +26,7 @@ class Products extends Model
     'categoria_id',
     'langs',
     'id_marketplace',
+    'hours',
     'costo_agencia'
   ];
 

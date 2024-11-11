@@ -1134,13 +1134,16 @@
                   <div class="flex gap-10">
                     <div class="flex gap-2 items-center">
                       <img src="{{ asset('images/svg/ubicacion.svg') }}" alt="ubigeo" />
-                      <p class="font-acehMedium text-text18 md:text-text22">{{ $destino->name }} - {{ strip_tags($destino->pais) }}
+                      <p class="font-acehMedium text-text18 md:text-text22">{{ $destino->name }} -
+                        {{ strip_tags($destino->pais) }}
                       </p>
                     </div>
                     <div class="flex gap-2 items-center">
-                      <img src="{{ asset('images/svg/hora.svg') }}" alt="hora" />
-                      <p class="font-acehMedium text-text16 md:text-text20">4
-                        {{ $langInfo['lang']['actividad']['horas'] }}</p>
+                      @if ($item->hours > 0)
+                        <img src="{{ asset('images/svg/hora.svg') }}" alt="hora" />
+                        <p class="font-acehMedium text-text16 md:text-text20">{{ $item->hours }}
+                          {{ $langInfo['lang']['actividad']['horas'] }}</p>
+                      @endif
                     </div>
                   </div>
                 </div>
