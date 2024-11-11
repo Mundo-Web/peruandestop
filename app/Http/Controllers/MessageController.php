@@ -17,9 +17,8 @@ class MessageController extends Controller
     public function index()
     {
         //
-        $mensajes = Message::where('status' , '=', 1 )->orderBy('id', 'DESC')->get();
+        $mensajes = Message::where('status', '=', 1)->orderBy('id', 'DESC')->get();
         return view('pages.message.index', compact('mensajes'));
-    
     }
 
     /**
@@ -40,14 +39,14 @@ class MessageController extends Controller
     function storePublic(Request $request)
     {
 
-         
+
         $mensaje = new Message();
 
-        $mensaje->full_name = $request-> nombre; 
-        $mensaje->email = $request-> email; 
-        $mensaje->phone = $request-> telefono; 
-        $mensaje->source = $request-> textoSeleccionado; 
-        $mensaje->service_product = $request-> textoMeet; 
+        $mensaje->full_name = $request->nombre;
+        $mensaje->email = $request->email;
+        $mensaje->phone = $request->telefono;
+        $mensaje->source = $request->textoSeleccionado;
+        $mensaje->service_product = $request->textoMeet;
 
         $mensaje->save();
 
@@ -61,9 +60,12 @@ class MessageController extends Controller
     public function show($id)
     {
         //
-        $message = Message::findOrFail($id);
+        $message = Message::select()
+            ->with(['answers'])
+            ->where('id', $id)
+            ->first();
 
-        $message->is_read = 1; 
+        $message->is_read = 1;
         $message->save();
 
         return view('pages.message.show', compact('message'));
@@ -96,10 +98,9 @@ class MessageController extends Controller
     {
 
         $mensaje = Message::find($request->id);
-        $mensaje->status = 0; 
+        $mensaje->status = 0;
         $mensaje->save();
 
         return response()->json(['success' => true]);
-
     }
 }

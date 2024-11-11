@@ -28,11 +28,64 @@
           <p class="mb-5 ">{{ $message->pais }} -
             {{ $message->ciudad }} </p>
 
+          @if (count($message->answers) > 0)
+            <div class="mb-4">
+
+              <hr class="mb-2">
+              <span class="font-bold block mb-2">Respuestas</span>
+              @foreach ($message->answers as $answer)
+                <div
+                  class="block w-full py-2 px-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mb-2">
+
+                  <p class="font-bold tracking-tight text-gray-900 dark:text-white">
+                    {{ $answer->subject }}</p>
+                  <p class="font-normal text-gray-700 dark:text-gray-400">{!! $answer->content !!}</p>
+                </div>
+              @endforeach
+            </div>
+          @endif
+
+          <form action="{{route('replyMailing', $message->id)}}" method="POST">
+
+            <hr class="mb-2">
+            @csrf
+            <span class="font-bold block mb-2">Enviar una respuesta por correo</span>
+
+            <div class="md:col-span-5 mt-2">
+
+              <label for="subject">Asunto</label>
+
+              <div class="relative mb-2  mt-2">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                  <i class="fa fa-pen"></i>
+                </div>
+                <input type="text" id="subject" name="subject" value=""
+                  class="mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Asunto">
+
+
+              </div>
+            </div>
+
+            <div class="md:col-span-5">
+              <label for="content">Contenido</label>
+              <div class="relative mb-6 mt-2">
+                <x-quill id="content" name="content" value="" />
+              </div>
+            </div>
 
 
 
-          <a href="{{ route('mensajes.index') }}" class="bg-blue-500 px-4 py-2 rounded text-white"><span><i
-                class="fa-solid fa-arrow-left mr-2"></i></span> Volver</a>
+            <button class="bg-green-500 px-4 py-2 rounded text-white" type="submit">
+              <i class="fa-solid fa-envelope mr-2"></i>
+              Responder
+            </button>
+            <a href="{{ route('mensajes.index') }}"
+              class="block bg-red-500 px-4 py-2 rounded text-white w-max float-end">
+              <i class="fa-solid fa-arrow-left mr-2"></i>
+              Volver
+            </a>
+          </form>
 
         </div>
       </div>

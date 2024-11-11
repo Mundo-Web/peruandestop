@@ -11,5 +11,7 @@ class Message extends Model
 
     protected $fillable = ['full_name', 'email', 'phone', 'message', 'status', 'is_read' ,'pais',     'ciudad'];
 
-
+    public function answers () {
+        return $this->hasMany(MailingAnswer::class, 'mailing_id', 'id');
+    }
 }
