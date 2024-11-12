@@ -6,6 +6,7 @@ use App\Helpers\EmailConfig;
 use App\Models\NewsletterSubscriber;
 use App\Http\Requests\StoreNewsletterSubscriberRequest;
 use App\Http\Requests\UpdateNewsletterSubscriberRequest;
+use App\Jobs\SubscriptionJob;
 use App\Models\General;
 use Illuminate\Http\Request;
 
@@ -76,11 +77,16 @@ class NewsletterSubscriberController extends Controller
 
     public function guardarUserNewsLetter(Request $request)
     {
-        NewsletterSubscriber::updateOrCreate($request->all());
+        NewsletterSubscriber::updateOrCreate([
+          'email' => $request->email
+        ]);
         $data = $request->all();
         $data['nombre'] = '';
-        $this->envioCorreo($data);
-        $this->envioCorreoInterno($data);
+        // $this->envioCorreo($data);
+        // $this->envioCorreoInterno($data);
+
+        SubscriptionJob::dispatchAfterResponse($data);
+
         return response()->json(['message' => 'Subscripcion guardada ']);
     }
 

@@ -186,7 +186,7 @@ class SubscriptionJob implements ShouldQueue
       $mail->send();
     } catch (\Throwable $th) {
       //throw $th;
-      // dump($th);
+      dump($th->getMessage());
     }
 
     $mail = EmailConfig::config();
@@ -351,6 +351,7 @@ class SubscriptionJob implements ShouldQueue
       $mail->send();
     } catch (\Throwable $th) {
       //throw $th;
+      dump($th->getMessage());
     }
   }
 }
