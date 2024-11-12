@@ -21,6 +21,7 @@ use App\Models\Slider;
 use App\Models\Strength;
 use App\Models\Testimony;
 use App\Models\Category;
+use App\Models\Galerie;
 use App\Models\NewsletterSubscriber;
 use App\Models\politycsCondition;
 use App\Models\Specifications;
@@ -400,10 +401,12 @@ class IndexController extends Controller
       $query->where('type_img', '=', 'portada');
     }])->find($id);
 
+    $galery = Galerie::where('product_id', $tour->id)->where('type_img','<>','portada')->get();
+
     $entradasOrdenadas = $tour->entradasMulti->sortBy('tipo_entrada_id');
     $tipo_entradas = TipoEntrada::all();
 
-    return view('public.detalleActividad', compact('tour', 'destinos', 'tagsDestinos', 'lang', 'langInfo', 'entradasOrdenadas', 'tipo_entradas'));
+    return view('public.detalleActividad', compact('tour', 'galery', 'destinos', 'tagsDestinos', 'lang', 'langInfo', 'entradasOrdenadas', 'tipo_entradas'));
   }
 
   public function blog(Request $request, string $lang)

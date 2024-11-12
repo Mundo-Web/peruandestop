@@ -214,21 +214,37 @@
 
           </div>
         </div>
+        <div class="w-full pb-36 mb-6">
+          @if (count($galery) > 0)
+            <div class="pictures mb-6 block ">
+              @foreach ($galery as $picture)
+                <img src="/{{ $picture->imagen }}" alt="Imagen galería" class="h-40" />
+              @endforeach
+            </div>
+
+            {{-- <script src="//code.jquery.com/jquery.min.js"></script> --}}
+            <script src="/js/vendor/tj-gallery/jquery-tjgallery.min.js"></script>
+            <script>
+              $('.pictures').tjGallery({
+                row_min_height: 160,
+                margin: 5
+              });
+            </script>
+          @endif
+        </div>
       </div>
 
       <!-- agregar efecto hover -->
       <div class="w-11/12 mx-auto my-10">
         <!-- mayor a  md -->
         <div class="image hidden 2md:block">
-          <img src="{{ asset('images/img/tu_viaje_comienza.png') }}" alt="tu viaje"
-            class="w-full h-auto object-cover" />
+          <img src="{{ asset('images/img/tu_viaje_comienza.png') }}" alt="tu viaje" class="w-full h-auto object-cover" />
           <div class="text-white flex-col gap-5 contain flex ">
             <h3
               class="font-acehbold md:text-[30px] 2md:text-[50px] xl:text-[60px] md:w-8/12 mx-auto text-center leading-none lg:leading-tight">
               {{ $langInfo['lang']['detallesActividad']['journey'] }}
             </h3>
-            <p
-              class="font-acehMedium w-9/12 mx-auto md:text-[14px] 2md:text-[16px] xl:text-[18px] md:w-6/12 text-center">
+            <p class="font-acehMedium w-9/12 mx-auto md:text-[14px] 2md:text-[16px] xl:text-[18px] md:w-6/12 text-center">
               {{ $langInfo['lang']['detallesActividad']['register'] }}
 
             </p>
