@@ -401,7 +401,7 @@ class IndexController extends Controller
       $query->where('type_img', '=', 'portada');
     }])->find($id);
 
-    $galery = Galerie::where('product_id', $tour->id)->where('type_img','<>','portada')->get();
+    $galery = Galerie::where('product_id', $tour->id)->get();
 
     $entradasOrdenadas = $tour->entradasMulti->sortBy('tipo_entrada_id');
     $tipo_entradas = TipoEntrada::all();
