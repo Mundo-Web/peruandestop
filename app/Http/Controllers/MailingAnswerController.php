@@ -40,7 +40,7 @@ class MailingAnswerController extends Controller
 
         try {
             $mail->addAddress($message->email, $message->full_name);
-            $mail->addBCC('agencias@peruandestop.com', 'PeruAndesTop');
+            // $mail->addBCC('agencias@peruandestop.com', 'PeruAndesTop');
             $mail->Body = $request->content;
             $mail->isHTML(true);
             $mail->send();

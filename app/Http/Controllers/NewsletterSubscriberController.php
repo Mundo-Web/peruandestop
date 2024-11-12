@@ -76,7 +76,7 @@ class NewsletterSubscriberController extends Controller
 
     public function guardarUserNewsLetter(Request $request)
     {
-        NewsletterSubscriber::create($request->all());
+        NewsletterSubscriber::updateOrCreate($request->all());
         $data = $request->all();
         $data['nombre'] = '';
         $this->envioCorreo($data);
