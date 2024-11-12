@@ -218,7 +218,7 @@
           @if (count($galery) > 0)
             <div class="pictures mb-6 block ">
               @foreach ($galery as $picture)
-                <img src="/{{ $picture->imagen }}" alt="Imagen galería" class="h-40" />
+                <img src="/{{ $picture->imagen }}" alt="Imagen galería" class="h-40 rounded-lg" />
               @endforeach
             </div>
 
