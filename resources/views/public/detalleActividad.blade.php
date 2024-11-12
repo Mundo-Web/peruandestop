@@ -227,7 +227,7 @@
             <script>
               $('.pictures').tjGallery({
                 row_min_height: 160,
-                margin: 5
+                margin: 20
               });
             </script>
           @endif
