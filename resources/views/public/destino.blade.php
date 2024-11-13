@@ -49,7 +49,7 @@
 
 @section('content')
   <main class="pb-24">
-    <section class="bg__destino-portada bg-cover bg-center bg-no-repeat sm:w-full h-full">
+    {{-- <section class="bg__destino-portada bg-cover bg-center bg-no-repeat sm:w-full h-full">
       <div class="text-white w-11/12 mx-auto pt-96" data-aos="fade-up" data-aos-offset="150">
         <div class="flex flex-col justify-end md:grid grid-cols-1 pb-12 md:py-10 md:gap-24">
           <div class="flex flex-col items-start my-12">
@@ -78,8 +78,8 @@
           </div>
         </div>
       </div>
-    </section>
-    <section>
+    </section> --}}
+    <section class="pt-28">
       <div class="gap-10 w-11/12 mx-auto">
         <div class="flex flex-row justify-between items-center my-16 gap-5">
 

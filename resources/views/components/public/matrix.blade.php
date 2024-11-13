@@ -95,7 +95,7 @@
     }
   </style>
   {{-- favicon  --}}
-  
+  <title>{{env('APP_NAME')}}</title>
   <link rel="shortcut icon" href="/images/img/favicon.ico" type="image/x-icon">
   <meta name="title" content="PeruAndesTop - Travel More" />
   <meta name="description" content="Somos una empresa que vende viajes" />

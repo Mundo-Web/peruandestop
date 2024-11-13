@@ -53,7 +53,7 @@ class CategoryController extends Controller
             $img =  $manager->read($request->file('imagen'));
 
             //adaptamos el tamaño de la imagen
-            $img->coverDown(669, 446);
+            $img->coverDown(1200, 800);
 
             $ruta = 'storage/images/categories/';
 
@@ -132,7 +132,7 @@ class CategoryController extends Controller
             $nombreImagen = Str::random(10) . '_' . $request->file('imagen')->getClientOriginalName();
 
             $img =  $manager->read($request->file('imagen'));
-            $img->coverDown(669, 446);
+            $img->coverDown(1200, 800);
 
             
             if (!file_exists($rutanueva)) {

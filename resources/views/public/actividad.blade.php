@@ -49,15 +49,20 @@
 @section('content')
 
   <main class="pb-24">
-    <section class="bg__actividad-portada bg-cover bg-center bg-no-repeat sm:w-full h-full">
-      <div class="text-white w-11/12 mx-auto pt-96" data-aos="fade-up">
-        <div class="flex flex-col justify-end md:grid grid-cols-1 pb-12 md:py-10 md:gap-24">
-          <div class="flex flex-col items-start my-12">
-            <a href="#"
-              class="font-acehbold text-text18 md:text-text22 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 leading-none">{{ strip_tags($destino->pais) }}</a>
-            <h1 class="font-acehbold text-text64 md:text-text68">{{ $destino->name }}</h1>
-          </div>
-          {{-- <div class="flex items-center flex-row md:justify-end md:gap-10 justify-center gap-5">
+    @if ($destino->name_image)
+      <section class="bg-cover bg-center bg-no-repeat sm:w-full h-full"
+        style="background-image: url('/{{ $destino->url_image }}{{ $destino->name_image }}')">
+      @else
+        <section class="bg__actividad-portada bg-cover bg-center bg-no-repeat sm:w-full h-full">
+    @endif
+    <div class="text-white w-11/12 mx-auto pt-96" data-aos="fade-up">
+      <div class="flex flex-col justify-end md:grid grid-cols-1 pb-12 md:py-10 md:gap-24">
+        <div class="flex flex-col items-start my-12">
+          <a href="#"
+            class="font-acehbold text-text18 md:text-text22 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 leading-none">{{ strip_tags($destino->pais) }}</a>
+          <h1 class="font-acehbold text-text64 md:text-text68">{{ $destino->name }}</h1>
+        </div>
+        {{-- <div class="flex items-center flex-row md:justify-end md:gap-10 justify-center gap-5">
             <p class="font-acehSemibold text-text24 md:text-text40 leading-none md:leading-tight">
               98
               <span class="font-acehMedium text-text12 md:text-text18 block my-2">Actividades</span>
@@ -77,8 +82,8 @@
               <span class="font-acehMedium text-text12 md:text-text18 block my-2">Opiniones</span>
             </p>
           </div> --}}
-        </div>
       </div>
+    </div>
     </section>
 
     <section>
