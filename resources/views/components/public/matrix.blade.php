@@ -90,13 +90,16 @@
       font-family: "extraHeavyDemo";
       src: url({{ asset('fonts/mont-heavydemo-webfont.woff') }}) format("woff");
     } */
-     * {
+    * {
       font-family: 'Karla', sans-serif;
-     }
+    }
   </style>
   {{-- favicon  --}}
-  <link rel="shortcut icon" href="/images/img/favicon.png?v={{uniqid()}}" type="image/png">
-  <title>PeruAndesTop | Travel More</title>
+  
+  <link rel="shortcut icon" href="/images/img/favicon.png?v={{ uniqid() }}" type="image/png">
+  <meta name="title" content="PeruAndesTop - Travel More" />
+  <meta name="description" content="Somos una empresa que vende viajes" />
+
   <link rel="stylesheet" href="{{ asset('/css/vendor/dropzone.min.css') }}" />
   <link rel="stylesheet" href="{{ asset('/css/cssDropzone.css') }}" />
   <script src="{{ asset('/js/cs/scrollspy.js') }}"></script>
