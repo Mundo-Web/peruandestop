@@ -75,8 +75,8 @@
   <main class="pb-24">
     <section>
       <div class="swiper slider__headers">
-        <div class="pt-16 md:pt-20 lg:pt-24 w-full grid grid-cols-1 " style="position: absolute; z-index:200; top:50%">
-          <form action="#" class="w-11/12 lg:w-4/12 mx-auto ">
+        <div class="mt-[72px] md:mt-[88px] lg:mt-[104px] w-11/12 lg:w-4/12 absolute left-1/2 -translate-x-1/2 grid grid-cols-1 " style="z-index:200; top:50%">
+          <form action="#" class="w-full mx-auto ">
             <div
               class="flex flex-col gap-5 2md:flex-row items-center justify-center 2md:bg-white py-2 md:px-2 rounded-full ">
 
@@ -496,7 +496,7 @@
       grabCursor: true,
       centeredSlides: false,
       initialSlide: 0,
-      allowTouchMove: false,
+      allowTouchMove: true,
       autoplay: {
         delay: 1500,
         disableOnInteraction: false,
