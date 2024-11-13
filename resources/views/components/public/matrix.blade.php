@@ -95,7 +95,7 @@
      }
   </style>
   {{-- favicon  --}}
-  <link rel="icon" href="/images/img/favicon.png?v={{uniqid()}}" type="image/png">
+  <link rel="shortcut icon" href="/images/img/favicon.png?v={{uniqid()}}" type="image/png">
   <title>PeruAndesTop | Travel More</title>
   <link rel="stylesheet" href="{{ asset('/css/vendor/dropzone.min.css') }}" />
   <link rel="stylesheet" href="{{ asset('/css/cssDropzone.css') }}" />
