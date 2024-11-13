@@ -13,13 +13,13 @@ class EmailConfig
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'peruandestop@gmail.com';
-        $mail->Password = 'nmsdxxnnjjuvwbog';
+        $mail->Username = 'info@peruandestop.com';
+        $mail->Password = 'PAT@inf#2023';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 465;
         $mail->Subject = 'Notificación de informacion Recibida';
         $mail->CharSet = 'UTF-8';
-        $mail->setFrom('peruandestop@gmail.com', 'Peru Andes Top');
+        $mail->setFrom('info@peruandestop.com', 'Peru Andes Top');
         return $mail;
     }
 }
