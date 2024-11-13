@@ -96,7 +96,7 @@
   </style>
   {{-- favicon  --}}
   
-  <link rel="shortcut icon" href="/images/img/favicon.png?v={{ uniqid() }}" type="image/png">
+  <link rel="shortcut icon" href="/images/img/favicon.ico" type="image/x-icon">
   <meta name="title" content="PeruAndesTop - Travel More" />
   <meta name="description" content="Somos una empresa que vende viajes" />
 
