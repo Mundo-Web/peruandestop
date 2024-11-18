@@ -141,7 +141,7 @@
                   <div class="md:col-span-5">
                     <label for="description">Descripcion</label>
                     <div class="relative mb-2 mt-2">
-                      <x-quill id="description" name="description" value="" />
+                      <x-quill id="description" name="description" value="" required />
                       {{-- 
                       <textarea type="text" rows="2" id="description" name="description" value=""
                         class="mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -325,7 +325,7 @@
                   </div>
                 </div>
                 <div class="md:col-span-5">
-                  <label for="description">Idioma</label>
+                  <label for="langSelect">Idioma</label>
                   <select id="langSelect" name="langs"
                     class="mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     <option value="">Seleccionar Idioma </option>
@@ -428,11 +428,12 @@
 
                 <div class="md:col-span-5 mt-2">
                   <section class="scroll-section overflow-y-auto" id="uploadedFiles">
-                    <h2 class="small-title">Uploaded Files Portada</h2>
+                    <h2 class="small-title">Imágenes de portada</h2>
                     <div class="card mb-5">
                       <div class="card-body">
 
-                        <div class="dropzone border-gray-300  " id="dropzoneServerFiles"></div>
+                        {{-- <div class="dropzone border-gray-300  " id="dropzoneServerFiles"></div> --}}
+                        <input type="file" name="files[]" id="" multiple accept="image/*">
 
                       </div>
                     </div>
@@ -441,11 +442,12 @@
 
                 <div class="md:col-span-5 mt-2">
                   <section class="scroll-section overflow-y-auto" id="uploadedFilesGallery">
-                    <h2 class="small-title">Uploaded Files to Gallery</h2>
+                    <h2 class="small-title">Imágenes de galería</h2>
                     <div class="card mb-5">
                       <div class="card-body">
 
-                        <div class="dropzone border-gray-300  " id="dropzoneServerFilesGallery"></div>
+                        {{-- <div class="dropzone border-gray-300  " id="dropzoneServerFilesGallery"></div> --}}
+                        <input type="file" name="filesGallery[]" id="" multiple accept="image/*">
 
                       </div>
                     </div>

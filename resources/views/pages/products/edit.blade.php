@@ -458,13 +458,15 @@
 
                 <div class="md:col-span-5 mt-2">
                   <section class="scroll-section overflow-y-auto" id="uploadedFiles">
-                    <h2 class="small-title">Uploaded Files Portada</h2>
+                    <h2 class="small-title">Imágenes de portada</h2>
 
 
                     <div class="card mb-5">
                       <div class="card-body">
 
-                        <div class="dropzone border-gray-300  " id="dropzoneServerFiles"></div>
+                        <input type="file" name="files[]" id="" multiple accept="image/*">
+
+                        {{-- <div class="dropzone border-gray-300  " id="dropzoneServerFiles"></div> --}}
 
                       </div>
                     </div>
@@ -494,11 +496,12 @@
 
                 <div class="md:col-span-5 mt-2">
                   <section class="scroll-section overflow-y-auto" id="uploadedFilesGallery">
-                    <h2 class="small-title">Uploaded Files to Gallery</h2>
+                    <h2 class="small-title">Imágenes de galería</h2>
                     <div class="card mb-5">
                       <div class="card-body">
 
-                        <div class="dropzone border-gray-300  " id="dropzoneServerFilesGallery"></div>
+                        {{-- <div class="dropzone border-gray-300  " id="dropzoneServerFilesGallery"></div> --}}
+                        <input type="file" name="filesGallery[]" id="" multiple accept="image/*">
 
                       </div>
                     </div>

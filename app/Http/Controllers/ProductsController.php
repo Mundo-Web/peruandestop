@@ -68,6 +68,7 @@ class ProductsController extends Controller
     $especificaciones = [];
     $entradaMultiple = [];
     $data = $request->all();
+
     $atributos = null;
     $tagsSeleccionados = $request->input('tags_id');
     // Hacer algo con los valores seleccionados, como almacenarlos en la base de datos
@@ -151,15 +152,19 @@ class ProductsController extends Controller
           # code...
 
           // data:image/png; base64,code
-          [$first, $code] = explode(';base64,', $file);
-          $imageData = base64_decode($code);
+          // [$first, $code] = explode(';base64,', $file);
+          // $imageData = base64_decode($code);
+          // $routeImg = 'storage/images/imagen/';
+
+          // $ext = ExtendFile::getExtention(str_replace("data:", '', $first));
+
+
+
+          // $nombreImagen = Str::random(10) . '.' . $ext;
+
           $routeImg = 'storage/images/imagen/';
-
-          $ext = ExtendFile::getExtention(str_replace("data:", '', $first));
-
-
-
-          $nombreImagen = Str::random(10) . '.' . $ext;
+          $nombreImagen = Str::slug($file->getClientOriginalName()) . Str::random(6) . '.' . $file->getClientOriginalExtension();
+          $imageData = $file->get();
 
           // Verificar si la ruta no existe y crearla si es necesario
           if (!file_exists($routeImg)) {
@@ -180,15 +185,19 @@ class ProductsController extends Controller
           # code...
 
           // data:image/png; base64,code
-          [$first, $code] = explode(';base64,', $file);
-          $imageData = base64_decode($code);
+          // [$first, $code] = explode(';base64,', $file);
+          // $imageData = base64_decode($code);
+          // $routeImg = 'storage/images/gallery/';
+
+          // $ext = ExtendFile::getExtention(str_replace("data:", '', $first));
+
+
+
+          // $nombreImagen = Str::random(10) . '.' . $ext;
+
           $routeImg = 'storage/images/gallery/';
-
-          $ext = ExtendFile::getExtention(str_replace("data:", '', $first));
-
-
-
-          $nombreImagen = Str::random(10) . '.' . $ext;
+          $nombreImagen = Str::slug($file->getClientOriginalName()) . Str::random(6) . '.' . $file->getClientOriginalExtension();
+          $imageData = $file->get();
 
           // Verificar si la ruta no existe y crearla si es necesario
           if (!file_exists($routeImg)) {
@@ -207,6 +216,7 @@ class ProductsController extends Controller
       return redirect()->route('activity.index')->with('success', 'Publicación creado exitosamente.');
     } catch (\Throwable $th) {
       //throw $th;
+      // dump($th->getMessage());
     }
   }
   private function TagsXProducts($id, $nTags)
@@ -225,6 +235,9 @@ class ProductsController extends Controller
   }
   private function guardarEntradaMultiple ($id , $values) {
     foreach ($values as $key => $value) {
+      if($value['entrada_multiple'] == null ){
+        continue;
+      }
       EntradasMultiples::create([
         'description' =>$value['entrada_multiple'], 
         'tipo_entrada_id' =>$value['tipo_entrada_id']  , 
@@ -317,6 +330,8 @@ class ProductsController extends Controller
       'producto' => 'required',
     ]);
 
+    dump($data);
+
     if ($request->hasFile("imagen")) {
       $file = $request->file('imagen');
       $routeImg = 'storage/images/imagen/';
@@ -363,15 +378,19 @@ class ProductsController extends Controller
         # code...
 
         // data:image/png; base64,code
-        [$first, $code] = explode(';base64,', $file);
-        $imageData = base64_decode($code);
+        // [$first, $code] = explode(';base64,', $file);
+        // $imageData = base64_decode($code);
+        // $routeImg = 'storage/images/imagen/';
+
+        // $ext = ExtendFile::getExtention(str_replace("data:", '', $first));
+        // $nombreImagen = Str::random(10) . '.' . $ext;
+
         $routeImg = 'storage/images/imagen/';
+        $nombreImagen = Str::slug($file->getClientOriginalName()) . Str::random(6) . '.' . $file->getClientOriginalExtension();
+        $imageData = $file->get();
 
-        $ext = ExtendFile::getExtention(str_replace("data:", '', $first));
 
 
-
-        $nombreImagen = Str::random(10) . '.' . $ext;
 
         // Verificar si la ruta no existe y crearla si es necesario
         if (!file_exists($routeImg)) {
@@ -392,15 +411,19 @@ class ProductsController extends Controller
         # code...
 
         // data:image/png; base64,code
-        [$first, $code] = explode(';base64,', $file);
-        $imageData = base64_decode($code);
+        // [$first, $code] = explode(';base64,', $file);
+        // $imageData = base64_decode($code);
+        // $routeImg = 'storage/images/gallery/';
+
+        // $ext = ExtendFile::getExtention(str_replace("data:", '', $first));
+
+
+
+        // $nombreImagen = Str::random(10) . '.' . $ext;
+
         $routeImg = 'storage/images/gallery/';
-
-        $ext = ExtendFile::getExtention(str_replace("data:", '', $first));
-
-
-
-        $nombreImagen = Str::random(10) . '.' . $ext;
+        $nombreImagen = Str::slug($file->getClientOriginalName()) . Str::random(6) . '.' . $file->getClientOriginalExtension();
+        $imageData = $file->get();
 
         // Verificar si la ruta no existe y crearla si es necesario
         if (!file_exists($routeImg)) {
