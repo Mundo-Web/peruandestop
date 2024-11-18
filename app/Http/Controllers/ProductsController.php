@@ -330,8 +330,6 @@ class ProductsController extends Controller
       'producto' => 'required',
     ]);
 
-    dump($data);
-
     if ($request->hasFile("imagen")) {
       $file = $request->file('imagen');
       $routeImg = 'storage/images/imagen/';
