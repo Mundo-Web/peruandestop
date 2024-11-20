@@ -369,7 +369,7 @@ class IndexController extends Controller
         if (!$destino) {
           return redirect()->route('index', $lang);
         }
-        $tours = Products::where('destacar', '=', 1)->where('status', '=', 1)->where('visible', '=', 1)->where('categoria_id', '=', $destino->id)->where('langs', '=', $lang)->get();
+        $tours = Products::where('status', '=', 1)->where('visible', '=', 1)->where('categoria_id', '=', $destino->id)->where('langs', '=', $lang)->get();
       }
       $langInfo = $request->attributes->all();
 
