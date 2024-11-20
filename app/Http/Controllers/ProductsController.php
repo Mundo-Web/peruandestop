@@ -40,7 +40,7 @@ class ProductsController extends Controller
   {
     $atributos = Attributes::where("status", "=", true)->get();
     $valorAtributo = AttributesValues::where("status", "=", true)->get();
-    $categoria = Category::all();
+    $categoria = Category::where("status", "=", true)->get();
     $tags = Tag::where("status", "=", true)->get();
     $langs = Langs::all();
     $tipoEntrada = TipoEntrada::all();
@@ -284,7 +284,7 @@ class ProductsController extends Controller
     $allTags = Tag::all();
 
     $langs = Langs::all();
-    $categoria = Category::all();
+    $categoria = Category::where("status", "=", true)->get();
     $tipoEntrada = TipoEntrada::all();
 
 

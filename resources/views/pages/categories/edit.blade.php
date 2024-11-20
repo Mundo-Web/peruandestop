@@ -54,7 +54,7 @@
                 </div>
               </div>
               <div class="md:col-span-5">
-                <label for="description">Pais</label>
+                <label for="pais">Pais</label>
                 <div class="relative mb-2 ">
                   <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                     <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@
               <div class="md:col-span-5">
                 <label for="description">Descripción</label>
                 <div class="relative mb-2 ">
-                  <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                  <div class="absolute top-3 left-0 flex items-center pl-3 pointer-events-none">
                     <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg"
                       version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0"
                       y="0" viewBox="0 0 469.336 469.336" style="enable-background:new 0 0 512 512" xml:space="preserve"
@@ -89,10 +89,24 @@
                       </g>
                     </svg>
                   </div>
-                  <input type="text" id="description" name="description" value="{{ $category->description }}"
+                  <textarea type="text" id="description" name="description"
                     class="mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Descripción">
+                    placeholder="Descripción">{{ $category->description }}</textarea>
                 </div>
+              </div>
+
+              <div class="md:col-span-5">
+                <div>
+                  <label>
+                    <input type="radio" name="category_type" value="destino" {{ (isset($category) && $category->category_type === 'destino') ? 'checked' : '' }}>
+                    Destino
+                  </label>
+                  <label>
+                    <input type="radio" name="category_type" value="paquete" {{ (isset($category) && $category->category_type === 'paquete') ? 'checked' : '' }}>
+                    Paquete
+                  </label>
+                </div>
+
               </div>
 
               <div class="md:col-span-1">
@@ -150,5 +164,30 @@
 
   </div>
 
+  <script>
+    const pickr = Pickr.create({
+      el: '#colorPicker', // Selector CSS del input
+      theme: 'classic', // Tema de Pickr
+      default: '#000000', // Color por defecto
+      swatches: [ // Colores de muestra
+        '#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#00FFFF', '#FF00FF'
+      ],
+      components: {
+        preview: true, // Mostrar vista previa
+        opacity: true, // Habilitar control de opacidad
+        hue: true, // Habilitar control de matiz
+        interaction: {
+          input: true, // Permitir entrada manual
+          hex: true,
+          save: true // Permitir guardar
+        }
+      }
+    });
+    pickr.on('save', (color, instance) => {
+
+      document.getElementById('color').value = color.toHEXA().toString();
+
+    })
+  </script>
 
 </x-app-layout>

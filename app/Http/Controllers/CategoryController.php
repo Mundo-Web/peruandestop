@@ -154,6 +154,8 @@ class CategoryController extends Controller
             $slug .= '-' . rand(1, 1000); // Puedes ajustar el rango según tu necesidad
         }
 
+       
+        
 
         $category->name = $request->name;
         $category->pais = $request->pais;
@@ -161,6 +163,7 @@ class CategoryController extends Controller
         $category->color = $request->color;
         $category->slug = $slug;
         $category->langs =$request->langs;
+        $category->category_type = $request->category_type;
         
         $category->save();
 
