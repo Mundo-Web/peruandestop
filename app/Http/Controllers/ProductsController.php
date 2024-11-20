@@ -139,6 +139,14 @@ class ProductsController extends Controller
       });
 
       $producto = Products::create($cleanedData);
+
+      $slugExist = Products::where('slug', Str::slug($producto->producto))->exists();
+      if ($slugExist) {
+        $producto->slug = Str::slug($producto->producto) . '-' . $producto->id;
+      } else {
+        $producto->slug = Str::slug($producto->producto);
+      }
+      
       $this->GuardarEspecificaciones($producto->id, $especificaciones);
 
       $this->guardarEntradaMultiple($producto->id,$entradaMultiple);
@@ -329,6 +337,13 @@ class ProductsController extends Controller
     $request->validate([
       'producto' => 'required',
     ]);
+
+    $slugExist = Products::where('id', '!=', $id)->where('slug', Str::slug($product->producto))->exists();
+    if ($slugExist) {
+      $product->slug = Str::slug($product->producto) . '-' . $product->id;
+    } else {
+      $product->slug = Str::slug($product->producto);
+    }
 
     if ($request->hasFile("imagen")) {
       $file = $request->file('imagen');

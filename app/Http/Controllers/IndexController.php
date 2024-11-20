@@ -382,11 +382,14 @@ class IndexController extends Controller
     }
   }
 
-  public function detalleActividad(Request $request, string $lang, string $id)
+  public function detalleActividad(Request $request, string $lang, string $slug)
   {
     //
     $destinos = Category::all();
-    $tagsProducto = Products::with('tags')->find($id);
+    $tagsProducto = Products::with('tags')
+      ->where('langs', $lang)
+      ->where('slug', $slug)
+      ->first();
     $tagsIds = $tagsProducto->tags->pluck('id')->toArray();
     $tagsIdsString = implode(', ', $tagsIds);
 
@@ -406,7 +409,10 @@ class IndexController extends Controller
     // producto -> categoria -> 
     $tour = Products::with(['galeria' => function ($query) {
       $query->where('type_img', '=', 'portada');
-    }])->find($id);
+    }])
+      ->where('langs', $lang)
+      ->where('slug', $slug)
+      ->first();
 
     $galery = Galerie::where('product_id', $tour->id)->get();
 
