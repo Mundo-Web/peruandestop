@@ -146,6 +146,7 @@ class ProductsController extends Controller
       } else {
         $producto->slug = Str::slug($producto->producto);
       }
+      $producto->save();
       
       $this->GuardarEspecificaciones($producto->id, $especificaciones);
 
@@ -338,11 +339,11 @@ class ProductsController extends Controller
       'producto' => 'required',
     ]);
 
-    $slugExist = Products::where('id', '!=', $id)->where('slug', Str::slug($product->producto))->exists();
+    $slugExist = Products::where('id', '!=', $id)->where('slug', Str::slug($request->producto))->exists();
     if ($slugExist) {
-      $product->slug = Str::slug($product->producto) . '-' . $product->id;
+      $product->slug = Str::slug($request->producto) . '-' . $product->id;
     } else {
-      $product->slug = Str::slug($product->producto);
+      $product->slug = Str::slug($request->producto);
     }
 
     if ($request->hasFile("imagen")) {

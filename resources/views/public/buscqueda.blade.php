@@ -294,7 +294,7 @@
                     <span
                       class="block font-acehMedium text-text16 md:text-text20">{{ $langInfo['lang']['actividad']['PorPersona'] }}</span>
                   </p>
-                  <a href="{{ url($langInfo['selected'] . '/detalleActividad') . '/' . $item->id }}"
+                  <a href="{{ url($langInfo['selected'] . '/detalleActividad') . '/' . $item->slug }}"
                     class="font-acehSemibold text-text16 md:text-text20 rounded-full bg-colorBackgroundHeader py-3 px-8 text-white hover:bg-colorBackgroundMainTop md:duration-500 inline-block w-full text-center md:w-auto">
                     {{ $langInfo['lang']['actividad']['ver'] }}
                   </a>
