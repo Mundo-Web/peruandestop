@@ -388,7 +388,7 @@
                   <span
                     class="font-acehMedium text-text16 md:text-text20">{{ $langInfo['lang']['section2']['Opiniones'] }}</span>
                 </p> --}}
-                <a href="{{ url($langInfo['selected'] . '/actividad/' . $destino->id) }}"
+                <a href="{{ url($langInfo['selected'] . '/actividad/' . $destino->slug) }}"
                   class="font-acehSemibold text-text18 md:text-text22 text-white bg-colorBackgroundHeader rounded-full hover:bg-colorBackgroundMainTop md:duration-500 px-5 py-2">{{ $langInfo['lang']['section2']['btn'] }}</a>
               </div>
             </div>

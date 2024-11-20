@@ -362,8 +362,14 @@ class IndexController extends Controller
         }
       } else {
 
-        $destino = Category::find($request->id);
-        $tours = Products::where('destacar', '=', 1)->where('status', '=', 1)->where('visible', '=', 1)->where('categoria_id', '=', $id)->where('langs', '=', $lang)->get();
+        $destino = Category::select()
+          ->where('slug', $id)
+          ->where('langs', $lang)
+          ->first();
+        if (!$destino) {
+          return redirect()->route('index', $lang);
+        }
+        $tours = Products::where('destacar', '=', 1)->where('status', '=', 1)->where('visible', '=', 1)->where('categoria_id', '=', $destino->id)->where('langs', '=', $lang)->get();
       }
       $langInfo = $request->attributes->all();
 
@@ -372,6 +378,7 @@ class IndexController extends Controller
       return view('public.actividad', compact('destino', 'lang', "langInfo", 'tours', 'tags'));
     } catch (\Throwable $th) {
       //throw $th;
+      dump($th->getMessage());
     }
   }
 
@@ -712,7 +719,7 @@ class IndexController extends Controller
                       font-family: Montserrat, sans-serif;
                     "
                   >
-                    !Hola '.$name.'
+                    !Hola ' . $name . '
                   </p>
                   <p
                     style="
@@ -789,7 +796,6 @@ class IndexController extends Controller
     } catch (\Throwable $th) {
       //throw $th;
     }
-
   }
 
   public function guardarUserNewsLetter(Request $request)
@@ -936,7 +942,7 @@ class IndexController extends Controller
   public function buscartour(string $lang, Request $request)
   {
 
-    
+
 
     $slider = Slider::where('status', '=', 1)->where('visible', '=', 1)->get();
     $category = Category::where('status', '=', 1)->where('destacar', '=', 1)->get();
@@ -949,16 +955,18 @@ class IndexController extends Controller
 
 
     $productos  = Products::where('producto', 'like', "%$promp%")->where('langs', '=', $lang)->get();
-    
+
 
     // return response()->json(['message' => 'llegamos a buscartour', 'data' => $ToursSearch]);
     return view('public.buscqueda', compact('productos', 'langInfo', 'sliders', 'tags', 'lang'));
   }
-  public function politicaprivacidad(string $lang){
+  public function politicaprivacidad(string $lang)
+  {
     $politicas = politycsCondition::where('langs', '=', $lang)->get();
     return view('public.politicaPriv', compact('politicas', 'lang'));
   }
-  public function term_condiciones(string $lang){
+  public function term_condiciones(string $lang)
+  {
     $terms = termsCondition::where('langs', '=', $lang)->get();
     return view('public.termsCondiciones', compact('terms', 'lang'));
   }
@@ -966,32 +974,29 @@ class IndexController extends Controller
   public function librodereclamaciones(string $lang)
   {
     $departamentofiltro = DB::select('select * from departments where active = ? order by 2', [1]);
-    
+
     return view('public.librodereclamaciones', compact('departamentofiltro', 'lang'));
   }
   public function esnapolicies(string $lang)
   {
-    
-    if($lang === 'es'){
-      return view('public.esnnacode', compact( 'lang'));
-    }elseif($lang === 'en'){
-      return view('public.esnnacodeEn', compact( 'lang'));
+
+    if ($lang === 'es') {
+      return view('public.esnnacode', compact('lang'));
+    } elseif ($lang === 'en') {
+      return view('public.esnnacodeEn', compact('lang'));
     }
-    
-    
-    
   }
 
   public function obtenerProvincia($departmentId)
   {
-      $provinces = DB::select('select * from provinces where active = ? and department_id = ? order by description', [1, $departmentId]);
-      return response()->json($provinces);
+    $provinces = DB::select('select * from provinces where active = ? and department_id = ? order by description', [1, $departmentId]);
+    return response()->json($provinces);
   }
 
   public function obtenerDistritos($provinceId)
   {
-      $distritos = DB::select('select * from districts where active = ? and province_id = ? order by description', [1, $provinceId]);
-      return response()->json($distritos);
+    $distritos = DB::select('select * from districts where active = ? and province_id = ? order by description', [1, $provinceId]);
+    return response()->json($distritos);
   }
 
   public function nosotros(Request $request, string $lang)
@@ -999,5 +1004,4 @@ class IndexController extends Controller
     $langInfo = $request->attributes->all();
     return view('public.nosotros', compact('lang', 'langInfo'));
   }
-  
 }

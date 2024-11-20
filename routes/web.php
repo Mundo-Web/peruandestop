@@ -67,7 +67,7 @@ Route::middleware(['language'])->group(function () {
 
     Route::get('/', [IndexController::class, 'index'])->name('index');
     Route::get('/destino', [IndexController::class, 'destino'])->name('destino');
-    Route::get('/actividad/{id}', [IndexController::class, 'actividad'])->name('actividad');
+    Route::get('/actividad/{slug}', [IndexController::class, 'actividad'])->name('actividad');
     Route::get('/detalleActividad/{id}', [IndexController::class, 'detalleActividad'])->name('detalleActividad');
 
     Route::get('/blog', [IndexController::class, 'blog'])->name('blog');
