@@ -345,6 +345,7 @@ class ProductsController extends Controller
     } else {
       $product->slug = Str::slug($request->producto);
     }
+    $product->save();
 
     if ($request->hasFile("imagen")) {
       $file = $request->file('imagen');

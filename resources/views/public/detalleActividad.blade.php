@@ -156,7 +156,9 @@
             </div>
 
 
-            {!! $tour->description !!}
+            <div class="prose font-acehSemibold text-text20 md:text-text24">
+              {!! $tour->description !!}
+            </div>
             @foreach ($tipo_entradas as $tipoEntrada)
               @php
                 $entradasAsociadas = $entradasOrdenadas->where('tipo_entrada_id', $tipoEntrada->id);

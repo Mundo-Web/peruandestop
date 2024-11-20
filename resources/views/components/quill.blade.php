@@ -1,3 +1,7 @@
+@php
+  $addProse = $addProse ?? 'true';
+@endphp
+
 <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
 
@@ -19,13 +23,18 @@
         // Obtener el contenido HTML actual del editor
         var html = quill.root.innerHTML;
 
-        // Crear un elemento temporal para manipular el contenido HTML
-        var tempElem = document.createElement('div');
-        tempElem.innerHTML = html;
-        tempElem.classList.add('prose')
+        if ({{$addProse}}) {
+          // Crear un elemento temporal para manipular el contenido HTML
+          var tempElem = document.createElement('div');
+          tempElem.innerHTML = html;
+          tempElem.classList.add('prose')
 
-        $('#{{ $id }}').val(tempElem.outerHTML);
-        $('#{{ $id }}').text(tempElem.outerHTML);
+          $('#{{ $id }}').val(tempElem.outerHTML);
+          $('#{{ $id }}').text(tempElem.outerHTML);
+        } else {
+          $('#{{ $id }}').val(html);
+          $('#{{ $id }}').text(html);
+        }
       }
     });
 

@@ -146,7 +146,7 @@
                   <div class="md:col-span-5">
                     <label for="description">Descripcion</label>
                     <div class="relative mb-2 mt-2">
-                      <x-quill id="description" name="description" :value="$product->description" />
+                      <x-quill id="description" name="description" :value="$product->description" add-prose="false" />
 
                       {{-- <textarea type="text" rows="2" id="description" name="description"
                         class="mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -371,7 +371,7 @@
                       <option value="">Seleccionar Destino </option>
                       @foreach ($categoria as $item)
                         @if ($item->id == $product->categoria_id)
-                          <option selected value="{{ $item->id }}">{{ $item->description }}</option>
+                          <option selected value="{{ $item->id }}">{{ $item->name }}</option>
                         @else
                           <option value="{{ $item->id }}">{{ $item->name }}</option>
                         @endif
@@ -389,7 +389,7 @@
                     <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                       <i class="fa fa-pen"></i>
                     </div>
-                    <input type="number" id="hours" name="hours" value="{{$product->hours}}"
+                    <input type="number" id="hours" name="hours" value="{{ $product->hours }}"
                       class="mt-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       placeholder="Ingrese el número de horas">
 
@@ -590,6 +590,12 @@
     }
     $(document).ready(function() {
       let valorInput = 1
+
+      $('#tags_id').select2({
+        placeholder: 'Seleccionar Tag...',
+        // Otras opciones de configuración
+      });
+
       $("#AddEntrada").on('click', function(e) {
         e.preventDefault()
 
