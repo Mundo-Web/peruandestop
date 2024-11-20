@@ -35,7 +35,7 @@
               @foreach ($category as $item)
                 <tr>
                   <td>{{ $item->name }}</td>
-                  <td>{{ $item->pais }}</td>
+                  <td>{{ strip_tags($item->pais) }}</td>
                   <td>{{ $item->langs }}</td>
                   <td>
                     <form method="POST" action="">
